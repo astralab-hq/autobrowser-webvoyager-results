@@ -1,0 +1,11 @@
+{
+  "id": "bbc-news-3",
+  "description": "WebVoyager task on BBC News",
+  "url": "https://www.bbc.com/news/",
+  "instruction": "Check the leaderboard for Golf's DP World Tour in the SPORT section, what was the name of the most recent tournament, and how many teams have a Total of -10 strokes.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

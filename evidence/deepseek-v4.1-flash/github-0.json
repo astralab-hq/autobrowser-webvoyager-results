@@ -1,0 +1,55 @@
+{
+  "task": {
+    "id": "github-0",
+    "site": "github",
+    "instruction": "Search for an open-source project related to 'climate change data visualization' on GitHub and report the project with the most stars.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The most-starred open-source project for \"climate change data visualization\" on GitHub is **resource-watch/resource-watch** — https://github.com/resource-watch/resource-watch — with **73 stars** (JavaScript/TypeScript, React + Next.js + Mapbox, last updated Sep 10).\n\nIt's a platform that aggregates hundreds of datasets on the state of the planet's resources and citizens, letting users visualize and explore environmental and climate data in one place.\n\nRunners-up from the same search (sorted by stars, 545 repositories total): Beckybams/AI-Enhanced-Climate-Education-Tools- (40 stars), WorldWindLabs/AgroSphere (20 stars), and akshaysonvane/Climate-Change-Data-Analytics-Visualization (11 stars).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "GitHub search was sorted by “Most stars” and shows resource-watch/resource-watch first with 73 stars, matching the agent’s reported project.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 5885,
+    "output_tokens": 158
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/search?q=climate+change+data+visualization&type=repositories&s=stars&o=desc",
+    "title": "Repository search results · GitHub"
+  },
+  "final_screenshot": "screenshots/github-0.jpg",
+  "cost_usd": 0.01052037,
+  "elapsed_s": 17,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=climate+change+data+visualization&type=repositories&s=stars&o=desc"
+      },
+      "ok": true,
+      "ms": 584
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 4000
+      },
+      "ok": true,
+      "ms": 26
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "task": {
+    "id": "arxiv-6",
+    "site": "arxiv",
+    "instruction": "How many figures and tables are in the paper \"On the Sentence Embeddings from Pre-trained Language Models\"?",
+    "start_url": "https://arxiv.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The paper \"On the Sentence Embeddings from Pre-trained Language Models\" (Bohan Li et al., EMNLP 2020, arXiv:2011.05864) contains **2 figures and 8 tables** — 10 float elements in total.\n\n**Figures:**\n- Figure 1 — An illustration of the proposed flow-based calibration over the original sentence embedding space of BERT.\n- Figure 2 — A scatterplot of sentence pairs, with the horizontal axis showing similarity (gold-standard semantic similarity vs. cosine similarity).\n\n**Tables:**\n- Table 1 — Mean ℓ₂-norm and distance to k-nearest neighbors of word embeddings.\n- Table 2 — Semantic textual similarity results without NLI supervision (Spearman's rank correlation).\n- Table 3 — Semantic textual similarity results with NLI supervision.\n- Table 4 — AUC on QNLI evaluated on the validation set.\n- Table 5 — Comparison of the flow-based method with baselines on STS-B (k selected from 1–20 on the validation set).\n- Table 6 — Spearman's ρ between various sentence similarities on the STS-B validation set.\n- Table 7 — Flow hyperparameters.\n- Table 8 — Results with different random seeds.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The arXiv HTML page caption query returned Figure 1–2 and Table 1–8, supporting the final count of 2 figures and 8 tables.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 6852,
+    "output_tokens": 113
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://arxiv.org/html/2011.05864v1",
+    "title": "On the Sentence Embeddings from Pre-trained Language Models"
+  },
+  "final_screenshot": "screenshots/arxiv-6.jpg",
+  "cost_usd": 0.00519684,
+  "elapsed_s": 24.7,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2011.05864"
+      },
+      "ok": true,
+      "ms": 240
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/html/2011.05864v1"
+      },
+      "ok": true,
+      "ms": 121
+    },
+    {
+      "tool": "evaluate_script",
+      "args": {
+        "expression": "(() => {\n  const caps = [...document.querySelectorAll('figcaption, .ltx_caption, caption')].map(e => e.innerText.trim().slice(0,120));\n  return {count: caps.length, caps};\n})()",
+        "intent": "Count the figure and table captions in the paper to determine how many figures and tables it contains."
+      },
+      "ok": true,
+      "ms": 61
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const figs = [...document.querySelectorAll('figure')].map(f => (f.className||'') + ' | ' + (f.querySelector('figcaption')?.innerText.slice(0,60)||''));\\n  return {figureCount: figs.length, figs, tableCaptions: document.querySelectorAll('figcaption.ltx_caption').length};\\n})()\",\"intent\":\"Double-check how many actual <figure> elements (figures/images) exist versus tables, … [+29 chars]",
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

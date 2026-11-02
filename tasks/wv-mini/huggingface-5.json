@@ -1,0 +1,11 @@
+{
+  "id": "huggingface-5",
+  "description": "WebVoyager task on Huggingface",
+  "url": "https://huggingface.co/",
+  "instruction": "Find a model released on Hugging Face for recipe generation. Retrieve the information of the model, including its name, model size and tensor type.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

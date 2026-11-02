@@ -1,0 +1,11 @@
+{
+  "id": "espn-4",
+  "description": "WebVoyager task on ESPN",
+  "url": "https://www.espn.com/",
+  "instruction": "Check ESPN for the final scores of NBA games that were played yesterday.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

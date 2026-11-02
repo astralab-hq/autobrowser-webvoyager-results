@@ -1,0 +1,64 @@
+{
+  "task": {
+    "id": "github-4",
+    "site": "github",
+    "instruction": "Find a popular JavaScript repository created in the last 30 days on GitHub with a Readme file.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Found one: **wheresryan22/anatomy** — the most-starred JavaScript repository created in the last 30 days (GitHub search filtered to `language:JavaScript created:>=2026-10-02`, sorted by stars).\n\n**What it is:** An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. It generates polished SVGs with optional WebGL shaders and 3D effects — essentially a Claude/Agent Skill that explains an idea by building it as a real, working diagram.\n\n**Key facts:** 23.6k stars, 2.0k forks, 14 contributors. It has a README (plus Code of Conduct, Contributing, MIT license, and a Security policy). Topics: `agent-skill`, `open-source`, `svg`, `vizualization`. Latest release is Anatomy 1.1 (Oct 12, 2026), with 153 commits across 13 branches. Requirements are Node 20.10+ with no dependencies; it installs via `npx` or by downloading the skill ZIP, and has a website at skills.wheresryan.sh/anatomy.\n\nThe README covers quick start, a gallery of example figures (e.g. a Raptor 2 rocket engine in a test stand), install/usage instructions, how it works internally (`SKILL.md`, `kit/`, `references/` and helper scripts), plus known limits and a contributing guide.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "GitHub search used `language:JavaScript created:>=2026-10-02` sorted by stars, and the repo page shows `wheresryan22/anatomy` with README and 23.6k stars.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 8808,
+    "output_tokens": 256
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/wheresryan22/anatomy",
+    "title": "GitHub - wheresryan22/anatomy: An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects. · GitHub"
+  },
+  "final_screenshot": "screenshots/github-4.jpg",
+  "cost_usd": 0.00386309,
+  "elapsed_s": 24.3,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=language%3AJavaScript+created%3A%3E%3D2026-10-02&type=repositories&s=stars&o=desc"
+      },
+      "ok": true,
+      "ms": 748
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/wheresryan22/anatomy"
+      },
+      "ok": true,
+      "ms": 622
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 37
+    }
+  ]
+}

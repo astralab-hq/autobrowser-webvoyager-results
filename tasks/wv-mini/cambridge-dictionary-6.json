@@ -1,0 +1,11 @@
+{
+  "id": "cambridge-dictionary-6",
+  "description": "WebVoyager task on Cambridge Dictionary",
+  "url": "https://dictionary.cambridge.org/",
+  "instruction": "Search for the word \"sustainability\" on the Cambridge Dictionary, what is the translation of sustainability into Chinese and French in the dictionary.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

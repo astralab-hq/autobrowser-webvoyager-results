@@ -1,0 +1,11 @@
+{
+  "id": "booking-3",
+  "description": "WebVoyager task on Booking",
+  "url": "https://www.booking.com/",
+  "instruction": "Find a hotel with 4 star and above rating in Los Angeles for 3 days from Dec 18th.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

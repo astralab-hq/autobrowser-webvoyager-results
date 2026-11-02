@@ -1,0 +1,11 @@
+{
+  "id": "bbc-news-2",
+  "description": "WebVoyager task on BBC News",
+  "url": "https://www.bbc.com/news/",
+  "instruction": "Read the latest article regarding the environmental impacts of deforestation published within the last two days.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

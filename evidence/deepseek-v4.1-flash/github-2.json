@@ -1,0 +1,47 @@
+{
+  "task": {
+    "id": "github-2",
+    "site": "github",
+    "instruction": "Look for the trending Python repositories on GitHub with most stars.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Here are today's trending Python repositories on GitHub, ranked by **total stars**:\n\n| # | Repository | Total ★ | ★ today | What it is |\n|---|---|---|---|---|\n| 1 | **public-apis / public-apis** | 494,169 | +298 | A collective list of free APIs |\n| 2 | **anthropics / skills** | 186,168 | +438 | Public repository for Agent Skills |\n| 3 | **D4Vinci / Scrapling** | 91,554 | +844 | Web-scraping framework, from a single request to full-scale crawls |\n| 4 | **bregman-arie / devops-exercises** | 86,285 | +733 | DevOps/SRE interview questions (Linux, AWS, K8s, Terraform…) |\n| 5 | **python / cpython** | 77,775 | +47 | The Python programming language itself |\n| 6 | **calesthio / OpenMontage** | 74,255 | +461 | Open-source agentic video production system |\n| 7 | **paperless-ngx / paperless-ngx** | 47,504 | +67 | Supercharged document management (scan, index, archive) |\n| 8 | **shiyu-coder / Kronos** | 45,061 | +611 | Foundation model for the \"language\" of financial markets |\n| 9 | **ifixai-ai / iFixAi** | 42,137 | +1,654 | Independent auditing of AI agents |\n| 10 | **eriklindernoren / ML-From-Scratch** | 33,234 | +36 | Bare-bones NumPy implementations of ML algorithms |\n\nRunners-up: **oraios/serena** (30,972), **FlashML-org/FreeToken** (15,177), **kornia/kornia** (11,638), **bleachbit/bleachbit** (7,327), **beenuar/AiSOC** (5,959), **ethanplusai/harvey** (3,839), **andreavolpato/spektrafilm** (1,488), **scenario-labs/skills** (1,437).\n\nTwo things worth noting: **public-apis** is by far the most-starred repo on the list (~494k), but the biggest *daily* gainer is **iFixAi** with +1,654 stars today — nearly double the next-fastest riser (Scrapling at +844). If you're looking for momentum rather than accumulated popularity, iFixAi, Scrapling, and devops-exercises are the ones climbing fastest right now.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent opened GitHub Trending filtered to Python today and reported repos ranked by total stars using values shown in the page text.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 5843,
+    "output_tokens": 31
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/trending/python?since=daily",
+    "title": "Trending Python repositories on GitHub today · GitHub"
+  },
+  "final_screenshot": "screenshots/github-2.jpg",
+  "cost_usd": 0.005425,
+  "elapsed_s": 15.3,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/trending/python?since=daily"
+      },
+      "ok": true,
+      "ms": 1574
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

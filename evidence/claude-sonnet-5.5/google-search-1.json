@@ -1,0 +1,37 @@
+{
+  "task": {
+    "id": "google-search-1",
+    "site": "google-search",
+    "instruction": "Find Kevin Durant's bio",
+    "start_url": "https://www.google.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a google bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0,
+  "elapsed_s": 8,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "Kevin Durant bio",
+        "uid": "ref_1_6"
+      },
+      "ok": true,
+      "ms": 153
+    }
+  ]
+}

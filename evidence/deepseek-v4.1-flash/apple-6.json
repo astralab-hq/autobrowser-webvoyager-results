@@ -1,0 +1,119 @@
+{
+  "task": {
+    "id": "apple-6",
+    "site": "apple",
+    "instruction": "Find AirPods on Apple and how many types are currently available.",
+    "start_url": "https://www.apple.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I checked Apple's AirPods pages (apple.com/airpods and the Compare Models page). Apple currently sells **4 AirPods models**, across three product families:\n\n**AirPods (earbuds)**\n1. **AirPods 5** — $129. Active Noise Cancellation, Adaptive Audio/Transparency, Personalized Spatial Audio, Live Translation, Siri AI, H2 chip; up to 4 hrs ANC (20 hrs with case).\n2. **AirPods 5 with Wireless Charging Case** — $149. Same features plus volume swipe on the stem and longer battery: up to 5 hrs ANC (22 hrs with case).\n\n**AirPods Pro**\n3. **AirPods Pro 3** — $249. The flagship in-ear model: up to 3x more ANC than AirPods 5, heart-rate sensing during workouts, Hearing Test / Hearing Aid / Hearing Protection, Live Translation, Siri AI; up to 8 hrs ANC (24 hrs with case).\n\n**AirPods Max (over-ear)**\n4. **AirPods Max 2** — $549. Over-ear design with Digital Crown, Lossless Audio and ultra-low latency via USB-C, Loud Sound Reduction, up to 20 hrs battery. Available in Midnight, Starlight, Blue, Purple, and Orange.\n\nNote: Apple's comparison tool still lists older models (AirPods 4, AirPods 4 with ANC, AirPods Pro 2, AirPods 2nd/3rd generation, and the original AirPods Max) for reference, but those are no longer part of the current for-sale lineup on the main AirPods page — so the answer to \"how many types are currently available\" is **4 models / 3 families**.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Apple AirPods page text shows four current Buy cards: AirPods 5, AirPods 5 Wireless Charging Case, AirPods Pro 3, and AirPods Max 2.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 8194,
+    "output_tokens": 310
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.apple.com/airpods-pro/",
+    "title": "AirPods Pro 3 - Apple"
+  },
+  "final_screenshot": "screenshots/apple-6.jpg",
+  "cost_usd": 0.00955941,
+  "elapsed_s": 57,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/airpods/"
+      },
+      "ok": true,
+      "ms": 203
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/airpods/compare/"
+      },
+      "ok": true,
+      "ms": 288
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/shop/buy-airpods"
+      },
+      "ok": true,
+      "ms": 1002
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/shop/airpods/all"
+      },
+      "ok": true,
+      "ms": 1054
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/shop/airpods"
+      },
+      "ok": true,
+      "ms": 488
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/airpods-4/"
+      },
+      "ok": true,
+      "ms": 508
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1500
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/airpods-pro/"
+      },
+      "ok": true,
+      "ms": 1318
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "apple-6",
+  "description": "WebVoyager task on Apple",
+  "url": "https://www.apple.com/",
+  "instruction": "Find AirPods on Apple and how many types are currently available.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

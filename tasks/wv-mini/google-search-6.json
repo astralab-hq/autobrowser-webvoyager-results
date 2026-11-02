@@ -1,0 +1,11 @@
+{
+  "id": "google-search-6",
+  "description": "WebVoyager task on Google Search",
+  "url": "https://www.google.com/",
+  "instruction": "Browse the monthly trending searches in Columbus.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

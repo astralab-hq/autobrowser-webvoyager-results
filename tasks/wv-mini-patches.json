@@ -1,0 +1,62 @@
+{
+  "version": "2026-10-27",
+  "policy": "Base: Alumnium's patched task set, the one the current top two WebVoyager leaderboard entries ran on. A task both Alumnium and Magnitude removed is excluded unless a live check shows it is completable. A task only Magnitude removed is kept. Explicit past dates become {{date+N}} placeholders resolved against the run date. Year-less dates are left as written and mean their next occurrence.",
+  "sources": {
+    "alumnium": "https://github.com/alumnium-hq/WebVoyager/tree/alumnium/data (branch alumnium @ 29cb48d84ade, 2026-03-25)",
+    "magnitude": "https://github.com/sagekit/webvoyager/blob/main/data/patches.json (@ 87009319e1a9, 2025-07-06)",
+    "live-check": "Checked on the live site on 2026-10-27"
+  },
+  "exclusions": {
+    "booking-6": {
+      "reason": "Asks the agent to book a room. Completing it would make a real reservation, and both patch sources removed it.",
+      "source": "alumnium+magnitude"
+    },
+    "google-flights-0": {
+      "reason": "Asks the agent to book a flight. Completing it would make a real purchase, and both patch sources removed it.",
+      "source": "alumnium+magnitude"
+    },
+    "google-flights-7": {
+      "reason": "Would backfill google-flights-0, but the sources disagree: Magnitude found no first-class fare under $1320 on the upstream dates and removed it, and Alumnium moved it to July to make the cap reachable. Backfills should be uncontested, so the slot goes to google-flights-8.",
+      "source": "alumnium+magnitude"
+    },
+    "huggingface-6": {
+      "reason": "The model page's similarity widget shows one source sentence and two comparison fields, so the two-sentence task does not fit it. Both patch sources removed it.",
+      "source": "alumnium+magnitude+live-check"
+    }
+  },
+  "overrides": {
+    "amazon-6": {
+      "instruction": "Browse black strollers within $100 to $200 on Amazon. Then find one Among these black strollers with over 2,000 reviews and a rating greater than 4 star.",
+      "reason": "No black stroller in the price range has over 20,000 reviews. Adopts Alumnium's lowered review threshold.",
+      "source": "alumnium"
+    },
+    "apple-2": {
+      "criteria": "Apple's compare page lists the chips (A16 Bionic and A17 Pro) but shows 'Available at authorized resellers' instead of prices for both discontinued models. A correct answer gives both chips and says Apple no longer lists prices.",
+      "reason": "Both phones are discontinued. The chips are still on Apple's site and the prices are not.",
+      "source": "live-check"
+    },
+    "apple-4": {
+      "instruction": "How much does it cost to buy a 16-inch MacBook Pro with the highest-end Max chip Apple currently sells, in its standard memory and storage configuration? Name the chip and its CPU and GPU core counts.",
+      "reason": "The M3 Max (upstream) and M4 Max (both patch sources) are no longer sold. On 2026-10-27 the 16-inch ships with M5 Pro or M5 Max (18-core CPU, 40-core GPU). Worded relative to the current lineup so the next chip refresh does not break it.",
+      "source": "live-check"
+    },
+    "booking-5": {
+      "instruction": "Search a hotel with free WiFi and air conditioning in Bali from {{date+60}} to {{date+63}}.",
+      "reason": "Upstream dates (Jan 1 to Jan 4, 2024) are in the past. Kept the three-night stay and moved it to a date relative to the run.",
+      "source": "relative-date"
+    },
+    "google-flights-1": {
+      "instruction": "Show me the list of one-way flights on {{date+30}} from Chicago to Paris.",
+      "reason": "Upstream date (February 17, 2024) is in the past. Both patch sources moved it to a fixed future date; a relative date stops it expiring again.",
+      "source": "relative-date"
+    }
+  },
+  "kept": {
+    "allrecipes-3": "Both patch sources removed it, but on 2026-10-27 Allrecipes lists 'Vegan Chocolate Chip, Oatmeal, and Nut Cookies' with 72 ratings and a five-star display.",
+    "amazon-4": "Magnitude removed it: the 'Used - Good' filter is only on the product's offers page. Alumnium kept it as completable, and the instruction does not require filtering from search results.",
+    "apple-1": "Magnitude removed it. Alumnium kept it as completable.",
+    "bbc-news-2": "Magnitude removed it because no matching article existed on its run day. Alumnium kept it. Its outcome depends on the news cycle on the run date.",
+    "espn-2": "Magnitude removed it during the NBA off-season. Alumnium kept it. The regular season runs from late October to mid April.",
+    "google-search-6": "Magnitude removed it: Trends offers no monthly filter. Alumnium kept it as completable."
+  }
+}

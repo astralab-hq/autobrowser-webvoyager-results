@@ -1,0 +1,11 @@
+{
+  "id": "cambridge-dictionary-1",
+  "description": "WebVoyager task on Cambridge Dictionary",
+  "url": "https://dictionary.cambridge.org/",
+  "instruction": "Find the pronunciation, definition, and a sample sentence for the word 'serendipity'.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

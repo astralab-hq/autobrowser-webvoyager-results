@@ -1,0 +1,45 @@
+{
+  "task": {
+    "id": "coursera-0",
+    "site": "coursera",
+    "instruction": "Find a beginner-level online course about '3d printing' which lasts 1-3 months, and is provided by a renowned university.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Several beginner courses on Coursera about 3D printing last 1–3 months and come from well-known universities:\n\n- **3D Printing Applications**, University of Illinois Urbana-Champaign. It's a course rated 4.6 from 692 reviews.\n- **3D Printing Software**, University of Illinois Urbana-Champaign. It's a course rated 4.6 from 563 reviews.\n- **Introduction to 3D Printing with Metals**, University of Michigan. It's a course rated 4.8 from 21 reviews.\n- **Rapid Prototyping Using 3D Printing**, Arizona State University. It's a specialization rated 4.6 from 130 reviews.\n- **3D Printing and Future Medical Technologies**, POSTECH. It's a course with no rating shown.\n\nIf you want one pick, I'd choose **3D Printing Applications** from the University of Illinois Urbana-Champaign. It has the most reviews of the general 3D printing courses and a strong 4.6 rating. I haven't enrolled in anything or opened any course pages.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The Coursera page supports multiple beginner 3D printing results from universities with 1–3 month durations, e.g. UIUC “3D Printing Software” and “3D Printing Applications.”",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 5603,
+    "output_tokens": 46
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/search?query=3d%20printing&productDifficultyLevel=Beginner&productDurationEnum=1-3%20Months",
+    "title": "Coursera | Online Courses From Top Universities. Join for Free"
+  },
+  "final_screenshot": "screenshots/coursera-0.jpg",
+  "cost_usd": 0.198894,
+  "elapsed_s": 23.8,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=3d%20printing&productDifficultyLevel=Beginner&productDurationEnum=1-3%20Months"
+      },
+      "ok": true,
+      "ms": 763
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

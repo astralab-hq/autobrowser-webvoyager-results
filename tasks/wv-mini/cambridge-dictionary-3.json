@@ -1,0 +1,11 @@
+{
+  "id": "cambridge-dictionary-3",
+  "description": "WebVoyager task on Cambridge Dictionary",
+  "url": "https://dictionary.cambridge.org/",
+  "instruction": "Look up the definition, pronunciation, and examples of the word \"zeitgeist.\"",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

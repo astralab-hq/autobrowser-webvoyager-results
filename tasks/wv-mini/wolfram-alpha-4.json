@@ -1,0 +1,11 @@
+{
+  "id": "wolfram-alpha-4",
+  "description": "WebVoyager task on Wolfram Alpha",
+  "url": "https://www.wolframalpha.com/",
+  "instruction": "Pack 24 circles in a circle radius r. Compare Densest known packing and Square packing. Then tell me the radius of the inner circles.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

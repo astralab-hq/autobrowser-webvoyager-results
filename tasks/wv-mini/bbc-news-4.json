@@ -1,0 +1,11 @@
+{
+  "id": "bbc-news-4",
+  "description": "WebVoyager task on BBC News",
+  "url": "https://www.bbc.com/news/",
+  "instruction": "Find the latest article regarding the economic implications of climate change in Europe as reported by BBC News and summarize the central points.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

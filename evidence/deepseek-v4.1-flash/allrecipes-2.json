@@ -1,0 +1,97 @@
+{
+  "task": {
+    "id": "allrecipes-2",
+    "site": "allrecipes",
+    "instruction": "Find a recipe for a vegetarian lasagna under 600 calories per serving that has a prep time of less than 1 hour.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a recipe that fits all your criteria: **Easy Vegetarian Spinach Lasagna** on Allrecipes (https://www.allrecipes.com/recipe/229764/easy-vegetarian-spinach-lasagna/).\n\n**Why it qualifies:**\n- **Vegetarian** — no meat; built on spinach, ricotta, mozzarella, Parmesan, egg, and pasta sauce\n- **305 calories per serving** — comfortably under your 600-calorie limit\n- **Prep time: 20 minutes** — well under 1 hour (cook time 1 hr, total 1 hr 25 min)\n- Rated 4.6 stars from 117 ratings and 85 reviews; yields 6 servings\n\n**Quick overview:** You preheat the oven to 400°F, blanch 10 oz fresh spinach, boil 9 lasagna noodles, then mix the spinach with ricotta, half the mozzarella, egg, nutmeg, and basil. Layer noodles, the ricotta-spinach mixture, and pasta sauce in a 1½-quart casserole, top with remaining mozzarella and Parmesan, cover with foil, and bake 25 minutes covered plus about 25 minutes uncovered until bubbling and lightly browned. Let it rest 5 minutes before serving.\n\n**Per serving:** 305 calories, 10g fat, 37g carbs (4g fiber), 18g protein, 443mg sodium.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page shows Easy Vegetarian Spinach Lasagna with vegetarian ingredients, Prep Time 20 mins, and Nutrition Facts 305 calories per serving.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 13762,
+    "output_tokens": 34
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/recipe/229764/easy-vegetarian-spinach-lasagna/",
+    "title": "Easy Vegetarian Spinach Lasagna"
+  },
+  "final_screenshot": "screenshots/allrecipes-2.jpg",
+  "cost_usd": 0.00440133,
+  "elapsed_s": 33.6,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "vegetarian lasagna",
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 271
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 31
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "link to Easy Vegetarian Spinach Lasagna recipe",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_49"
+      },
+      "ok": true,
+      "ms": 248
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 46
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 12000
+      },
+      "ok": true,
+      "ms": 54
+    }
+  ]
+}

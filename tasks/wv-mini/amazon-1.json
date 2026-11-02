@@ -1,0 +1,11 @@
+{
+  "id": "amazon-1",
+  "description": "WebVoyager task on Amazon",
+  "url": "https://www.amazon.com/",
+  "instruction": "Search for women's golf polos in m size, priced between 50 to 75 dollars, and save the lowest priced among results.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

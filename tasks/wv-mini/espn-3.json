@@ -1,0 +1,11 @@
+{
+  "id": "espn-3",
+  "description": "WebVoyager task on ESPN",
+  "url": "https://www.espn.com/",
+  "instruction": "Retrieve the final score from the most recent NBA game broadcast on ESPN, including the playing teams' names and the date of the match.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

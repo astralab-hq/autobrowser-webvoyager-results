@@ -1,0 +1,75 @@
+{
+  "task": {
+    "id": "allrecipes-0",
+    "site": "allrecipes",
+    "instruction": "Provide a recipe for vegetarian lasagna with more than 100 reviews and a rating of at least 4.5 stars suitable for 6 people.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a vegetarian lasagna that meets your criteria: **Artichoke Spinach Lasagna** on Allrecipes (https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/).\n\n**Why it fits:** It is rated 4.6 out of 5 from 1,824 ratings, with 1,287 written reviews. The recipe makes 8 servings, so it covers 6 people with a little left over. Prep is 20 min and cook time is 1 hr, for 1 hr 20 min total. It has about 396 calories per serving.\n\n**Ingredients (original recipe, 8 servings)**\n- Cooking spray\n- 9 uncooked lasagna noodles\n- 1 onion, chopped\n- 4 cloves garlic, chopped\n- 1 (14.5 oz) can vegetable broth\n- 1 tbsp chopped fresh rosemary\n- 1 (14 oz) can marinated artichoke hearts, drained and chopped\n- 1 (10 oz) package frozen chopped spinach, thawed, drained and squeezed dry\n- 1 (28 oz) jar tomato pasta sauce\n- 3 cups shredded mozzarella, divided\n- 1 (4 oz) package herb and garlic feta, crumbled\n\n**Directions**\n1. Preheat the oven to 350°F (175°C). Spray a 9x13 inch baking dish with cooking spray.\n2. Boil the noodles in lightly salted water for 8–10 minutes until al dente, then drain.\n3. Spray a large skillet and heat it on medium-high. Sauté the onion and garlic for 3 minutes. Add the broth and rosemary and bring to a boil. Stir in the artichokes and spinach, then cover and simmer for 5 minutes. Stir in the pasta sauce.\n4. Spread 1/4 of the artichoke mixture in the dish and top with 3 noodles. Sprinkle on 3/4 cup mozzarella. Repeat the layers twice more, ending with the artichoke mixture and mozzarella. Top with the crumbled feta.\n5. Bake covered for 40 minutes. Uncover and bake 15 minutes more, until hot and bubbly. Let it stand for 10 minutes before cutting.\n\n**Tip:** Several reviewers found it watery. They suggest using less broth or no-boil noodles.\n\nIf you want exactly 6 servings, the page has a scaling control, but I didn't use it. Multiplying the amounts by about 0.75 would work, with a smaller baking dish.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final answer cites Allrecipes page showing vegetarian lasagna rated 4.6, 1,287 reviews, and 8 servings, with ingredients and directions provided.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 10057,
+    "output_tokens": 39
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/",
+    "title": "Artichoke Spinach Lasagna"
+  },
+  "final_screenshot": "screenshots/allrecipes-0.jpg",
+  "cost_usd": 0,
+  "elapsed_s": 56.9,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/search?q=vegetarian+lasagna"
+      },
+      "ok": true,
+      "ms": 555
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 27
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Artichoke Spinach Lasagna recipe link"
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_64"
+      },
+      "ok": true,
+      "ms": 147
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 1
+    }
+  ]
+}

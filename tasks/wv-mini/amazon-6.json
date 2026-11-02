@@ -1,0 +1,11 @@
+{
+  "id": "amazon-6",
+  "description": "WebVoyager task on Amazon",
+  "url": "https://www.amazon.com/",
+  "instruction": "Browse black strollers within $100 to $200 on Amazon. Then find one Among these black strollers with over 2,000 reviews and a rating greater than 4 star.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

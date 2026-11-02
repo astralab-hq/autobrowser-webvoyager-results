@@ -1,0 +1,11 @@
+{
+  "id": "cambridge-dictionary-4",
+  "description": "WebVoyager task on Cambridge Dictionary",
+  "url": "https://dictionary.cambridge.org/",
+  "instruction": "Look for the British English pronunciation of the word \"innovate\" and write down the International Phonetic Alphabet (IPA) notation, then find one example sentence provided in the Cambridge Dictionary that uses this word.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "task": {
+    "id": "coursera-5",
+    "site": "coursera",
+    "instruction": "Identify a Specialization on Coursera that teaches C++ programming for beginners, provide the name and what the learning outcomes are.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "**Specialization: Programming in C++: A Hands-on Introduction** (offered by Codio on Coursera). It is rated 4.6 from 1,333 reviews. It is a Beginner-level, 4-course series that takes about 4 weeks at 10 hours a week. It is meant for people with no programming experience.\n\n**What you'll learn (learning outcomes):**\n- Automate everyday, repetitive tasks using C++ programs.\n- Create engaging, graphical programs.\n- Build a firm foundation of Computer Science concepts that you can bring to any language you learn.\n\n**Skills you'll gain:** Memory Management, Code Reusability, File I/O, Data Validation, Maintainability, Computer Science, Programming Principles, Software Documentation, Computer Programming, Data Import/Export, and more.\n\n**Courses in the series:**\n1. C++ Basics: Selection and Iteration\n2. C++ Basic Structures: Vectors, Pointers, Strings, and Files\n3. C++ Object Basics: Functions, Recursion, and Objects\n4. Object-Oriented C++: Inheritance and Encapsulation\n\n**Applied project:** You build practical C++ programs, such as an automated file updater. Later projects produce graphical output with the CImg library, including animations.\n\nThe specialization covers everything from fundamentals to object-oriented design. That prepares you to write small automation programs and larger applications. It also gives you enough C++ to move on to topics like Data Science and AI.\n\nA similar option is \"Coding for Everyone: C and C++\" from UC Santa Cruz. It is also Beginner level and rated 4.5. I chose the Codio specialization because it focuses on C++ alone.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent identified a beginner C++ Coursera Specialization and provided the learning outcomes shown on the Coursera page.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 11867,
+    "output_tokens": 29
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/specializations/hands-on-cpp",
+    "title": "Programming in C++: A Hands-on Introduction | Coursera"
+  },
+  "final_screenshot": "screenshots/coursera-5.jpg",
+  "cost_usd": 0.914622,
+  "elapsed_s": 48.5,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=c%2B%2B%20for%20beginners&productTypeDescription=Specializations"
+      },
+      "ok": true,
+      "ms": 986
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Programming in C++: A Hands-on Introduction specialization link",
+        "limit": 3
+      },
+      "ok": false,
+      "ms": 10
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 31
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_24"
+      },
+      "ok": true,
+      "ms": 1198
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "list_tabs",
+      "args": {
+        "args": {}
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 13
+    },
+    {
+      "tool": "get_element_info",
+      "args": {
+        "uid": "ref_3_24"
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/specializations/hands-on-cpp"
+      },
+      "ok": true,
+      "ms": 569
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

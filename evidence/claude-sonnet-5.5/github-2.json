@@ -1,0 +1,59 @@
+{
+  "task": {
+    "id": "github-2",
+    "site": "github",
+    "instruction": "Look for the trending Python repositories on GitHub with most stars.",
+    "start_url": "https://github.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The trending Python repository on GitHub today with the most total stars is **anthropics/skills**. It has about 185,721 stars and 21,924 forks, and gained 756 stars today. It is the public repository for Agent Skills.\n\nThe next most-starred trending Python repos are:\n- github/spec-kit: 144,185 stars (166 today)\n- Graphify-Labs/graphify: 139,803 stars (686 today)\n- hacksider/Deep-Live-Cam: 97,460 stars (44 today)\n- bregman-arie/devops-exercises: 85,612 stars (341 today)\n- calesthio/OpenMontage: 73,772 stars (564 today)\n\nIf you meant the most stars gained today instead of total stars, the leader is **HKUDS/DeepTutor** with 1,035 stars today (52,368 total). It is followed by anthropics/skills with 756 and Graphify-Labs/graphify with 686.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent opened GitHub Trending filtered to Python today and reported supported star counts, including both total-star leader anthropics/skills and stars-today leader HKUDS/DeepTutor.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 5587,
+    "output_tokens": 480
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/trending/python?since=daily",
+    "title": "Trending Python repositories on GitHub today · GitHub"
+  },
+  "final_screenshot": "screenshots/github-2.jpg",
+  "cost_usd": 0.214404,
+  "elapsed_s": 26.1,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=language%3APython&type=repositories&s=stars&o=desc"
+      },
+      "ok": true,
+      "ms": 1003
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/trending/python?since=daily"
+      },
+      "ok": true,
+      "ms": 1480
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

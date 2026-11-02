@@ -1,0 +1,11 @@
+{
+  "id": "huggingface-1",
+  "description": "WebVoyager task on Huggingface",
+  "url": "https://huggingface.co/",
+  "instruction": "Use the Huggingface Inference API to generate a short story about a dragon and a wizard.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "arxiv-4",
+  "description": "WebVoyager task on ArXiv",
+  "url": "https://arxiv.org/",
+  "instruction": "Find the most recent research papers in Astrophysics of Galaxies. How many papers have been announced in the last day?",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

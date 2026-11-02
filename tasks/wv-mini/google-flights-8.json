@@ -1,0 +1,11 @@
+{
+  "id": "google-flights-8",
+  "description": "WebVoyager task on Google Flights",
+  "url": "https://www.google.com/travel/flights/",
+  "instruction": "Search a one-way filght from Dublin To Athens Greece for 1 Adult that leaves on December 30 and analyse the price graph for the next 2 months.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

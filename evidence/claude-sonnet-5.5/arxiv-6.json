@@ -1,0 +1,73 @@
+{
+  "task": {
+    "id": "arxiv-6",
+    "site": "arxiv",
+    "instruction": "How many figures and tables are in the paper \"On the Sentence Embeddings from Pre-trained Language Models\"?",
+    "start_url": "https://arxiv.org/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The paper has 2 figures and 8 tables. I counted them from the ar5iv HTML version of the full text.\n\n**Figures (2)**\n- Figure 1: An illustration of the proposed flow-based calibration over BERT's sentence embedding space.\n- Figure 2: A scatterplot of sentence pairs, with similarity on one axis and edit distance on the other.\n\n**Tables (8)**\n- Table 1: Word embedding norms and k-NN distances, by word frequency rank.\n- Table 2: STS results without NLI supervision.\n- Table 3: STS results with NLI supervision.\n- Table 4: AUC on QNLI.\n- Table 5: Comparison with the SN and NATSV calibration baselines on STS-B.\n- Table 6: Spearman correlations between similarity, edit distance and gold similarity.\n- Table 7: Flow hyperparameters (Appendix B).\n- Table 8: Results with different random seeds (Appendix C).\n\nTables 1–6 are in the main text and Tables 7–8 are in the appendices. Counting only the main body gives 2 figures and 6 tables.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent opened the ar5iv full text for arXiv:2011.05864 and provided the requested count: 2 figures and 8 tables.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 7029,
+    "output_tokens": 1924
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://ar5iv.labs.arxiv.org/html/2011.05864",
+    "title": "[2011.05864] On the Sentence Embeddings from Pre-trained Language Models"
+  },
+  "final_screenshot": "screenshots/arxiv-6.jpg",
+  "cost_usd": 0.795364,
+  "elapsed_s": 51,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2011.05864"
+      },
+      "ok": true,
+      "ms": 478
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/pdf/2011.05864v1"
+      },
+      "ok": true,
+      "ms": 114
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://ar5iv.labs.arxiv.org/html/2011.05864"
+      },
+      "ok": true,
+      "ms": 545
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 4
+    }
+  ]
+}

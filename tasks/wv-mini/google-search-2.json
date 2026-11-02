@@ -1,0 +1,11 @@
+{
+  "id": "google-search-2",
+  "description": "WebVoyager task on Google Search",
+  "url": "https://www.google.com/",
+  "instruction": "Search for the latest news title about the NBA team the Los Angeles Lakers.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

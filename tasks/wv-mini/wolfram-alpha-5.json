@@ -1,0 +1,11 @@
+{
+  "id": "wolfram-alpha-5",
+  "description": "WebVoyager task on Wolfram Alpha",
+  "url": "https://www.wolframalpha.com/",
+  "instruction": "Show the solution of y\"(z) + sin(y(z)) = 0 from wolframalpha.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "task": {
+    "id": "amazon-2",
+    "site": "amazon",
+    "instruction": "Find a gaming desktop with Windows 11 Home, and the disk size should be 1TB.",
+    "start_url": "https://www.amazon.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found several gaming desktops on Amazon that come with Windows 11 Home and a 1TB drive. Prices are in MYR because the site is set to ship to Malaysia.\n\nTop matches:\n- **CyberPowerPC Gamer Xtreme** (Core i5-14400F, RTX 5060 8GB, 16GB DDR5, 1TB PCIe 4.0 SSD, Windows 11 Home): MYR 6,486.28. It is rated 4.4 stars from 70 reviews and is marked as an Overall Pick.\n- **CyberPowerPC Gamer Master** (Ryzen 7 8700F, RTX 5060 Ti 8GB, 16GB DDR5, 1TB SSD, Windows 11 Home): MYR 6,088.46. It is rated 4.3 stars from 506 reviews.\n- **ZOTAC MEK Gaming PC** (Ryzen 5 5500, RTX 5060 8GB, 16GB DDR4, 1TB NVMe SSD, Windows 11 Home): MYR 4,464.86.\n- **KOTIN Gaming PC** (i5-14400F, RTX 5060 Ti, 16GB DDR4, 1TB NVMe SSD, Windows 11 Home): MYR 5,073.71. It is rated 4.5 stars.\n- **Skytech Azure 3** (Ryzen 7 5700, RTX 5060, 16GB, 1TB SSD): MYR 4,870.76. Its Windows 11 listing doesn't say Home.\n- **Budget option, NINGMEI** (Ryzen 5 5500, GTX 1660 Super, 16GB, 1TB NVMe, Windows 11 Home): MYR 3,368.93.\n- **Higher-end options:** iBUYPOWER Element (Ryzen 9 7900X, RTX 5070, 32GB, 1TB, MYR 9,335.66) and Alienware Aurora (RTX 5070, 1TB, 32GB; price is shown on its product page).\n\nI didn't add anything to the cart. I'd pick the CyberPowerPC Gamer Master for the best mix of reviews and specs. Tell me if you want a different budget or brand, or if you want one added to the cart.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Amazon results show multiple gaming desktops explicitly listing “1TB SSD” and “Windows 11 Home,” e.g., CyberPowerPC Gamer Xtreme and Gamer Master.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 10193,
+    "output_tokens": 149
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.amazon.com/s?k=gaming+desktop+windows+11+home+1TB",
+    "title": "Amazon.com : gaming desktop windows 11 home 1TB"
+  },
+  "final_screenshot": "screenshots/amazon-2.jpg",
+  "cost_usd": 0.23857,
+  "elapsed_s": 29.1,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 28
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.amazon.com/s?k=gaming+desktop+windows+11+home+1TB"
+      },
+      "ok": true,
+      "ms": 348
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 4
+    }
+  ]
+}

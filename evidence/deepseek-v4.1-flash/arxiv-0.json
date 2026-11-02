@@ -1,0 +1,72 @@
+{
+  "task": {
+    "id": "arxiv-0",
+    "site": "arxiv",
+    "instruction": "Search for the latest preprints about 'quantum computing'.",
+    "start_url": "https://arxiv.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Here are the newest arXiv preprints matching **\"quantum computing\"** (search sorted by announcement date, newest first — 58,983 total hits; the most recent batch is from **29 October 2026**):\n\n**Hardware & gates**\n- **arXiv:2610.40642** — *Comparison of entangling strategies for unitary synthesis* (Wunder, Weimer, Costa de Almeida). Compares ways to synthesize unitaries from entangling operations, aimed at trapped-ion hardware. 16 pp.\n- **arXiv:2610.40329** — *High-Fidelity Universal Quantum Gates in a Cryogenic Atom Array* (Jin, Seo, Shi, Lu, Thompson, Bakr). Neutral-atom tweezer arrays at cryogenic temperatures, where blackbody-radiation-induced Rydberg decay is the limiting error source.\n- **arXiv:2610.39670** — *Error-Corrected Quantum Optimization via Rydberg Atom Array Embeddings* (Byun et al.). Embedding general combinatorial optimization problems onto Rydberg maximum-independent-set hardware, with error correction.\n\n**Error correction & fault tolerance**\n- **arXiv:2610.40490** — *Fast and accurate neural triage decoding of ultra-high-rate quantum LDPC codes* (Hu et al.). Neural decoders for qLDPC codes, targeting the decoding bottleneck in fault-tolerant machines.\n- **arXiv:2610.40592** — *Toric codes all the way down: decoupling translation-invariant topological CSS codes in higher dimensions* (He, Wang, Song, Gu). Higher-dimensional topological CSS codes with transversal non-Clifford gates and single-shot decoding; includes Lean formalization.\n- **arXiv:2610.40052** — *Identifying Logical Operations from Syndrome Histories for qLDPC Codes* (Tan, Xu, Ding, Szefer). Recovering logical operations from syndrome data.\n- **arXiv:2610.40357** — *…* (Fu, Chakraborty, Gottesman) — quantum error correction work from Daniel Gottesman's group.\n\n**Algorithms & theory**\n- **arXiv:2610.40573** — *What Can Be Computed with Indefinite Causal Structure?* (Shmueli). Computational power of indefinite causal order.\n- **arXiv:2610.39702** — *Quantum Query Complexity of Tournament Solutions* (Arora, Kumar). Quantum vs. classical query complexity for Copeland set, uncovered set, top cycle.\n- **arXiv:2610.40393** — *Quantum Computing through Computational Imaging: Representations, Measurement, and Inference* (Kourousias et al.). Algebraic correspondence between imaging models and quantum states.\n\n**Applications & software**\n- **arXiv:2610.40561** — *Grow, Compress, and Perturb: A Hybrid Quantum-Classical Pathway to Scalable Quantum Chemistry on Quantum Computers* (Nogueira et al.). Introduces VULCAN, a Hamiltonian-gradient-free VQE variant for electronic structure.\n- **arXiv:2610.39847** — *Digital-Analog Quantum Neural Network with Long-Range Interactions* (Ge, Li, Zhang).\n- **arXiv:2610.39824** — *Enabling Dynamic Resource Scaling in Quantum Circuit Simulations* (Aréjula-Aísa et al.). Dynamic node allocation for state-vector simulation on HPC.\n\n**Adjacent / enabling tech**\n- **arXiv:2610.40612** — *Exceptional Points as Witnesses of Non-Gaussian Noise* (Ghosh, Banerjee, Bhattacharya). Characterizing realistic non-Gaussian device noise.\n- **arXiv:2610.39942** — *Majorana Zero Modes in Fractional Vortices* (Fang et al.). Topological quantum computing platform in iron-based superconductors.\n- **arXiv:2610.39873** — *Syndrome Trellis Decryption in Post-Quantum Cryptography* (Ariel). Post-quantum crypto, not quantum computing per se.\n\nIf you want, I can pull the full abstract of any of these, or narrow the search to a specific subfield (e.g. `cat:quant-ph` only, or superconducting qubits, or quantum machine learning).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent searched arXiv for “quantum computing,” sorted by newest announcement date, and reported supported latest results from the displayed page.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 12188,
+    "output_tokens": 34
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://arxiv.org/search/?query=quantum+computing&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+    "title": "Search | arXiv e-print repository"
+  },
+  "final_screenshot": "screenshots/arxiv-0.jpg",
+  "cost_usd": 0.00411149,
+  "elapsed_s": 26.7,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/list/quant-ph/recent"
+      },
+      "ok": true,
+      "ms": 172
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/search/?query=quantum+computing&searchtype=all&abstracts=show&order=-announced_date_first&size=50"
+      },
+      "ok": true,
+      "ms": 1296
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

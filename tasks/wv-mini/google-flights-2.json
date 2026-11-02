@@ -1,0 +1,11 @@
+{
+  "id": "google-flights-2",
+  "description": "WebVoyager task on Google Flights",
+  "url": "https://www.google.com/travel/flights/",
+  "instruction": "Find the lowest fare from all eligible one-way flights for 1 adult from JFK to Heathrow on Jan. 22.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

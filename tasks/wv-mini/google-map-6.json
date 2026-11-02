@@ -1,0 +1,11 @@
+{
+  "id": "google-map-6",
+  "description": "WebVoyager task on Google Map",
+  "url": "https://www.google.com/maps/",
+  "instruction": "Find all Uniqlo locations in Chicago, IL.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

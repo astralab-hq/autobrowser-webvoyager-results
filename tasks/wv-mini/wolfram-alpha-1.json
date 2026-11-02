@@ -1,0 +1,11 @@
+{
+  "id": "wolfram-alpha-1",
+  "description": "WebVoyager task on Wolfram Alpha",
+  "url": "https://www.wolframalpha.com/",
+  "instruction": "Give a constraint on the set of inequalities for the inner region of the pentagram.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "task": {
+    "id": "huggingface-7",
+    "site": "huggingface",
+    "instruction": "Which is the most downloaded audio related dataset on Hugging face currently.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The most downloaded audio dataset on Hugging Face right now is **espnet/yodas3**. It has about 405k downloads and 255 likes, and its listing shows 4.08M rows. It was updated 24 days ago. I got this from the Datasets page filtered to the Audio modality and sorted by \"Most downloads\". Hugging Face's download counts cover a recent window, not all time.\n\nThe next most downloaded are google/fleurs (about 179k) and Fhrozen/FSD50k (about 147k).\n\nLink: https://huggingface.co/datasets/espnet/yodas3",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The page is filtered to Audio and sorted by Most downloads, showing espnet/yodas3 first with 405k downloads, matching the final answer.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 5198,
+    "output_tokens": 36
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/datasets?modality=modality:audio&sort=downloads",
+    "title": "Audio Datasets – Hugging Face"
+  },
+  "final_screenshot": "screenshots/huggingface-7.jpg",
+  "cost_usd": 0.729868,
+  "elapsed_s": 20.6,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/datasets?task_categories=task_categories:automatic-speech-recognition&sort=downloads"
+      },
+      "ok": true,
+      "ms": 413
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/datasets?modality=modality:audio&sort=downloads"
+      },
+      "ok": true,
+      "ms": 363
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

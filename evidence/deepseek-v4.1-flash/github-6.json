@@ -1,0 +1,90 @@
+{
+  "task": {
+    "id": "github-6",
+    "site": "github",
+    "instruction": "Search for an open-source project related to 'cryptocurrency wallet' updated in the past 30 days and provide the top three contributors.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a strong match: **trustwallet/wallet-core** — \"Cross-platform, cross-blockchain wallet library\" (https://github.com/trustwallet/wallet-core).\n\n**Why it fits:** It's open source under the Apache-2.0 license, written primarily in C++, with 3,577 stars and 2,004 forks. It was last pushed on **2026-10-28**, well within the past 30 days (today is 2026-11-01), and its topics include cryptocurrency, crypto, bitcoin, ethereum, and blockchain.\n\n**Top three contributors (by commit count):**\n1. **hewigovens** — 345 contributions (https://github.com/hewigovens)\n2. **optout21** — 229 contributions (https://github.com/optout21)\n3. **satoshiotomakan** — 201 contributions (https://github.com/satoshiotomakan)\n\nFor context, the next contributors down the list are alejandro-isaza (177) and Milerius (163). The search that surfaced this repo (GitHub repository search for \"cryptocurrency wallet\" filtered to `pushed:>2026-10-02`, sorted by stars) returned 509 matching repositories; wallet-core was the second most-starred active result after dogecoin/dogecoin, which is a currency implementation rather than a wallet library.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The answer cites GitHub data: trustwallet/wallet-core is licensed Apache-2.0, pushed 2026-10-28, wallet/crypto related, and contributors API lists the top three.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 12853,
+    "output_tokens": 230
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://api.github.com/repos/trustwallet/wallet-core",
+    "title": ""
+  },
+  "final_screenshot": "screenshots/github-6.jpg",
+  "cost_usd": 0.00781622,
+  "elapsed_s": 33.4,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=cryptocurrency+wallet+pushed%3A%3E2026-10-02&type=repositories&s=stars&o=desc"
+      },
+      "ok": true,
+      "ms": 619
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://api.github.com/repos/trustwallet/wallet-core/contributors?per_page=5&anon=false"
+      },
+      "ok": true,
+      "ms": 454
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://api.github.com/repos/trustwallet/wallet-core"
+      },
+      "ok": true,
+      "ms": 535
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4500,
+        "offset": 3000
+      },
+      "ok": true,
+      "ms": 1
+    }
+  ]
+}

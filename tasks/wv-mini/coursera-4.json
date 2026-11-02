@@ -1,0 +1,11 @@
+{
+  "id": "coursera-4",
+  "description": "WebVoyager task on Coursera",
+  "url": "https://www.coursera.org/",
+  "instruction": "Identify a course or Specialization on Coursera that helps business process management with with a rating 4.7.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

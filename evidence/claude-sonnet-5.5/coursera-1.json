@@ -1,0 +1,112 @@
+{
+  "task": {
+    "id": "coursera-1",
+    "site": "coursera",
+    "instruction": "Search for a beginner-level online course about Python programming, suitable for someone who has no programming experience on Coursera.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I searched Coursera for \"python programming for beginners\" and applied the Beginner level filter. The results page is now open. The top matches for someone with no programming experience are:\n\n1. Python for Data Science, AI & Development (IBM, course)\n2. Python Basics (University of Michigan, course)\n3. Python Fundamentals - Variables, Loops, Functions & More (Packt, course)\n4. Python Programming Fundamentals (Microsoft, course)\n5. Programming for Everybody (Getting Started with Python) (University of Michigan, course)\n6. Crash Course on Python (Google, course)\n\nOther beginner options include Python Programming Essentials (Rice University), Programming in Python (Meta), Hello, Python! (Google) and the guided project Create Your First Python Program. I haven't opened any course pages, so I haven't checked ratings, duration or prerequisites. If you want one pick, \"Programming for Everybody (Getting Started with Python)\" is designed for people who have never programmed.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The final Coursera page shows search results for “python programming for beginners” with the Beginner filter and beginner Python courses listed.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 9317,
+    "output_tokens": 31
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/search?query=python%20programming%20for%20beginners&productDifficultyLevel=Beginner&sortBy=BEST_MATCH",
+    "title": "Coursera | Online Courses From Top Universities. Join for Free"
+  },
+  "final_screenshot": "screenshots/coursera-1.jpg",
+  "cost_usd": 0.361792,
+  "elapsed_s": 39.9,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 45
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "python programming for beginners",
+        "uid": "ref_1_8"
+      },
+      "ok": true,
+      "ms": 229
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 30
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_19"
+      },
+      "ok": true,
+      "ms": 268
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_1"
+      },
+      "ok": true,
+      "ms": 165
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_5"
+      },
+      "ok": false,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_5"
+      },
+      "ok": true,
+      "ms": 87
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3500
+      },
+      "ok": true,
+      "ms": 21
+    }
+  ]
+}

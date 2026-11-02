@@ -1,0 +1,11 @@
+{
+  "id": "arxiv-2",
+  "description": "WebVoyager task on ArXiv",
+  "url": "https://arxiv.org/",
+  "instruction": "Look up the most recent papers related to 'cs.CL', select one and show its abstract.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

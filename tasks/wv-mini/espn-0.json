@@ -1,0 +1,11 @@
+{
+  "id": "espn-0",
+  "description": "WebVoyager task on ESPN",
+  "url": "https://www.espn.com/",
+  "instruction": "Look up the current standings for the NBA Eastern Conference on ESPN.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

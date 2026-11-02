@@ -1,0 +1,11 @@
+{
+  "id": "google-search-4",
+  "description": "WebVoyager task on Google Search",
+  "url": "https://www.google.com/",
+  "instruction": "Show most played games in Steam. And tell me the number of players in In game at this time",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

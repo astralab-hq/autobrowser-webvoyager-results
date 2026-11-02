@@ -1,0 +1,11 @@
+{
+  "id": "allrecipes-6",
+  "description": "WebVoyager task on Allrecipes",
+  "url": "https://www.allrecipes.com/",
+  "instruction": "Search for a vegetarian lasagna recipe that has at least a four-star rating and over 500 reviews.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

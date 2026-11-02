@@ -1,0 +1,11 @@
+{
+  "id": "cambridge-dictionary-2",
+  "description": "WebVoyager task on Cambridge Dictionary",
+  "url": "https://dictionary.cambridge.org/",
+  "instruction": "Look up the pronunciation, definition, and example sentence for the word \"ubiquitous\" in UK and US English.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

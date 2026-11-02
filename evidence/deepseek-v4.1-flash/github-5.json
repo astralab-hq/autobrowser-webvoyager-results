@@ -1,0 +1,57 @@
+{
+  "task": {
+    "id": "github-5",
+    "site": "github",
+    "instruction": "Find a Python repository on GitHub that has been updated in the past 2 days and has at least 500 stars.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I ran a GitHub repository search with the filters `language:Python stars:>=500 pushed:>2026-10-30` (i.e. pushed within the last 2 days of today, Nov 1 2026), sorted by most recently updated. It returns 1.9k matching repositories; here are the ones on the first page:\n\n**Top pick — `langgenius/dify`** (https://github.com/langgenius/dify)\n- Language: Python · Stars: ~160,155\n- Topics: python, agent, workflow, automation, ai\n- Pushed within the last 2 days, per the filter\n- A widely used open-source LLM app development platform (agentic workflows, RAG, model-agnostic).\n\nOther qualifying repos from the same result set, if you want something smaller or more specialised:\n\n| Repository | Stars | Notes |\n|---|---|---|\n| `seedds/nxnative` | ~10,823 | Python, recently pushed |\n| `AboutRSS/ALL-about-RSS` | ~5,941 | Curated RSS/reader/Telegram tooling list |\n| `embeddings-benchmark/mteb` | ~3,487 | Massive Text Embedding Benchmark — NLP research |\n| `Faugus/faugus-launcher` | ~2,581 | Linux game/Proton launcher |\n| `0xMarcio/pocindex` | ~1,509 | Security proof-of-concept index |\n| `ros/rosdistro` | ~1,103 | ROS distributions metadata |\n| `NVIDIA/cudnn-frontend` | ~991 | CUDA/cuDNN deep-learning frontend |\n\nIf you'd prefer a specific domain (ML tooling, security, automation, etc.), tell me which and I'll narrow the search further — or I can open any of these repos for a look at its recent commits.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "GitHub search/page shows `langgenius/dify` is Python, ~160k stars, and updated seconds ago under query `language:Python stars:>=500 pushed:>2026-10-30`.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 7853,
+    "output_tokens": 217
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/search?q=language%3APython+stars%3A%3E%3D500+pushed%3A%3E2026-10-30&type=repositories&s=updated&o=desc",
+    "title": "Repository search results · GitHub"
+  },
+  "final_screenshot": "screenshots/github-5.jpg",
+  "cost_usd": 0,
+  "elapsed_s": 18.5,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 21
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=language%3APython+stars%3A%3E%3D500+pushed%3A%3E2026-10-30&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 668
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 22
+    }
+  ]
+}

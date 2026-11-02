@@ -1,0 +1,11 @@
+{
+  "id": "amazon-5",
+  "description": "WebVoyager task on Amazon",
+  "url": "https://www.amazon.com/",
+  "instruction": "Find a Blue iPhone 12 Pro 128gb and add to cart.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

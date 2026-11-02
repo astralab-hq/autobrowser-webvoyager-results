@@ -1,0 +1,11 @@
+{
+  "id": "coursera-2",
+  "description": "WebVoyager task on Coursera",
+  "url": "https://www.coursera.org/",
+  "instruction": "Find a Beginner's Spanish Specialization on Coursera and show all the courses in this Specialization.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

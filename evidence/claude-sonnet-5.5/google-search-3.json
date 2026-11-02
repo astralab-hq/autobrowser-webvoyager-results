@@ -1,0 +1,37 @@
+{
+  "task": {
+    "id": "google-search-3",
+    "site": "google-search",
+    "instruction": "Show me a list of comedy movies, sorted by user ratings. Show me the Top 5 movies.",
+    "start_url": "https://www.google.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a aws-waf bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0.457482,
+  "elapsed_s": 9.9,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.imdb.com/search/title/?genres=comedy&title_type=feature&sort=user_rating,desc&num_votes=10000,"
+      },
+      "ok": true,
+      "ms": 415
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all"
+      },
+      "ok": true,
+      "ms": 9
+    }
+  ]
+}

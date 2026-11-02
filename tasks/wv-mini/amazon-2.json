@@ -1,0 +1,11 @@
+{
+  "id": "amazon-2",
+  "description": "WebVoyager task on Amazon",
+  "url": "https://www.amazon.com/",
+  "instruction": "Find a gaming desktop with Windows 11 Home, and the disk size should be 1TB.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

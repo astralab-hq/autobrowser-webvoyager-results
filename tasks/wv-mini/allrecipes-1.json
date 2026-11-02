@@ -1,0 +1,11 @@
+{
+  "id": "allrecipes-1",
+  "description": "WebVoyager task on Allrecipes",
+  "url": "https://www.allrecipes.com/",
+  "instruction": "Find a recipe for a vegetarian lasagna that has at least a four-star rating and uses zucchini.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

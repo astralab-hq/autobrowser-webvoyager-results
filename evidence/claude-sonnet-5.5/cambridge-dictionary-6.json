@@ -1,0 +1,29 @@
+{
+  "task": {
+    "id": "cambridge-dictionary-6",
+    "site": "cambridge-dictionary",
+    "instruction": "Search for the word \"sustainability\" on the Cambridge Dictionary, what is the translation of sustainability into Chinese and French in the dictionary.",
+    "start_url": "https://dictionary.cambridge.org/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a cloudflare bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0.13218,
+  "elapsed_s": 17.7,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://dictionary.cambridge.org/dictionary/english-chinese-simplified/sustainability"
+      },
+      "ok": true,
+      "ms": 202
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Auto Browser WebVoyager-mini results
+
+The files under tasks/ are derived from:
+
+- WebVoyager, https://github.com/MinorJerry/WebVoyager
+  Licensed under the Apache License, Version 2.0.
+- Alumnium's patched WebVoyager task set,
+  https://github.com/alumnium-hq/WebVoyager/tree/alumnium/data
+  Licensed under the Apache License, Version 2.0.
+
+tasks/wv-mini-patches.json lists each change made to those tasks, with its reason.

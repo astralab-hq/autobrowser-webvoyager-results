@@ -1,0 +1,11 @@
+{
+  "id": "google-flights-1",
+  "description": "WebVoyager task on Google Flights",
+  "url": "https://www.google.com/travel/flights/",
+  "instruction": "Show me the list of one-way flights on {{date+30}} from Chicago to Paris.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

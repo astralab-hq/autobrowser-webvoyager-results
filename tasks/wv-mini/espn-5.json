@@ -1,0 +1,11 @@
+{
+  "id": "espn-5",
+  "description": "WebVoyager task on ESPN",
+  "url": "https://www.espn.com/",
+  "instruction": "Identify the top scorer in the NBA from the latest completed game and note down the points scored, the team they play for, and their position on the team.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

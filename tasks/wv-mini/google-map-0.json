@@ -1,0 +1,11 @@
+{
+  "id": "google-map-0",
+  "description": "WebVoyager task on Google Map",
+  "url": "https://www.google.com/maps/",
+  "instruction": "Find 5 beauty salons with ratings greater than 4.8 in Seattle, WA.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

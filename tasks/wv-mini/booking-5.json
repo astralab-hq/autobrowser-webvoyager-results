@@ -1,0 +1,11 @@
+{
+  "id": "booking-5",
+  "description": "WebVoyager task on Booking",
+  "url": "https://www.booking.com/",
+  "instruction": "Search a hotel with free WiFi and air conditioning in Bali from {{date+60}} to {{date+63}}.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "task": {
+    "id": "google-search-2",
+    "site": "google-search",
+    "instruction": "Search for the latest news title about the NBA team the Los Angeles Lakers.",
+    "start_url": "https://www.google.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a google bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": -0.457482,
+  "elapsed_s": 5.8,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.google.com/search?q=Los+Angeles+Lakers+latest+news&tbm=nws"
+      },
+      "ok": true,
+      "ms": 211
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all"
+      },
+      "ok": true,
+      "ms": 17
+    }
+  ]
+}

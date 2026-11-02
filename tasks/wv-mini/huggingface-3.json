@@ -1,0 +1,11 @@
+{
+  "id": "huggingface-3",
+  "description": "WebVoyager task on Huggingface",
+  "url": "https://huggingface.co/",
+  "instruction": "Look up a model with a license of cc-by-sa-4.0 with the most likes on Hugging face.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

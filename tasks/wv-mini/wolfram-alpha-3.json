@@ -1,0 +1,11 @@
+{
+  "id": "wolfram-alpha-3",
+  "description": "WebVoyager task on Wolfram Alpha",
+  "url": "https://www.wolframalpha.com/",
+  "instruction": "Let g(x) be the integral of x^2 cos(2x). Write the expression of g(x).",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

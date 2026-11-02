@@ -1,0 +1,29 @@
+{
+  "task": {
+    "id": "cambridge-dictionary-1",
+    "site": "cambridge-dictionary",
+    "instruction": "Find the pronunciation, definition, and a sample sentence for the word 'serendipity'.",
+    "start_url": "https://dictionary.cambridge.org/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a cloudflare bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0,
+  "elapsed_s": 10.5,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://dictionary.cambridge.org/dictionary/english/serendipity"
+      },
+      "ok": true,
+      "ms": 245
+    }
+  ]
+}

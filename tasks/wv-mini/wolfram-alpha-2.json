@@ -1,0 +1,11 @@
+{
+  "id": "wolfram-alpha-2",
+  "description": "WebVoyager task on Wolfram Alpha",
+  "url": "https://www.wolframalpha.com/",
+  "instruction": "Calculate 3^71 and retain 5 significant figures in scientific notation.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

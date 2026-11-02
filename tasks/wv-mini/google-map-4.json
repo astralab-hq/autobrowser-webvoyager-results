@@ -1,0 +1,11 @@
+{
+  "id": "google-map-4",
+  "description": "WebVoyager task on Google Map",
+  "url": "https://www.google.com/maps/",
+  "instruction": "Plan a trip from Boston Logan Airport to North Station.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

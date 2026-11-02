@@ -1,0 +1,11 @@
+{
+  "id": "allrecipes-5",
+  "description": "WebVoyager task on Allrecipes",
+  "url": "https://www.allrecipes.com/",
+  "instruction": "Search for a popular Pasta Sauce with more than 1000 reviews and a rating above 4 stars. Create a shopping list of ingredients for this recipe.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

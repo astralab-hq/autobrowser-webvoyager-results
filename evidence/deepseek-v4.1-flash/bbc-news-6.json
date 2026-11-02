@@ -1,0 +1,80 @@
+{
+  "task": {
+    "id": "bbc-news-6",
+    "site": "bbc-news",
+    "instruction": "Find the top story from BBC News in the technology section for today.",
+    "start_url": "https://www.bbc.com/news/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Today's top story in BBC News' Technology section is **\"These firms you've never heard of are feeding fears the AI bubble could burst\"** by Lily Jamali (North America Technology correspondent, San Francisco), published about 13 hours ago.\n\nIt's about \"neocloud\" companies — data centre firms like CoreWeave and Nebius that run warehouses full of expensive AI hardware and lease the computing power to major AI developers such as Anthropic, OpenAI and Meta. They've become the centre of one of Silicon Valley's most heated debates over whether they're financially sound, and what their recent stumbles say about the health of the AI economy.\n\nThe core worry is debt. Neoclouds sign long-term leases with big tech customers, then borrow against those contracts and the AI chips they buy as collateral — CoreWeave alone has accumulated $35.1bn (£26.3bn) in debt. Investors are getting jittery: CoreWeave stock has lost a quarter of its value in the past month, with Nebius, IREN and Applied Digital down similarly or more, and debt investors demanding ever-higher returns. Analysts at Gartner predict 80% of neocloud firms will cease independent operations by 2030, while Forrester expects at least three to be imminently acquired as finances get shaky. Treasury Secretary Scott Bessent has tried to downplay the concerns, calling the sector \"a small component of the overall ecosystem.\"\n\nRunners-up on the page: \"Crypto firm Binance covers 90% of losses after $6.3bn hack\" (the FBI says North Korea was responsible) and \"Our tech columnist answers your biggest AI questions.\"",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The BBC Technology page showed this headline as the lead story, and the opened article confirms the title, author, and “13 hours ago” timestamp.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 8035,
+    "output_tokens": 36
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.bbc.com/news/articles/cje36degrgv5o",
+    "title": "Neoclouds: These firms you've never heard of are feeding fears the AI bubble could burst"
+  },
+  "final_screenshot": "screenshots/bbc-news-6.jpg",
+  "cost_usd": 0.00493449,
+  "elapsed_s": 61.5,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.bbc.com/news/technology"
+      },
+      "ok": true,
+      "ms": 251
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "get_element_info",
+      "args": {
+        "uid": "ref_1_36"
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_36"
+      },
+      "ok": true,
+      "ms": 184
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500
+      },
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

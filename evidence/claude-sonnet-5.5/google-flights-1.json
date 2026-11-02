@@ -1,0 +1,220 @@
+{
+  "task": {
+    "id": "google-flights-1",
+    "site": "google-flights",
+    "instruction": "Show me the list of one-way flights on {{date+30}} from Chicago to Paris.",
+    "start_url": "https://www.google.com/travel/flights/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Here are the one-way flights from Chicago to Paris on Monday, November 30, 2026 (1 adult, Economy). Google Flights returned 11 results, and I've listed the 10 that appeared on the page. Prices are in MYR.\n\n**Top flights**\n1. 11:00 AM ORD → 9:20 AM+1 CDG, JetBlue, 15 hr 20 min, 1 stop (BOS, 5 hr 51 min long layover), **MYR 1,514**\n2. 6:25 PM ORD → 9:35 AM+1 CDG, Air France/Delta, 8 hr 10 min, nonstop, **MYR 2,117**\n3. 6:45 PM ORD → 9:55 AM+1 CDG, United/Lufthansa/Brussels Airlines, 8 hr 10 min, nonstop, **MYR 2,117**\n4. 9:35 PM ORD → 12:40 PM+1 CDG, American/Iberia/Finnair, 8 hr 5 min, nonstop, **MYR 2,117**\n\n**Other flights**\n5. 6:30 PM ORD → 12:00 PM+1 CDG, Icelandair, 10 hr 30 min, 1 stop (KEF, 45 min), **MYR 2,089**\n6. 9:50 PM ORD → 3:20 PM+1 CDG, British Airways, 10 hr 30 min, 1 stop (LHR, 1 hr 25 min), **MYR 2,106**\n7. 9:50 PM ORD → 7:40 PM+1 CDG, British Airways/American, 14 hr 50 min, 1 stop (LHR, 5 hr 40 min long layover), **MYR 2,106**\n8. 3:55 PM ORD → 9:35 AM+1 CDG, Aer Lingus, 10 hr 40 min, 1 stop (DUB, 1 hr 25 min), **MYR 2,110**\n9. 8:05 PM ORD → 4:05 PM+1 CDG, Aer Lingus, 13 hr, 1 stop (DUB, 3 hr 45 min), **MYR 2,110**\n10. 1:31 PM MDW → 8:10 AM+1 CDG, Delta/KLM/Virgin Atlantic, 11 hr 39 min, 1 stop (DTW, 2 hr 31 min), **MYR 2,135**\n11. 5:40 PM ORD → 12:00 PM+1 ORY (Orly), Iberia/American/British Airways/Finnair, 11 hr 20 min, 1 stop (MAD, 1 hr 5 min), **MYR 2,151**\n\nThe cheapest fare is MYR 1,514 (JetBlue via Boston). The cheapest nonstop is MYR 2,117. Google also notes that travelling on Nov 29 would cost about MYR 913.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page shows one-way Chicago to Paris on Mon Nov 30 with 11 results, and the answer lists supported flight details from Google Flights.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 17359,
+    "output_tokens": 35
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.google.com/travel/flights/search?tfs=CBwQAhooEgoyMDI2LTExLTMwagwIAxIIL20vMDFfZDRyDAgDEggvbS8wNXF0akABSAFwAYIBCwj___________8BmAEC",
+    "title": "Chicago to Paris | Google Flights"
+  },
+  "final_screenshot": "screenshots/google-flights-1.jpg",
+  "cost_usd": 1.675448,
+  "elapsed_s": 78.1,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_10"
+      },
+      "ok": true,
+      "ms": 91
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_2"
+      },
+      "ok": true,
+      "ms": 91
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_13"
+      },
+      "ok": true,
+      "ms": 78
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "text": "Chicago",
+        "uid": "ref_7_1"
+      },
+      "ok": true,
+      "ms": 62
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_9_3"
+      },
+      "ok": true,
+      "ms": 72
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_11_14"
+      },
+      "ok": true,
+      "ms": 75
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_13_6"
+      },
+      "ok": true,
+      "ms": 72
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_15_16"
+      },
+      "ok": true,
+      "ms": 101
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 54
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_17_33"
+      },
+      "ok": true,
+      "ms": 85
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 1500
+      },
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Done button in date picker",
+        "limit": 2
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "offset": 300
+      },
+      "ok": true,
+      "ms": 58
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_20_326"
+      },
+      "ok": true,
+      "ms": 74
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 9
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_22_14"
+      },
+      "ok": true,
+      "ms": 82
+    },
+    {
+      "tool": "wait_for_network_idle",
+      "args": {},
+      "ok": true,
+      "ms": 534
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 69
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "google-map-3",
+  "description": "WebVoyager task on Google Map",
+  "url": "https://www.google.com/maps/",
+  "instruction": "The least amount of walking from Central Park Zoo to the Broadway Theater in New York.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "arxiv-5",
+  "description": "WebVoyager task on ArXiv",
+  "url": "https://arxiv.org/",
+  "instruction": "Search papers about \"quantum computing\" which has been submitted to the Quantum Physics category on ArXiv. How many results in total. What if search in all archives?",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "espn-1",
+  "description": "WebVoyager task on ESPN",
+  "url": "https://www.espn.com/",
+  "instruction": "Check the latest articles on ESPN for updates on any trades that occurred in the NBA within the past 2 days.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

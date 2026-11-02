@@ -1,0 +1,119 @@
+{
+  "task": {
+    "id": "wolfram-alpha-6",
+    "site": "wolfram-alpha",
+    "instruction": "Simplify x^5-20x^4+163x^3-676x^2+1424x-1209 so that it has fewer items.",
+    "start_url": "https://www.wolframalpha.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-02",
+  "status": "fail",
+  "pass": false,
+  "final_answer": "**It doesn't simplify — x^5 − 20x^4 + 163x^3 − 676x^2 + 1424x − 1209 is irreducible over the integers.**\n\nWolfram|Alpha's result page confirms this: it returns no integer factorization, only \"Factorization over the complexes\" (the five numerical roots) and \"Factorizations over finite fields.\" A quick proof: reduce the coefficients mod 2. Since −20 → 0, 163 → 1, −676 → 0, 1424 → 0 and −1209 → 1, the polynomial becomes x^5 + x^3 + 1 over GF(2). That residue has no root (1+1+1 = 1 ≠ 0), is not divi… [+424 chars]",
+  "judge": {
+    "verdict": "FAILURE",
+    "rationale": "They only checked integer factorization; the polynomial has a fewer-term form, e.g. (x−4)^5 + 3(x−4)^3 + 7.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": null,
+    "output_tokens": null
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.wolframalpha.com/input?i=factor+x%5E5-20x%5E4%2B163x%5E3-676x%5E2%2B1424x-1209+over+the+integers",
+    "title": "factor x^5-20x^4+163x^3-676x^2+1424x-1209 over the integers - Wolfram|Alpha"
+  },
+  "final_screenshot": null,
+  "cost_usd": 0.01236579,
+  "elapsed_s": 129.8,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "factor x^5-20x^4+163x^3-676x^2+1424x-1209",
+        "uid": "ref_1_7"
+      },
+      "ok": true,
+      "ms": 267
+    },
+    {
+      "tool": "wait_for_network_idle",
+      "args": {
+        "idle_ms": 800,
+        "timeout_ms": 15000
+      },
+      "ok": true,
+      "ms": 813
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 3000
+      },
+      "ok": true,
+      "ms": 10
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 8
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "factor x^5-20x^4+163x^3-676x^2+1424x-1209 over the integers",
+        "uid": "ref_4_17"
+      },
+      "ok": true,
+      "ms": 5080
+    },
+    {
+      "tool": "wait_for_network_idle",
+      "args": {
+        "idle_ms": 800,
+        "timeout_ms": 15000
+      },
+      "ok": true,
+      "ms": 829
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 4000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 2500
+      },
+      "ok": true,
+      "ms": 10
+    }
+  ]
+}

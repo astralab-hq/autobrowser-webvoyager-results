@@ -1,0 +1,11 @@
+{
+  "id": "bbc-news-0",
+  "description": "WebVoyager task on BBC News",
+  "url": "https://www.bbc.com/news/",
+  "instruction": "Find a report on the BBC News website about recent developments in renewable energy technologies in the UK.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

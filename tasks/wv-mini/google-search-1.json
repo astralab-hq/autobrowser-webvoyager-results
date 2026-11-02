@@ -1,0 +1,11 @@
+{
+  "id": "google-search-1",
+  "description": "WebVoyager task on Google Search",
+  "url": "https://www.google.com/",
+  "instruction": "Find Kevin Durant's bio",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

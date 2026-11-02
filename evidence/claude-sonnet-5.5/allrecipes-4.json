@@ -1,0 +1,75 @@
+{
+  "task": {
+    "id": "allrecipes-4",
+    "site": "allrecipes",
+    "instruction": "Find a recipe for Baked Salmon that takes less than 30 minutes to prepare and has at least a 4 star rating based on user reviews.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a recipe that fits: **Baked Dijon Salmon** on Allrecipes (https://www.allrecipes.com/recipe/21176/baked-dijon-salmon/).\n\n- **Rating:** 4.6 out of 5 from 3,745 ratings and 2,684 reviews.\n- **Prep time:** 15 minutes, which is under your 30-minute limit.\n- **Cook time:** 15 minutes, so the total is 30 minutes.\n- **Servings:** 4.\n- **Method:** Brush salmon fillets with a mix of butter, Dijon mustard and honey. Top them with a pecan, bread crumb and parsley crust. Bake at 400°F (200°C) for 12 to 15 minutes.\n\nIf you want the *total* time to be under 30 minutes, the page lists \"Baked Salmon Fillets Dijon\" at 25 minutes total. It has 1,590 ratings, but I didn't check its star rating.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page shows Baked Dijon Salmon with 4.6 rating from 3,745 ratings and prep time 15 mins, satisfying baked salmon, <30 min prep, and ≥4 stars.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 9224,
+    "output_tokens": 46
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/recipe/21176/baked-dijon-salmon/",
+    "title": "Baked Dijon Salmon Recipe"
+  },
+  "final_screenshot": "screenshots/allrecipes-4.jpg",
+  "cost_usd": 0,
+  "elapsed_s": 42.1,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/search?q=baked+salmon"
+      },
+      "ok": true,
+      "ms": 591
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Baked Dijon Salmon result link"
+      },
+      "ok": false,
+      "ms": 11
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_53"
+      },
+      "ok": true,
+      "ms": 163
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

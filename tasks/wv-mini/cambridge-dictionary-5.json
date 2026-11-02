@@ -1,0 +1,11 @@
+{
+  "id": "cambridge-dictionary-5",
+  "description": "WebVoyager task on Cambridge Dictionary",
+  "url": "https://dictionary.cambridge.org/",
+  "instruction": "Learn the UK and US pronunciation of the word \"procrastination\", and find one example sentence that reflects its use in context.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

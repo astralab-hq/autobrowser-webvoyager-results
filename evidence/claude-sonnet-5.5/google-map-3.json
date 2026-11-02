@@ -1,0 +1,91 @@
+{
+  "task": {
+    "id": "google-map-3",
+    "site": "google-map",
+    "instruction": "The least amount of walking from Central Park Zoo to the Broadway Theater in New York.",
+    "start_url": "https://www.google.com/maps/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "If you count a taxi or rideshare, that route has the least walking. Google Maps shows a 1.0 mi drive taking about 14 min via 5th Ave and W 55th St. It is the fastest route right now and avoids road closures. You would barely walk at all.\n\nIf you want to use public transit, the subway route has the least walking, about 0.4 mi in total. Google Maps estimates 12 min door to door and a $3.00 fare.\n1. **Walk to the station (about 4 min, 0.2 mi):** From Central Park Zoo, head toward Wien Walk. Turn left toward 5th Ave, then right onto 5th Ave. Enter the 5 Av/59 St station at the NW corner of 5th Ave and 60th St.\n2. **Ride the subway (3 min, non-stop):** Take the N or R train from 5 Av/59 St to 57 St-7 Av. Trains run about every 7 min.\n3. **Walk to the theatre (about 5 min, 0.2 mi):** Exit at 7th Ave and 55th St. Head toward W 55th St, turn right onto W 53rd St, then left onto Broadway. The Broadway Theatre (1681 Broadway) will be on your right.\n\nWalking the whole way is 0.9 mi and about 20 min via 7th Ave. Cycling takes about 11 min.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Google Maps evidence shows transit route with 0.2 mi + 0.2 mi walking; agent reported it and noted taxi/rideshare would have minimal walking.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 8047,
+    "output_tokens": 40
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.google.com/maps/dir/Central+Park+Zoo,+New+York,+NY+10021,+United+States/Broadway+Theatre,+1681+Broadway,+New+York,+NY+10019,+United+States/@40.7647089,-73.9871557,15z/am=t/data=!3m1!5s0x89c25857da0bda21:0x9c63b2c2f563f9e2!4m13!4m12!1m5!1m1!1s0x89c258f1fcd66869:0x65d72e84d91a3f14!2m2!1d-73.9719906!2d40.7677061!1m5!1m1!1s0x89c2585665784711:0x5bbfed74cc606bf6!2m2!1d-73.983051!2d40.7632593?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+    "title": "Central Park Zoo to Broadway Theatre - Google Maps"
+  },
+  "final_screenshot": "screenshots/google-map-3.jpg",
+  "cost_usd": 0.066092,
+  "elapsed_s": 37.8,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 12
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 164
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "fill_form",
+      "args": {
+        "entries": [
+          {
+            "text": "Central Park Zoo, New York",
+            "uid": "ref_3_9"
+          },
+          {
+            "press_enter": true,
+            "text": "Broadway Theater, New York",
+            "uid": "ref_3_12"
+          }
+        ]
+      },
+      "ok": true,
+      "ms": 80
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all"
+      },
+      "ok": true,
+      "ms": 12
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_48"
+      },
+      "ok": true,
+      "ms": 76
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 26
+    }
+  ]
+}

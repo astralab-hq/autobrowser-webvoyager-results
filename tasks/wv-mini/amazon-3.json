@@ -1,0 +1,11 @@
+{
+  "id": "amazon-3",
+  "description": "WebVoyager task on Amazon",
+  "url": "https://www.amazon.com/",
+  "instruction": "Find climbing gears and sort the results by price high to low. Answer the first 3 results after sorting.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

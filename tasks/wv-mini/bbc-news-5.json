@@ -1,0 +1,11 @@
+{
+  "id": "bbc-news-5",
+  "description": "WebVoyager task on BBC News",
+  "url": "https://www.bbc.com/news/",
+  "instruction": "Find the article \"What is climate change? A really simple guide\" and use it to answer what human activities are causing climate change.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "cambridge-dictionary-0",
+  "description": "WebVoyager task on Cambridge Dictionary",
+  "url": "https://dictionary.cambridge.org/",
+  "instruction": "Look up the pronunciation and definition of the word \"sustainability\" on the Cambridge Dictionary.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

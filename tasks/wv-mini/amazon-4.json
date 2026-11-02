@@ -1,0 +1,11 @@
+{
+  "id": "amazon-4",
+  "description": "WebVoyager task on Amazon",
+  "url": "https://www.amazon.com/",
+  "instruction": "Find the used Nintendo Switch Lite on Amazon then filter by 'Used - Good', tell me the cheapest one that is 'Used - Good'.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

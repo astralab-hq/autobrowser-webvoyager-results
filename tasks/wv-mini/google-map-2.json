@@ -1,0 +1,11 @@
+{
+  "id": "google-map-2",
+  "description": "WebVoyager task on Google Map",
+  "url": "https://www.google.com/maps/",
+  "instruction": "Find Apple Stores close to zip code 90028",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

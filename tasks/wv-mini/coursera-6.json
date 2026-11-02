@@ -1,0 +1,11 @@
+{
+  "id": "coursera-6",
+  "description": "WebVoyager task on Coursera",
+  "url": "https://www.coursera.org/",
+  "instruction": "Identify a course on Coursera related to 'Artificial Intelligence for Healthcare' and note the course duration along with the number of quizzes in Assessments.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

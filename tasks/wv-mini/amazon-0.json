@@ -1,0 +1,11 @@
+{
+  "id": "amazon-0",
+  "description": "WebVoyager task on Amazon",
+  "url": "https://www.amazon.com/",
+  "instruction": "Search an Xbox Wireless controller with green color and rated above 4 stars.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

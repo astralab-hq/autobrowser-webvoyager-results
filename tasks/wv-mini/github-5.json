@@ -1,0 +1,11 @@
+{
+  "id": "github-5",
+  "description": "WebVoyager task on GitHub",
+  "url": "https://github.com/",
+  "instruction": "Find a Python repository on GitHub that has been updated in the past 2 days and has at least 500 stars.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

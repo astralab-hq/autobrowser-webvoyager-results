@@ -1,0 +1,11 @@
+{
+  "id": "arxiv-3",
+  "description": "WebVoyager task on ArXiv",
+  "url": "https://arxiv.org/",
+  "instruction": "Locate the most recent research paper about 'Algebraic Topology' under Mathematics published on ArXiv. Provide the title of the paper, the name of the authors, and the abstract.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

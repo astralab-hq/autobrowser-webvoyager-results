@@ -1,0 +1,11 @@
+{
+  "id": "bbc-news-6",
+  "description": "WebVoyager task on BBC News",
+  "url": "https://www.bbc.com/news/",
+  "instruction": "Find the top story from BBC News in the technology section for today.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

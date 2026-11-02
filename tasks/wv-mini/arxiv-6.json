@@ -1,0 +1,11 @@
+{
+  "id": "arxiv-6",
+  "description": "WebVoyager task on ArXiv",
+  "url": "https://arxiv.org/",
+  "instruction": "How many figures and tables are in the paper \"On the Sentence Embeddings from Pre-trained Language Models\"?",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

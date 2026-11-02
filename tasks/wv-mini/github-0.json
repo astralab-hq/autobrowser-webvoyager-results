@@ -1,0 +1,11 @@
+{
+  "id": "github-0",
+  "description": "WebVoyager task on GitHub",
+  "url": "https://github.com/",
+  "instruction": "Search for an open-source project related to 'climate change data visualization' on GitHub and report the project with the most stars.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

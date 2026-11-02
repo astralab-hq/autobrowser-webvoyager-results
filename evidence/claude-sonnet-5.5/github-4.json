@@ -1,0 +1,61 @@
+{
+  "task": {
+    "id": "github-4",
+    "site": "github",
+    "instruction": "Find a popular JavaScript repository created in the last 30 days on GitHub with a Readme file.",
+    "start_url": "https://github.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I recommend **wheresryan22/anatomy** (https://github.com/wheresryan22/anatomy).\n\n- **Why it fits:** It came up as the top result when I searched for JavaScript repositories created after 2026-10-01 (the last 30 days), sorted by stars. I didn't open the repository's page to check its creation date directly. It has about 23.2k stars and 1.9k forks.\n- **What it is:** An agent skill, mainly for Claude, that builds detailed, interactive isometric illustrations of real-world machines and complex systems. It produces SVGs with optional WebGL shaders and 3D effects.\n- **README:** It has a full README.md. The README covers a quick start (`npx skills add wheresryan22/anatomy -g`), a gallery, install and usage instructions, examples, how it works, and limits. The repository also includes a LICENSE (MIT), CONTRIBUTING.md, and a CHANGELOG.\n- **Activity:** It has 153 commits, 13 branches, 15 open issues, and 55 open pull requests. The latest commit is \"Printable sheets: A4 and Letter PDFs from any figure (#126)\".\n\nOther popular new JavaScript repositories in the same results include HeyPuter/everything (6.1k stars) and alchaincyf/huashu-art-motion (5.8k stars).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "GitHub search was filtered to JavaScript repos created after 2026-10-01 and sorted by stars; the chosen repo shows 23.2k stars and README.md.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 7312,
+    "output_tokens": 528
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/wheresryan22/anatomy",
+    "title": "GitHub - wheresryan22/anatomy: An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects. · GitHub"
+  },
+  "final_screenshot": "screenshots/github-4.jpg",
+  "cost_usd": 0.216354,
+  "elapsed_s": 28.5,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=language%3AJavaScript+created%3A%3E2026-10-01&type=repositories&s=stars&o=desc"
+      },
+      "ok": true,
+      "ms": 716
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/wheresryan22/anatomy"
+      },
+      "ok": true,
+      "ms": 156
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

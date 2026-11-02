@@ -1,0 +1,11 @@
+{
+  "id": "bbc-news-1",
+  "description": "WebVoyager task on BBC News",
+  "url": "https://www.bbc.com/news/",
+  "instruction": "Read the latest health-related news article published on BBC News and summarize the key points discussed.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

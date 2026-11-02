@@ -1,0 +1,95 @@
+{
+  "task": {
+    "id": "github-1",
+    "site": "github",
+    "instruction": "Search for an open-source repository for machine learning in Python, specifically focused on decision trees, updated within the last 2 days.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Found it: **cgrtml/neural-trees** — https://github.com/cgrtml/neural-trees\n\n**What it is:** A scikit-learn–compatible Python library for soft decision trees, mixtures of experts, and statistical model-comparison tests, with a PyTorch backend (GPU/MPS support). It implements classic algorithms from research papers (Soft Decision Trees, HMoE, DistilledTree, plus a 5×2cv F-test for classifier comparison) and installs via `pip install neural-trees`.\n\n**Why it matches your filters:**\n- **Python + ML + decision trees:** the repo's own topics are `python`, `machine-learning`, `deep-learning`, `sklearn`, `pytorch`; the README leads with \"Soft decision trees, mixture of experts… for Python.\"\n- **Updated within the last 2 days:** the commits page shows a large batch of commits **on Nov 1, 2026** (today) — the latest being \"munge_lgbm results at 03f5f6b: the MUNGE gain holds with a LightGBM teacher\" (`6ae98f0`) in a 221-commit history.\n- **Open source:** MIT license, public repo, 38 stars / 4 forks, 10 tags, plus docs, notebooks, benchmarks, and a Streamlit playground (`app.py`).\n\nI found it via GitHub's repository search filtered with `decision tree language:Python pushed:>2026-10-30`, sorted by most recently updated. That search returned about 70 hits, but most were one-off class assignments or small project repos (e.g. credit-card-fraud, student-performance notebooks); neural-trees was the only mature, library-quality project at the top of the recency-sorted list. If you'd prefer something more narrowly \"classic\" decision trees (CART/ID3 teaching implementations) rather than neural soft trees, say so and I'll dig deeper into the remaining pages.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "GitHub search and repo pages show cgrtml/neural-trees is public MIT, Python ML decision-trees-focused, with commits on Nov 1, 2026 (within 2 days).",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 10045,
+    "output_tokens": 47
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/cgrtml/neural-trees/commits/main",
+    "title": "Commits · cgrtml/neural-trees · GitHub"
+  },
+  "final_screenshot": "screenshots/github-1.jpg",
+  "cost_usd": 0.00235884,
+  "elapsed_s": 34,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=decision+tree+language%3APython+pushed%3A%3E2026-10-30&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 493
+    },
+    {
+      "tool": "wait_for_network_idle",
+      "args": {
+        "idle_ms": 500,
+        "timeout_ms": 10000
+      },
+      "ok": true,
+      "ms": 532
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 8000
+      },
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/cgrtml/neural-trees"
+      },
+      "ok": true,
+      "ms": 731
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/cgrtml/neural-trees/commits/main"
+      },
+      "ok": true,
+      "ms": 900
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500
+      },
+      "ok": true,
+      "ms": 1
+    }
+  ]
+}

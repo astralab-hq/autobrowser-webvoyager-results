@@ -1,0 +1,11 @@
+{
+  "id": "huggingface-0",
+  "description": "WebVoyager task on Huggingface",
+  "url": "https://huggingface.co/",
+  "instruction": "Find a pre-trained natural language processing model on Hugging Face that can perform sentiment analysis, and make sure the model's last update is within March 2023.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

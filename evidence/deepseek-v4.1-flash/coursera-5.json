@@ -1,0 +1,106 @@
+{
+  "task": {
+    "id": "coursera-5",
+    "site": "coursera",
+    "instruction": "Identify a Specialization on Coursera that teaches C++ programming for beginners, provide the name and what the learning outcomes are.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Specialization: Programming in C++: A Hands-on Introduction — offered by Codio on Coursera. It is a 4-course series at Beginner level, about 4 weeks at 10 hours per week, rated 4.6 from 1,333 reviews, with 44,069+ learners enrolled, taught in English, and includes a shareable certificate.\n\nStated learning outcomes (What you'll learn):\n- Automate everyday, repetitive tasks using C++ programs\n- Create engaging, graphical-based programs\n- Develop a firm foundation of Computer Science concepts you can bring to any language you learn\n\nSkills you'll gain: Code Reusability, Memory Management, Maintainability, Computer Science, Programming Principles, Software Documentation, Object-Oriented Programming (OOP), Data Integrity, and Data Structures. The core tool is the C++ programming language.\n\nStructure (4 courses, roughly 9 hours each):\n1. C++ Basics: Selection and Iteration\n2. C++ Basic Structures: Vectors, Pointers, Strings, and Files\n3. C++ Object Basics: Functions, Recursion, and Objects\n4. Object-Oriented C++: Inheritance and Encapsulation\n\nWho it is for: People with no prior programming experience who want to build C++ skills plus the underlying computer science concepts that make learning other languages easier. It covers fundamentals through object-oriented design, enough to write small automation programs up to larger applications, and to move on to specialized areas such as Data Science and Artificial Intelligence.\n\nApplied learning project: Learners build practical programs such as an automated file updater, and later projects produce graphical output and animations using the CImg library.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final answer identifies the Coursera C++ beginner specialization and lists “What you’ll learn” outcomes shown on the page.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 10872,
+    "output_tokens": 30
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/specializations/hands-on-cpp",
+    "title": "Programming in C++: A Hands-on Introduction | Coursera"
+  },
+  "final_screenshot": "screenshots/coursera-5.jpg",
+  "cost_usd": 0.01433585,
+  "elapsed_s": 44.2,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 33
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "C++ programming for beginners",
+        "uid": "ref_1_8"
+      },
+      "ok": true,
+      "ms": 216
+    },
+    {
+      "tool": "wait_for_network_idle",
+      "args": {
+        "idle_ms": 800,
+        "timeout_ms": 10000
+      },
+      "ok": true,
+      "ms": 1650
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_47"
+      },
+      "ok": true,
+      "ms": 955
+    },
+    {
+      "tool": "wait_for_network_idle",
+      "args": {
+        "idle_ms": 800,
+        "timeout_ms": 10000
+      },
+      "ok": true,
+      "ms": 1379
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/specializations/hands-on-cpp"
+      },
+      "ok": true,
+      "ms": 586
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000
+      },
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

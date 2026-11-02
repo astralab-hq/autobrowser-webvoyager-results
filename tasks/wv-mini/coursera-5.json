@@ -1,0 +1,11 @@
+{
+  "id": "coursera-5",
+  "description": "WebVoyager task on Coursera",
+  "url": "https://www.coursera.org/",
+  "instruction": "Identify a Specialization on Coursera that teaches C++ programming for beginners, provide the name and what the learning outcomes are.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

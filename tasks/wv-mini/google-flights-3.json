@@ -1,0 +1,11 @@
+{
+  "id": "google-flights-3",
+  "description": "WebVoyager task on Google Flights",
+  "url": "https://www.google.com/travel/flights/",
+  "instruction": "Search for the one-way flight available from Calgary to New York on Jan. 1st with the lowest carbon dioxide emissions.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

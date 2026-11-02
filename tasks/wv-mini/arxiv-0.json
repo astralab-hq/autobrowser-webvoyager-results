@@ -1,0 +1,11 @@
+{
+  "id": "arxiv-0",
+  "description": "WebVoyager task on ArXiv",
+  "url": "https://arxiv.org/",
+  "instruction": "Search for the latest preprints about 'quantum computing'.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

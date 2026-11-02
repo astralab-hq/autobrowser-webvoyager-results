@@ -1,0 +1,11 @@
+{
+  "id": "apple-1",
+  "description": "WebVoyager task on Apple",
+  "url": "https://www.apple.com/",
+  "instruction": "Research the new features of the iOS 17 on Apple support and check its compatibility with the iPhone 12.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

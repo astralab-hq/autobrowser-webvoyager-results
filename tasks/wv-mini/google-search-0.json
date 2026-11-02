@@ -1,0 +1,11 @@
+{
+  "id": "google-search-0",
+  "description": "WebVoyager task on Google Search",
+  "url": "https://www.google.com/",
+  "instruction": "Find the initial release date for Guardians of the Galaxy Vol. 3 the movie.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

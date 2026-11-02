@@ -1,0 +1,11 @@
+{
+  "id": "apple-3",
+  "description": "WebVoyager task on Apple",
+  "url": "https://www.apple.com/",
+  "instruction": "Find the latest model of the iPhone and compare the price and screen size between the pro and pro max.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

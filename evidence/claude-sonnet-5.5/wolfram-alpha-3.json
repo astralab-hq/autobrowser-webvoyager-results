@@ -1,0 +1,30 @@
+{
+  "task": {
+    "id": "wolfram-alpha-3",
+    "site": "wolfram-alpha",
+    "instruction": "Let g(x) be the integral of x^2 cos(2x). Write the expression of g(x).",
+    "start_url": "https://www.wolframalpha.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "fail",
+  "pass": false,
+  "final_answer": "g(x) = ∫ x² cos(2x) dx = (x²/2)·sin(2x) + (x/2)·cos(2x) − (1/4)·sin(2x) + C\n\nI used integration by parts twice.\n1. Let u = x² and dv = cos(2x) dx. Then ∫ x² cos(2x) dx = (x²/2) sin(2x) − ∫ x sin(2x) dx.\n2. Let u = x and dv = sin(2x) dx. Then ∫ x sin(2x) dx = −(x/2) cos(2x) + (1/4) sin(2x).\n3. Substituting step 2 into step 1 gives the result above.\n\nC is the constant of integration. If you want the antiderivative with g(0) = 0, take C = 0.",
+  "judge": {
+    "verdict": "FAILURE",
+    "rationale": "The final page is still WolframAlpha’s homepage with no computed result, so the answer is not supported as coming from the website.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 2856,
+    "output_tokens": 117
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.wolframalpha.com/",
+    "title": "Wolfram|Alpha: Computational Intelligence"
+  },
+  "final_screenshot": "screenshots/wolfram-alpha-3.jpg",
+  "cost_usd": 0.20693,
+  "elapsed_s": 15.5,
+  "actions": []
+}

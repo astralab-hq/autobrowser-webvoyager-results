@@ -1,0 +1,29 @@
+{
+  "task": {
+    "id": "cambridge-dictionary-2",
+    "site": "cambridge-dictionary",
+    "instruction": "Look up the pronunciation, definition, and example sentence for the word \"ubiquitous\" in UK and US English.",
+    "start_url": "https://dictionary.cambridge.org/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a cloudflare bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0.132302,
+  "elapsed_s": 16.2,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://dictionary.cambridge.org/dictionary/english/ubiquitous"
+      },
+      "ok": true,
+      "ms": 250
+    }
+  ]
+}

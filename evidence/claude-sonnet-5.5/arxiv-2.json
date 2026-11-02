@@ -1,0 +1,63 @@
+{
+  "task": {
+    "id": "arxiv-2",
+    "site": "arxiv",
+    "instruction": "Look up the most recent papers related to 'cs.CL', select one and show its abstract.",
+    "start_url": "https://arxiv.org/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I picked the most recent paper in the cs.CL listing: **\"Elucidating the Design Space of LM Data Attribution\"** (arXiv:2610.40655). It was submitted on 29 Oct 2026 by Steven Yu, Sheng-Yu Wang, Kimia Hamidieh, Antonio Torralba and David Bau.\n\n**Abstract:** Data attribution methods for Language Models (LMs) are typically evaluated using downstream tasks like fact retrieval. However, existing evaluations vary multiple dataset properties simultaneously, making it impossible to isolate exactly why an attribution algorithm fails. To diagnose these failures, the authors explore the design space of LLM data attribution, with a primary focus on evaluation. They introduce the Controlled Attribution Benchmark (CATT) for fact tracing, in which LLMs are fine-tuned on entirely fictitious knowledge, providing unambiguous ground truth for attribution. This synthetic setup allows them to systematically alter one dataset configuration at a time, such as document redundancy and lexical distractors. With this configurable evaluation, they show that redundancy and distractors consistently degrade attribution performance.\n\nRather than proposing a new estimator, they examine two underexplored design choices: the loss used to compute gradients, and how per-token attribution scores are aggregated into a document score. They find that the true causal evidence within a training document is highly localized, but standard methods dilute it into noise by averaging attribution scores across the entire document. Replacing standard cross-entropy loss gradients with negative log-odds gradients surfaces the critical tokens from other uninformative ones. Aggregating only the top token scores then improves ground truth recall by 35 to 72 percentage points across multiple baselines on the diagnostic benchmark. The negative log-odds correction also generalizes to FTRACE-TREX, improving counterfactual retraining performance for every method tested, by up to 4.9x.\n\nSubject: Computation and Language (cs.CL). Link: https://arxiv.org/abs/2610.40655",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent opened arXiv cs.CL recent, selected the top listed paper, and provided its abstract supported by the final arXiv page.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 6012,
+    "output_tokens": 128
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://arxiv.org/abs/2610.40655",
+    "title": "[2610.40655] Elucidating the Design Space of LM Data Attribution"
+  },
+  "final_screenshot": "screenshots/arxiv-2.jpg",
+  "cost_usd": 0.309264,
+  "elapsed_s": 21.5,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/list/cs.CL/recent"
+      },
+      "ok": true,
+      "ms": 183
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2610.40655"
+      },
+      "ok": true,
+      "ms": 188
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

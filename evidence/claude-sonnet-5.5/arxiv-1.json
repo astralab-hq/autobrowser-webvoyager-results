@@ -1,0 +1,45 @@
+{
+  "task": {
+    "id": "arxiv-1",
+    "site": "arxiv",
+    "instruction": "Search for the latest research papers on quantum computing submitted to ArXiv within the last two days.",
+    "start_url": "https://arxiv.org/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The arXiv search for \"quantum computing\" (all fields) submitted 29–31 Oct 2026 returned 45 results. All of them are dated 29 October. Some are older papers with new versions, and some only mention \"quantum\" in passing. The papers most clearly about quantum computing, newest first, are:\n\n**New submissions**\n- 2610.40642: Comparison of entangling strategies for unitary synthesis (Wunder, Weimer, Costa de Almeida). It looks at trapped-ion quantum computing.\n- 2610.40592: Toric codes all the way down: decoupling translation-invariant topological CSS codes in higher dimensions (He, Wang, Song, Gu).\n- 2610.40573: What Can Be Computed with Indefinite Causal Structure? (Shmueli)\n- 2610.40561: Grow, Compress, and Perturb: a hybrid quantum-classical pathway to scalable quantum chemistry on quantum computers (Nogueira et al.). It introduces the VULCAN VQE variant.\n- 2610.40490: Fast and accurate neural triage decoding of ultra-high-rate quantum LDPC codes (Hu et al.)\n- 2610.40393: Quantum Computing through Computational Imaging: Representations, Measurement, and Inference (Kourousias et al.)\n- 2610.40329: High-Fidelity Universal Quantum Gates in a Cryogenic Atom Array (Jin, Seo, Shi, Lu, Thompson, Bakr)\n- 2610.40052: Identifying Logical Operations from Syndrome Histories for qLDPC Codes (Tan, Xu, Ding, Szefer)\n- 2610.39980: Benchmarking Quantum Neural Networks for MBHB coalescence in the LISA mission\n- 2610.39942: Majorana Zero Modes in Fractional Vortices (Fang et al.). It is relevant to topological quantum computation.\n- 2610.39873: Syndrome Trellis Decryption in Post-Quantum Cryptography (Ariel)\n- 2610.39847: Digital-Analog Quantum Neural Network with Long-Range Interactions (Ge, Li, Zhang)\n- 2610.39824: Enabling Dynamic Resource Scaling in Quantum Circuit Simulations (Aréjula-Aísa et al.)\n- 2610.39702: Quantum Query Complexity of Tournament Solutions (Arora, Kumar)\n- 2610.39670: Error-Corrected Quantum Optimization via Rydberg Atom Array Embeddings (Byun et al.)\n- 2610.39615: Improving Energy Efficiency of Uplink RSMA via Rydberg Atomic Quantum Receiver (Shen et al.)\n- 2610.39577: Adiabatic training of VQAs for entanglement detection (Acosta et al.)\n- 2610.39541: Optimal Linear Combination of Hamiltonian Simulation for Dissipative Dynamics (Ni, Ying)\n- 2610.39476: SeQUeNCe.DQC: Full-stack Simulation of Distributed Quantum Computing (Suresh et al.)\n- 2610.39406: QSoftCore: A Conceptual Foundation for Quantum Software Engineering (Yue, Li, Zhang)\n\n**Updated versions of older papers (revised 29 Oct)**\n- 2609.40105: Harnessing problem structure for end-to-end quantum speed-ups\n- 2610.03429: Fault tolerance of quantum circuits with tensor networks and symplectic geometry\n- 2608.09913: Superselection Rigidity of Topological CSS Codes\n- 2605.12588: Coherent control of spinmons\n- 2603.16527: Logarithmic-depth quantum state preparation of polynomials\n- 2508.14011: Brace for impact: ECDLP challenges for quantum cryptanalysis\n- 2312.11206: GAnnET, which automatically annotates charge stability diagrams for quantum-dot arrays\n\nThe remaining results are mostly hep-th, gr-qc, cond-mat and similar papers. They match on the word \"quantum\" or \"computing\" rather than on quantum computing itself. You can browse the full list on the search page that is currently open. I can also narrow it to quant-ph only if you want.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The arXiv page shows a 2026-10-29 to 2026-10-31 “quantum computing” search with 45 results, and the answer lists relevant papers from those results.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 7942,
+    "output_tokens": 49
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=quantum+computing&terms-0-field=all&classification-physics_archives=all&date-filter_by=date_range&date-from_date=2026-10-29&date-to_date=2026-10-31&date-date_type=submitted_date&abstracts=show&size=50&order=-submitted_date",
+    "title": "Advanced Search | arXiv e-print repository"
+  },
+  "final_screenshot": "screenshots/arxiv-1.jpg",
+  "cost_usd": 0.888716,
+  "elapsed_s": 22.7,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=quantum+computing&terms-0-field=all&classification-physics_archives=all&date-filter_by=date_range&date-from_date=2026-10-29&date-to_date=2026-10-31&date-date_type=submitted_date&abstracts=show&size=50&order=-submitted_date"
+      },
+      "ok": true,
+      "ms": 740
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 5
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "task": {
+    "id": "huggingface-3",
+    "site": "huggingface",
+    "instruction": "Look up a model with a license of cc-by-sa-4.0 with the most likes on Hugging face.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The most-liked Hugging Face model with the cc-by-sa-4.0 license is **replit/replit-code-v1-3b**. It is a Text Generation model with about 748 likes, and it was last updated on Jul 22, 2023.\n\nI got this from the Hugging Face models list, filtered to cc-by-sa-4.0 and sorted by most likes. The next models in that list are defog/sqlcoder-7b-2 (452 likes) and nlpaueb/legal-bert-base-uncased (335 likes).\n\nPage: https://huggingface.co/replit/replit-code-v1-3b",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The page is filtered to cc-by-sa-4.0 and sorted by most likes, showing replit/replit-code-v1-3b first with 748 likes, matching the final answer.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 5945,
+    "output_tokens": 46
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/models?license=license:cc-by-sa-4.0&sort=likes",
+    "title": "Models with LICENSE:CC-BY-SA-4.0 license – Hugging Face"
+  },
+  "final_screenshot": "screenshots/huggingface-3.jpg",
+  "cost_usd": 0.434312,
+  "elapsed_s": 17.1,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?license=license:cc-by-sa-4.0&sort=likes"
+      },
+      "ok": true,
+      "ms": 459
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 88
+    }
+  ]
+}

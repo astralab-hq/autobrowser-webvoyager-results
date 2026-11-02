@@ -1,0 +1,152 @@
+{
+  "task": {
+    "id": "google-map-3",
+    "site": "google-map",
+    "instruction": "The least amount of walking from Central Park Zoo to the Broadway Theater in New York.",
+    "start_url": "https://www.google.com/maps/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-01",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The shortest walk from the Central Park Zoo to the Broadway Theatre (1681 Broadway) is about **0.9 mile, roughly 20 minutes on foot**, via **7th Avenue** — Google Maps flags this as the fastest walking route right now.\n\nA near-identical alternative is 0.9 mile / 21 minutes via 6th Avenue (Avenue of the Americas) and W 53rd Street. Both routes are essentially flat, so there's no meaningful elevation difference to worry about.\n\nIn short: head south out of the park along 7th Ave and you'll arrive at the theatre in about 20 minutes with the least amount of walking.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Google Maps walking directions show the shortest route as via 7th Ave, 20 min and 0.9 mile, matching the agent’s final answer.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 7493,
+    "output_tokens": 38
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.google.com/maps/dir/Central+Park+Zoo,+New+York,+NY+10021,+United+States/Broadway+Theatre,+1681+Broadway,+New+York,+NY+10019,+United+States/@40.7647706,-73.9878305,15z/data=!3m2!4b1!5s0x89c25857da0bda21:0x9c63b2c2f563f9e2!4m14!4m13!1m5!1m1!1s0x89c258f1fcd66869:0x65d72e84d91a3f14!2m2!1d-73.9719906!2d40.7677061!1m5!1m1!1s0x89c2585665784711:0x5bbfed74cc606bf6!2m2!1d-73.983051!2d40.7632593!3e2?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+    "title": "Central Park Zoo to Broadway Theatre - Google Maps"
+  },
+  "final_screenshot": "screenshots/google-map-3.jpg",
+  "cost_usd": 0.00235094,
+  "elapsed_s": 31.4,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 19
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 165
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "args": "{}"
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "fill_form",
+      "args": {
+        "entries": [
+          {
+            "text": "Central Park Zoo, New York",
+            "uid": "ref_3_9"
+          },
+          {
+            "text": "Broadway Theatre, New York",
+            "uid": "ref_3_12"
+          }
+        ]
+      },
+      "ok": true,
+      "ms": 65
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_12"
+      },
+      "ok": true,
+      "ms": 76
+    },
+    {
+      "tool": "wait_for_network_idle",
+      "args": {
+        "timeout_ms": 15000
+      },
+      "ok": true,
+      "ms": 999
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "args": "{\"filter\": \"interactive\", \"max_chars\": 8000}"
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "get_element_info",
+      "args": {
+        "uid": "ref_8_3"
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_element_info",
+      "args": {
+        "uid": "ref_8_5"
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_8_5"
+      },
+      "ok": true,
+      "ms": 82
+    },
+    {
+      "tool": "wait_for_network_idle",
+      "args": {
+        "timeout_ms": 15000
+      },
+      "ok": true,
+      "ms": 622
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 8000
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": "div[role='main']"
+      },
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

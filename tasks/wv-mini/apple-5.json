@@ -1,0 +1,11 @@
+{
+  "id": "apple-5",
+  "description": "WebVoyager task on Apple",
+  "url": "https://www.apple.com/",
+  "instruction": "Check the release date and price for the latest version of the iPhone.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

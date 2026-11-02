@@ -1,0 +1,61 @@
+{
+  "task": {
+    "id": "github-6",
+    "site": "github",
+    "instruction": "Search for an open-source project related to 'cryptocurrency wallet' updated in the past 30 days and provide the top three contributors.",
+    "start_url": "https://github.com/"
+  },
+  "model": "anthropic/claude-sonnet-5.5",
+  "run_date": "2026-10-31",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The project is **dogecoin/dogecoin**, an open-source cryptocurrency and wallet project with about 15.2k stars. It was the top result for \"cryptocurrency wallet\" in a GitHub search limited to repositories pushed after 2026-10-01, so it was updated within the past 30 days.\n\nIts top three contributors, from the GitHub contributors graph, are:\n\n1. **chromatic**, with 8 commits\n2. **mikeua**, with 4 commits\n3. **michilumin**, with 3 commits\n\nThe graph covers the last 3 months (Jul 25 to Oct 25, 2026), not only the last 30 days. I didn't check the 30-day commit counts separately.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The search URL filters repos pushed after 2026-10-01 and shows dogecoin/dogecoin; contributors page ranks chromatic, mikeua, and michilumin #1–#3.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 6594,
+    "output_tokens": 565
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/dogecoin/dogecoin/graphs/contributors?from=7%2F25%2F2026",
+    "title": "Contributors to dogecoin/dogecoin · GitHub"
+  },
+  "final_screenshot": "screenshots/github-6.jpg",
+  "cost_usd": 0,
+  "elapsed_s": 31.2,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=cryptocurrency+wallet+pushed%3A%3E2026-10-01&type=repositories&s=stars&o=desc"
+      },
+      "ok": true,
+      "ms": 667
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all"
+      },
+      "ok": true,
+      "ms": 33
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/dogecoin/dogecoin/graphs/contributors"
+      },
+      "ok": true,
+      "ms": 662
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 1
+    }
+  ]
+}

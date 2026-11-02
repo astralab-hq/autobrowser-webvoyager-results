@@ -1,0 +1,11 @@
+{
+  "id": "apple-0",
+  "description": "WebVoyager task on Apple",
+  "url": "https://www.apple.com/",
+  "instruction": "Compare the prices of the latest models of MacBook Air available on Apple's website.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

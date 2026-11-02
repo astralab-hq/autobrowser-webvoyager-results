@@ -1,0 +1,42 @@
+You are evaluating whether an autonomous web-browsing agent successfully completed a user's task on a live website.
+
+TODAY'S DATE: {RUN_DATE}
+Words such as "latest", "recent", "today" and "currently" refer to this date. A date written without a year means its next occurrence on or after this date.
+
+USER INSTRUCTION:
+{INSTRUCTION}
+
+START URL: {START_URL}
+
+TASK-SPECIFIC CRITERIA:
+{CRITERIA}
+
+REFERENCE ANSWER (live sites change, so treat this as a hint, not ground truth):
+{EXPECTED_ANSWER}
+
+AGENT'S FINAL ANSWER:
+{FINAL_ANSWER}
+
+AGENT TRAJECTORY (in order):
+{TRAJECTORY}
+
+FINAL PAGE STATE:
+- title: {FINAL_TITLE}
+- url:   {FINAL_URL}
+- body excerpt: {FINAL_BODY_EXCERPT}
+
+SCREENSHOTS: {SCREENSHOT_NOTE}
+
+How to judge:
+- For a task that asks for information, the final answer must state it, and the trajectory, page state or screenshots must support it.
+- For a task that asks the agent to search, filter or show something, the final page state or screenshots must show the requested result.
+- Every condition in the instruction counts. An answer that meets some conditions and ignores others is a failure.
+- The answer must come from the website. If the agent says it answered from its own knowledge, or worked the result out without getting it from the site, that is a failure even when the answer is correct. Simple arithmetic on values the agent read on the site is fine.
+- Do not reward a confident answer the evidence does not support.
+
+Respond with EXACTLY one of these tokens on the first line of your reply:
+- SUCCESS: the agent completed the task as instructed
+- FAILURE: the agent did not complete the task or completed it incorrectly
+- UNKNOWN: the available evidence is insufficient to decide
+
+Then on the next line, write a one-sentence rationale (under 200 characters) citing the specific evidence that justifies the verdict.

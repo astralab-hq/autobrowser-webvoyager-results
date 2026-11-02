@@ -1,0 +1,14 @@
+{
+  "version": "2026-q4",
+  "model": "gpt-5.5-2026-04-23",
+  "reasoning_effort": "medium",
+  "temperature": null,
+  "prompt_version": "wv-2.2",
+  "api": "OpenAI Responses API",
+  "limits": {
+    "final_page_text_chars": 8000,
+    "trajectory_chars": 40000,
+    "chars_per_trajectory_line": 6000,
+    "screenshots": "one JPEG of the final page's viewport, when the capture succeeds"
+  }
+}

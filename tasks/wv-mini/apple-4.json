@@ -1,0 +1,11 @@
+{
+  "id": "apple-4",
+  "description": "WebVoyager task on Apple",
+  "url": "https://www.apple.com/",
+  "instruction": "How much does it cost to buy a 16-inch MacBook Pro with the highest-end Max chip Apple currently sells, in its standard memory and storage configuration? Name the chip and its CPU and GPU core counts.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

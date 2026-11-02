@@ -1,0 +1,12 @@
+{
+  "id": "apple-2",
+  "description": "WebVoyager task on Apple",
+  "url": "https://www.apple.com/",
+  "instruction": "Compare the prices and chips for the iPhone 14 Pro and iPhone 15 Pro models directly from Apple's website.",
+  "oracles": [
+    {
+      "type": "llm_judge",
+      "criteria": "Apple's compare page lists the chips (A16 Bionic and A17 Pro) but shows 'Available at authorized resellers' instead of prices for both discontinued models. A correct answer gives both chips and says Apple no longer lists prices."
+    }
+  ]
+}

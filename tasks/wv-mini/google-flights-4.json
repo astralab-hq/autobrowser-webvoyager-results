@@ -1,0 +1,11 @@
+{
+  "id": "google-flights-4",
+  "description": "WebVoyager task on Google Flights",
+  "url": "https://www.google.com/travel/flights/",
+  "instruction": "Search for one-way flights from New York to London on Dec. 26th and filter the results to show only non-stop flights.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

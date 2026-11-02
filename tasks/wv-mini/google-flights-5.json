@@ -1,0 +1,11 @@
+{
+  "id": "google-flights-5",
+  "description": "WebVoyager task on Google Flights",
+  "url": "https://www.google.com/travel/flights/",
+  "instruction": "Find flights from Chicago to London on 20 December and return on 23 December.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

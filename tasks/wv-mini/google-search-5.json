@@ -1,0 +1,11 @@
+{
+  "id": "google-search-5",
+  "description": "WebVoyager task on Google Search",
+  "url": "https://www.google.com/",
+  "instruction": "find the score of the latest nba game played by the phoenix suns.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}

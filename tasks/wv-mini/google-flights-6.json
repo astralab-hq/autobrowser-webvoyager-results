@@ -1,0 +1,11 @@
+{
+  "id": "google-flights-6",
+  "description": "WebVoyager task on Google Flights",
+  "url": "https://www.google.com/travel/flights/",
+  "instruction": "Search for a flight on December 19 and return on December 26 from Tel Aviv to Venice and Select First Class.",
+  "oracles": [
+    {
+      "type": "llm_judge"
+    }
+  ]
+}
