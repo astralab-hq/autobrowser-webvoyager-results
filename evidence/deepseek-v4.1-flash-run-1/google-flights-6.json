@@ -1,0 +1,312 @@
+{
+  "task": {
+    "id": "google-flights-6",
+    "site": "google-flights",
+    "instruction": "Search for a flight on December 19 and return on December 26 from Tel Aviv to Venice and Select First Class.",
+    "start_url": "https://www.google.com/travel/flights/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The search is done on Google Flights: round trip Tel Aviv-Yafo (TLV) → Venice (VCE), departing Saturday, December 19, 2026 and returning Saturday, December 26, 2026, with the cabin set to **First** (the cabin selector now reads \"First\").\n\nOnly one itinerary came back for those dates in First class:\n\n- **Air France** — departs TLV 3:55 PM Sat, Dec 19, arrives VCE 11:15 PM the same day; 8 hr 20 min total, 1 stop at Paris-Charles de Gaulle (CDG, 1 hr 45 min layover).\n- **Fare: $8,275 round trip** per adult (taxes and fees included; optional charges and bag fees may apply).\n- Cabin is listed as \"First Class + Business Class\" — the long-haul leg in First, the connecting leg in Business, which is normal for this route since Air France doesn't sell a full First cabin on the CDG–VCE segment.\n\nGoogle notes prices for these dates are currently \"typical,\" and flags that air traffic disruptions may affect flights. If you'd like, I can open the flight details, check the date grid for cheaper nearby dates, or start the booking.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page shows TLV to Venice, Dec 19–26, round trip, cabin First, with Google Flights results displayed.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 15453,
+    "output_tokens": 32
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI2LTEyLTE5agcIARIDVExWcgcIARIDVkNFGh4SCjIwMjYtMTItMjZqBwgBEgNWQ0VyBwgBEgNUTFZAAUgEcAGCAQsI____________AZgBAQ&tfu=EgYIABAAGAA&curr=USD",
+    "title": "Tel Aviv-Yafo to Venice | Google Flights"
+  },
+  "final_screenshot": "screenshots/google-flights-6.jpg",
+  "cost_usd": 0.01599955,
+  "elapsed_s": 79.8,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 28
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "text": "Tel Aviv",
+        "uid": "ref_1_13"
+      },
+      "ok": true,
+      "ms": 239
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_3"
+      },
+      "ok": true,
+      "ms": 225
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_13"
+      },
+      "ok": true,
+      "ms": 237
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "press_key",
+      "args": {
+        "chord": "Escape"
+      },
+      "ok": true,
+      "ms": 69
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_10_13"
+      },
+      "ok": true,
+      "ms": 223
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_14_6"
+      },
+      "ok": true,
+      "ms": 215
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "offset": 55
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_18_13"
+      },
+      "ok": true,
+      "ms": 228
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 8000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 8000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 8000
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "press_key",
+      "args": {
+        "chord": "Escape"
+      },
+      "ok": true,
+      "ms": 62
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.google.com/travel/flights?q=Flights%20from%20TLV%20to%20VCE%20on%202026-12-19%20through%202026-12-26&curr=USD"
+      },
+      "ok": true,
+      "ms": 343
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_12"
+      },
+      "ok": true,
+      "ms": 433
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_4"
+      },
+      "ok": true,
+      "ms": 245
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 50
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 4000
+      },
+      "ok": true,
+      "ms": 31
+    }
+  ]
+}

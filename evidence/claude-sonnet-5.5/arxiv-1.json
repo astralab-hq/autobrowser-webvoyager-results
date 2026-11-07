@@ -6,40 +6,91 @@
     "start_url": "https://arxiv.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "The arXiv search for \"quantum computing\" (all fields) submitted 29–31 Oct 2026 returned 45 results. All of them are dated 29 October. Some are older papers with new versions, and some only mention \"quantum\" in passing. The papers most clearly about quantum computing, newest first, are:\n\n**New submissions**\n- 2610.40642: Comparison of entangling strategies for unitary synthesis (Wunder, Weimer, Costa de Almeida). It looks at trapped-ion quantum computing.\n- 2610.40592: Toric codes all the way down: decoupling translation-invariant topological CSS codes in higher dimensions (He, Wang, Song, Gu).\n- 2610.40573: What Can Be Computed with Indefinite Causal Structure? (Shmueli)\n- 2610.40561: Grow, Compress, and Perturb: a hybrid quantum-classical pathway to scalable quantum chemistry on quantum computers (Nogueira et al.). It introduces the VULCAN VQE variant.\n- 2610.40490: Fast and accurate neural triage decoding of ultra-high-rate quantum LDPC codes (Hu et al.)\n- 2610.40393: Quantum Computing through Computational Imaging: Representations, Measurement, and Inference (Kourousias et al.)\n- 2610.40329: High-Fidelity Universal Quantum Gates in a Cryogenic Atom Array (Jin, Seo, Shi, Lu, Thompson, Bakr)\n- 2610.40052: Identifying Logical Operations from Syndrome Histories for qLDPC Codes (Tan, Xu, Ding, Szefer)\n- 2610.39980: Benchmarking Quantum Neural Networks for MBHB coalescence in the LISA mission\n- 2610.39942: Majorana Zero Modes in Fractional Vortices (Fang et al.). It is relevant to topological quantum computation.\n- 2610.39873: Syndrome Trellis Decryption in Post-Quantum Cryptography (Ariel)\n- 2610.39847: Digital-Analog Quantum Neural Network with Long-Range Interactions (Ge, Li, Zhang)\n- 2610.39824: Enabling Dynamic Resource Scaling in Quantum Circuit Simulations (Aréjula-Aísa et al.)\n- 2610.39702: Quantum Query Complexity of Tournament Solutions (Arora, Kumar)\n- 2610.39670: Error-Corrected Quantum Optimization via Rydberg Atom Array Embeddings (Byun et al.)\n- 2610.39615: Improving Energy Efficiency of Uplink RSMA via Rydberg Atomic Quantum Receiver (Shen et al.)\n- 2610.39577: Adiabatic training of VQAs for entanglement detection (Acosta et al.)\n- 2610.39541: Optimal Linear Combination of Hamiltonian Simulation for Dissipative Dynamics (Ni, Ying)\n- 2610.39476: SeQUeNCe.DQC: Full-stack Simulation of Distributed Quantum Computing (Suresh et al.)\n- 2610.39406: QSoftCore: A Conceptual Foundation for Quantum Software Engineering (Yue, Li, Zhang)\n\n**Updated versions of older papers (revised 29 Oct)**\n- 2609.40105: Harnessing problem structure for end-to-end quantum speed-ups\n- 2610.03429: Fault tolerance of quantum circuits with tensor networks and symplectic geometry\n- 2608.09913: Superselection Rigidity of Topological CSS Codes\n- 2605.12588: Coherent control of spinmons\n- 2603.16527: Logarithmic-depth quantum state preparation of polynomials\n- 2508.14011: Brace for impact: ECDLP challenges for quantum cryptanalysis\n- 2312.11206: GAnnET, which automatically annotates charge stability diagrams for quantum-dot arrays\n\nThe remaining results are mostly hep-th, gr-qc, cond-mat and similar papers. They match on the word \"quantum\" or \"computing\" rather than on quantum computing itself. You can browse the full list on the search page that is currently open. I can also narrow it to quant-ph only if you want.",
+  "final_answer": "I searched arXiv for \"quantum computing\" (all fields, cross-lists included). I limited it to papers submitted from 5 to 7 November 2026, and the search returned 44 results, newest first. I read the first 16. The other 28 are on the search page and I didn't read them. All 16 were submitted on 5 November 2026.\n\n1. Quantum Knowledge Distillation: State-of-the-art, Applications and Open Problems (arXiv:2611.08461). Al-Sulaiti, Chen, Dastagir, Farouk, Al-Kuwari. quant-ph.\n2. Polynomial-time classical simulation of boson and fermion sampling under thermal loss (arXiv:2611.08444). Angrisani, Mhiri. quant-ph.\n3. Deep-learning surrogate model for rapid quantum-noise computation in dual-pump fiber-optic phase-sensitive amplifiers (arXiv:2611.08437). Bouasria, Chatterjee, Belfakir, Basu. physics.optics.\n4. QDiff: Differential Testing of Quantum Software Stacks (arXiv:2611.08220). Wang, Zhang, Xu, Kim. quant-ph, cs.SE.\n5. Zirah: A Post-Quantum True Random Number Generator Hardware Signer With an Avalanche Noise (arXiv:2611.08200). Junaid. cs.CR.\n6. Quantum Advantage with Sign-Free Proofs: An Oracle Separation between StoqMA and MA (arXiv:2611.08180). Hamoudi, Le Borgne, Sridhara. quant-ph.\n7. Non-Unitary Quantum Butterfly Effect: Theory and Experiment (arXiv:2611.08152). Argyle, Lakhdar-Hamina, Miller, Galitski. quant-ph.\n8. Machine learning quantum data to accelerate quantum Monte Carlo (arXiv:2611.08151). Jiang, Zhao, Kumar, Nigam, Rosenberg, Babbush, Baczewski, Huggins, Lee. quant-ph.\n9. Accelerating Quantum-Classical Auxiliary-Field Quantum Monte Carlo with Shadow-Trained Neural Quantum States (arXiv:2611.08129). Provazza, Knitter, Goings, Epifanovsky, Chen, Roetteler, Zhao. quant-ph.\n10. Post-Quantum Authentication of IoT Data on Ethereum: Signatures, the Calldata Floor, and Device-Signed Merkle Roots (arXiv:2611.08108). Sie. cs.DC.\n11. Semi-Analytical Geometric Synthesis of Robust Quantum Controls (arXiv:2611.08107). Lussi, de Santiago, Duzzioni, Silveira. quant-ph, eess.SY.\n12. Quantum Advantage in Local Certification of Graph Properties (arXiv:2611.08076). Jáuregui, Miyamoto. cs.DC.\n13. Exponential mixing time for the Davies dynamics of the quantum random energy model (arXiv:2611.08064). De Palma, Mingione. quant-ph, math-ph.\n14. Autler-townes energy-level engineering for high-quality all-microwave qubit gate (arXiv:2611.07967). Gao, He, Niu, Li, Bao, Liu, You, Tsai, Wang, Lin. quant-ph.\n15. Monopoles, Scattering and Generalized Symmetries on a Quantum Computer (arXiv:2611.07960). O'Brien, Ueda, Granet, Dreyer, Verstraete. quant-ph.\n16. Multirobust Control Pulses Designed by Iterative Quantum Kolmogorov-Arnold-Moser Algorithm (arXiv:2611.07802). Harutyunyan, Guérin. quant-ph.\n\nThe search matches the phrase anywhere in a paper, so some results are only loosely about quantum computing. These include the post-quantum cryptography papers (#5, #10) and the fiber-amplifier paper (#3). The most directly on-topic are #1, #2, #4, #6, #9, #11, #14, #15 and #16. You can see all 44 results by opening the search page in your browser.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The arXiv page shows a 2026-10-29 to 2026-10-31 “quantum computing” search with 45 results, and the answer lists relevant papers from those results.",
+    "rationale": "The agent used arXiv advanced search for “quantum computing” with submitted date 2026-11-05 to 2026-11-07, showing 1–44 results and listing latest entries.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 7942,
-    "output_tokens": 49
+    "input_tokens": 15853,
+    "output_tokens": 568
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=quantum+computing&terms-0-field=all&classification-physics_archives=all&date-filter_by=date_range&date-from_date=2026-10-29&date-to_date=2026-10-31&date-date_type=submitted_date&abstracts=show&size=50&order=-submitted_date",
+    "url": "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=quantum+computing&terms-0-field=all&classification-physics_archives=all&date-filter_by=date_range&date-from_date=2026-11-05&date-to_date=2026-11-07&date-date_type=submitted_date&abstracts=hide&size=50&order=-announced_date_first",
     "title": "Advanced Search | arXiv e-print repository"
   },
   "final_screenshot": "screenshots/arxiv-1.jpg",
-  "cost_usd": 0.888716,
-  "elapsed_s": 22.7,
+  "cost_usd": 1.151504,
+  "elapsed_s": 79.2,
   "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 24
+    },
     {
       "tool": "navigate",
       "args": {
-        "url": "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=quantum+computing&terms-0-field=all&classification-physics_archives=all&date-filter_by=date_range&date-from_date=2026-10-29&date-to_date=2026-10-31&date-date_type=submitted_date&abstracts=show&size=50&order=-submitted_date"
+        "url": "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=quantum+computing&terms-0-field=all&classification-physics_archives=all&date-filter_by=date_range&date-from_date=2026-11-05&date-to_date=2026-11-07&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first"
       },
       "ok": true,
-      "ms": 740
+      "ms": 973
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
     },
     {
       "tool": "get_page_text",
-      "args": {},
+      "args": {
+        "head_limit": 9000
+      },
       "ok": true,
-      "ms": 5
+      "ms": 63
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "p.title"
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=quantum+computing&terms-0-field=all&classification-physics_archives=all&date-filter_by=date_range&date-from_date=2026-11-05&date-to_date=2026-11-07&date-date_type=submitted_date&abstracts=hide&size=50&order=-announced_date_first"
+      },
+      "ok": true,
+      "ms": 738
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 12000,
+        "selector": "ol.breathe-horizontal"
+      },
+      "ok": true,
+      "ms": 22
     }
   ]
 }

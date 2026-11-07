@@ -1,0 +1,101 @@
+{
+  "task": {
+    "id": "huggingface-2",
+    "site": "huggingface",
+    "instruction": "Discover three new and popular open-source NLP models for language translation released in the past month on Huggingface.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "fail",
+  "pass": false,
+  "final_answer": "Here are three genuinely new (released in the past month, since 7 Oct 2026) and popular open-source translation models on Hugging Face. I pulled every translation-tagged model created in that window (732 repos), filtered out quantized/derivative copies to leave ~300 original releases, then ranked by likes and downloads.\n\n**1. Tencent Hy-SimulMT-30B-A3B** — `tencent/Hy-SimulMT-30B-A3B` (created 22 Oct 2026). Tencent Hunyuan's low-latency, high-quality model for real-time simultaneous translation: a 30B-parameter MoE (~30.4B total, ~3B active) covering 36 languages (zh, en, ja, ko, ar, th, vi, and most major European languages). It is the breakout hit of the month — the FP8 variant alone has 461 likes and 1,264 downloads, with the base weights at 47 likes / 899 downloads and an Interleave variant at 17 likes. License: Apache-2.0.\n\n**2. PLaMo 3 Translate 31B** — `pfnet/plamo-3-translate-31b` (created 26 Oct 2026). Preferred Networks' (PFN) translation-specialised LLM, built on PLaMo 3 NICT — a pretrained base developed jointly with Japan's National Institute of Information and Communications Technology — then further trained on tens of billions of tokens of translation-focused data. It supports translation among 53 languages. 21 likes and 429 downloads, released alongside a full size family the same week (0.8B: 20 likes / 931 downloads; 2B: 1,804 downloads; 8B: 13 likes), plus GGUF and MLX builds. License: other (PFN's own terms).\n\n**3. Index-Translate-Omni (35B-A3B / 9B / 2B)** — `IndexTeam/Index-Translate-omni-35B` (created 4 Nov 2026). The newest of the three: multilingual text translation with terminology and formatting constraints, image translation, speech recognition, and bidirectional Chinese–English speech translation. Its builds are already pulling heavy traffic (9B GGUF: 793 downloads, 35B GGUF: 658, 2B GGUF: 651). License: Apache-2.0 on the FP8/GGUF releases — note the bare base-weight repos don't carry a license tag yet, so check before commercial use.\n\nOne caveat: the single most-downloaded repo in the window, `datacrunch/tolkio-models` (4,331 downloads), has zero likes and no model card, so it looks like a packaging/weights dump rather than a documented model — I left it out in favour of the three above.",
+  "judge": {
+    "verdict": "FAILURE",
+    "rationale": "The answer includes models with “license:other” and no license tag, so the evidence does not support that all three are open-source as requested.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 17030,
+    "output_tokens": 555
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=createdAt&direction=-1&limit=100",
+    "title": ""
+  },
+  "final_screenshot": "screenshots/huggingface-2.jpg",
+  "cost_usd": 0.01954742,
+  "elapsed_s": 92.4,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?pipeline_tag=translation&sort=createdAt"
+      },
+      "ok": true,
+      "ms": 429
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=createdAt&direction=-1&limit=100"
+      },
+      "ok": true,
+      "ms": 378
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const cutoff = new Date('2026-10-07T00:00:00Z');\\n  let all = [], skip = 0, pages = 0, done = false;\\n  while (!done && pages < 6) {\\n    const r = await fetch(`https://huggingface.co/api/models?pipeline_tag=translation&sort=createdAt&direction=-1&limit=1000&skip=${skip}&full=false`);\\n    if (!r.ok) return { error: 'http ' + r.status, pages };\\n    const batch = a… [+1042 chars]",
+      "ok": true,
+      "ms": 1235
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const ids = ['pfnet/plamo-3-translate-8b','pfnet/plamo-3-translate-2b','pfnet/plamo-3-translate-0.8b','pfnet/plamo-3-translate-31b','tencent/Hy-SimulMT-30B-A3B-FP8','qvac/TranslatePsy-AfriSLM-4B','qvac/TranslatePsy-AfriSLM-2B','qvac/TranslatePsy-AfriSLM-0.8B','buddhist-nlp/mitra-qwen35-translate','mkbadeniyi/WazoCore-8B-v6-long','IndexTeam/Index-Translate-2B','goog… [+953 chars]",
+      "ok": true,
+      "ms": 3265
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const cutoff = new Date('2026-10-07T00:00:00Z');\\n  let all = [], skip = 0, done = false, pages = 0;\\n  while (!done && pages < 8) {\\n    const r = await fetch(`https://huggingface.co/api/models?pipeline_tag=translation&sort=createdAt&direction=-1&limit=1000&skip=${skip}`);\\n    if (!r.ok) return {error: r.status};\\n    const b = await r.json();\\n    if (!b.length)… [+857 chars]",
+      "ok": true,
+      "ms": 627
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const ids = ['tencent/Hy-SimulMT-30B-A3B','pfnet/plamo-3-translate-31b','IndexTeam/Index-Translate-omni-35B'];\\n  const out = [];\\n  for (const id of ids) {\\n    try {\\n      const m = await (await fetch('https://huggingface.co/api/models/' + id)).json();\\n      let readme = '';\\n      try { readme = await (await fetch('https://huggingface.co/' + id + '/raw/main/RE… [+749 chars]",
+      "ok": true,
+      "ms": 1561
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const cutoff = new Date('2026-10-07T00:00:00Z');\\n  let all = [], skip = 0, done = false, pages = 0;\\n  while (!done && pages < 8) {\\n    const r = await fetch(`https://huggingface.co/api/models?pipeline_tag=translation&sort=createdAt&direction=-1&limit=1000&skip=${skip}`);\\n    if (!r.ok) return {error: r.status};\\n    const b = await r.json();\\n    if (!b.length)… [+894 chars]",
+      "ok": true,
+      "ms": 382
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const ids = ['IndexTeam/Index-Translate-omni-35B','IndexTeam/Index-Translate-omni-35B-FP8','IndexTeam/Index-Translate-omni-9B','IndexTeam/Index-Translate-omni-2B','IndexTeam/Index-Translate-2B'];\\n  const out = [];\\n  for (const id of ids) {\\n    try {\\n      const r = await fetch('https://huggingface.co/api/models/' + id);\\n      if (!r.ok) { out.push({id, err: r.… [+473 chars]",
+      "ok": true,
+      "ms": 1436
+    }
+  ]
+}

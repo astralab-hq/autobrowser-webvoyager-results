@@ -1,0 +1,69 @@
+{
+  "task": {
+    "id": "bbc-news-2",
+    "site": "bbc-news",
+    "instruction": "Read the latest article regarding the environmental impacts of deforestation published within the last two days.",
+    "start_url": "https://www.bbc.com/news/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a google bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0.00252233,
+  "elapsed_s": 26.0,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 32
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.bbc.co.uk/search?q=deforestation&d=NEWS_PS"
+      },
+      "ok": true,
+      "ms": 4477
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 14
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://news.google.com/search?q=deforestation%20environmental%20impact&hl=en-US&gl=US&ceid=US:en"
+      },
+      "ok": true,
+      "ms": 719
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

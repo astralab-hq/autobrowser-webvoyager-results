@@ -1,0 +1,81 @@
+{
+  "task": {
+    "id": "wolfram-alpha-1",
+    "site": "wolfram-alpha",
+    "instruction": "Give a constraint on the set of inequalities for the inner region of the pentagram.",
+    "start_url": "https://www.wolframalpha.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "fail",
+  "pass": false,
+  "final_answer": "**The inner region of a pentagram is the intersection of five half-planes — one per pentagram line — and the constraint that makes them bound the central pentagon is that the five inequalities be congruent and equally spaced (invariant under a 72° rotation).**\n\nConcretely, take a regular pentagram inscribed in the circle of radius R centred at the origin, with outer vertices at angles 90° + 72k°. Its five lines each sit at distance R·cos 72° from the centre, with inward unit normals at angles 18° + 72k°. So the inner pentagon is\n\n  (x, y) such that  x·cos(18° + 72k°) + y·sin(18° + 72k°) ≤ R·cos 72°,  for k = 0, 1, 2, 3, 4.\n\nEquivalently, writing n_k = (cos(18°+72k°), sin(18°+72k°)) and d = R·cos 72° = R(√5 − 1)/4 ≈ 0.309R:\n\n  max over k of (n_k · p) ≤ d.\n\n**The constraint, stated as a condition on the inequality set itself:** the system {n_k · p ≤ d_k} describes the pentagram's inner region exactly when (i) the five normals are equally spaced, n_k = R_{72k°}·n_0 (so the normals sum to zero, Σ n_k = 0), and (ii) all five right-hand sides are equal, d_0 = d_1 = … = d_4 = d > 0. Condition (ii) is what forces the five lines to be tangent to a common incircle — the inner pentagon's incircle — and condition (i) is what makes that pentagon regular. Drop either one and you get a general convex pentagon (or an empty/inconsistent system) rather than the pentagram's core.\n\n**Resulting geometry:** the inner pentagon is regular, with inradius d = R cos 72° and circumradius d / cos 36° = R/φ² = R(3 − √5)/2 ≈ 0.382R, where φ = (1+√5)/2. Its side length is 1/φ² ≈ 0.382 times the outer pentagon's, and its area is 1/φ⁴ ≈ 0.146 of the outer pentagon's — the familiar golden-ratio self-similarity of the pentagram.",
+  "judge": {
+    "verdict": "FAILURE",
+    "rationale": "The final answer is unsupported by the visited pages; WolframAlpha showed only generic pentagon info and DuckDuckGo showed no results.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 5915,
+    "output_tokens": 123
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://html.duckduckgo.com/html/?q=%22constraint+on+the+set+of+inequalities%22+pentagram+inner+region",
+    "title": "\"constraint on the set of inequalities\" pentagram inner region at DuckDuckGo"
+  },
+  "final_screenshot": "screenshots/wolfram-alpha-1.jpg",
+  "cost_usd": 0.00608595,
+  "elapsed_s": 55.1,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.wolframalpha.com/input?i=pentagram+inner+pentagon+inequalities"
+      },
+      "ok": true,
+      "ms": 527
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 18
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://duckduckgo.com/html/?q=%22constraint+on+the+set+of+inequalities%22+pentagram+inner+region"
+      },
+      "ok": true,
+      "ms": 1333
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 6
+    }
+  ]
+}

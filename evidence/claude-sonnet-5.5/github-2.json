@@ -6,54 +6,59 @@
     "start_url": "https://github.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "The trending Python repository on GitHub today with the most total stars is **anthropics/skills**. It has about 185,721 stars and 21,924 forks, and gained 756 stars today. It is the public repository for Agent Skills.\n\nThe next most-starred trending Python repos are:\n- github/spec-kit: 144,185 stars (166 today)\n- Graphify-Labs/graphify: 139,803 stars (686 today)\n- hacksider/Deep-Live-Cam: 97,460 stars (44 today)\n- bregman-arie/devops-exercises: 85,612 stars (341 today)\n- calesthio/OpenMontage: 73,772 stars (564 today)\n\nIf you meant the most stars gained today instead of total stars, the leader is **HKUDS/DeepTutor** with 1,035 stars today (52,368 total). It is followed by anthropics/skills with 756 and Graphify-Labs/graphify with 686.",
+  "final_answer": "The trending Python repository with the most stars on GitHub today is EbookFoundation / free-programming-books, with 401,179 stars. It is a list of freely available programming books, and it gained 179 stars today.\n\nThe full \"Today\" trending list, ranked by total stars, is:\n1. EbookFoundation / free-programming-books: 401,179 (+179 today)\n2. donnemartin / system-design-primer: 377,189 (+190 today)\n3. anthropics / skills: 188,332 (+386 today)\n4. sherlock-project / sherlock: 99,269 (+1,761 today)\n5. django / django: 91,673 (+169 today)\n6. jamiepine / voicebox: 59,820 (+318 today)\n7. microsoft / VibeVoice: 56,587 (+237 today)\n8. spotDL / spotify-downloader: 26,703 (+75 today)\n9. google / skills: 23,044 (+449 today)\n10. Usagi-org / ai-goofish-monitor: 18,265 (+146 today)\n11. bobeff / open-source-games: 17,792 (+146 today)\n12. NVIDIA / auto-ontology: 9,544 (+1,322 today)\n13. elder-plinius / OBLITERATUS: 9,269 (+61 today)\n14. aws / agent-toolkit-for-aws: 3,422 (+8 today)\n15. mbillow / localthings: 929 (+184 today)\n\nBy stars gained today, sherlock-project / sherlock leads with 1,761. NVIDIA / auto-ontology is next with 1,322.\n\nI can also check the weekly or monthly trending view if you want it.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The agent opened GitHub Trending filtered to Python today and reported supported star counts, including both total-star leader anthropics/skills and stars-today leader HKUDS/DeepTutor.",
+    "rationale": "The agent opened GitHub Trending Python today and reported the highest total-star repo, EbookFoundation/free-programming-books with 401,179 stars, supported by page evidence.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 5587,
-    "output_tokens": 480
+    "input_tokens": 8125,
+    "output_tokens": 301
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://github.com/trending/python?since=daily",
+    "url": "https://github.com/trending/python",
     "title": "Trending Python repositories on GitHub today · GitHub"
   },
   "final_screenshot": "screenshots/github-2.jpg",
-  "cost_usd": 0.214404,
-  "elapsed_s": 26.1,
+  "cost_usd": 0.714604,
+  "elapsed_s": 35.2,
   "actions": [
     {
       "tool": "navigate",
       "args": {
-        "url": "https://github.com/search?q=language%3APython&type=repositories&s=stars&o=desc"
+        "url": "https://github.com/trending/python"
       },
       "ok": true,
-      "ms": 1003
+      "ms": 1567
     },
     {
-      "tool": "get_page_text",
-      "args": {},
-      "ok": true,
-      "ms": 3
-    },
-    {
-      "tool": "navigate",
+      "tool": "take_snapshot",
       "args": {
-        "url": "https://github.com/trending/python?since=daily"
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 1480
+      "ms": 1
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "offset": 92
+      },
+      "ok": true,
+      "ms": 12
     },
     {
       "tool": "get_page_text",
-      "args": {},
+      "args": {
+        "selector": "main"
+      },
       "ok": true,
-      "ms": 3
+      "ms": 48
     }
   ]
 }

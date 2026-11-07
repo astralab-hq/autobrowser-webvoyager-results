@@ -1,0 +1,66 @@
+{
+  "task": {
+    "id": "wolfram-alpha-2",
+    "site": "wolfram-alpha",
+    "instruction": "Calculate 3^71 and retain 5 significant figures in scientific notation.",
+    "start_url": "https://www.wolframalpha.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "3^71 = 7,509,466,514,979,724,803,946,715,958,257,547 (a 34-digit number).\n\nIn scientific notation Wolfram|Alpha gives 7.509466514979724803946715958257547 × 10^33.\n\nRounded to 5 significant figures: **7.5095 × 10^33** (the sixth digit is a 6, so the 4 in the fifth place rounds up to 5).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "WolframAlpha page shows 3^71 = 7.5094665…×10^33, and the agent correctly rounded it to 5 significant figures as 7.5095×10^33.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 5077,
+    "output_tokens": 51
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.wolframalpha.com/input?i=3%5E71",
+    "title": "3^71 - Wolfram|Alpha"
+  },
+  "final_screenshot": "screenshots/wolfram-alpha-2.jpg",
+  "cost_usd": 0.0011308,
+  "elapsed_s": 20.3,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 14
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "3^71",
+        "uid": "ref_1_7"
+      },
+      "ok": true,
+      "ms": 437
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 13
+    }
+  ]
+}

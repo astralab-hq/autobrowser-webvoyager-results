@@ -6,26 +6,26 @@
     "start_url": "https://www.coursera.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
-  "status": "fail",
-  "pass": false,
-  "final_answer": "The course I picked is **AI for Medical Diagnosis**, offered by DeepLearning.AI on Coursera. It is part of the AI for Medicine Specialization and is rated 4.7 from 2,078 reviews.\n\n- **Duration:** about 2 weeks at 10 hours a week, on a flexible schedule. The search listing shows 1–4 weeks. The course has 3 modules, which take 9, 5 and 7 hours (about 21 hours in total).\n- **Assessments:** the page lists \"3 assignments\". It doesn't use the word \"quizzes\", so the number of quizzes in Assessments is 3.",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I picked the Coursera course \"AI for Healthcare\" (offered by AI CERTs, https://www.coursera.org/learn/ai-for-healthcare).\n\nDuration: 1 week to complete, at 10 hours a week. It is a Beginner level course with 9 modules and a flexible schedule.\n\nAssessments: the page lists 8 assignments. It doesn't list any quizzes separately. The Assessments section says \"8 assignments\", so the number of quizzes is 8 if you count assignments as quizzes.",
   "judge": {
-    "verdict": "FAILURE",
-    "rationale": "The page supports duration “2 weeks at 10 hours a week” and Assessments “3 assignments,” but the agent incorrectly reported these assignments as “quizzes.”",
+    "verdict": "SUCCESS",
+    "rationale": "The Coursera page supports the chosen course, duration “1 week to complete at 10 hours a week,” and Assessments showing “8 assignments.”",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 11143,
-    "output_tokens": 40
+    "input_tokens": 7375,
+    "output_tokens": 537
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.coursera.org/learn/ai-for-medical-diagnosis",
-    "title": "AI for Medical Diagnosis | Coursera"
+    "url": "https://www.coursera.org/learn/ai-for-healthcare",
+    "title": "AI for Healthcare | Coursera"
   },
   "final_screenshot": "screenshots/coursera-6.jpg",
-  "cost_usd": 1.71779,
-  "elapsed_s": 70.5,
+  "cost_usd": 0.312754,
+  "elapsed_s": 36.1,
   "actions": [
     {
       "tool": "navigate",
@@ -33,35 +33,7 @@
         "url": "https://www.coursera.org/search?query=Artificial%20Intelligence%20for%20Healthcare"
       },
       "ok": true,
-      "ms": 1653
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "filter": "interactive"
-      },
-      "ok": true,
-      "ms": 36
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_1_43"
-      },
-      "ok": true,
-      "ms": 1855
-    },
-    {
-      "tool": "get_page_text",
-      "args": {},
-      "ok": true,
-      "ms": 3
-    },
-    {
-      "tool": "list_tabs",
-      "args": {},
-      "ok": true,
-      "ms": 1
+      "ms": 764
     },
     {
       "tool": "take_snapshot",
@@ -70,78 +42,38 @@
         "max_chars": 3000
       },
       "ok": true,
-      "ms": 22
+      "ms": 0
     },
     {
       "tool": "click",
       "args": {
-        "uid": "ref_3_43"
+        "uid": "ref_1_41"
       },
       "ok": true,
-      "ms": 5779
-    },
-    {
-      "tool": "list_tabs",
-      "args": {},
-      "ok": true,
-      "ms": 3
-    },
-    {
-      "tool": "get_element_info",
-      "args": {
-        "uid": "ref_3_43"
-      },
-      "ok": false,
-      "ms": 3
-    },
-    {
-      "tool": "find",
-      "args": {
-        "description": "AI for Medical Diagnosis course link"
-      },
-      "ok": false,
-      "ms": 4
+      "ms": 884
     },
     {
       "tool": "take_snapshot",
       "args": {
         "filter": "interactive",
-        "max_chars": 1500
-      },
-      "ok": true,
-      "ms": 10
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "filter": "interactive",
-        "max_chars": 1500,
-        "offset": 34
-      },
-      "ok": true,
-      "ms": 21
-    },
-    {
-      "tool": "get_element_info",
-      "args": {
-        "uid": "ref_6_43"
+        "max_chars": 3000
       },
       "ok": true,
       "ms": 1
     },
     {
-      "tool": "navigate",
+      "tool": "switch_focus",
       "args": {
-        "url": "https://www.coursera.org/learn/ai-for-medical-diagnosis"
+        "tab_id": 1550753509
       },
       "ok": true,
-      "ms": 742
+      "ms": 1
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 3
+      "ms": 34
     }
   ]
 }

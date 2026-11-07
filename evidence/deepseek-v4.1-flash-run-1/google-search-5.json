@@ -1,0 +1,38 @@
+{
+  "task": {
+    "id": "google-search-5",
+    "site": "google-search",
+    "instruction": "find the score of the latest nba game played by the phoenix suns.",
+    "start_url": "https://www.google.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a google bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0.01042667,
+  "elapsed_s": 5.3,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.google.com/search?q=Phoenix+Suns+latest+game+score"
+      },
+      "ok": true,
+      "ms": 140
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    }
+  ]
+}

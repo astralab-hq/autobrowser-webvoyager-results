@@ -1,0 +1,83 @@
+{
+  "task": {
+    "id": "arxiv-0",
+    "site": "arxiv",
+    "instruction": "Search for the latest preprints about 'quantum computing'.",
+    "start_url": "https://arxiv.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I searched arXiv (all fields, sorted by announcement date, newest first) for \"quantum computing\" — 59,149 results total. The most recent batch is all dated **Submitted 5 November, 2026; originally announced November 2026**. Here are the 10 newest preprints:\n\n1. **Quantum Knowledge Distillation: State-of-the-art, Applications and Open Problems** — arXiv:2611.08461 [quant-ph] — Aldana Al-Sulaiti, Kuan-Cheng Chen, Muhammad Bilal Akram Dastagir, Ahmed Farouk, Saif Al-Kuwari. A survey of knowledge distillation in quantum machine learning, organized by teacher–student configuration and the role of quantum resources; finds benefits are task- and architecture-dependent, with hardware evaluations still limited. (21 pages, 3 figures, 4 tables)\n\n2. **Polynomial-time classical simulation of boson and fermion sampling under thermal loss** — arXiv:2611.08444 [quant-ph, cs.CC, math-ph, physics.optics] — Armando Angrisani, Hela Mhiri. Shows that under any fixed nonzero loss rate, boson and fermion sampling can be classically simulated in polynomial time, weakening claims of noise-robust quantum advantage. (83 pages, 2 figures)\n\n3. **Deep-learning surrogate model for rapid quantum-noise computation in dual-pump fiber-optic phase-sensitive amplifiers** — arXiv:2611.08437 [physics.optics] — Yousra Bouasria, Debanuj Chatterjee, Abdessamad Belfakir, Debabrota Basu. A DNN predicts noise figures ~400× faster than semi-quantum evaluation (MAE 0.0015 dB).\n\n4. **QDiff: Differential Testing of Quantum Software Stacks** — arXiv:2611.08220 [quant-ph, cs.SE] — Jiyuan Wang, Qian Zhang, Guoqing Harry Xu, Miryung Kim. Semantics-preserving program transformation plus circuit filtering and distribution-comparison equivalence checking for testing quantum compilers/simulators. (Published at ASE 2021; DOI 10.1109/ASE51524.2021.9678792)\n\n5. **Zirah: A Post-Quantum True Random Number Generator Hardware Signer With an Avalanche Noise** — arXiv:2611.08200 [cs.CR, cs.AR] — Muhammad Shaheer Bin Junaid. An STM32F407-based ML-DSA-65 signer using avalanche-breakdown entropy, with an honest account of where the key is exposed. (28 pages, 13 figures, 10 tables)\n\n6. **Quantum Advantage with Sign-Free Proofs: An Oracle Separation between StoqMA and MA** — arXiv:2611.08180 [quant-ph, cs.CC, cs.DS] — Yassine Hamoudi, Yvan Le Borgne, Shrinidhi Teganahally Sridhara. Proves MA ⊊ StoqMA relative to a classical oracle, i.e. a single Hadamard-basis measurement already beats every classical verifier. (21 pages, 3 figures)\n\n7. **Non-Unitary Quantum Butterfly Effect: Theory and Experiment** — arXiv:2611.08152 [quant-ph, cond-mat.other] — Paul Argyle, Djamil Lakhdar-Hamina, Sarah H. Miller, Victor Galitski. Generalizes the OTOC to non-unitary (measured) circuits and confirms the prediction on Quantinuum's trapped-ion quantum computer. (48 pages, 13 figures)\n\n8. **Machine learning quantum data to accelerate quantum Monte Carlo** — arXiv:2611.08151 [quant-ph, physics.chem-ph] — Tong Jiang, Andrew Zhao, Shashwat Kumar, Jigyasa Nigam, Eliott Rosenberg, Ryan Babbush, Andrew D. Baczewski, William J. Huggins, Joonho Lee. Compresses quantum measurement data into ML models to speed hybrid QMC, reaching chemically accurate simulations on up to 40 qubits using Google's Willow processor.\n\n9. **Accelerating Quantum-Classical Auxiliary-Field Quantum Monte Carlo with Shadow-Trained Neural Quantum States** — arXiv:2611.08129 [quant-ph] — Justin Provazza, Oliver Knitter, Joshua Goings, Evgeny Epifanovsky, Chi Chen, Martin Roetteler, Luning Zhao. Distills matchgate shadows into a noise-aware autoregressive transformer NQS, cutting classical cost ~99% for a nickel-catalyzed reaction. (17 pages, 8 figures)\n\n10. **Post-Quantum Authentication of IoT Data on Ethereum: Signatures, the Calldata Floor, and Device-Signed Merkle Roots** — arXiv:2611.08108 [cs.DC] — Ming-Fong Sie. Measures on-chain costs of ML-DSA, Falcon, SLH-DSA, LMS and XMSS verification under current and upcoming Ethereum rules.\n\nNote: several of these are only tangentially about quantum computing proper (post-quantum cryptography, fiber-optic amplifier noise); the core quantum-computing papers are #1, #2, #6, #7, #8 and #9. Want me to narrow to a specific category (e.g. quant-ph only) or pull the full abstracts for any of these?",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent searched arXiv for “quantum computing,” sorted newest first, and reported the latest preprints supported by the page’s top results and dates.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 14369,
+    "output_tokens": 38
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://arxiv.org/search/?searchtype=all&query=quantum+computing&start=0",
+    "title": "Search | arXiv e-print repository"
+  },
+  "final_screenshot": "screenshots/arxiv-0.jpg",
+  "cost_usd": 0.00501541,
+  "elapsed_s": 33.3,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/search/?searchtype=all&query=quantum+computing&start=0"
+      },
+      "ok": true,
+      "ms": 867
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 90
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 7000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 72
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 13000
+      },
+      "ok": true,
+      "ms": 73
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 5000,
+        "offset": 19000
+      },
+      "ok": true,
+      "ms": 81
+    }
+  ]
+}

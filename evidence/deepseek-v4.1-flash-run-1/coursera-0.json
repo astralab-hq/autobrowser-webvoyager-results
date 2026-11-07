@@ -1,0 +1,359 @@
+{
+  "task": {
+    "id": "coursera-0",
+    "site": "coursera",
+    "instruction": "Find a beginner-level online course about '3d printing' which lasts 1-3 months, and is provided by a renowned university.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a match on Coursera: **3D Printing and Additive Manufacturing Specialization**, offered by the **University of Illinois Urbana-Champaign** (https://www.coursera.org/specializations/3d-printing-additive-manufacturing).\n\nIt fits all three of your criteria:\n- **Level:** Beginner level (no prior experience required)\n- **Duration:** 2 months to complete at ~10 hours a week — squarely inside your 1–3 month window\n- **Provider:** University of Illinois Urbana-Champaign, a renowned public research university, with instructors including Vishal Sachdev, Jeffrey Smith and Matthew Griffin\n\nIt's a 4-course series (~77 hours total) that takes you from the fundamentals of how 3D printing works, through 3D modeling and scanning software, to setting up, operating and maintaining a desktop 3D printer. It has 20,847 learners enrolled and a 4.6-star rating across 2,494 reviews, and it awards a shareable career certificate from the university. The courses are: The 3D Printing Revolution (10 hrs), 3D Printing Applications (21 hrs), 3D Printing Software (15 hrs), and 3D Printing Hardware (31 hrs).\n\nOne alternative I checked and ruled out: Arizona State University's \"Rapid Prototyping Using 3D Printing\" is also beginner-level and university-provided, but it's listed at only 4 weeks to complete, which falls short of your 1-month minimum.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page and answer show a 3D printing course from University of Illinois, beginner level, and “2 months to complete,” satisfying all criteria.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 14977,
+    "output_tokens": 36
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/specializations/3d-printing-additive-manufacturing",
+    "title": "3D Printing and Additive Manufacturing | Coursera"
+  },
+  "final_screenshot": "screenshots/coursera-0.jpg",
+  "cost_usd": 0.01795124,
+  "elapsed_s": 125.0,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 41
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_8"
+      },
+      "ok": true,
+      "ms": 307
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "3d printing",
+        "uid": "ref_3_1"
+      },
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_19"
+      },
+      "ok": true,
+      "ms": 286
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 8000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_4_4"
+      },
+      "ok": true,
+      "ms": 292
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 10
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 12000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000,
+        "offset": 100
+      },
+      "ok": true,
+      "ms": 10
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 12000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "include_screenshot": true,
+        "max_chars": 12000
+      },
+      "ok": true,
+      "ms": 72
+    },
+    {
+      "tool": "press_key",
+      "args": {
+        "chord": "Escape"
+      },
+      "ok": true,
+      "ms": 68
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_11_23"
+      },
+      "ok": true,
+      "ms": 336
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "switch_focus",
+      "args": {
+        "tab_id": 717047935
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 30
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/specializations/3d-printing-additive-manufacturing"
+      },
+      "ok": true,
+      "ms": 733
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_68"
+      },
+      "ok": true,
+      "ms": 324
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 3000
+      },
+      "ok": true,
+      "ms": 27
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 9000
+      },
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=3d%20printing&productDifficultyLevel=Beginner"
+      },
+      "ok": true,
+      "ms": 587
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_26"
+      },
+      "ok": true,
+      "ms": 541
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "switch_focus",
+      "args": {
+        "tab_id": 717047936
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 28
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 4000
+      },
+      "ok": true,
+      "ms": 32
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/specializations/3d-printing-additive-manufacturing"
+      },
+      "ok": true,
+      "ms": 1352
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 37
+    }
+  ]
+}

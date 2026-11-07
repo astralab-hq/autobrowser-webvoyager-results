@@ -1,0 +1,101 @@
+{
+  "task": {
+    "id": "apple-6",
+    "site": "apple",
+    "instruction": "Find AirPods on Apple and how many types are currently available.",
+    "start_url": "https://www.apple.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "On Apple's AirPods page (apple.com/airpods), there are **4 AirPods models currently available**, as listed in the \"Compare AirPods models\" section:\n\n1. **AirPods 5** — \"Discover the magic of Active Noise Cancellation.\" — from **$129** (charging case, USB‑C)\n2. **AirPods 5 with Wireless Charging Case** — Active Noise Cancellation, volume swipe, longer battery life — **$149**\n3. **AirPods Pro 3** — \"The world's best in‑ear Active Noise Cancellation,\" with heart rate sensing during workouts — **$249**\n4. **AirPods Max 2** — \"Listening. Remastered.\" over‑ear headphones — **$549**\n\nThe site's top navigation groups them into three families — AirPods (New), AirPods Pro, and AirPods Max — with the AirPods 5 offered in two case variants, which is how the four buyable models break down.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The Apple AirPods page evidence lists four compare models: AirPods 5, AirPods 5 Wireless Charging Case, AirPods Pro 3, and AirPods Max 2.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 15498,
+    "output_tokens": 43
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.apple.com/airpods/",
+    "title": "AirPods - Apple"
+  },
+  "final_screenshot": "screenshots/apple-6.jpg",
+  "cost_usd": 0.01163187,
+  "elapsed_s": 39.8,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/airpods/"
+      },
+      "ok": true,
+      "ms": 271
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 6000,
+        "offset": 79
+      },
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 37
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 5000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 21
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 20000
+      },
+      "ok": true,
+      "ms": 29
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 9000
+      },
+      "ok": true,
+      "ms": 31
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 15000
+      },
+      "ok": true,
+      "ms": 14
+    }
+  ]
+}

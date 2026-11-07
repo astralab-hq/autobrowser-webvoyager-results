@@ -6,40 +6,51 @@
     "start_url": "https://www.coursera.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "Several beginner courses on Coursera about 3D printing last 1–3 months and come from well-known universities:\n\n- **3D Printing Applications**, University of Illinois Urbana-Champaign. It's a course rated 4.6 from 692 reviews.\n- **3D Printing Software**, University of Illinois Urbana-Champaign. It's a course rated 4.6 from 563 reviews.\n- **Introduction to 3D Printing with Metals**, University of Michigan. It's a course rated 4.8 from 21 reviews.\n- **Rapid Prototyping Using 3D Printing**, Arizona State University. It's a specialization rated 4.6 from 130 reviews.\n- **3D Printing and Future Medical Technologies**, POSTECH. It's a course with no rating shown.\n\nIf you want one pick, I'd choose **3D Printing Applications** from the University of Illinois Urbana-Champaign. It has the most reviews of the general 3D printing courses and a strong 4.6 rating. I haven't enrolled in anything or opened any course pages.",
+  "final_answer": "I searched Coursera for \"3d printing\" with the Beginner level and 1-3 Months duration filters applied. Several courses from well-known universities came up.\n\nThe top result is **3D Printing Software** from the University of Illinois Urbana-Champaign. It is a Beginner course lasting 1-3 months, rated 4.6 stars from 563 reviews. It covers 3D modeling and design software: https://www.coursera.org/learn/3d-printing-software\n\nOther Beginner, 1-3 month options from renowned universities:\n- **3D Printing Applications**, University of Illinois Urbana-Champaign: 4.6 stars, 692 reviews.\n- **Introduction to 3D Printing with Metals**, University of Michigan: 4.8 stars, 21 reviews.\n- **Rapid Prototyping Using 3D Printing**, Arizona State University: a Specialization rated 4.6 stars, 130 reviews.\n- **3D Printing Hardware**, University of Illinois Urbana-Champaign: 4.2 stars, 116 reviews.\n- **3D Printing and Future Medical Technologies**, POSTECH: a new course with no ratings yet.\n\nI'd pick 3D Printing Software or 3D Printing Applications as the best general introduction.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The Coursera page supports multiple beginner 3D printing results from universities with 1–3 month durations, e.g. UIUC “3D Printing Software” and “3D Printing Applications.”",
+    "rationale": "Final answer names Coursera results showing 3D printing, Beginner, Course, 1–3 Months, from universities like UIUC and Michigan, supported by page text.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 5603,
-    "output_tokens": 46
+    "input_tokens": 6766,
+    "output_tokens": 41
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.coursera.org/search?query=3d%20printing&productDifficultyLevel=Beginner&productDurationEnum=1-3%20Months",
+    "url": "https://www.coursera.org/search?query=3d%20printing&productDifficultyLevel=Beginner&productDuration=1-3%20Months",
     "title": "Coursera | Online Courses From Top Universities. Join for Free"
   },
   "final_screenshot": "screenshots/coursera-0.jpg",
-  "cost_usd": 0.198894,
-  "elapsed_s": 23.8,
+  "cost_usd": 0.412874,
+  "elapsed_s": 27.3,
   "actions": [
     {
       "tool": "navigate",
       "args": {
-        "url": "https://www.coursera.org/search?query=3d%20printing&productDifficultyLevel=Beginner&productDurationEnum=1-3%20Months"
+        "url": "https://www.coursera.org/search?query=3d%20printing&productDifficultyLevel=Beginner&productDuration=1-3%20Months"
       },
       "ok": true,
-      "ms": 763
+      "ms": 1204
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
     },
     {
       "tool": "get_page_text",
-      "args": {},
+      "args": {
+        "head_limit": 5000
+      },
       "ok": true,
-      "ms": 2
+      "ms": 15
     }
   ]
 }

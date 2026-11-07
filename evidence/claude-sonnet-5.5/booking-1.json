@@ -6,49 +6,43 @@
     "start_url": "https://www.booking.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "The cheapest hotel room I found for 2 adults, 1–4 Jan 2027 (3 nights), is the **Superior Double Room (1 queen bed) at Bungur Inn Syariah** in Kebayoran Lama, South Jakarta. It costs **MYR 63 for the whole 3-night stay**, including taxes and fees. That is about MYR 21 a night.\n\nBooking.com's lowest-price sort lists a cheaper result first. It is a One-Bedroom Apartment at \"App store properti\" in Penjaringan for MYR 11 in total. That is an entire apartment, not a hotel room, so I left it out. If you count any property type, MYR 11 is the lowest price.\n\nThe MYR 63 room has a review score of only 1.0, from a single review. I also tried to apply the \"Hotels\" property-type filter, but I couldn't confirm it took effect. I chose the room from the price-sorted list instead. Prices come from the live search results and could change.",
+  "final_answer": "The cheapest hotel room I found is the Standard Double Room (1 queen bed, free cancellation) at **Hotel O near TMII formerly Wisma Damai** in East Jakarta. It costs **MYR 69** for 3 nights (1–4 Jan 2027, 2 adults), plus MYR 6 in taxes and fees, so about **MYR 75** in total.\n\nI used Booking.com with the \"Hotels\" property type filter, sorted by lowest price. The next cheapest was Hotel O near Ancol formerly Ava Guest House at MYR 72 plus MYR 4 in taxes and fees, which comes to about MYR 76. Without the Hotels filter, an apartment listing was cheaper (MYR 10), but it isn't a hotel room.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "Evidence shows Booking search for Jakarta Jan 1–4, 2027, 2 adults sorted by lowest price; Bungur Inn Syariah Superior Double Room is MYR 63.",
+    "rationale": "Evidence shows Booking.com search for Jakarta Jan 1–4, 2 adults, Hotels filter, sorted lowest; TMII room is MYR 69 + MYR 6, cheaper total than Ancol.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 17062,
-    "output_tokens": 497
+    "input_tokens": 17983,
+    "output_tokens": 527
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.booking.com/searchresults.html?ss=Jakarta&checkin=2027-01-01&checkout=2027-01-04&group_adults=2&no_rooms=1&group_children=0&order=price&selected_currency=MYR",
+    "url": "https://www.booking.com/searchresults.html?ss=Jakarta&checkin=2027-01-01&checkout=2027-01-04&group_adults=2&no_rooms=1&group_children=0&order=price&nflt=ht_id%3D204",
     "title": "Booking.com: Search results: Jakarta. Book your hotel now!"
   },
   "final_screenshot": "screenshots/booking-1.jpg",
-  "cost_usd": 1.52665,
-  "elapsed_s": 81.6,
+  "cost_usd": 2.050032,
+  "elapsed_s": 120.0,
   "actions": [
-    {
-      "tool": "take_snapshot",
-      "args": {},
-      "ok": true,
-      "ms": 44
-    },
     {
       "tool": "navigate",
       "args": {
-        "url": "https://www.booking.com/searchresults.html?ss=Jakarta&checkin=2027-01-01&checkout=2027-01-04&group_adults=2&no_rooms=1&group_children=0&order=price&selected_currency=MYR"
+        "url": "https://www.booking.com/searchresults.html?ss=Jakarta&checkin=2027-01-01&checkout=2027-01-04&group_adults=2&no_rooms=1&group_children=0&order=price"
       },
       "ok": true,
-      "ms": 1888
+      "ms": 1191
     },
     {
       "tool": "take_snapshot",
       "args": {
-        "filter": "all",
-        "max_chars": 12000
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 66
+      "ms": 1
     },
     {
       "tool": "get_page_text",
@@ -56,57 +50,138 @@
         "head_limit": 6000
       },
       "ok": true,
-      "ms": 2
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_1_60"
-      },
-      "ok": true,
-      "ms": 285
-    },
-    {
-      "tool": "get_page_text",
-      "args": {
-        "head_limit": 3500,
-        "offset": 3300
-      },
-      "ok": true,
-      "ms": 2
-    },
-    {
-      "tool": "get_page_text",
-      "args": {
-        "head_limit": 3500,
-        "offset": 2800
-      },
-      "ok": true,
-      "ms": 2
+      "ms": 62
     },
     {
       "tool": "take_snapshot",
       "args": {
-        "filter": "all",
-        "max_chars": 3000,
-        "offset": 180
+        "include_screenshot": true,
+        "offset": 58
       },
       "ok": true,
-      "ms": 53
+      "ms": 121
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Hotels property type filter checkbox",
+        "limit": 3
+      },
+      "ok": true,
+      "ms": 64
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_2_218"
+      },
+      "ok": true,
+      "ms": 307
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
     },
     {
       "tool": "get_page_text",
       "args": {
-        "head_limit": 1800,
-        "offset": 2400
+        "head_limit": 7000,
+        "offset": 2500
+      },
+      "ok": true,
+      "ms": 56
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {
+        "full_page": false
+      },
+      "ok": true,
+      "ms": 70
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": 900,
+        "x": 740,
+        "y": 700
+      },
+      "ok": true,
+      "ms": 64
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 63
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -500,
+        "x": 740,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 55
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
       "ms": 4
     },
     {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "selector": "[data-testid=\"property-card\"]"
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
       "tool": "find",
       "args": {
-        "description": "Hotels property type checkbox (checked state) and results count heading"
+        "description": "price of Hotel O near Ancol formerly Ava Guest House",
+        "limit": 3
+      },
+      "ok": true,
+      "ms": 58
+    },
+    {
+      "tool": "computer",
+      "args": {
+        "action": "scroll",
+        "deltaY": -3000,
+        "x": 740,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
       "ms": 4
@@ -115,16 +190,7 @@
       "tool": "take_screenshot",
       "args": {},
       "ok": true,
-      "ms": 82
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "filter": "interactive",
-        "max_chars": 4000
-      },
-      "ok": true,
-      "ms": 37
+      "ms": 64
     }
   ]
 }

@@ -1,0 +1,209 @@
+{
+  "task": {
+    "id": "allrecipes-4",
+    "site": "allrecipes",
+    "instruction": "Find a recipe for Baked Salmon that takes less than 30 minutes to prepare and has at least a 4 star rating based on user reviews.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a recipe that meets both criteria on Allrecipes: **Baked Salmon Fillets Dijon** (https://www.allrecipes.com/recipe/22538/baked-salmon-fillets-dijon/).\n\nIt's rated **4.6 out of 5 stars** from **1,590 user ratings** (1,135 written reviews, 109 photos), and its **total time is 25 minutes** — 10 minutes prep plus 15 minutes cook time — so it comes in under your 30-minute limit. It's submitted by CHRISTYJ and tested by the Allrecipes Test Kitchen.\n\n**Ingredients (4 servings):** 4 (4-ounce) salmon fillets; 3 tablespoons prepared Dijon-style mustard; salt and ground black pepper to taste; ¼ cup Italian-style dry bread crumbs; ¼ cup butter, melted.\n\n**Directions:** Preheat the oven to 400°F (200°C) and line a shallow baking pan with aluminum foil. Place the fillets skin-side down on the pan, spread a thin layer of mustard over each one, and season with salt and pepper. Top with the bread crumbs, then drizzle with the melted butter. Bake until the salmon flakes easily with a fork, about 15 minutes, and serve. Per serving it comes to 331 calories, 22g fat, 8g carbs, and 25g protein.\n\nFor reference, I also checked two other baked salmon recipes: \"Baked Dijon Salmon\" (4.6 stars, 3,745 ratings) is exactly 30 minutes total, so it sits right at your limit rather than under it, and \"Baked Salmon II\" fell short of the rating bar.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page shows Baked Salmon Fillets Dijon rated 4.6 from 1,590 ratings with 25 mins total time, satisfying baked salmon, <30 mins, and ≥4 stars.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 17200,
+    "output_tokens": 46
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/recipe/22538/baked-salmon-fillets-dijon/",
+    "title": "Baked Salmon Fillets Dijon Recipe"
+  },
+  "final_screenshot": "screenshots/allrecipes-4.jpg",
+  "cost_usd": 0.00820964,
+  "elapsed_s": 96.4,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 52
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "baked salmon",
+        "uid": "ref_1_10"
+      },
+      "ok": true,
+      "ms": 306
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_11"
+      },
+      "ok": true,
+      "ms": 222
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/search?q=baked%20salmon"
+      },
+      "ok": true,
+      "ms": 394
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/34746/baked-salmon-ii/"
+      },
+      "ok": true,
+      "ms": 634
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 30
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/21176/baked-dijon-salmon/"
+      },
+      "ok": true,
+      "ms": 518
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 38
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 2500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 36
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/22538/baked-salmon-fillets-dijon/"
+      },
+      "ok": true,
+      "ms": 655
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 41
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2000,
+        "offset": 2000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 39
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1200,
+        "offset": 4000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 38
+    }
+  ]
+}

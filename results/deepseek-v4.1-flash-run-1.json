@@ -1,0 +1,954 @@
+{
+  "system": "Auto Browser + DeepSeek V4.1 Flash, run 1",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "suite": "wv-mini (103 WebVoyager tasks)",
+  "agent_commit": "29e9d031ac1856fb1662862af2c161b4d163703a",
+  "judge": {
+    "model": "gpt-5.5-2026-04-23",
+    "reasoning_effort": "medium",
+    "prompt_version": "wv-2.2"
+  },
+  "run_date": "2026-11-07",
+  "time_zone": "Asia/Kuala_Lumpur",
+  "summary": {
+    "tasks": 103,
+    "graded": 89,
+    "passed": 82,
+    "failed": 7,
+    "blocked_by_bot_check": 14,
+    "errored": 0,
+    "pass_rate": 0.9213483146067416,
+    "agent_cost_usd": 1.32583789,
+    "agent_cost_source": "OpenRouter key spend, read between tasks",
+    "elapsed_minutes": 127
+  },
+  "tasks": [
+    {
+      "id": "allrecipes-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.02947994,
+      "elapsed_s": 243.3,
+      "actions": 47,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "allrecipes-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01716546,
+      "elapsed_s": 50.3,
+      "actions": 10,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "allrecipes-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00856874,
+      "elapsed_s": 56.5,
+      "actions": 10,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "allrecipes-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00820964,
+      "elapsed_s": 96.4,
+      "actions": 20,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "allrecipes-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.02244869,
+      "elapsed_s": 94.5,
+      "actions": 17,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "allrecipes-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00822591,
+      "elapsed_s": 67.8,
+      "actions": 12,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "amazon-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0,
+      "elapsed_s": 21.8,
+      "actions": 3,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "amazon-1",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0.01988647,
+      "elapsed_s": 146.0,
+      "actions": 31,
+      "judge_verdict": null
+    },
+    {
+      "id": "amazon-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00706424,
+      "elapsed_s": 44.3,
+      "actions": 15,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "amazon-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00796811,
+      "elapsed_s": 22.4,
+      "actions": 5,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "amazon-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.03641977,
+      "elapsed_s": 191.2,
+      "actions": 57,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "amazon-5",
+      "status": "fail",
+      "pass": false,
+      "cost_usd": 0.03034728,
+      "elapsed_s": 158.3,
+      "actions": 62,
+      "judge_verdict": "FAILURE"
+    },
+    {
+      "id": "amazon-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01354204,
+      "elapsed_s": 101.4,
+      "actions": 16,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "apple-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01124547,
+      "elapsed_s": 108.8,
+      "actions": 13,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "apple-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.02530628,
+      "elapsed_s": 89.1,
+      "actions": 35,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "apple-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.03244408,
+      "elapsed_s": 67.3,
+      "actions": 19,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "apple-3",
+      "status": "fail",
+      "pass": false,
+      "cost_usd": 0.04946682,
+      "elapsed_s": 202.5,
+      "actions": 65,
+      "judge_verdict": "FAILURE"
+    },
+    {
+      "id": "apple-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01489422,
+      "elapsed_s": 48.6,
+      "actions": 19,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "apple-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.05752334,
+      "elapsed_s": 107.4,
+      "actions": 41,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "apple-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01052328,
+      "elapsed_s": 57.2,
+      "actions": 16,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "arxiv-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00501541,
+      "elapsed_s": 33.3,
+      "actions": 6,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "arxiv-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.02158096,
+      "elapsed_s": 99.9,
+      "actions": 17,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "arxiv-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0,
+      "elapsed_s": 25.9,
+      "actions": 6,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "arxiv-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01098715,
+      "elapsed_s": 60.1,
+      "actions": 10,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "arxiv-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00392362,
+      "elapsed_s": 25.2,
+      "actions": 5,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "arxiv-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00552527,
+      "elapsed_s": 45.8,
+      "actions": 19,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "arxiv-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00514812,
+      "elapsed_s": 35.9,
+      "actions": 10,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "bbc-news-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.0066127,
+      "elapsed_s": 49.5,
+      "actions": 9,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "bbc-news-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.03204903,
+      "elapsed_s": 230.8,
+      "actions": 37,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "bbc-news-2",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0.00511952,
+      "elapsed_s": 21.5,
+      "actions": 6,
+      "judge_verdict": null
+    },
+    {
+      "id": "bbc-news-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0,
+      "elapsed_s": 38.1,
+      "actions": 9,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "bbc-news-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00798305,
+      "elapsed_s": 98.2,
+      "actions": 12,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "bbc-news-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00669539,
+      "elapsed_s": 36.0,
+      "actions": 6,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "bbc-news-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00420204,
+      "elapsed_s": 39.2,
+      "actions": 7,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "booking-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.03890372,
+      "elapsed_s": 188.2,
+      "actions": 63,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "booking-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.03793904,
+      "elapsed_s": 115.2,
+      "actions": 23,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "booking-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01999172,
+      "elapsed_s": 126.3,
+      "actions": 36,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "booking-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00444911,
+      "elapsed_s": 44.3,
+      "actions": 11,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "booking-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01220047,
+      "elapsed_s": 86.2,
+      "actions": 20,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "booking-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01462888,
+      "elapsed_s": 97.2,
+      "actions": 28,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "booking-7",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.02294349,
+      "elapsed_s": 267.4,
+      "actions": 31,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "cambridge-dictionary-0",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0,
+      "elapsed_s": 8.6,
+      "actions": 3,
+      "judge_verdict": null
+    },
+    {
+      "id": "cambridge-dictionary-1",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0.00264443,
+      "elapsed_s": 8.7,
+      "actions": 3,
+      "judge_verdict": null
+    },
+    {
+      "id": "cambridge-dictionary-2",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0,
+      "elapsed_s": 13.0,
+      "actions": 2,
+      "judge_verdict": null
+    },
+    {
+      "id": "cambridge-dictionary-3",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0.0027036,
+      "elapsed_s": 12.7,
+      "actions": 2,
+      "judge_verdict": null
+    },
+    {
+      "id": "cambridge-dictionary-4",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0,
+      "elapsed_s": 12.1,
+      "actions": 2,
+      "judge_verdict": null
+    },
+    {
+      "id": "cambridge-dictionary-5",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0.00139145,
+      "elapsed_s": 36.8,
+      "actions": 3,
+      "judge_verdict": null
+    },
+    {
+      "id": "cambridge-dictionary-6",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0.00099677,
+      "elapsed_s": 39.1,
+      "actions": 4,
+      "judge_verdict": null
+    },
+    {
+      "id": "coursera-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01795124,
+      "elapsed_s": 125.0,
+      "actions": 38,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "coursera-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00490725,
+      "elapsed_s": 65.2,
+      "actions": 20,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "coursera-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00886678,
+      "elapsed_s": 65.8,
+      "actions": 10,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "coursera-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01768261,
+      "elapsed_s": 169.2,
+      "actions": 37,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "coursera-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00618267,
+      "elapsed_s": 90.5,
+      "actions": 9,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "coursera-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00246049,
+      "elapsed_s": 40.6,
+      "actions": 9,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "coursera-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00895059,
+      "elapsed_s": 52.4,
+      "actions": 14,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "espn-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00270852,
+      "elapsed_s": 34.5,
+      "actions": 3,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "espn-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.09129838,
+      "elapsed_s": 195.1,
+      "actions": 43,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "espn-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01448756,
+      "elapsed_s": 24.3,
+      "actions": 4,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "espn-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00666427,
+      "elapsed_s": 71.5,
+      "actions": 7,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "espn-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01572002,
+      "elapsed_s": 121.2,
+      "actions": 12,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "espn-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01456645,
+      "elapsed_s": 92.2,
+      "actions": 20,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "espn-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01954152,
+      "elapsed_s": 88.9,
+      "actions": 15,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "github-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01188233,
+      "elapsed_s": 42.8,
+      "actions": 13,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "github-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00717963,
+      "elapsed_s": 57.1,
+      "actions": 21,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "github-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00743568,
+      "elapsed_s": 43.7,
+      "actions": 10,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "github-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00481195,
+      "elapsed_s": 15.8,
+      "actions": 5,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "github-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00314052,
+      "elapsed_s": 36.7,
+      "actions": 9,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "github-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00267578,
+      "elapsed_s": 27.9,
+      "actions": 7,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "github-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00374206,
+      "elapsed_s": 37.7,
+      "actions": 7,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-flights-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.0045998,
+      "elapsed_s": 67.3,
+      "actions": 25,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-flights-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.02711751,
+      "elapsed_s": 85.7,
+      "actions": 62,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-flights-3",
+      "status": "fail",
+      "pass": false,
+      "cost_usd": 0.05017634,
+      "elapsed_s": 216.2,
+      "actions": 72,
+      "judge_verdict": "UNKNOWN"
+    },
+    {
+      "id": "google-flights-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00323968,
+      "elapsed_s": 49.2,
+      "actions": 34,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-flights-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.0303788,
+      "elapsed_s": 94.6,
+      "actions": 52,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-flights-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01599955,
+      "elapsed_s": 79.8,
+      "actions": 33,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-flights-8",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01341005,
+      "elapsed_s": 169.0,
+      "actions": 67,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-map-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.02936377,
+      "elapsed_s": 111.7,
+      "actions": 28,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-map-1",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00338528,
+      "elapsed_s": 27.4,
+      "actions": 6,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-map-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00760546,
+      "elapsed_s": 34.9,
+      "actions": 3,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-map-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00265027,
+      "elapsed_s": 18.7,
+      "actions": 9,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-map-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00524562,
+      "elapsed_s": 36.7,
+      "actions": 12,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-map-5",
+      "status": "fail",
+      "pass": false,
+      "cost_usd": 0.03696177,
+      "elapsed_s": 264.3,
+      "actions": 80,
+      "judge_verdict": "FAILURE"
+    },
+    {
+      "id": "google-map-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00294449,
+      "elapsed_s": 15.3,
+      "actions": 4,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-search-0",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0,
+      "elapsed_s": 9.8,
+      "actions": 3,
+      "judge_verdict": null
+    },
+    {
+      "id": "google-search-1",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0,
+      "elapsed_s": 8.4,
+      "actions": 4,
+      "judge_verdict": null
+    },
+    {
+      "id": "google-search-2",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0.00850368,
+      "elapsed_s": 7.9,
+      "actions": 3,
+      "judge_verdict": null
+    },
+    {
+      "id": "google-search-3",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": -0.00850368,
+      "elapsed_s": 8.0,
+      "actions": 2,
+      "judge_verdict": null
+    },
+    {
+      "id": "google-search-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00850368,
+      "elapsed_s": 17.8,
+      "actions": 4,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "google-search-5",
+      "status": "blocked",
+      "pass": false,
+      "cost_usd": 0.01042667,
+      "elapsed_s": 5.3,
+      "actions": 2,
+      "judge_verdict": null
+    },
+    {
+      "id": "google-search-6",
+      "status": "fail",
+      "pass": false,
+      "cost_usd": 0.01370902,
+      "elapsed_s": 181.3,
+      "actions": 59,
+      "judge_verdict": "FAILURE"
+    },
+    {
+      "id": "huggingface-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01919313,
+      "elapsed_s": 181.6,
+      "actions": 25,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "huggingface-2",
+      "status": "fail",
+      "pass": false,
+      "cost_usd": 0.01890828,
+      "elapsed_s": 84.5,
+      "actions": 23,
+      "judge_verdict": "FAILURE"
+    },
+    {
+      "id": "huggingface-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00488026,
+      "elapsed_s": 69.2,
+      "actions": 20,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "huggingface-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00103633,
+      "elapsed_s": 20.8,
+      "actions": 6,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "huggingface-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01816934,
+      "elapsed_s": 72.1,
+      "actions": 33,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "huggingface-7",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.008766,
+      "elapsed_s": 34.2,
+      "actions": 7,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "wolfram-alpha-0",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00209179,
+      "elapsed_s": 15.5,
+      "actions": 4,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "wolfram-alpha-1",
+      "status": "fail",
+      "pass": false,
+      "cost_usd": 0.00608595,
+      "elapsed_s": 55.1,
+      "actions": 6,
+      "judge_verdict": "FAILURE"
+    },
+    {
+      "id": "wolfram-alpha-2",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00398314,
+      "elapsed_s": 17.0,
+      "actions": 4,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "wolfram-alpha-3",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0,
+      "elapsed_s": 18.8,
+      "actions": 4,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "wolfram-alpha-4",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.00471919,
+      "elapsed_s": 20.8,
+      "actions": 4,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "wolfram-alpha-5",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.0022925,
+      "elapsed_s": 30.1,
+      "actions": 4,
+      "judge_verdict": "SUCCESS"
+    },
+    {
+      "id": "wolfram-alpha-6",
+      "status": "pass",
+      "pass": true,
+      "cost_usd": 0.01277324,
+      "elapsed_s": 68.7,
+      "actions": 10,
+      "judge_verdict": "SUCCESS"
+    }
+  ]
+}

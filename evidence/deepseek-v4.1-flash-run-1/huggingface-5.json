@@ -1,0 +1,309 @@
+{
+  "task": {
+    "id": "huggingface-5",
+    "site": "huggingface",
+    "instruction": "Find a model released on Hugging Face for recipe generation. Retrieve the information of the model, including its name, model size and tensor type.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a Hugging Face model built for recipe generation: **flax-community/t5-recipe-generation** (also branded \"Chef Transformer (T5)\"), a T5-based text2text-generation model trained on the RecipeNLG dataset of ~2.23 million cooking recipes as part of the Flax/JAX Community Week.\n\nDetails pulled from the model's repository:\n\n- **Name:** flax-community/t5-recipe-generation (T5ForConditionalGeneration, \"Chef Transformer\")\n- **Model size:** 892 MB — the `model.safetensors` weights file (config shows a T5-base-sized architecture: d_model 768, d_ff 3072, 12 encoder layers, 12 decoder layers, 12 heads, vocab 32,128)\n- **Tensor type (precision):** F32 (float32) — every tensor listed in the safetensors metadata, e.g. `shared.weight` [32 128, 768] F32, `decoder.block.0.layer.0.SelfAttention.q.weight` [768, 768] F32, is stored as F32\n\nIt's tagged Text Generation / Transformers / PyTorch / TensorFlow / JAX / Safetensors / English, with 77 likes and 400 followers, and there's a demo Space at huggingface.co/spaces/flax-community/chef-transformer.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The final answer gives the recipe-generation model name, 892 MB size, and F32 tensor precision, all supported by the Hugging Face page shown.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 17872,
+    "output_tokens": 37
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/flax-community/t5-recipe-generation/blob/main/model.safetensors",
+    "title": "model.safetensors · flax-community/t5-recipe-generation at main"
+  },
+  "final_screenshot": "screenshots/huggingface-5.jpg",
+  "cost_usd": 0.01816934,
+  "elapsed_s": 72.1,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "text": "recipe generation",
+        "uid": "ref_1_2"
+      },
+      "ok": false,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?search=recipe%20generation"
+      },
+      "ok": true,
+      "ms": 364
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_60"
+      },
+      "ok": true,
+      "ms": 358
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/flax-community/t5-recipe-generation/tree/main"
+      },
+      "ok": true,
+      "ms": 547
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/flax-community/t5-recipe-generation"
+      },
+      "ok": true,
+      "ms": 469
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/flax-community/t5-recipe-generation/tree/main"
+      },
+      "ok": true,
+      "ms": 707
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/flax-community/t5-recipe-generation"
+      },
+      "ok": true,
+      "ms": 437
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_33"
+      },
+      "ok": true,
+      "ms": 284
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/flaxformer/architect-gpt2-owt"
+      },
+      "ok": true,
+      "ms": 492
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/flax-community/t5-recipe-generation/tree/main"
+      },
+      "ok": true,
+      "ms": 615
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "offset": 180
+      },
+      "ok": true,
+      "ms": 20
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 8000
+      },
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/flax-community/t5-recipe-generation/blob/main/config.json"
+      },
+      "ok": true,
+      "ms": 585
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/flax-community/t5-recipe-generation"
+      },
+      "ok": true,
+      "ms": 363
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_33"
+      },
+      "ok": true,
+      "ms": 299
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/flax-community/t5-recipe-generation/blob/main/model.safetensors"
+      },
+      "ok": true,
+      "ms": 449
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 28
+    }
+  ]
+}

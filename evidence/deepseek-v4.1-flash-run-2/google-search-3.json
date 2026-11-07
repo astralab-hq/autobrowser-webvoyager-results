@@ -1,0 +1,466 @@
+{
+  "task": {
+    "id": "google-search-3",
+    "site": "google-search",
+    "instruction": "Show me a list of comedy movies, sorted by user ratings. Show me the Top 5 movies.",
+    "start_url": "https://www.google.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Here are the Top 5 comedy movies on IMDb, sorted by user rating (highest first), from the advanced title search for feature films in the Comedy genre:\n\n1. **Christmas in the Tropics** (2026) — 1h 28m — **10/10** (15 votes)\n   A content creator returns to Jamaica to save her family's failing spice business, but an unexpected romance with the man holding its future forces her to choose between love and legacy.\n\n2. **Patakka Guddiyan** (2026) — 2h 7m — **10/10** (6 votes)\n   Identical twin sisters Roohi and Mahi have completely opposite personalities. When their contrasting lives collide, a sequence of mistaken identities and misunderstandings creates family chaos.\n\n3. **Baa Baa Black Sheep** (2026) — 2h 15m — **10/10** (1.6K votes)\n   A single misplaced object sets off a wild 24-hour chain reaction, sweeping six strangers into chaotic fun. As it changes hands, petty blunders and comic mix-ups collide, forging unexpected connections that upend all their lives forever.\n\n4. **La Herencia de los Ramírez** (2026) — **10/10** (6 votes)\n   A poor Dominican bus driver is informed that he and all members of the Ramírez family nationwide could be the heirs to a 100-million-dollar inheritance.\n\n5. **Dark plague birds. Funny filming** (2026) — 1h 9m — **10/10** (9 votes)\n   The filming moments of the film Dark plague birds (2026).\n\nA note on the results: sorting purely by user rating surfaces very new 2026 releases with tiny vote counts, so several titles share a perfect 10. If you'd rather see the highest-rated comedies with a meaningful number of votes (e.g. 25,000+ ratings), which gives a list of widely recognized classics instead, just say so and I'll re-run the search with that filter.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page is IMDb Comedy Movie search sorted by User rating and body/answer list the top 5 titles with ratings.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 16869,
+    "output_tokens": 130
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.imdb.com/search/title/?title_type=feature&genres=comedy&sort=user_rating,desc",
+    "title": "Top 50 Comedy Movies"
+  },
+  "final_screenshot": "screenshots/google-search-3.jpg",
+  "cost_usd": 0.01505492,
+  "elapsed_s": 93.2,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.imdb.com/search/title/?title_type=feature&genres=comedy&sort=user_rating,desc"
+      },
+      "ok": true,
+      "ms": 504
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_1"
+      },
+      "ok": true,
+      "ms": 378
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 53
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_4_1"
+      },
+      "ok": true,
+      "ms": 218
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 44
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_7_4"
+      },
+      "ok": true,
+      "ms": 216
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 50
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_10_5"
+      },
+      "ok": true,
+      "ms": 220
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 43
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_13_5"
+      },
+      "ok": true,
+      "ms": 218
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 44
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_16_5"
+      },
+      "ok": true,
+      "ms": 215
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 38
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_19_6"
+      },
+      "ok": true,
+      "ms": 212
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 54
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_22_5"
+      },
+      "ok": true,
+      "ms": 221
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 48
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_25_7"
+      },
+      "ok": true,
+      "ms": 217
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 45
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_28_15"
+      },
+      "ok": true,
+      "ms": 220
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "wait_for",
+      "args": {
+        "text": "comedy",
+        "timeout_ms": 8000
+      },
+      "ok": false,
+      "ms": 8018
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 46
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_31_4"
+      },
+      "ok": true,
+      "ms": 225
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 39
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_34_5"
+      },
+      "ok": true,
+      "ms": 229
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 37
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_37_6"
+      },
+      "ok": true,
+      "ms": 207
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 44
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_40_8"
+      },
+      "ok": true,
+      "ms": 222
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 41
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_43_9"
+      },
+      "ok": true,
+      "ms": 211
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 9
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 30
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_46_15"
+      },
+      "ok": true,
+      "ms": 208
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 48
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 3000
+      },
+      "ok": true,
+      "ms": 42
+    }
+  ]
+}

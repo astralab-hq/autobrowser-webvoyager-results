@@ -1,0 +1,108 @@
+{
+  "task": {
+    "id": "github-4",
+    "site": "github",
+    "instruction": "Find a popular JavaScript repository created in the last 30 days on GitHub with a Readme file.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a strong match: **heydamir/unslop** — https://github.com/heydamir/unslop\n\n- **Language:** JavaScript\n- **Created:** 2026-10-29 (9 days ago, well within the last 30 days)\n- **Popularity:** ~10,985 stars and 602 forks\n- **README:** Yes — `README.md` is present at the repo root (about 3.5 KB)\n- **License:** CC-BY-4.0\n\nWhat it is, per its README: \"unslop is a skill for Claude Code and Codex that turns vibecoded, AI-looking UI into a designed interface with its own character.\" It hunts down the tell-tale AI design slop — purple gradients, glows, emoji labels, shouty copy, uneven spacing — then applies a design direction and fixes the screen pass by pass, working with Next.js, React, Vue, Svelte, Tailwind, or plain HTML/CSS. It was created by Damir Sokolovsky (@heydamir) as part of his \"Unslopping\" series on X, and it was the top result when searching GitHub for JavaScript repositories created in the last 30 days sorted by stars.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent used GitHub search/API to verify heydamir/unslop is JavaScript, created 2026-10-29, has 10,985 stars, and README.md exists.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 13581,
+    "output_tokens": 160
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://api.github.com/repos/heydamir/unslop/readme",
+    "title": ""
+  },
+  "final_screenshot": "screenshots/github-4.jpg",
+  "cost_usd": 0.00314052,
+  "elapsed_s": 36.7,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=language%3AJavaScript+created%3A%3E2026-10-08&type=repositories&s=stars&o=desc"
+      },
+      "ok": true,
+      "ms": 632
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/heydamir/unslop"
+      },
+      "ok": true,
+      "ms": 704
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://api.github.com/repos/heydamir/unslop"
+      },
+      "ok": true,
+      "ms": 450
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://api.github.com/repos/heydamir/unslop/readme"
+      },
+      "ok": true,
+      "ms": 522
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

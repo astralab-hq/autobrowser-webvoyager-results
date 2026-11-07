@@ -1,0 +1,82 @@
+{
+  "task": {
+    "id": "arxiv-0",
+    "site": "arxiv",
+    "instruction": "Search for the latest preprints about 'quantum computing'.",
+    "start_url": "https://arxiv.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I searched arXiv for \"quantum computing\" sorted by announcement date (newest first) — the search returns 59,149 results in total. The most recent preprints all carry the same date: **submitted 5 November 2026, originally announced November 2026**. The newest ones are:\n\n1. **arXiv:2611.08461** (quant-ph) — *Quantum Knowledge Distillation: State-of-the-art, Applications and Open Problems* — Aldana Al-Sulaiti, Kuan-Cheng Chen, Muhammad Bilal Akram Dastagir, Ahmed Farouk, Saif Al-Kuwari. A 21-page survey of knowledge distillation in quantum machine learning, separating quantum-inspired methods from those simulated classically or run on quantum hardware; it cautions that benefits are task- and architecture-dependent, with some studies finding negligible gains or even degradation.\n\n2. **arXiv:2611.08444** (quant-ph, cs.CC, math-ph, physics.optics) — *Polynomial-time classical simulation of boson and fermion sampling under thermal loss* — Armando Angrisani, Hela Mhiri. Gives a common framework showing that noisy boson/fermion sampling experiments remain classically simulable in polynomial time at any fixed nonzero loss rate, undercutting claims of quantum advantage in such setups.\n\n3. **arXiv:2611.08437** (physics.optics) — *Deep-learning surrogate model for rapid quantum-noise computation in dual-pump fiber-optic phase-sensitive amplifiers* — Yousra Bouasria, Debanuj Chatterjee, Abdessamad Belfakir, Debabrota Basu. Trains a DNN to predict noise figures ~400× faster than semi-quantum calculations (MAE 0.0015 dB).\n\n4. **arXiv:2611.08220** (quant-ph, cs.SE) — *QDiff: Differential Testing of Quantum Software Stacks* — Jiyuan Wang, Qian Zhang, Guoqing Harry Xu, Miryung Kim. A semantics-preserving differential testing approach for quantum compilers/simulators, with static filtering of circuits and distribution-comparison equivalence checking.\n\n5. **arXiv:2611.08200** (cs.CR, cs.AR) — *Zirah: A Post-Quantum True Random Number Generator Hardware Signer With an Avalanche Noise* — Muhammad Shaheer Bin Junaid. An STM32F407-based post-quantum (ML-DSA-65) signing device using avalanche-noise entropy, with a candid account of key-exposure weaknesses on cheap hardware.\n\n6. **arXiv:2611.08180** (quant-ph, cs.CC, cs.DS) — *Quantum Advantage with Sign-Free Proofs: An Oracle Separation between StoqMA and MA* — Yassine Hamoudi, Yvan Le Borgne, Shrinidhi Teganahally Sridhara, et al.\n\nNote: the results page's date labels read \"5 November, 2026\" and arXiv IDs starting 2611 (November 2026), consistent with today being 7 November 2026. The abstracts are collapsed in the listing; tell me if you want the full abstract of any of these, or a narrower search (e.g. limited to quant-ph, or to a specific topic within quantum computing).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The final page shows arXiv search for “quantum computing” sorted by announcement date newest first, and the answer lists the top latest results with dates and details.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 12457,
+    "output_tokens": 278
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://arxiv.org/search/?query=quantum+computing&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+    "title": "Search | arXiv e-print repository"
+  },
+  "final_screenshot": "screenshots/arxiv-0.jpg",
+  "cost_usd": 0.00753466,
+  "elapsed_s": 35.4,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 13
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/search/?query=quantum+computing&searchtype=all&abstracts=show&order=-announced_date_first&size=50"
+      },
+      "ok": true,
+      "ms": 1075
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "selector": "ol.results"
+      },
+      "ok": false,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 87
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 9000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 76
+    }
+  ]
+}

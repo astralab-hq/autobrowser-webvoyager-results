@@ -1,0 +1,117 @@
+{
+  "task": {
+    "id": "github-1",
+    "site": "github",
+    "instruction": "Search for an open-source repository for machine learning in Python, specifically focused on decision trees, updated within the last 2 days.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a repository that matches all your criteria: **navadeep-sundara/decision-tree-classification-system** — https://github.com/navadeep-sundara/decision-tree-classification-system\n\nIt's a Python machine-learning project built specifically around decision trees: an interactive Streamlit app that trains **ID3** and **C4.5** decision trees implemented from scratch with NumPy/Pandas. You can upload a CSV (or use built-in Play Tennis / Iris samples), pick the target column, preprocess data (duplicate removal, missing-value imputation, train/test split), tune max depth and minimum samples to split, visualize the trees with Graphviz, and compare the two algorithms side by side with confusion matrices, accuracy/precision/recall/F1, tree depth/node/leaf counts, training time, and an overfitting gap. It also generates downloadable test-set predictions and a single-sample prediction form.\n\nRecency check: the repository's commit history shows all commits — \"Add app.py\", \"Add decision_trees.py\", \"Add README.md\", \"Add requirements.txt\", \"Add .gitignore\" — dated **Nov 7, 2026**, which is today, so it is well inside your 2-day window. It appeared in GitHub's repository search for `decision tree language:Python` sorted by most recently updated, listed as \"Updated 1 hour ago.\"",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The found GitHub repo is Python decision-tree ML per README, and commit history shows commits on Nov 7, 2026, within the 2-day window.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 12217,
+    "output_tokens": 325
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/navadeep-sundara/decision-tree-classification-system/commits/main",
+    "title": "Commits · navadeep-sundara/decision-tree-classification-system · GitHub"
+  },
+  "final_screenshot": "screenshots/github-1.jpg",
+  "cost_usd": 0.00601298,
+  "elapsed_s": 45.2,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=decision+tree+language%3APython&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 647
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 9000
+      },
+      "ok": true,
+      "ms": 19
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/navadeep-sundara/decision-tree-classification-system"
+      },
+      "ok": true,
+      "ms": 890
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": "article.markdown-body"
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/navadeep-sundara/decision-tree-classification-system/commits/main"
+      },
+      "ok": true,
+      "ms": 580
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 6
+    }
+  ]
+}

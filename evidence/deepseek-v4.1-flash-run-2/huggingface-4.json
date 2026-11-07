@@ -1,0 +1,83 @@
+{
+  "task": {
+    "id": "huggingface-4",
+    "site": "huggingface",
+    "instruction": "Locate an open-source conversational AI model on Hugging Face, trained in English and list its main features and applications.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I located an open-source conversational model on Hugging Face: **minas2025/Qwen-3.5-0.8B-Uncensored-Conversational** (also branded \"Warm Qwen 3.5 0.8B Uncensored\"). It is tagged English, licensed **apache-2.0**, and listed under Text Generation / Transformers / GGUF, with the `conversational`, `chat`, `instruct` and `uncensored` tags.\n\n**Main features**\n- **Base and method:** a QLoRA (4-bit, merged) fine-tune of `sh0ck0r/Qwen3.5-0.8B-heretic`, itself derived from `Qwen/Qwen3.5-0.8B-Base`. LoRA rank 16 / alpha 32 across all 7 modules.\n- **Size and format:** 0.8B parameters, `qwen35` architecture, shipped as a Q8_0 GGUF (~812 MB), so it runs on consumer hardware via LM Studio, Ollama, llama.cpp or llama-server.\n- **Training data:** `minas2025/warm-chat-12k` — 11,400 warm conversational rows; 2,000 steps at lr 1.5e-4 (cosine), effective batch 4, context length 2048.\n- **Behaviour:** tuned for a warm, casual, human-like tone rather than a helpdesk register — it greets you back conversationally and needs no system prompt (\"friendliness is baked in, not prompted on\"). Uncensored base, so it answers without refusals or \"as an AI\" disclaimers.\n- **Prompting:** Qwen ChatML template (`<\\|im_start\\|>user` / `<\\|im_start\\|>assistant`).\n\n**Applications**\n- Lightweight local chat companion / casual conversation assistant on modest hardware.\n- Warm-tone or roleplay-style assistants where a friendly persona matters more than reasoning depth.\n- Offline or privacy-preserving deployment (single small GGUF, no inference provider required — the card notes it isn't served by any Inference Provider).\n- Base for further fine-tuning or experimentation with uncensored conversational behaviour; it belongs to the \"WarmChat Models\" collection.\n\n**Caveats stated on the model card:** at 0.8B it chats but doesn't reason deeply (\"ask it for comfort, not calculus\"); it is warm-leaning rather than bubbly; it still self-identifies as Qwen/Tongyi; its knowledge cutoff is whatever the base model knew, so it can deliver wrong answers cheerfully; and the uncensored nature is both the feature and the warning. Training-data licensing is mixed — the Nemotron slice is ODC-By (attribution required) and the Opus-candid slice should be checked before commercial use. The model has ~1,581 downloads last month and 3 likes.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent found a Hugging Face model tagged English/conversational with apache-2.0 license and summarized model-card features and applications supported by the page.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 12042,
+    "output_tokens": 38
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/minas2025/Qwen-3.5-0.8B-Uncensored-Conversational",
+    "title": "minas2025/Qwen-3.5-0.8B-Uncensored-Conversational · Hugging Face"
+  },
+  "final_screenshot": "screenshots/huggingface-4.jpg",
+  "cost_usd": 0.00401296,
+  "elapsed_s": 23.5,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_2"
+      },
+      "ok": true,
+      "ms": 391
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "conversational",
+        "uid": "ref_3_1"
+      },
+      "ok": true,
+      "ms": 233
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 19
+    }
+  ]
+}

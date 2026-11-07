@@ -6,32 +6,32 @@
     "start_url": "https://www.google.com/maps/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "Google Maps lists three Uniqlo locations in Chicago, IL. Two are open and one is permanently closed.\n\n1. **UNIQLO State Street**, 22 N State St. Phone +1 855-486-4756. It is closed now and opens at 10 am.\n2. **UNIQLO Michigan Avenue**, 600 N Michigan Ave. Phone +1 855-486-4756. It is closed now and opens at 10 am.\n3. **UNIQLO Chicago**, 830 N Michigan Ave. This one is **permanently closed**.\n\nThe website for all three is https://www.uniqlo.com/us/en/ The search covered the map area around downtown Chicago. The result list ended after these three, and Google Maps showed a limited view of the page.",
+  "final_answer": "Google Maps lists three Uniqlo locations in Chicago, IL:\n\n1. **UNIQLO State Street**: 22 N State St, Chicago. It's a clothing store (casualwear for men and women). It was closed when I checked and opens at 10 am. Phone: +1 855-486-4756.\n2. **UNIQLO Michigan Avenue**: 600 N Michigan Ave, Chicago. It's a clothing store (casualwear for men and women). It was closed when I checked and opens at 10 am. Phone: +1 855-486-4756.\n3. **UNIQLO Chicago**: 830 N Michigan Ave, Chicago. Google Maps marks this one as **permanently closed**. Phone: +1 855-486-4756.\n\nTwo of the three are listed as open for business: State Street and Michigan Avenue (600 N). The 830 N Michigan Ave location has closed for good.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "Google Maps search for “Uniqlo in Chicago, IL” shows three results and “You've reached the end of the list,” matching the agent’s listed locations.",
+    "rationale": "Final answer matches Google Maps results shown: State Street, Michigan Avenue, and permanently closed Chicago at 830 N Michigan Ave.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 5376,
-    "output_tokens": 183
+    "input_tokens": 5053,
+    "output_tokens": 31
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.google.com/maps/search/Uniqlo+in+Chicago,+IL/@41.890318,-87.6365563,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+    "url": "https://www.google.com/maps/search/Uniqlo+in+Chicago,+IL/@41.890318,-87.6365563,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
     "title": "Uniqlo in Chicago, IL - Google Maps"
   },
   "final_screenshot": "screenshots/google-map-6.jpg",
-  "cost_usd": 0,
-  "elapsed_s": 15.1,
+  "cost_usd": 0.556646,
+  "elapsed_s": 20.1,
   "actions": [
     {
       "tool": "take_snapshot",
       "args": {},
       "ok": true,
-      "ms": 21
+      "ms": 16
     },
     {
       "tool": "fill",
@@ -41,7 +41,16 @@
         "uid": "ref_1_1"
       },
       "ok": true,
-      "ms": 274
+      "ms": 451
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
     },
     {
       "tool": "get_page_text",

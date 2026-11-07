@@ -6,63 +6,318 @@
     "start_url": "https://www.booking.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I searched Booking.com for hotels in Bali for Dec 30, 2026 to Jan 2, 2027 (3 nights, 2 adults, 1 room). The results are filtered to Hotels with Free WiFi and Air conditioning, and 235 properties match.\n\nThe first results are:\n- Fairfield by Marriott Bali Kuta Ngurah Rai: 8.7, MYR 604 for 3 nights, breakfast and free cancellation included.\n- Kuta Central Park Hotel: 8.2, MYR 401.\n- The Kana Kuta Hotel: 8.6, MYR 460 (was MYR 810).\n- Sovereign Bali Hotel: 7.5, MYR 431.\n- Anja Jimbaran: 8.7, MYR 871.\n- Emana Akatara (Ubud): 9.5, MYR 1,038 with breakfast.\n\nThe results page is open in your browser, so you can sort or refine them from there.",
+  "final_answer": "I searched Booking.com for hotels in Bali, Indonesia, from Wed, Jan 6, 2027 to Sat, Jan 9, 2027. The search is for 2 adults and 1 room, which was the default. The Free WiFi and Air conditioning filters are both applied. The page address shows check-in 2027-01-06, check-out 2027-01-09 and both filters. I haven't read the results list or picked a hotel, so the results page is ready for you to browse.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "Final Booking.com page shows Bali dates Dec 30–Jan 2, Hotels selected, “Facilities 2” filter applied, and filters list Free Wifi/Air conditioning.",
+    "rationale": "Final page shows Bali search for Wed Jan 6–Sat Jan 9, 2027, with Free Wifi and Air conditioning filter chips applied.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 11463,
-    "output_tokens": 398
+    "input_tokens": 17332,
+    "output_tokens": 36
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.booking.com/searchresults.html?ss=Bali&checkin=2026-12-30&checkout=2027-01-02&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204%3Bhotelfacility%3D107%3Bhotelfacility%3D11",
-    "title": "Booking.com: Search results: Bali. Book your hotel now!"
+    "url": "https://www.booking.com/searchresults.html?ss=Bali%2C+Indonesia&efdco=1&lang=en-us&src=index&dest_id=835&dest_type=region&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=bb854d8cbea3024f&checkin=2027-01-06&checkout=2027-01-09&group_adults=2&no_rooms=1&group_children=0&nflt=hotelfacility%3D107%3Broomfacility%3D11",
+    "title": "Booking.com: Hotels in Bali. Book your hotel now!"
   },
   "final_screenshot": "screenshots/booking-5.jpg",
-  "cost_usd": 0.543752,
-  "elapsed_s": 35.8,
+  "cost_usd": 1.59411,
+  "elapsed_s": 112.2,
   "actions": [
     {
       "tool": "take_snapshot",
       "args": {},
       "ok": true,
-      "ms": 52
-    },
-    {
-      "tool": "navigate",
-      "args": {
-        "url": "https://www.booking.com/searchresults.html?ss=Bali&checkin=2026-12-30&checkout=2027-01-02&group_adults=2&no_rooms=1&group_children=0&nflt=ht_id%3D204%3Bhotelfacility%3D107%3Bhotelfacility%3D11"
-      },
-      "ok": true,
-      "ms": 2297
+      "ms": 59
     },
     {
       "tool": "take_snapshot",
-      "args": {},
+      "args": {
+        "offset": 156
+      },
       "ok": true,
-      "ms": 58
+      "ms": 44
     },
     {
-      "tool": "get_page_text",
+      "tool": "take_snapshot",
       "args": {
-        "head_limit": 3000
+        "include_screenshot": true,
+        "max_chars": 5000
+      },
+      "ok": true,
+      "ms": 81
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "close button of Genius sign-in modal",
+        "limit": 3
+      },
+      "ok": true,
+      "ms": 50
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_258"
+      },
+      "ok": true,
+      "ms": 339
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_15"
+      },
+      "ok": true,
+      "ms": 217
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
       "ms": 2
     },
     {
-      "tool": "get_page_text",
+      "tool": "fill",
       "args": {
-        "head_limit": 3500,
-        "offset": 2900
+        "text": "Bali",
+        "uid": "ref_7_15"
+      },
+      "ok": true,
+      "ms": 239
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_9_17"
+      },
+      "ok": true,
+      "ms": 230
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "calendar date cell 6 January 2027",
+        "limit": 3
+      },
+      "ok": true,
+      "ms": 37
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 4000,
+        "offset": 53
+      },
+      "ok": true,
+      "ms": 46
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 52
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_13_20"
+      },
+      "ok": true,
+      "ms": 229
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
       "ms": 3
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "calendar day cells for January 2027 (6 January, 9 January)",
+        "limit": 8
+      },
+      "ok": true,
+      "ms": 51
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 43
+    },
+    {
+      "tool": "computer",
+      "args": {
+        "action": "click",
+        "x": 858,
+        "y": 601
+      },
+      "ok": true,
+      "ms": 163
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 42
+    },
+    {
+      "tool": "computer",
+      "args": {
+        "action": "click",
+        "x": 858,
+        "y": 649
+      },
+      "ok": true,
+      "ms": 172
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "computer",
+      "args": {
+        "action": "click",
+        "x": 979,
+        "y": 649
+      },
+      "ok": true,
+      "ms": 181
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_21_19"
+      },
+      "ok": true,
+      "ms": 252
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Free WiFi and Air conditioning filter checkboxes",
+        "limit": 6
+      },
+      "ok": true,
+      "ms": 44
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_124"
+      },
+      "ok": true,
+      "ms": 440
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Air conditioning filter checkbox",
+        "limit": 3
+      },
+      "ok": true,
+      "ms": 46
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_136"
+      },
+      "ok": true,
+      "ms": 230
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
     }
   ]
 }

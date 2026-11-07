@@ -6,16 +6,16 @@
     "start_url": "https://www.google.com/travel/flights/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "The Google Flights results now show one-way flights from New York to London on Saturday, December 26, 2026. The Stops filter is set to \"Nonstop only\", and the page shows \"All filters (1)\". The cheapest nonstop fare is about MYR 2,007. The nonstop flights include American and Virgin Atlantic, mostly leaving from JFK.",
+  "final_answer": "I searched Google Flights for one-way flights from New York to London on Saturday, December 26, 2026, and applied the \"Nonstop\" Stops filter. The page now lists only nonstop flights. The filter bar shows \"Nonstop, Stops, Selected\".\n\nThe first result is a nonstop flight leaving JFK at 10:20 PM on Dec 26 and arriving at LHR at 10:30 AM on Dec 27. It takes 7 hr 10 min and costs MYR 1,753. Other nonstop options include Delta from MYR 2,074 and Virgin Atlantic from MYR 2,362.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "Final page shows Google Flights one-way New York to London, Sat Dec 26, with the Nonstop filter applied and only nonstop results listed.",
+    "rationale": "Final page shows one-way New York to London, Sat Dec 26, with the Nonstop filter active and all visible results marked Nonstop.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 17607,
+    "input_tokens": 15977,
     "output_tokens": 35
   },
   "not_graded_because": null,
@@ -24,14 +24,14 @@
     "title": "New York to London | Google Flights"
   },
   "final_screenshot": "screenshots/google-flights-4.jpg",
-  "cost_usd": 1.684106,
-  "elapsed_s": 99,
+  "cost_usd": 1.130646,
+  "elapsed_s": 77.2,
   "actions": [
     {
       "tool": "take_snapshot",
       "args": {},
       "ok": true,
-      "ms": 26
+      "ms": 17
     },
     {
       "tool": "click",
@@ -39,13 +39,16 @@
         "uid": "ref_1_10"
       },
       "ok": true,
-      "ms": 183
+      "ms": 224
     },
     {
       "tool": "take_snapshot",
-      "args": {},
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
       "ok": true,
-      "ms": 2
+      "ms": 1
     },
     {
       "tool": "click",
@@ -53,13 +56,16 @@
         "uid": "ref_3_2"
       },
       "ok": true,
-      "ms": 77
+      "ms": 226
     },
     {
       "tool": "take_snapshot",
-      "args": {},
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
       "ok": true,
-      "ms": 15
+      "ms": 1
     },
     {
       "tool": "click",
@@ -67,77 +73,87 @@
         "uid": "ref_5_13"
       },
       "ok": true,
-      "ms": 79
+      "ms": 223
     },
     {
       "tool": "take_snapshot",
-      "args": {},
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
       "ok": true,
-      "ms": 3
+      "ms": 2
     },
     {
-      "tool": "fill",
+      "tool": "take_snapshot",
       "args": {
-        "text": "New York",
-        "uid": "ref_7_1"
+        "filter": "all",
+        "include_screenshot": true
       },
       "ok": true,
       "ms": 61
     },
     {
-      "tool": "take_snapshot",
-      "args": {},
+      "tool": "fill",
+      "args": {
+        "text": "New York",
+        "uid": "ref_8_3"
+      },
       "ok": true,
-      "ms": 4
+      "ms": 221
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 47
     },
     {
       "tool": "click",
       "args": {
-        "uid": "ref_9_3"
+        "uid": "ref_11_6"
       },
       "ok": true,
-      "ms": 73
+      "ms": 228
     },
     {
       "tool": "take_snapshot",
-      "args": {},
-      "ok": true,
-      "ms": 14
-    },
-    {
-      "tool": "take_screenshot",
-      "args": {},
-      "ok": true,
-      "ms": 48
-    },
-    {
-      "tool": "click",
       "args": {
-        "uid": "ref_11_14"
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 78
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {},
-      "ok": true,
-      "ms": 3
+      "ms": 2
     },
     {
       "tool": "fill",
       "args": {
         "text": "London",
-        "uid": "ref_13_1"
+        "uid": "ref_13_14"
       },
       "ok": true,
-      "ms": 60
+      "ms": 229
     },
     {
       "tool": "take_snapshot",
-      "args": {},
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
       "ok": true,
-      "ms": 4
+      "ms": 2
     },
     {
       "tool": "click",
@@ -145,13 +161,16 @@
         "uid": "ref_15_3"
       },
       "ok": true,
-      "ms": 73
+      "ms": 220
     },
     {
       "tool": "take_snapshot",
-      "args": {},
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
       "ok": true,
-      "ms": 12
+      "ms": 3
     },
     {
       "tool": "click",
@@ -159,143 +178,170 @@
         "uid": "ref_17_16"
       },
       "ok": true,
-      "ms": 100
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {},
-      "ok": true,
-      "ms": 49
-    },
-    {
-      "tool": "fill",
-      "args": {
-        "press_enter": true,
-        "text": "Sat, Dec 26",
-        "uid": "ref_19_1"
-      },
-      "ok": true,
-      "ms": 89
+      "ms": 239
     },
     {
       "tool": "take_snapshot",
       "args": {
         "filter": "interactive",
-        "include_screenshot": true,
         "max_chars": 3000
       },
       "ok": true,
-      "ms": 93
+      "ms": 2
     },
     {
-      "tool": "get_element_info",
+      "tool": "click",
       "args": {
-        "uid": "ref_21_1"
+        "uid": "ref_19_52"
+      },
+      "ok": true,
+      "ms": 247
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
       "ms": 3
     },
     {
-      "tool": "take_screenshot",
-      "args": {},
+      "tool": "find",
+      "args": {
+        "description": "Done button in date picker",
+        "limit": 3
+      },
+      "ok": true,
+      "ms": 57
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_21_353"
+      },
+      "ok": true,
+      "ms": 227
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_23_14"
+      },
+      "ok": true,
+      "ms": 234
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_25_18"
+      },
+      "ok": true,
+      "ms": 221
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_27_3"
+      },
+      "ok": true,
+      "ms": 222
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_29_11"
+      },
+      "ok": true,
+      "ms": 227
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500
+      },
       "ok": true,
       "ms": 41
     },
     {
+      "tool": "click",
+      "args": {
+        "uid": "ref_31_27"
+      },
+      "ok": true,
+      "ms": 219
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
       "tool": "find",
       "args": {
-        "description": "Done button in date picker, and Search button"
+        "description": "flight result listings showing stops (Nonstop)",
+        "limit": 3
       },
       "ok": true,
-      "ms": 5
+      "ms": 30
     },
     {
-      "tool": "take_snapshot",
+      "tool": "get_page_text",
       "args": {
-        "offset": 123
+        "head_limit": 1500,
+        "offset": 2400
       },
       "ok": true,
-      "ms": 66
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_22_303"
-      },
-      "ok": true,
-      "ms": 82
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "max_chars": 3000
-      },
-      "ok": true,
-      "ms": 8
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_24_14"
-      },
-      "ok": true,
-      "ms": 82
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "max_chars": 4000
-      },
-      "ok": true,
-      "ms": 31
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_26_18"
-      },
-      "ok": true,
-      "ms": 80
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "max_chars": 2500
-      },
-      "ok": true,
-      "ms": 4
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_28_3"
-      },
-      "ok": true,
-      "ms": 68
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "max_chars": 3500
-      },
-      "ok": true,
-      "ms": 5
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_30_11"
-      },
-      "ok": true,
-      "ms": 85
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "max_chars": 3000
-      },
-      "ok": true,
-      "ms": 21
+      "ms": 96
     }
   ]
 }

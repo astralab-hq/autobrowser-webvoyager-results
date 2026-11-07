@@ -1,0 +1,261 @@
+{
+  "task": {
+    "id": "google-map-0",
+    "site": "google-map",
+    "instruction": "Find 5 beauty salons with ratings greater than 4.8 in Seattle, WA.",
+    "start_url": "https://www.google.com/maps/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Here are 5 beauty salons in Seattle, WA with Google Maps ratings above 4.8 (from the \"beauty salons in Seattle, WA\" results, filtered to 4.5+ and sorted by rating):\n\n1. **Lady Neptune Hair Salon, University District** — 5.0 ★ (520 reviews) · Beauty salon · 5611 University Wy NE #100A\n2. **Aurora Beauty - Head Spa** — 5.0 ★ (476 reviews) · Beauty salon · 4208 SW Oregon St Ste A\n3. **Lady Neptune Hair Salon, Capitol Hill** — 5.0 ★ (164 reviews) · Hair salon · 1525 E Olive Wy St\n4. **SPORTS HAIR SALON** — 4.9 ★ (2,599 reviews) · Hair salon · 1103 Boylston Ave\n5. **Antonio Salon** — 4.9 ★ (684 reviews) · Hair salon · 113 Virginia St\n\nAll five are currently closed at the time of search, with most opening between 9:00 and 10:00 am.\n\nOther strong options just below the cutoff or with fewer reviews: 19th Avenue Salon - An AVEDA Salon & Store (4.9, 345 reviews, 542 19th Ave E), Paint Salon (4.9, 256, 1300 E Pike St Ste 102), Pure Alchemy Salon (4.9, 205, 3811 S Ferdinand St #A), Nola (4.9, 138, 1090 N Northlake Way), and Beauty Theory Salon (4.9, 50, 2014 E Union St B). Note that YSA Beauty Studio (5.0, 26) and Allum Beauty Eyebrows & Lash Lift (5.0, 44) appeared as sponsored listings, so I left them out of the main list.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The final answer lists five Seattle salons with ratings >4.8, and the Google Maps page state supports their names, ratings, reviews, and addresses.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 17849,
+    "output_tokens": 37
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.google.com/maps/search/beauty+salons+in+Seattle,+WA/@47.6180055,-122.4262463,12z/data=!4m4!2m3!5m1!4e9!6e1?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+    "title": "beauty salons in Seattle, WA - Google Maps"
+  },
+  "final_screenshot": "screenshots/google-map-0.jpg",
+  "cost_usd": 0.02936377,
+  "elapsed_s": 111.7,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 21
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "beauty salons in Seattle, WA",
+        "uid": "ref_1_1"
+      },
+      "ok": true,
+      "ms": 400
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "div[role=\"feed\"]"
+      },
+      "ok": true,
+      "ms": 12
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 12000
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_4_9"
+      },
+      "ok": true,
+      "ms": 233
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_6_5"
+      },
+      "ok": true,
+      "ms": 224
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_8_5"
+      },
+      "ok": true,
+      "ms": 222
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 81
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 25
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "include_screenshot": true
+      },
+      "ok": true,
+      "ms": 74
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "4.5 rating option in the rating filter dropdown"
+      },
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 25
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 98
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 4000
+      },
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "computer",
+      "args": {
+        "action": "click",
+        "x": 549,
+        "y": 283
+      },
+      "ok": true,
+      "ms": 182
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "div[role=\"feed\"]"
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 8000
+      },
+      "ok": true,
+      "ms": 21
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_18_55"
+      },
+      "ok": true,
+      "ms": 252
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const feed = document.querySelector('div[role=\\\"feed\\\"]');\\n  if (!feed) return { error: 'no feed' };\\n  const seen = new Map();\\n  const grab = () => {\\n    feed.querySelectorAll('div[role=\\\"article\\\"], a[href*=\\\"/maps/place/\\\"]').forEach(el => {\\n      const a = el.matches('a[href*=\\\"/maps/place/\\\"]') ? el : el.querySelector('a[href*=\\\"/maps/place/\\\"]');\\n      i… [+944 chars]",
+      "ok": true,
+      "ms": 8478
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const feed = document.querySelector('div[role=\\\"feed\\\"]');\\n  if (!feed) return { error: 'no feed' };\\n  const seen = new Map();\\n  const grab = () => {\\n    feed.querySelectorAll('div[role=\\\"article\\\"]').forEach(el => {\\n      const a = el.querySelector('a[href*=\\\"/maps/place/\\\"]');\\n      if (!a) return;\\n      const name = a.getAttribute('aria-label') || a.textC… [+1084 chars]",
+      "ok": true,
+      "ms": 12045
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const feed = document.querySelector('div[role=\\\"feed\\\"]');\\n  const want = [\\\"SPORTS HAIR SALON\\\",\\\"Antonio Salon\\\",\\\"Lady Neptune Hair Salon, University District\\\",\\\"Aurora Beauty - Head Spa\\\",\\\"19th Avenue Salon - An AVEDA Salon & Store\\\"];\\n  const out = {};\\n  const grab = () => {\\n    feed.querySelectorAll('div[role=\\\"article\\\"]').forEach(el => {\\n      const … [+813 chars]",
+      "ok": true,
+      "ms": 12
+    }
+  ]
+}

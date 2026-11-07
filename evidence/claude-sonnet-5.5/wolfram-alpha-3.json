@@ -6,25 +6,57 @@
     "start_url": "https://www.wolframalpha.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
-  "status": "fail",
-  "pass": false,
-  "final_answer": "g(x) = ∫ x² cos(2x) dx = (x²/2)·sin(2x) + (x/2)·cos(2x) − (1/4)·sin(2x) + C\n\nI used integration by parts twice.\n1. Let u = x² and dv = cos(2x) dx. Then ∫ x² cos(2x) dx = (x²/2) sin(2x) − ∫ x sin(2x) dx.\n2. Let u = x and dv = sin(2x) dx. Then ∫ x sin(2x) dx = −(x/2) cos(2x) + (1/4) sin(2x).\n3. Substituting step 2 into step 1 gives the result above.\n\nC is the constant of integration. If you want the antiderivative with g(0) = 0, take C = 0.",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Wolfram|Alpha gives:\n\ng(x) = ∫ x² cos(2x) dx = (1/4)·((2x² − 1)·sin(2x) + 2x·cos(2x)) + C\n\nExpanded, this is g(x) = (1/2)x² sin(2x) − (1/4) sin(2x) + (1/2)x cos(2x) + C, where C is the constant of integration.",
   "judge": {
-    "verdict": "FAILURE",
-    "rationale": "The final page is still WolframAlpha’s homepage with no computed result, so the answer is not supported as coming from the website.",
+    "verdict": "SUCCESS",
+    "rationale": "Final answer matches WolframAlpha’s displayed indefinite integral for ∫x²cos(2x)dx, including the constant of integration.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 2856,
-    "output_tokens": 117
+    "input_tokens": 5133,
+    "output_tokens": 34
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.wolframalpha.com/",
-    "title": "Wolfram|Alpha: Computational Intelligence"
+    "url": "https://www.wolframalpha.com/input?i=integrate+x%5E2+cos%282x%29+dx",
+    "title": "integrate x^2 cos(2x) dx - Wolfram|Alpha"
   },
   "final_screenshot": "screenshots/wolfram-alpha-3.jpg",
-  "cost_usd": 0.20693,
-  "elapsed_s": 15.5,
-  "actions": []
+  "cost_usd": 1.104786,
+  "elapsed_s": 18.5,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "integrate x^2 cos(2x) dx",
+        "uid": "ref_1_7"
+      },
+      "ok": true,
+      "ms": 235
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 8
+    }
+  ]
 }

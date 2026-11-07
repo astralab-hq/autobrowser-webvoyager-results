@@ -6,26 +6,26 @@
     "start_url": "https://huggingface.co/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I found a sentiment analysis model on Hugging Face whose last update falls in March 2023: **cointegrated/rubert-tiny-sentiment-balanced** (https://huggingface.co/cointegrated/rubert-tiny-sentiment-balanced).\n\nIt's a text-classification model for Russian sentiment, built on RuBERT-tiny. Hugging Face's API lists its last modification as March 20, 2023. It has about 67.8k downloads and 18 likes.\n\nOther models from the same search also have March 2023 update dates:\n- Voicelab/herbert-base-cased-sentiment (Mar 20, 2023)\n- Jean-Baptiste/roberta-large-financial-news-sentiment-en (Mar 22, 2023)\n- MonoHime/rubert-base-cased-sentiment-new (Mar 17, 2023)",
+  "final_answer": "I found a model that fits: **Jean-Baptiste/roberta-large-financial-news-sentiment-en** (https://huggingface.co/Jean-Baptiste/roberta-large-financial-news-sentiment-en).\n\n- **Task:** It is a Text Classification model for sentiment analysis of English financial news. It is built on RoBERTa-large and uses the Transformers library. It comes in PyTorch, ONNX and Safetensors formats and has an MIT license.\n- **Last update:** 2023-03-22, according to Hugging Face's API (`lastModified` = 2023-03-22T02:27:09Z). That falls within March 2023. The model page didn't show an update date, so I couldn't check it there.\n- **Popularity:** It has about 1,963 downloads and 9 likes.\n\nThe same search returned other sentiment models last updated in March 2023. Examples are cointegrated/rubert-tiny-sentiment-balanced (Russian, 2023-03-20) and Voicelab/herbert-base-cased-sentiment (Polish, 2023-03-20). I can pick one of those if you want a different language.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The agent used Hugging Face’s API to find a text-classification sentiment model with lastModified 2023-03-20 and opened its HF page showing sentiment usage.",
+    "rationale": "The trajectory shows HF API `lastModified` 2023-03-22 for the model, and the final page confirms it is a Text Classification sentiment model.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 9727,
-    "output_tokens": 225
+    "input_tokens": 6731,
+    "output_tokens": 285
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://huggingface.co/cointegrated/rubert-tiny-sentiment-balanced",
-    "title": "cointegrated/rubert-tiny-sentiment-balanced · Hugging Face"
+    "url": "https://huggingface.co/Jean-Baptiste/roberta-large-financial-news-sentiment-en",
+    "title": "Jean-Baptiste/roberta-large-financial-news-sentiment-en · Hugging Face"
   },
   "final_screenshot": "screenshots/huggingface-0.jpg",
-  "cost_usd": 2.693028,
-  "elapsed_s": 53.8,
+  "cost_usd": 0.365614,
+  "elapsed_s": 41.4,
   "actions": [
     {
       "tool": "navigate",
@@ -33,67 +33,39 @@
         "url": "https://huggingface.co/models?pipeline_tag=text-classification&search=sentiment&sort=modified"
       },
       "ok": true,
-      "ms": 323
+      "ms": 530
     },
     {
-      "tool": "get_page_text",
-      "args": {},
-      "ok": true,
-      "ms": 2
-    },
-    {
-      "tool": "navigate",
+      "tool": "take_snapshot",
       "args": {
-        "url": "https://huggingface.co/models?pipeline_tag=text-classification&search=sentiment&sort=modified&p=60"
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 715
-    },
-    {
-      "tool": "get_page_text",
-      "args": {
-        "selector": "main"
-      },
-      "ok": true,
-      "ms": 1
-    },
-    {
-      "tool": "navigate",
-      "args": {
-        "url": "https://huggingface.co/models?pipeline_tag=text-classification&search=sentiment&sort=modified&p=99"
-      },
-      "ok": true,
-      "ms": 702
-    },
-    {
-      "tool": "get_page_text",
-      "args": {
-        "selector": "main"
-      },
-      "ok": true,
-      "ms": 2
-    },
-    {
-      "tool": "navigate",
-      "args": {
-        "url": "https://huggingface.co/api/models?pipeline_tag=text-classification&search=sentiment&sort=downloads&direction=-1&limit=100&full=false"
-      },
-      "ok": true,
-      "ms": 427
+      "ms": 0
     },
     {
       "tool": "evaluate_script",
-      "args": "{\"expression\":\"(async () => { const r = await fetch('https://huggingface.co/api/models?pipeline_tag=text-classification&search=sentiment&sort=downloads&direction=-1&limit=1000&full=true'); const d = await r.json(); const m = d.filter(x => x.lastModified && x.lastModified.startsWith('2023-03')).slice(0,10).map(x => ({id: x.id, lastModified: x.lastModified, downloads: x.downloads, likes: x.likes}));… [+258 chars]",
+      "args": "{\"expression\":\"(async () => { let url = \\\"https://huggingface.co/api/models?search=sentiment&pipeline_tag=text-classification&sort=downloads&direction=-1&limit=1000&full=true\\\"; const out = []; let total = 0; for (let i = 0; i < 3 && url; i++) { const r = await fetch(url); const d = await r.json(); total += d.length; for (const m of d) { if ((m.lastModified || \\\"\\\").startsWith(\\\"2023-03\\\")) out.pu… [+443 chars]",
       "ok": true,
-      "ms": 739
+      "ms": 3023
     },
     {
       "tool": "navigate",
       "args": {
-        "url": "https://huggingface.co/cointegrated/rubert-tiny-sentiment-balanced"
+        "url": "https://huggingface.co/Jean-Baptiste/roberta-large-financial-news-sentiment-en"
       },
       "ok": true,
-      "ms": 313
+      "ms": 615
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
     }
   ]
 }

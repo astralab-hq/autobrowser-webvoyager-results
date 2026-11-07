@@ -6,17 +6,17 @@
     "start_url": "https://www.coursera.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "**Specialization: Programming in C++: A Hands-on Introduction** (offered by Codio on Coursera). It is rated 4.6 from 1,333 reviews. It is a Beginner-level, 4-course series that takes about 4 weeks at 10 hours a week. It is meant for people with no programming experience.\n\n**What you'll learn (learning outcomes):**\n- Automate everyday, repetitive tasks using C++ programs.\n- Create engaging, graphical programs.\n- Build a firm foundation of Computer Science concepts that you can bring to any language you learn.\n\n**Skills you'll gain:** Memory Management, Code Reusability, File I/O, Data Validation, Maintainability, Computer Science, Programming Principles, Software Documentation, Computer Programming, Data Import/Export, and more.\n\n**Courses in the series:**\n1. C++ Basics: Selection and Iteration\n2. C++ Basic Structures: Vectors, Pointers, Strings, and Files\n3. C++ Object Basics: Functions, Recursion, and Objects\n4. Object-Oriented C++: Inheritance and Encapsulation\n\n**Applied project:** You build practical C++ programs, such as an automated file updater. Later projects produce graphical output with the CImg library, including animations.\n\nThe specialization covers everything from fundamentals to object-oriented design. That prepares you to write small automation programs and larger applications. It also gives you enough C++ to move on to topics like Data Science and AI.\n\nA similar option is \"Coding for Everyone: C and C++\" from UC Santa Cruz. It is also Beginner level and rated 4.5. I chose the Codio specialization because it focuses on C++ alone.",
+  "final_answer": "The Specialization is **Programming in C++: A Hands-on Introduction Specialization**. Codio offers it on Coursera. It is a beginner-level, 4-course series that takes about 40 hours (about 4 weeks at 10 hours a week). It needs no prior coding experience.\n\n**What you'll learn (specialization-level outcomes):**\n- Automate everyday, repetitive tasks using C++ programs.\n- Create engaging, graphical-based programs.\n- Develop a firm foundation of Computer Science concepts you can bring to any language you learn.\n\n**Outcomes by course:**\n1. *C++ Basics: Selection and Iteration*:\n   - Use variables and operators to store and manipulate small pieces of data.\n   - Automate decision making with selection statements.\n   - Repeat sections of a program using the appropriate loop type.\n2. *C++ Basic Structures: Vectors, Pointers, Strings, and Files*:\n   - Store and manipulate vectors of data.\n   - Compare and manipulate strings of text.\n   - Read and write text and CSV files.\n3. *C++ Object Basics: Functions, Recursion, and Objects*:\n   - Define and use custom functions to improve code readability.\n   - Know when and how to use recursion instead of iteration.\n   - Create and modify custom objects.\n4. *Object-Oriented C++: Inheritance and Encapsulation*:\n   - Architect larger programs using object-oriented principles.\n   - Re-use parts of classes through inheritance.\n   - Encapsulate relevant information and methods in a class.\n\n**Skills gained include:** Computer Programming, Memory Management, File I/O, Data Structures, Object Oriented Programming (OOP), Data Validation and Code Reusability. The applied projects include a C++ automated file updater and graphical output and animations using the CImg library.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The agent identified a beginner C++ Coursera Specialization and provided the learning outcomes shown on the Coursera page.",
+    "rationale": "The Coursera page shows the specialization title, beginner level, and “What you’ll learn” outcomes that match the agent’s final answer.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 11867,
-    "output_tokens": 29
+    "input_tokens": 9573,
+    "output_tokens": 34
   },
   "not_graded_because": null,
   "final_page": {
@@ -24,59 +24,16 @@
     "title": "Programming in C++: A Hands-on Introduction | Coursera"
   },
   "final_screenshot": "screenshots/coursera-5.jpg",
-  "cost_usd": 0.914622,
-  "elapsed_s": 48.5,
+  "cost_usd": 0.319906,
+  "elapsed_s": 41.0,
   "actions": [
     {
       "tool": "navigate",
       "args": {
-        "url": "https://www.coursera.org/search?query=c%2B%2B%20for%20beginners&productTypeDescription=Specializations"
+        "url": "https://www.coursera.org/search?query=c%2B%2B%20programming%20beginners&productTypeDescription=Specializations"
       },
       "ok": true,
-      "ms": 986
-    },
-    {
-      "tool": "get_page_text",
-      "args": {},
-      "ok": true,
-      "ms": 2
-    },
-    {
-      "tool": "find",
-      "args": {
-        "description": "Programming in C++: A Hands-on Introduction specialization link",
-        "limit": 3
-      },
-      "ok": false,
-      "ms": 10
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {},
-      "ok": true,
-      "ms": 31
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_1_24"
-      },
-      "ok": true,
-      "ms": 1198
-    },
-    {
-      "tool": "get_page_text",
-      "args": {},
-      "ok": true,
-      "ms": 0
-    },
-    {
-      "tool": "list_tabs",
-      "args": {
-        "args": {}
-      },
-      "ok": true,
-      "ms": 2
+      "ms": 1068
     },
     {
       "tool": "take_snapshot",
@@ -85,15 +42,24 @@
         "max_chars": 3000
       },
       "ok": true,
-      "ms": 13
+      "ms": 1
     },
     {
-      "tool": "get_element_info",
+      "tool": "click",
       "args": {
-        "uid": "ref_3_24"
+        "uid": "ref_1_23"
       },
       "ok": true,
-      "ms": 4
+      "ms": 1161
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
     },
     {
       "tool": "navigate",
@@ -101,13 +67,22 @@
         "url": "https://www.coursera.org/specializations/hands-on-cpp"
       },
       "ok": true,
-      "ms": 569
+      "ms": 610
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 3
+      "ms": 28
     }
   ]
 }

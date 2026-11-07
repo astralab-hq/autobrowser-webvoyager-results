@@ -1,0 +1,133 @@
+{
+  "task": {
+    "id": "github-0",
+    "site": "github",
+    "instruction": "Search for an open-source project related to 'climate change data visualization' on GitHub and report the project with the most stars.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The most-starred open-source project on GitHub for \"climate change data visualization\" is **resource-watch/resource-watch**, with **73 stars**.\n\nIts description: \"Resource Watch features hundreds of data sets all in one place on the state of the planet's resources and citizens. Users can visualize challenges facing people and the planet, from climate change to poverty, water risk to state instability, air pollution to human migration, and more.\"\n\nIt's a TypeScript/React/Next.js application using Mapbox for mapping, and it's released under the MIT license. URL: https://github.com/resource-watch/resource-watch\n\nFor context, the next runners-up in the star-sorted repository search were Beckybams/AI-Enhanced-Climate-Education-Tools- (40 stars), WorldWindLabs/AgroSphere (20 stars), and akshaysonvane/Climate-Change-Data-Analytics-Visualization (11 stars) — so the field is fairly small and resource-watch leads clearly.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "GitHub search was sorted by “Most stars,” showing resource-watch/resource-watch first with 73 stars; repo page confirms 73 stars, MIT license, and climate data visualization description.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 9995,
+    "output_tokens": 167
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/resource-watch/resource-watch",
+    "title": "GitHub - resource-watch/resource-watch: Resource Watch features hundreds of data sets all in one place on the state of the planet’s resources and citizens. Users can visualize challenges facing people and the planet, from climate change to poverty, water risk to state instability, air pollution to human migration, and more. · GitHub"
+  },
+  "final_screenshot": "screenshots/github-0.jpg",
+  "cost_usd": 0.00916055,
+  "elapsed_s": 32.7,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=climate+change+data+visualization&type=repositories&s=stars&o=desc"
+      },
+      "ok": true,
+      "ms": 568
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_45"
+      },
+      "ok": true,
+      "ms": 245
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "go_back",
+      "args": {},
+      "ok": true,
+      "ms": 184
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_45"
+      },
+      "ok": false,
+      "ms": 101
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1500,
+        "selector": "#repo-stars-counter-star, .starred, body"
+      },
+      "ok": true,
+      "ms": 60
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 200,
+        "selector": "#repo-stars-counter-star"
+      },
+      "ok": false,
+      "ms": 1
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "star count button for this repository",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 42
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "license information for this repository",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 55
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1200,
+        "selector": "div.Layout-sidebar"
+      },
+      "ok": false,
+      "ms": 2
+    }
+  ]
+}

@@ -6,17 +6,17 @@
     "start_url": "https://www.coursera.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I found the Beginner Spanish Specialization on Coursera: **Learn Spanish: Basic Spanish Vocabulary**, offered by the University of California, Davis. The instructor is Dr. Robert Blake. It's a beginner-level, 5-course series. Coursera estimates about 2 months at 10 hours a week. It has a 4.5 rating from 3,744 reviews, and 182,351 learners are enrolled. The URL is https://www.coursera.org/specializations/learn-spanish.\n\nThe 5 courses are:\n1. **Spanish Vocabulary: Meeting People** (Course 1, 16 hours)\n2. **Spanish Vocabulary: Cultural Experience** (Course 2, 14 hours)\n3. **Spanish Vocabulary: Sports, Travel, and the Home** (Course 3, 18 hours)\n4. **Spanish Vocabulary: Careers and Social Events** (Course 4, 15 hours)\n5. **Spanish Vocabulary Project** (Course 5, 9 hours). This is the capstone project.\n\nThe Specialization aims to build a working vocabulary of the 1,500 most commonly used Spanish words and phrases.",
+  "final_answer": "Coursera has no specialization titled exactly \"Beginner's Spanish Specialization\". The closest match is **Learn Spanish: Basic Spanish Vocabulary Specialization** from the University of California, Davis. It is beginner level, needs no prior experience, and takes about 2 months at 10 hours a week. It is a 5-course series:\n\n1. **Spanish Vocabulary: Meeting People** (Course 1, 16 hours). Covers the basics of Spanish grammar and pronunciation, plus talking about yourself, family and friends in the present tense.\n2. **Spanish Vocabulary: Cultural Experience** (Course 2, 14 hours). Covers expressing likes and dislikes, and the cultural experience of a marketplace visit.\n3. **Spanish Vocabulary: Sports, Travel, and the Home** (Course 3, 18 hours). Covers sports, pastimes, politics, travel and living arrangements. It also introduces the progressive and past tenses.\n4. **Spanish Vocabulary: Careers and Social Events** (Course 4, 15 hours). Covers dining, fashion, professions and careers. It also introduces the subjunctive and the future tense.\n5. **Spanish Vocabulary Project** (Course 5, 9 hours). A capstone project: a written travel plan and an oral presentation for an imagined educational trip to a Spanish-speaking country.\n\nThe page says the Specialization starts Nov 7, and 182,584 learners have enrolled.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The Coursera page shows a beginner 5-course specialization, and the final answer lists all five course titles with course numbers/hours from the page.",
+    "rationale": "The agent opened Coursera’s beginner Spanish specialization page and listed all 5 courses shown in the page excerpt, with titles and hours.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 10179,
-    "output_tokens": 36
+    "input_tokens": 10531,
+    "output_tokens": 177
   },
   "not_graded_because": null,
   "final_page": {
@@ -24,75 +24,72 @@
     "title": "Learn Spanish: Basic Spanish Vocabulary | Coursera"
   },
   "final_screenshot": "screenshots/coursera-2.jpg",
-  "cost_usd": 0.804914,
-  "elapsed_s": 46.3,
+  "cost_usd": 0.596324,
+  "elapsed_s": 42.3,
   "actions": [
     {
-      "tool": "navigate",
-      "args": {
-        "url": "https://www.coursera.org/search?query=beginner%20spanish%20specialization"
-      },
-      "ok": true,
-      "ms": 1336
-    },
-    {
       "tool": "take_snapshot",
       "args": {},
       "ok": true,
-      "ms": 31
+      "ms": 34
     },
     {
-      "tool": "click",
+      "tool": "fill",
       "args": {
-        "uid": "ref_1_33"
+        "press_enter": true,
+        "text": "Beginner's Spanish Specialization",
+        "uid": "ref_1_8"
       },
       "ok": true,
-      "ms": 946
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "filter": "all"
-      },
-      "ok": true,
-      "ms": 24
-    },
-    {
-      "tool": "list_tabs",
-      "args": {},
-      "ok": true,
-      "ms": 1
+      "ms": 459
     },
     {
       "tool": "take_snapshot",
       "args": {
         "filter": "interactive",
-        "max_chars": 1500
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 6
+      "ms": 2
     },
     {
-      "tool": "get_element_info",
+      "tool": "find",
       "args": {
-        "uid": "ref_4_33"
+        "description": "Beginner's Spanish Specialization result link"
       },
       "ok": true,
-      "ms": 3
+      "ms": 21
     },
     {
-      "tool": "navigate",
+      "tool": "click",
       "args": {
-        "url": "https://www.coursera.org/specializations/learn-spanish"
+        "uid": "ref_1_81"
       },
       "ok": true,
-      "ms": 1165
+      "ms": 642
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "switch_focus",
+      "args": {
+        "tab_id": 854901622
+      },
+      "ok": true,
+      "ms": 1
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 4
+      "ms": 33
     }
   ]
 }

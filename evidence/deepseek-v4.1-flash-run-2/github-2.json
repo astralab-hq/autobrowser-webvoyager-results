@@ -1,0 +1,101 @@
+{
+  "task": {
+    "id": "github-2",
+    "site": "github",
+    "instruction": "Look for the trending Python repositories on GitHub with most stars.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Here are today's GitHub Trending Python repositories (since=daily), ranked by total stars as shown on the page:\n\n1. EbookFoundation / free-programming-books — 401,190 stars, 67,313 forks\n2. donnemartin / system-design-primer — 377,205 stars, 59,207 forks\n3. anthropics / skills — 188,386 stars, 22,218 forks\n4. sherlock-project / sherlock — 99,550 stars, 11,793 forks\n5. django / django — 91,677 stars, 35,969 forks\n6. jamiepine / voicebox — 59,862 stars, 7,511 forks\n7. microsoft / VibeVoice — 56,611 stars, 6,375 forks\n8. spotDL / spotify-downloader — 26,713 stars, 2,314 forks\n9. google / skills — 23,088 stars, 1,939 forks (\"Agent Skills for Google products and technologies\")\n10. Usagi-org / ai-goofish-monitor — 18,283 stars, 3,014 forks\n11. bobeff / open-source-games — 17,798 stars, 1,636 forks\n12. NVIDIA / auto-ontology — 9,590 stars, 769 forks\n13. elder-plinius / OBLITERATUS — 9,273 stars, 1,645 forks\n14. aws / agent-toolkit-for-aws — 3,423 stars, 439 forks\n15. mbillow / localthings — 951 stars, 102 forks\n\nThe runaway leaders by lifetime stars are free-programming-books (401k), system-design-primer (377k), and anthropics/skills (188k). Worth noting: GitHub's Trending page ranks by recent star velocity, not lifetime totals — the page's own \"stars today\" figure put google/skills at the top with 449 new stars today, even though it sits 9th on lifetime stars.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent used GitHub Trending filtered to Python/today and provided the repos sorted by total stars, supported by the page’s repo/star counts.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 14721,
+    "output_tokens": 35
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/trending/python?since=daily",
+    "title": "Trending Python repositories on GitHub today · GitHub"
+  },
+  "final_screenshot": "screenshots/github-2.jpg",
+  "cost_usd": 0.00116763,
+  "elapsed_s": 31.2,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/trending/python?since=daily"
+      },
+      "ok": true,
+      "ms": 1690
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "selector": "article.Box-row"
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 8000,
+        "offset": 92
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000
+      },
+      "ok": true,
+      "ms": 51
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 9000,
+        "offset": 20000
+      },
+      "ok": true,
+      "ms": 35
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 8000,
+        "offset": 30
+      },
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 4000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 9
+    }
+  ]
+}

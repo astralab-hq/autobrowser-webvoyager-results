@@ -1,0 +1,214 @@
+{
+  "task": {
+    "id": "huggingface-2",
+    "site": "huggingface",
+    "instruction": "Discover three new and popular open-source NLP models for language translation released in the past month on Huggingface.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "fail",
+  "pass": false,
+  "final_answer": "Here are three open-source translation models released on Hugging Face within the past month (Oct 7 – Nov 7, 2026), all tagged `translation` and traced back to their original release repos rather than counting quantized re-uploads as separate models:\n\n**1. tencent/Hy-SimulMT-30B-A3B** — created 2026-10-22 · 899 downloads · 47 likes (its FP8 build has 1,264 downloads and **461 likes**, making it the most-liked translation model released this month)\nTencent Hunyuan's real-time **simultaneous** translation model, supporting bidirectional **speech-to-speech translation between Chinese and English**: it continuously receives incoming audio and translates as the speaker talks, emitting both translated text and speech, with **real-time voice cloning** that preserves the speaker's vocal characteristics. Built for meetings, speeches and interviews where waiting for a finished sentence would disrupt the conversation. Apache-2.0, with FP8 and \"Interleave\" variants.\n\n**2. pfnet/plamo-3-translate-8b** — created 2026-10-27 · 452 downloads · 12 likes (the 0.8B GGUF build has 14,380 downloads and 26 likes)\nPreferred Networks' (PFN) translation-specialized LLM, built on PLaMo 3 NICT — a pretrained model from joint PFN–NICT research — and further trained on tens of billions of tokens of translation-focused data. It supports translation among **53 languages**, can take surrounding context and a glossary into account, and lets you choose plain vs. polite style for Japanese output. The family spans 0.8B / 2B / 8B / 31B sizes with GGUF, FP8, NVFP4, W4A16 and MLX-4bit variants. License: PLaMo Community License.\n\n**3. IndexTeam/Index-Translate-omni-9B** — created 2026-11-04 · 1 like\nA multimodal member of the Index-Translate family covering multilingual text translation, terminology and formatting constraints, **image translation, speech recognition, and bidirectional Chinese–English speech translation**. Its card reports FLORES COMET22 0.8789, WMT24++ COMET22 0.8601 and WMT26 Judge 75.35 — matching the text-only Index-Translate 9B — with the larger Omni 35BA3B reaching 78.01 on WMT26 Judge. Siblings include 2B and 35B sizes plus FP8 and GGUF builds.\n\nHonorable mention: **rikai-translate/rikai-jp-eng-Bench-265-1.4B** (2026-11-04, MIT) — a tiny on-device bidirectional Japanese↔English model fine-tuned from CAT-Translate-1.4b that matches or beats CAT-Translate-3.3B on most automatic metrics at 2.4× its decode speed (0.8425 on the 26-domain CometKiwi gate), shipped as fp16 safetensors plus an MLX 8-bit build.",
+  "judge": {
+    "verdict": "FAILURE",
+    "rationale": "The third selected model has only 1 like and lacks shown open-source/license evidence, so the answer doesn’t satisfy “popular open-source” for three models.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 17903,
+    "output_tokens": 557
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=likes&direction=-1&limit=500&full=false",
+    "title": ""
+  },
+  "final_screenshot": "screenshots/huggingface-2.jpg",
+  "cost_usd": 0.01890828,
+  "elapsed_s": 84.5,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?pipeline_tag=translation&sort=createdAt&direction=-1"
+      },
+      "ok": true,
+      "ms": 497
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?pipeline_tag=translation"
+      },
+      "ok": true,
+      "ms": 458
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_74"
+      },
+      "ok": true,
+      "ms": 334
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_78"
+      },
+      "ok": true,
+      "ms": 227
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=createdAt&direction=-1&limit=100&full=false"
+      },
+      "ok": true,
+      "ms": 315
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const data = JSON.parse(document.body.innerText);\\n  const cutoff = new Date('2026-10-07T00:00:00Z');\\n  const recent = data.filter(m => new Date(m.createdAt) >= cutoff);\\n  const slim = m => ({id: m.id, created: m.createdAt.slice(0,10), downloads: m.downloads, likes: m.likes, lib: m.library_name, tags: (m.tags||[]).filter(t=>!t.includes(':')&&!['transformers','safetenso… [+586 chars]",
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?search=plamo-3-translate&limit=50&full=false"
+      },
+      "ok": true,
+      "ms": 302
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => { const d = JSON.parse(document.body.innerText); return d.map(m => ({id: m.id, created: m.createdAt.slice(0,10), likes: m.likes, downloads: m.downloads, lib: m.library_name, tag: m.pipeline_tag})); })()\",\"intent\":\"Lists every plamo-3-translate repository on the page with its creation date, likes and downloads, so I can identify the original model releases versus quantized cop… [+57 chars]",
+      "ok": true,
+      "ms": 172
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=likes&direction=-1&limit=100&full=false"
+      },
+      "ok": true,
+      "ms": 507
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=createdAt&direction=-1&limit=500&full=false"
+      },
+      "ok": true,
+      "ms": 414
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const ids = [\\\"pfnet/plamo-3-translate-8b\\\", \\\"IndexTeam/Index-Translate-omni-9B\\\", \\\"rikai-translate/rikai-jp-eng-Bench-265-1.4B\\\"];\\n  const out = [];\\n  for (const id of ids) {\\n    try {\\n      const r = await fetch(`https://huggingface.co/${id}/raw/main/README.md`);\\n      const t = await r.text();\\n      out.push({ id, head: t.slice(0, 1400) });\\n    } catch … [+272 chars]",
+      "ok": true,
+      "ms": 1034
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=likes&direction=-1&limit=500&full=false"
+      },
+      "ok": true,
+      "ms": 514
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const d = JSON.parse(document.body.innerText);\\n  const cutoff = new Date('2026-10-07T00:00:00Z');\\n  const recent = d.filter(m => new Date(m.createdAt) >= cutoff);\\n  const slim = m => ({id: m.id, created: m.createdAt.slice(0,10), likes: m.likes, downloads: m.downloads, lib: m.library_name, tags: (m.tags||[]).filter(t=>!t.includes(':')&&!['transformers','safetensors','r… [+436 chars]",
+      "ok": true,
+      "ms": 50
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(async () => {\\n  const ids = [\\\"tencent/Hy-SimulMT-30B-A3B\\\", \\\"tencent/Hy-SimulMT-30B-A3B-FP8\\\"];\\n  const out = [];\\n  for (const id of ids) {\\n    try {\\n      const r = await fetch(`https://huggingface.co/${id}/raw/main/README.md`);\\n      const t = await r.text();\\n      out.push({ id, head: t.slice(0, 1800) });\\n    } catch (e) { out.push({ id, error: String(e) }); }\\n  }\\n  … [+185 chars]",
+      "ok": true,
+      "ms": 565
+    }
+  ]
+}

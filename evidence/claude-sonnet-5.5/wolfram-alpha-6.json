@@ -6,25 +6,57 @@
     "start_url": "https://www.wolframalpha.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
-  "status": "fail",
-  "pass": false,
-  "final_answer": "The polynomial can be written with three terms by expanding around (x − 4):\n\nx⁵ − 20x⁴ + 163x³ − 676x² + 1424x − 1209 = (x − 4)⁵ + 3(x − 4)³ + 7\n\nTo check it:\n- (x − 4)⁵ = x⁵ − 20x⁴ + 160x³ − 640x² + 1280x − 1024\n- 3(x − 4)³ = 3x³ − 36x² + 144x − 192\n- Adding these two gives x⁵ − 20x⁴ + 163x³ − 676x² + 1424x − 1216.\n- Adding 7 gives the original constant term, −1209.\n\nI worked this out by hand and didn't use Wolfram|Alpha.",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Wolfram|Alpha simplifies the polynomial to (x - 4)^5 + 3 (x - 4)^3 + 7. That has three terms, down from six in the original x^5-20x^4+163x^3-676x^2+1424x-1209. Wolfram|Alpha also lists a nested Horner form, x (x (x ((x - 20) x + 163) - 676) + 1424) - 1209, but the (x - 4) form has fewer terms.",
   "judge": {
-    "verdict": "FAILURE",
-    "rationale": "The agent explicitly said it “worked this out by hand” and final page is just WolframAlpha homepage, so the answer is not supported by the website.",
+    "verdict": "SUCCESS",
+    "rationale": "The Wolfram|Alpha page shows the result “(x−4)^5 + 3(x−4)^3 + 7,” matching the agent’s final simplified expression with fewer terms.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 2847,
-    "output_tokens": 126
+    "input_tokens": 5309,
+    "output_tokens": 45
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.wolframalpha.com/",
-    "title": "Wolfram|Alpha: Computational Intelligence"
+    "url": "https://www.wolframalpha.com/input?i=simplify+x%5E5-20x%5E4%2B163x%5E3-676x%5E2%2B1424x-1209",
+    "title": "simplify x^5-20x^4+163x^3-676x^2+1424x-1209 - Wolfram|Alpha"
   },
   "final_screenshot": "screenshots/wolfram-alpha-6.jpg",
-  "cost_usd": 0.419824,
-  "elapsed_s": 36.9,
-  "actions": []
+  "cost_usd": 0.74545,
+  "elapsed_s": 24.2,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "simplify x^5-20x^4+163x^3-676x^2+1424x-1209",
+        "uid": "ref_1_7"
+      },
+      "ok": true,
+      "ms": 362
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 9
+    }
+  ]
 }

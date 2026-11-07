@@ -1,10 +1,11 @@
 {
-  "version": "2026-10-27",
-  "policy": "Base: Alumnium's patched task set, the one the current top two WebVoyager leaderboard entries ran on. A task both Alumnium and Magnitude removed is excluded unless a live check shows it is completable. A task only Magnitude removed is kept. Explicit past dates become {{date+N}} placeholders resolved against the run date. Year-less dates are left as written and mean their next occurrence.",
+  "version": "2026-11-07",
+  "policy": "Base: Alumnium's patched task set, the one the current top two WebVoyager leaderboard entries ran on. A task both Alumnium and Magnitude removed is excluded unless a live check shows it is completable. A task only Magnitude removed is kept. Explicit past dates become {{date+N}} placeholders resolved against the run date. Year-less dates are left as written and mean their next occurrence. A task the live site can no longer satisfy under this suite's judge is retired: it leaves the suite with no backfill, so earlier runs rescore on the same remaining tasks. Each retirement is dated and rests on a check of the task and the site, not on the agent's results.",
   "sources": {
     "alumnium": "https://github.com/alumnium-hq/WebVoyager/tree/alumnium/data (branch alumnium @ 29cb48d84ade, 2026-03-25)",
     "magnitude": "https://github.com/sagekit/webvoyager/blob/main/data/patches.json (@ 87009319e1a9, 2025-07-06)",
-    "live-check": "Checked on the live site on 2026-10-27"
+    "live-check": "Checked on the live site on 2026-10-27",
+    "omxyz": "https://github.com/omxyz/webvoyager/blob/main/TASK_UPDATES.md (current impossible exclusions)"
   },
   "exclusions": {
     "booking-6": {
@@ -52,11 +53,22 @@
     }
   },
   "kept": {
-    "allrecipes-3": "Both patch sources removed it, but on 2026-10-27 Allrecipes lists 'Vegan Chocolate Chip, Oatmeal, and Nut Cookies' with 72 ratings and a five-star display.",
     "amazon-4": "Magnitude removed it: the 'Used - Good' filter is only on the product's offers page. Alumnium kept it as completable, and the instruction does not require filtering from search results.",
     "apple-1": "Magnitude removed it. Alumnium kept it as completable.",
     "bbc-news-2": "Magnitude removed it because no matching article existed on its run day. Alumnium kept it. Its outcome depends on the news cycle on the run date.",
     "espn-2": "Magnitude removed it during the NBA off-season. Alumnium kept it. The regular season runs from late October to mid April.",
     "google-search-6": "Magnitude removed it: Trends offers no monthly filter. Alumnium kept it as completable."
+  },
+  "retired": {
+    "allrecipes-3": {
+      "reason": "Both patch sources removed it, so the base policy keeps it only if a live check shows it can be completed. The 2026-10-27 check that kept it read the recipe's 72 ratings; the recipe shows 59 written reviews, and this suite's judge reads 'over 60 reviews' as written reviews. The check therefore did not show the task completable under this judge.",
+      "source": "alumnium+magnitude",
+      "checked": "2026-10-27"
+    },
+    "huggingface-1": {
+      "reason": "Asks for a story from the Hugging Face Inference API, which now needs a signed-in account: an anonymous request to router.huggingface.co returned 401 Unauthorized on 2026-11-07. omxyz excludes it for the same reason ('requires authentication in the anonymous benchmark browser').",
+      "source": "omxyz+live-check",
+      "checked": "2026-11-07"
+    }
   }
 }

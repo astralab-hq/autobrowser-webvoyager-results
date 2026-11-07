@@ -6,17 +6,17 @@
     "start_url": "https://www.apple.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "Apple's US store lists two current MacBook Air models, and both use the M5 chip. The prices below are in USD for the base configuration.\n\n- **MacBook Air 13-inch** (13.6\" display): from **$1,299**. That is $108.25/mo for 12 months with Apple Card Monthly Installments at 0% APR. An Apple Upgrade lease starts at $24.99/mo for 36 months.\n- **MacBook Air 15-inch** (15.3\" display): from **$1,499**. That is $124.91/mo for 12 months with Apple Card Monthly Installments. An Apple Upgrade lease starts at $28.99/mo for 36 months.\n\nThe 15-inch costs $200 more than the 13-inch at the base configuration.\n\nBoth models come in Sky Blue, Silver, Starlight and Midnight. The marketing page lists 16GB of memory and 512GB of storage as the base configuration for both. You can choose between two M5 versions: a 10-core CPU with an 8-core GPU, or a 10-core CPU with a 10-core GPU. Memory goes up to 24GB or 32GB, and storage goes up to 4TB.\n\nI didn't open the configurator, so I don't have prices for the chip, memory or storage upgrades. The lease option is only for US residents. The page was set to the US store, so Malaysian prices may differ.",
+  "final_answer": "The latest MacBook Air models on Apple's US store are the M5 versions in 13-inch and 15-inch sizes. These are the starting prices the page shows:\n\n| Model | Chip option | Starting price | Apple Card Monthly Installments (12 months) | Apple Upgrade lease (36 months) |\n|---|---|---|---|---|\n| 13-inch | M5, 10-core CPU / 8-core GPU | $1,299 | $108.25/mo | from $24.99/mo |\n| 13-inch | M5, 10-core CPU / 10-core GPU | $1,399 | $116.58/mo | from $27.07/mo |\n| 15-inch | M5, 10-core CPU / 10-core GPU | $1,499 | $124.91/mo | from $28.99/mo |\n\n- **Size:** The 15-inch starts $200 above the base 13-inch. It is $100 above the 13-inch with the same 10-core GPU.\n- **GPU:** On the 13-inch, going from the 8-core to the 10-core GPU adds $100.\n- **Colors:** Sky Blue, Silver, Starlight and Midnight are offered. The page doesn't show a price difference between them.\n- **Upgrades:** Memory runs from 16GB to 32GB and storage from 512GB to 4TB. I didn't see upgrade prices for either on the page, so the 24GB and 1TB configurations cost more than the starting prices above.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The final page shows 13-inch from $1299 and 15-inch from $1499, and the agent compared them, noting the 15-inch is $200 more.",
+    "rationale": "The page state shows MacBook Air with M5 chip and prices: 13-inch from $1299 and 15-inch from $1499, matching the agent’s comparison.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 8106,
-    "output_tokens": 215
+    "input_tokens": 7889,
+    "output_tokens": 560
   },
   "not_graded_because": null,
   "final_page": {
@@ -24,38 +24,31 @@
     "title": "Buy MacBook Air - Apple"
   },
   "final_screenshot": "screenshots/apple-0.jpg",
-  "cost_usd": 0,
-  "elapsed_s": 31.3,
+  "cost_usd": 0.414146,
+  "elapsed_s": 34.2,
   "actions": [
-    {
-      "tool": "navigate",
-      "args": {
-        "url": "https://www.apple.com/macbook-air/"
-      },
-      "ok": true,
-      "ms": 295
-    },
-    {
-      "tool": "get_page_text",
-      "args": {},
-      "ok": true,
-      "ms": 6
-    },
     {
       "tool": "navigate",
       "args": {
         "url": "https://www.apple.com/shop/buy-mac/macbook-air"
       },
       "ok": true,
-      "ms": 869
+      "ms": 118
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
     },
     {
       "tool": "get_page_text",
-      "args": {
-        "head_limit": 12000
-      },
+      "args": {},
       "ok": true,
-      "ms": 4
+      "ms": 46
     }
   ]
 }

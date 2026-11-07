@@ -6,26 +6,26 @@
     "start_url": "https://arxiv.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I picked the most recent paper in the cs.CL listing: **\"Elucidating the Design Space of LM Data Attribution\"** (arXiv:2610.40655). It was submitted on 29 Oct 2026 by Steven Yu, Sheng-Yu Wang, Kimia Hamidieh, Antonio Torralba and David Bau.\n\n**Abstract:** Data attribution methods for Language Models (LMs) are typically evaluated using downstream tasks like fact retrieval. However, existing evaluations vary multiple dataset properties simultaneously, making it impossible to isolate exactly why an attribution algorithm fails. To diagnose these failures, the authors explore the design space of LLM data attribution, with a primary focus on evaluation. They introduce the Controlled Attribution Benchmark (CATT) for fact tracing, in which LLMs are fine-tuned on entirely fictitious knowledge, providing unambiguous ground truth for attribution. This synthetic setup allows them to systematically alter one dataset configuration at a time, such as document redundancy and lexical distractors. With this configurable evaluation, they show that redundancy and distractors consistently degrade attribution performance.\n\nRather than proposing a new estimator, they examine two underexplored design choices: the loss used to compute gradients, and how per-token attribution scores are aggregated into a document score. They find that the true causal evidence within a training document is highly localized, but standard methods dilute it into noise by averaging attribution scores across the entire document. Replacing standard cross-entropy loss gradients with negative log-odds gradients surfaces the critical tokens from other uninformative ones. Aggregating only the top token scores then improves ground truth recall by 35 to 72 percentage points across multiple baselines on the diagnostic benchmark. The negative log-odds correction also generalizes to FTRACE-TREX, improving counterfactual retraining performance for every method tested, by up to 4.9x.\n\nSubject: Computation and Language (cs.CL). Link: https://arxiv.org/abs/2610.40655",
+  "final_answer": "I opened the arXiv cs.CL recent listing and picked one paper. It was submitted on 5 Nov 2026, two days before today's date.\n\n**Title:** Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes\n**Author:** Vladimir Beskorovainyi\n**arXiv:** 2611.08439 (cs.CL; also cs.AI, cs.LG)\n**Link:** https://arxiv.org/abs/2611.08439\n\n**Abstract:** Typed-decision models score options that the caller supplies at request time, so their accuracy depends on label wording that the model's developer does not control. We compare two releases of a 307M-parameter multilingual cross-encoder, Ru-Jev, trained on thirteen Russian-language tasks; the later release adds an augmentation that presents labels in several surface forms. Holding questions fixed and varying only how eighteen routing labels are worded, we evaluate ten label vocabularies, produced by three separate processes and checked for overlap with the training data, with five candidates per question and, for eight of them, also with eighteen. On held-out vocabularies made of ordinary or borrowed words (English-derived jargon, office slang, department names), the augmented release is more accurate in every setting, by up to 0.24. Eleven of these fourteen gains survive a Holm correction (slang with eighteen candidates and descriptive sentences with five do not), and for jargon on all labels the label-level interval excludes zero in both settings. On abbreviations and opaque codes it gives no usable gain: on abbreviations it is not better, and worse on the clean slice, and on opaque codes both releases stay at or below chance once labels related to training options are removed. In most cells where accuracy rises, the risk-coverage area falls, but with eighteen candidates confident errors rise on jargon and slang. On two datasets neither release saw, accuracy moves by -8.4 and +5.6 points. We also report four evaluation hazards from comparing the two releases.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The agent opened arXiv cs.CL recent, selected the top listed paper, and provided its abstract supported by the final arXiv page.",
+    "rationale": "The agent used arXiv’s cs.CL recent listing, opened a cs.CL paper page, and provided the title, link, and abstract shown on that page.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 6012,
-    "output_tokens": 128
+    "input_tokens": 8290,
+    "output_tokens": 253
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://arxiv.org/abs/2610.40655",
-    "title": "[2610.40655] Elucidating the Design Space of LM Data Attribution"
+    "url": "https://arxiv.org/abs/2611.08439",
+    "title": "[2611.08439] Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes"
   },
   "final_screenshot": "screenshots/arxiv-2.jpg",
-  "cost_usd": 0.309264,
-  "elapsed_s": 21.5,
+  "cost_usd": 0.604888,
+  "elapsed_s": 29.8,
   "actions": [
     {
       "tool": "navigate",
@@ -33,31 +33,39 @@
         "url": "https://arxiv.org/list/cs.CL/recent"
       },
       "ok": true,
-      "ms": 183
+      "ms": 255
     },
     {
-      "tool": "get_page_text",
+      "tool": "take_snapshot",
       "args": {
-        "head_limit": 4000
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 4
+      "ms": 0
     },
     {
       "tool": "navigate",
       "args": {
-        "url": "https://arxiv.org/abs/2610.40655"
+        "url": "https://arxiv.org/abs/2611.08439"
       },
       "ok": true,
-      "ms": 188
+      "ms": 133
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
     },
     {
       "tool": "get_page_text",
-      "args": {
-        "head_limit": 4000
-      },
+      "args": {},
       "ok": true,
-      "ms": 2
+      "ms": 18
     }
   ]
 }

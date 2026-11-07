@@ -1,0 +1,136 @@
+{
+  "task": {
+    "id": "allrecipes-6",
+    "site": "allrecipes",
+    "instruction": "Search for a vegetarian lasagna recipe that has at least a four-star rating and over 500 reviews.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a great match on Allrecipes: **Artichoke Spinach Lasagna** (https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/)\n\n- **Rating:** 4.6 out of 5 stars (well above your four-star floor)\n- **Reviews:** 1,287 written reviews from 1,824 ratings (far past the 500 minimum)\n- **Why it qualifies as vegetarian:** an artichoke-and-spinach mixture cooked with vegetable broth, onions and garlic, layered with lasagna noodles, pasta sauce, mozzarella, and topped with crumbled feta — no meat.\n- **Details:** Submitted by DMCCRACKEN, tested by the Allrecipes Test Kitchen, updated July 31, 2026. Prep 20 mins, cook 1 hr, total 1 hr 20 mins. 81 photos from home cooks.\n\nFor reference, two other vegetarian options on the same site also clear the bar but with fewer reviews: **Spinach Lasagna III** at 4.7 stars with 500 reviews, and **Simple Spinach Lasagna** at 565 ratings. The Artichoke Spinach Lasagna is the strongest pick of the three given its much larger review base.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page shows Artichoke Spinach Lasagna with 4.6 rating, 1,287 reviews, and vegetarian ingredients/description from Allrecipes.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 15982,
+    "output_tokens": 38
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/",
+    "title": "Artichoke Spinach Lasagna"
+  },
+  "final_screenshot": "screenshots/allrecipes-6.jpg",
+  "cost_usd": 0.00822591,
+  "elapsed_s": 67.8,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 28
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "vegetarian lasagna",
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 412
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 27
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 9000
+      },
+      "ok": true,
+      "ms": 27
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 15000
+      },
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/22729/spinach-lasagna-iii/"
+      },
+      "ok": true,
+      "ms": 568
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "evaluate_script",
+      "args": {
+        "expression": "(() => {\n  const t = document.body.innerText;\n  const i = t.search(/Ratings|Reviews|out of 5|stars/i);\n  return t.slice(Math.max(0, i - 400), i + 800);\n})()",
+        "intent": "Read the rating and review count shown on this recipe page so I can check it meets the four-star / 500-review bar."
+      },
+      "ok": true,
+      "ms": 212
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/"
+      },
+      "ok": true,
+      "ms": 606
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "evaluate_script",
+      "args": {
+        "expression": "(() => {\n  const t = document.body.innerText;\n  const i = t.search(/LASAGNA RECIPES/);\n  return t.slice(i, i + 500);\n})()",
+        "intent": "Read the rating and review count for Artichoke Spinach Lasagna to check it meets four stars and 500+ reviews."
+      },
+      "ok": true,
+      "ms": 133
+    }
+  ]
+}

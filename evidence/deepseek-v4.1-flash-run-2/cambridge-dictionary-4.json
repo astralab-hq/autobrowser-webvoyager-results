@@ -1,0 +1,46 @@
+{
+  "task": {
+    "id": "cambridge-dictionary-4",
+    "site": "cambridge-dictionary",
+    "instruction": "Look for the British English pronunciation of the word \"innovate\" and write down the International Phonetic Alphabet (IPA) notation, then find one example sentence provided in the Cambridge Dictionary that uses this word.",
+    "start_url": "https://dictionary.cambridge.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a cloudflare bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0,
+  "elapsed_s": 9.7,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 27
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "innovate",
+        "uid": "ref_1_15"
+      },
+      "ok": true,
+      "ms": 469
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    }
+  ]
+}

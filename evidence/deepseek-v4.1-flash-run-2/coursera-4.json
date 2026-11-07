@@ -1,0 +1,117 @@
+{
+  "task": {
+    "id": "coursera-4",
+    "site": "coursera",
+    "instruction": "Identify a course or Specialization on Coursera that helps business process management with with a rating 4.7.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "On Coursera, the course that matches is **Business Process Modelling** by **STARWEAVER** (instructor Igor Arkhipov), rated **4.7 stars from 135 reviews**.\n\nDetails: Beginner level, 1 module (~9 hours to complete), 14,118 already enrolled, taught in English with 3 languages available, includes 4 assignments and a shareable certificate. It covers identifying and scoping business processes, analyzing process logic for efficiency, and choosing suitable modeling notations — BPMN, UML, flowcharts, DFD, and eEPC — to document and communicate operations clearly. Skills gained include Business Process Management, Process Modeling, Workflow Analysis, Business Analysis, and Process Improvement.\n\nLink: https://www.coursera.org/learn/business-process-modelling\n\nIf you specifically want a Specialization rather than a single course, the closest match at that rating tier is a different product — let me know and I can look for a 4.7-rated Specialization in this area too (the ones surfaced in search were Project & Process Management for a Tech-Driven Workplace, which didn't show a 4.7 rating).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The Coursera page shows “Business Process Modelling” with skill Business Process Management and a 4.7 rating; the agent reported the course and link.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 12751,
+    "output_tokens": 38
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/learn/business-process-modelling",
+    "title": "Business Process Modelling | Coursera"
+  },
+  "final_screenshot": "screenshots/coursera-4.jpg",
+  "cost_usd": 0.00442183,
+  "elapsed_s": 45.0,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 46
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "business process management",
+        "uid": "ref_1_8"
+      },
+      "ok": true,
+      "ms": 342
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/learn/business-process-modelling"
+      },
+      "ok": true,
+      "ms": 971
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500
+      },
+      "ok": true,
+      "ms": 27
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "star rating displayed near reviews"
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 19
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3500,
+        "offset": 2500
+      },
+      "ok": true,
+      "ms": 18
+    }
+  ]
+}

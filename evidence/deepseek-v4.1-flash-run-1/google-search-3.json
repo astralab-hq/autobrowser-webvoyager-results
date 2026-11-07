@@ -1,0 +1,38 @@
+{
+  "task": {
+    "id": "google-search-3",
+    "site": "google-search",
+    "instruction": "Show me a list of comedy movies, sorted by user ratings. Show me the Top 5 movies.",
+    "start_url": "https://www.google.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a google bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": -0.00850368,
+  "elapsed_s": 8.0,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.google.com/search?q=top+comedy+movies+sorted+by+user+rating"
+      },
+      "ok": true,
+      "ms": 172
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    }
+  ]
+}

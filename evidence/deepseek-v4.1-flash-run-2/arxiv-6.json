@@ -1,0 +1,252 @@
+{
+  "task": {
+    "id": "arxiv-6",
+    "site": "arxiv",
+    "instruction": "How many figures and tables are in the paper \"On the Sentence Embeddings from Pre-trained Language Models\"?",
+    "start_url": "https://arxiv.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The paper \"On the Sentence Embeddings from Pre-trained Language Models\" (Li et al., arXiv:2011.05864) contains **2 figures and 8 tables** — 10 numbered figures/tables in total.\n\n**Figures (2):**\n- Figure 1: An illustration of the proposed flow-based calibration over the original sentence embedding space of BERT.\n- Figure 2: A scatterplot of sentence pairs (similarity vs. edit distance), with pairs of edit distance ≤4 highlighted in green.\n\n**Tables (8):**\n- Table 1: Mean ℓ₂-norm and k-NN distances of BERT word embeddings, segmented by word-frequency rank.\n- Table 2: Semantic textual similarity results without NLI supervision.\n- Table 3: Semantic textual similarity results with NLI supervision.\n- Table 4: AUC on QNLI (unsupervised question-answer entailment).\n- Table 5: Comparison of the flow-based method with other calibration baselines (SN, NATSV) on STS-B.\n- Table 6: Spearman's correlation between gold, BERT-induced, and flow-induced similarity vs. edit distance.\n- Table 7: Flow hyperparameters (Appendix B).\n- Table 8: Results with different random seeds (Appendix C).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent found the correct arXiv paper (2011.05864), opened its HTML, read it, and answered with a specific count: 2 figures and 8 tables.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 18210,
+    "output_tokens": 511
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://arxiv.org/html/2011.05864v1",
+    "title": "On the Sentence Embeddings from Pre-trained Language Models"
+  },
+  "final_screenshot": "screenshots/arxiv-6.jpg",
+  "cost_usd": 0.01123576,
+  "elapsed_s": 63.8,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2010.03719"
+      },
+      "ok": true,
+      "ms": 332
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2010.05006"
+      },
+      "ok": true,
+      "ms": 370
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/a/search?query=On+the+Sentence+Embeddings+from+Pre-trained+Language+Models"
+      },
+      "ok": true,
+      "ms": 1982
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/search/?query=On+the+Sentence+Embeddings+from+Pre-trained+Language+Models&searchtype=all"
+      },
+      "ok": true,
+      "ms": 1108
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2010.05006"
+      },
+      "ok": true,
+      "ms": 240
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/search/?searchtype=all&query=On+the+Sentence+Embeddings+from+Pre-trained+Language+Models"
+      },
+      "ok": true,
+      "ms": 978
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2010.05006"
+      },
+      "ok": true,
+      "ms": 91
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/search/?searchtype=all&query=Sentence+Embeddings+from+Pre-trained+Language+Models"
+      },
+      "ok": true,
+      "ms": 1121
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2010.05006"
+      },
+      "ok": true,
+      "ms": 239
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/search/?searchtype=all&query=%22On+the+Sentence+Embeddings+from+Pre-trained+Language+Models%22"
+      },
+      "ok": true,
+      "ms": 843
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2011.05864"
+      },
+      "ok": true,
+      "ms": 88
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/html/2011.05864v1"
+      },
+      "ok": true,
+      "ms": 143
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 30000
+      },
+      "ok": true,
+      "ms": 41
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 30000,
+        "offset": 30000
+      },
+      "ok": true,
+      "ms": 31
+    }
+  ]
+}

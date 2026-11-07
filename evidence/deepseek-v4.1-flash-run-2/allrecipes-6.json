@@ -1,0 +1,110 @@
+{
+  "task": {
+    "id": "allrecipes-6",
+    "site": "allrecipes",
+    "instruction": "Search for a vegetarian lasagna recipe that has at least a four-star rating and over 500 reviews.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a vegetarian lasagna on Allrecipes that clears both bars: **Artichoke Spinach Lasagna** (https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/) — rated **4.6 stars from 1,824 ratings** (1,287 written reviews), well past your 4-star / 500-review thresholds. It's a meatless lasagna that layers marinated artichoke hearts and spinach (cooked with vegetable broth, onion, garlic and rosemary) with lasagna noodles, tomato pasta sauce and mozzarella, topped with crumbled herb-and-garlic feta. Prep 20 min, cook 1 hr, 8 servings, and it's Test Kitchen tested. Full recipe and reviews are at that link.\n\nFor context, none of the recipes literally titled \"Vegetarian Lasagna\" on the search results page came close on volume — the highest was Vegetarian Four Cheese Lasagna with 243 ratings, and Easy Vegetarian Spinach Lasagna with 117 — so the artichoke-spinach one is the best match for your rating and review-count requirements.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The final page shows Artichoke Spinach Lasagna is vegetarian, rated 4.6, with 1,287 reviews, satisfying at least 4 stars and over 500 reviews.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 15512,
+    "output_tokens": 45
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/",
+    "title": "Artichoke Spinach Lasagna"
+  },
+  "final_screenshot": "screenshots/allrecipes-6.jpg",
+  "cost_usd": 0.00618145,
+  "elapsed_s": 51.6,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 32
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "vegetarian lasagna",
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 391
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 1200
+      },
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 7000,
+        "offset": 7200
+      },
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 14200
+      },
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/"
+      },
+      "ok": true,
+      "ms": 541
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 0,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 38
+    }
+  ]
+}

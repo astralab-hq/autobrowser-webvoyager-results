@@ -1,0 +1,133 @@
+{
+  "task": {
+    "id": "huggingface-7",
+    "site": "huggingface",
+    "instruction": "Which is the most downloaded audio related dataset on Hugging face currently.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The most-downloaded audio dataset on Hugging Face right now is **espnet/yodas3** — about **353k downloads** in the last month (4.08M dataset size, 258 likes, last updated about a month ago).\n\nI got this by opening the Datasets listing filtered to the **Audio** modality and sorted by **Most downloads**. The runners-up were google/fleurs (~197k), Fhrozen/FSD50k (~158k), Narsil/image_dummy (~137k), and disco-eth/EuroSpeech (~113k).\n\nNote that these are Hugging Face's rolling monthly download counts, so the ranking shifts over time.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page is Audio datasets sorted by Most downloads, showing espnet/yodas3 first with 353k downloads, matching the final answer.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 12522,
+    "output_tokens": 34
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/datasets?modality=modality:audio&sort=downloads",
+    "title": "Audio Datasets – Hugging Face"
+  },
+  "final_screenshot": "screenshots/huggingface-7.jpg",
+  "cost_usd": 0.00473941,
+  "elapsed_s": 67.2,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/datasets?sort=downloads"
+      },
+      "ok": true,
+      "ms": 701
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_18"
+      },
+      "ok": true,
+      "ms": 391
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/datasets/espnet/yodas3"
+      },
+      "ok": true,
+      "ms": 394
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/datasets?sort=downloads&search=audio"
+      },
+      "ok": true,
+      "ms": 421
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_18"
+      },
+      "ok": true,
+      "ms": 312
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/datasets?modality=modality:audio&sort=downloads"
+      },
+      "ok": true,
+      "ms": 697
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

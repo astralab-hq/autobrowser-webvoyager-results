@@ -6,52 +6,131 @@
     "start_url": "https://www.google.com/travel/flights/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "The lowest fare for a one-way flight from JFK to London Heathrow on January 22, 2027 for 1 adult is **$298**. Google Flights also shows \"Cheapest from $298\" for this search.\n\nTwo flights are priced at $298. Both are 1-stop flights with Aer Lingus and British Airways, connecting in Dublin (DUB):\n- Departs 5:00 PM and arrives 8:05 AM the next day. Total time is 10 hr 5 min, with a 2 hr 5 min layover.\n- Departs 9:05 PM and arrives 11:25 AM the next day. Total time is 9 hr 20 min, with a 1 hr 15 min layover.\n\nThe cheapest nonstop flights are $300, on Virgin Atlantic, British Airways, American, JetBlue and Delta.\n\nGoogle Flights also advertises a $197 fare from LGA. I excluded it because it leaves from LaGuardia, not JFK. I didn't click \"View more flights\". All 20 results the page reported were already listed, and the page's own \"Cheapest\" figure matches $298.",
+  "final_answer": "The lowest fare for a one-way flight for 1 adult from JFK to London Heathrow (LHR) on Friday, Jan 22, 2027 is **MYR 1,211**. Google Flights shows prices in Malaysian ringgit because of the location setting. The page's \"Cheapest\" tab also says \"from 1211\".\n\nTwo flights have that fare. Both are Aer Lingus / British Airways with one stop in Dublin (DUB):\n- Departs 5:00 PM and arrives 8:05 AM the next day (10 hr 5 min).\n- Departs 9:05 PM and arrives 11:25 AM the next day (9 hr 20 min).\n\nThe cheapest nonstop flights cost MYR 1,217, only MYR 6 more. One flight on the list was higher, at MYR 1,753.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The page shows one-way, 1 adult, JFK–LHR, Fri Jan 22, with “Cheapest from $298” and $298 JFK–LHR flights listed.",
+    "rationale": "Final page shows one-way, 1 adult, JFK–LHR, Fri Jan 22, with “Cheapest from MYR 1,211,” matching the agent’s stated fare.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 6953,
-    "output_tokens": 44
+    "input_tokens": 12951,
+    "output_tokens": 251
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.google.com/travel/flights?q=One-way%20flights%20from%20JFK%20to%20LHR%20on%202027-01-22%20for%201%20adult&curr=USD",
+    "url": "https://www.google.com/travel/flights?q=One-way%20flights%20from%20JFK%20to%20LHR%20on%202027-01-22%20for%201%20adult",
     "title": "New York to London | Google Flights"
   },
   "final_screenshot": "screenshots/google-flights-2.jpg",
-  "cost_usd": 1.440634,
-  "elapsed_s": 26.4,
+  "cost_usd": 0.45738,
+  "elapsed_s": 49.6,
   "actions": [
     {
       "tool": "take_snapshot",
       "args": {},
       "ok": true,
-      "ms": 16
+      "ms": 22
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_10"
+      },
+      "ok": true,
+      "ms": 340
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_2"
+      },
+      "ok": true,
+      "ms": 221
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_13"
+      },
+      "ok": true,
+      "ms": 233
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
     },
     {
       "tool": "navigate",
       "args": {
-        "url": "https://www.google.com/travel/flights?q=One-way%20flights%20from%20JFK%20to%20LHR%20on%202027-01-22%20for%201%20adult&curr=USD"
+        "url": "https://www.google.com/travel/flights?q=One-way flights from JFK to LHR on 2027-01-22 for 1 adult"
       },
       "ok": true,
-      "ms": 645
+      "ms": 442
     },
     {
-      "tool": "wait_for_network_idle",
-      "args": {},
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
       "ok": true,
-      "ms": 512
+      "ms": 2
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
+      "ms": 38
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_26"
+      },
+      "ok": true,
+      "ms": 329
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
       "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "offset": 3000
+      },
+      "ok": true,
+      "ms": 74
     }
   ]
 }

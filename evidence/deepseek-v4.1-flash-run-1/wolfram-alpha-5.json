@@ -1,0 +1,66 @@
+{
+  "task": {
+    "id": "wolfram-alpha-5",
+    "site": "wolfram-alpha",
+    "instruction": "Show the solution of y\"(z) + sin(y(z)) = 0 from wolframalpha.",
+    "start_url": "https://www.wolframalpha.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "WolframAlpha classifies y''(z) + sin(y(z)) = 0 as a second-order nonlinear ordinary differential equation (an autonomous equation, equivalently y''(z) = −sin(y(z))).\n\nIts general solution is given as two branches:\n\n  y(z) = −2 am( ½√((c₁ + 2)(z + c₂)²), 4/(c₁ + 2) )\n  y(z) =  2 am( ½√((c₁ + 2)(z + c₂)²), 4/(c₁ + 2) )\n\nwhere am(x, m) is the Jacobi amplitude function, and c₁, c₂ are arbitrary constants. (This is the expected pendulum-type solution — the equation is the undamped pendulum equation, whose solutions are elliptic functions.)\n\nThe page also shows alternate forms y''(z) = −sin(y(z)) and y''(z) + ½i·e^(−i y(z)) − ½i·e^(i y(z)) = 0, plus sample solution plots for the initial conditions y(0)=1, y'(0)=0 and y(0)=0, y'(0)=1. A full \"Step-by-step solution\" is available only with Wolfram|Alpha Pro.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent queried WolframAlpha and reported the displayed differential equation solutions, matching the final page’s “Differential equation solutions” section.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 5146,
+    "output_tokens": 33
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.wolframalpha.com/input?i=y%27%27%28z%29+%2B+sin%28y%28z%29%29+%3D+0",
+    "title": "y''(z) + sin(y(z)) = 0 - Wolfram|Alpha"
+  },
+  "final_screenshot": "screenshots/wolfram-alpha-5.jpg",
+  "cost_usd": 0.0022925,
+  "elapsed_s": 30.1,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 25
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "y''(z) + sin(y(z)) = 0",
+        "uid": "ref_1_7"
+      },
+      "ok": true,
+      "ms": 314
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 11
+    }
+  ]
+}

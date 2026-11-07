@@ -1,0 +1,211 @@
+{
+  "task": {
+    "id": "github-1",
+    "site": "github",
+    "instruction": "Search for an open-source repository for machine learning in Python, specifically focused on decision trees, updated within the last 2 days.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a match on GitHub: **Vaishalini5252/ml-assignment-2-breast-cancer-classification** (https://github.com/Vaishalini5252/ml-assignment-2-breast-cancer-classification).\n\nIt's a public Python machine-learning repository whose description reads: \"5 classification models (Logistic Regression, _Decision Tree_, KNN, Naive Bayes, SVM) trained on the Breast Cancer Wisconsin dataset, compa…\" — so decision trees are a core part of it. GitHub's search shows it as **Updated 2 minutes ago**, and its commit history confirms this: the latest commits (\"Add classification reports for multiple models\", \"Implement model training and evaluation for breast cancer\", \"Add dependencies to requirements.txt\") are all authored **Nov 7, 2026** — today — well inside your 2-day window.\n\nI found it by searching GitHub repositories with the query `\"decision tree\" in:name,description language:Python pushed:>2026-11-05`, sorted by recently updated (57 results). Other fresh alternatives from the same search, if you want options: `dvt18/ML_2026aj05580` (steel plate fault classification comparing Decision Tree, KNN, Naive Bayes, SVM — updated 31 minutes ago) and `tangerineYR/telco-churn-ml` (leakage-safe Telco churn classification with Decision Trees, SVMs, RFE and cross-validated tuning).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final answer cites a GitHub result showing Python, decision tree ML description, and updated 2 minutes ago; commits dated Nov 7 further support the 2-day window.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 15873,
+    "output_tokens": 384
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/search?q=%22decision+tree%22+in%3Aname%2Cdescription+language%3APython+pushed%3A%3E2026-11-05&type=repositories&s=updated&o=desc",
+    "title": "Repository search results · GitHub"
+  },
+  "final_screenshot": "screenshots/github-1.jpg",
+  "cost_usd": 0.00717963,
+  "elapsed_s": 57.1,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=decision+trees+language%3APython&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 698
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=decision+tree+language%3APython+pushed%3A%3E2026-11-05&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 723
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/Vaishalini5252/ml-assignment-2-breast-cancer-classification"
+      },
+      "ok": true,
+      "ms": 859
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/Vaishalini5252/ml-assignment-2-breast-cancer-classification/commits/main"
+      },
+      "ok": true,
+      "ms": 852
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": ".Box-sc-g0xbh4-0"
+      },
+      "ok": false,
+      "ms": 5
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 7000
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/Vaishalini5252/ml-assignment-2-breast-cancer-classification"
+      },
+      "ok": true,
+      "ms": 184
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=decision+tree+language%3APython+pushed%3A%3E2026-11-05&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 97
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=%22decision+tree%22+in%3Aname%2Cdescription+language%3APython+pushed%3A%3E2026-11-05&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 611
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "selector": "#search-results"
+      },
+      "ok": false,
+      "ms": 6
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 3000
+      },
+      "ok": true,
+      "ms": 18
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 18
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 19
+    }
+  ]
+}

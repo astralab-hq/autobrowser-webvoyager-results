@@ -1,0 +1,114 @@
+{
+  "task": {
+    "id": "google-map-3",
+    "site": "google-map",
+    "instruction": "The least amount of walking from Central Park Zoo to the Broadway Theater in New York.",
+    "start_url": "https://www.google.com/maps/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The shortest walking route from Central Park Zoo to the Broadway Theatre (1681 Broadway) is about **0.9 mile, roughly 20 minutes on foot**, via **7th Ave** — that's the first option Google Maps lists for walking directions.\n\nA second walking option covers the same 0.9 mile via 6th Ave/Ave of the Americas and W 53rd St, but takes about 21 minutes, so the 7th Ave route is the least walking of the two. For reference, the other modes shown were cycling at 9 min, transit at 11 min, and driving at 6 min.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Google Maps walking directions show the shortest route as 20 min, 0.9 mile via 7th Ave, which the agent reported.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 6902,
+    "output_tokens": 35
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.google.com/maps/dir/Central+Park+Zoo,+New+York,+NY+10021,+United+States/Broadway+Theatre,+1681+Broadway,+New+York,+NY+10019,+United+States/@40.7647706,-73.9878305,15z/data=!3m2!4b1!5s0x89c25857da0bda21:0x9c63b2c2f563f9e2!4m14!4m13!1m5!1m1!1s0x89c258f1fcd66869:0x65d72e84d91a3f14!2m2!1d-73.9719906!2d40.7677061!1m5!1m1!1s0x89c2585665784711:0x5bbfed74cc606bf6!2m2!1d-73.983051!2d40.7632593!3e2?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+    "title": "Central Park Zoo to Broadway Theatre - Google Maps"
+  },
+  "final_screenshot": "screenshots/google-map-3.jpg",
+  "cost_usd": 0.00265027,
+  "elapsed_s": 18.7,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 438
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "fill_form",
+      "args": {
+        "entries": [
+          {
+            "text": "Central Park Zoo, New York",
+            "uid": "ref_3_9"
+          },
+          {
+            "text": "Broadway Theater, New York",
+            "uid": "ref_3_12"
+          }
+        ]
+      },
+      "ok": true,
+      "ms": 386
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_12"
+      },
+      "ok": true,
+      "ms": 228
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_7_5"
+      },
+      "ok": true,
+      "ms": 233
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "task": {
+    "id": "google-map-3",
+    "site": "google-map",
+    "instruction": "The least amount of walking from Central Park Zoo to the Broadway Theater in New York.",
+    "start_url": "https://www.google.com/maps/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The shortest walking route from the Central Park Zoo to the Broadway Theatre (1681 Broadway) is **0.9 mile / about 20 minutes**, via 7th Ave. Google Maps rates the terrain as \"Mostly flat.\"\n\nTurn-by-turn:\n\n1. From the zoo, head toward Wien Walk — 125 ft\n2. Turn right toward Gapstow Bridge — 56 ft\n3. Turn left toward Gapstow Bridge — 141 ft\n4. Turn right toward Gapstow Bridge — 266 ft\n5. Turn left onto Gapstow Bridge — 0.2 mi\n6. Turn left onto Center Dr — 236 ft\n7. Slight right to stay on Center Dr — 210 ft\n8. Turn left toward West Dr — 79 ft\n9. Turn right toward West Dr — 328 ft\n10. Turn left toward West Dr — 151 ft\n11. Turn right toward West Dr — 30 ft\n12. Turn left onto West Dr — 66 ft\n13. Continue onto 7th Ave — 0.3 mi\n14. Turn right onto W 53rd St — 305 ft\n15. Turn left onto Broadway — 75 ft; the destination will be on your right\n\nNote: the route card also lists a 7-minute driving option, a 12-minute transit option, and a 9-minute biking option for comparison — but for walking itself, this 20-minute, 0.9-mile path through the park's south end and up 7th Ave is the shortest walking option Google Maps returns.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Google Maps page shows walking directions Central Park Zoo to Broadway Theatre: 20 min, 0.9 mile, via 7th Ave, matching the final answer.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 8966,
+    "output_tokens": 40
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.google.com/maps/dir/Central+Park+Zoo,+New+York,+NY+10021,+United+States/Broadway+Theatre,+1681+Broadway,+New+York,+NY+10019,+United+States/@40.7647706,-73.9878305,15z/am=t/data=!3m1!5s0x89c25857da0bda21:0x9c63b2c2f563f9e2!4m14!4m13!1m5!1m1!1s0x89c258f1fcd66869:0x65d72e84d91a3f14!2m2!1d-73.9719906!2d40.7677061!1m5!1m1!1s0x89c2585665784711:0x5bbfed74cc606bf6!2m2!1d-73.983051!2d40.7632593!3e2?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+    "title": "Central Park Zoo to Broadway Theatre - Google Maps"
+  },
+  "final_screenshot": "screenshots/google-map-3.jpg",
+  "cost_usd": 0.00296886,
+  "elapsed_s": 27.6,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 428
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "fill_form",
+      "args": {
+        "entries": [
+          {
+            "text": "Central Park Zoo, New York",
+            "uid": "ref_3_9"
+          },
+          {
+            "text": "Broadway Theater, New York",
+            "uid": "ref_3_12"
+          }
+        ]
+      },
+      "ok": true,
+      "ms": 389
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_5"
+      },
+      "ok": true,
+      "ms": 240
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_7_28"
+      },
+      "ok": true,
+      "ms": 215
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1200
+      },
+      "ok": true,
+      "ms": 21
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1500,
+        "offset": 1000
+      },
+      "ok": true,
+      "ms": 17
+    }
+  ]
+}

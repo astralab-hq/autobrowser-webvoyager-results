@@ -1,0 +1,139 @@
+{
+  "task": {
+    "id": "github-6",
+    "site": "github",
+    "instruction": "Search for an open-source project related to 'cryptocurrency wallet' updated in the past 30 days and provide the top three contributors.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found **BlueWallet** (github.com/BlueWallet/BlueWallet) — an open-source, Bitcoin-focused cryptocurrency wallet (React Native, iOS/Android) that has been actively updated within the past 30 days. Its contributor graph shows commits in the window Oct 8 – Nov 1, 2026.\n\nTop three contributors in that period:\n\n1. **limpbrains** — 16 commits\n2. **GladosBlueWallet** — 15 commits\n3. **marcosrdz** — 12 commits\n\n(Runners-up for context: transifex-integration[bot] with 8, Overtorment with 6, ncoelho with 2.)",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "GitHub evidence shows BlueWallet is MIT-licensed, cryptocurrency wallet-related, recently updated, and its contributors graph lists limpbrains, GladosBlueWallet, and marcosrdz as top three.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 15679,
+    "output_tokens": 564
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/BlueWallet/BlueWallet",
+    "title": "GitHub - BlueWallet/BlueWallet: Bitcoin wallet for iOS & Android. Built with React Native · GitHub"
+  },
+  "final_screenshot": "screenshots/github-6.jpg",
+  "cost_usd": 0.01163071,
+  "elapsed_s": 49.7,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 18
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=cryptocurrency+wallet+pushed%3A%3E2026-10-08&type=repositories&s=stars&o=desc"
+      },
+      "ok": true,
+      "ms": 565
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/BlueWallet/BlueWallet/graphs/contributors"
+      },
+      "ok": true,
+      "ms": 584
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_28"
+      },
+      "ok": true,
+      "ms": 352
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/BlueWallet/BlueWallet/graphs/contributors?from=10%2F8%2F2026&type=c"
+      },
+      "ok": true,
+      "ms": 451
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 14
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/BlueWallet/BlueWallet"
+      },
+      "ok": true,
+      "ms": 717
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

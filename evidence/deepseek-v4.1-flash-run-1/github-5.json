@@ -1,0 +1,89 @@
+{
+  "task": {
+    "id": "github-5",
+    "site": "github",
+    "instruction": "Find a Python repository on GitHub that has been updated in the past 2 days and has at least 500 stars.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found one: **doobidoo/mcp-memory-service** — https://github.com/doobidoo/mcp-memory-service\n\n- **Language:** Python (GitHub language filter confirmed; repo carries a Python/PyPI badge)\n- **Stars:** ~2.1k (well above your 500 minimum)\n- **Last update:** the latest commit (`b103d4f`) is dated **2026-11-07**, i.e. today — inside your 2-day window\n\nIt's an open-source persistent memory service for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude, offering a REST API, knowledge graph, and autonomous consolidation. It uses the Apache-2.0 license, has 28 open issues and 4 open PRs.\n\nYou can reproduce the search with: `https://github.com/search?q=language%3APython+pushed%3A%3E2026-11-05+stars%3A%3E%3D500&type=repositories&s=updated&o=desc`",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page shows doobidoo/mcp-memory-service with Star 2.1k and latest commit “now”; search query used GitHub filters language:Python and pushed >2026-11-05.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 7980,
+    "output_tokens": 260
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/doobidoo/mcp-memory-service",
+    "title": "GitHub - doobidoo/mcp-memory-service: Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation. · GitHub"
+  },
+  "final_screenshot": "screenshots/github-5.jpg",
+  "cost_usd": 0.00267578,
+  "elapsed_s": 27.9,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=language%3APython+pushed%3A%3E2026-11-05+stars%3A%3E%3D500&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 614
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_45"
+      },
+      "ok": true,
+      "ms": 295
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => { const el = document.querySelector('relative-time[datetime], time-ago'); const all = [...document.querySelectorAll('relative-time')].slice(0,5).map(e => e.getAttribute('datetime')); return {lang: document.querySelector('[data-testid=\\\"repos-header\\\"]')?.innerText?.slice(0,300), times: all}; })()\",\"intent\":\"Reads the repository page's language and the latest commit timestamps… [+106 chars]",
+      "ok": true,
+      "ms": 133
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2000,
+        "selector": "[data-testid=\"repos-header\"]"
+      },
+      "ok": false,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1500,
+        "selector": "div.Layout-sidebar"
+      },
+      "ok": false,
+      "ms": 2
+    }
+  ]
+}

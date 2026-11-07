@@ -6,26 +6,26 @@
     "start_url": "https://www.bbc.com/news/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "The latest article on BBC's Health page is \"Scientists think our recent ancestors may have run hotter – but why?\" by Sandy Ong, published about 3 hours ago.\n\n**Key points:**\n- **The 37C benchmark:** In the 1860s, German physician Carl Wunderlich collected over a million armpit-temperature readings from about 25,000 patients. He set 37C (98.6F) as the average for healthy adults, and a reading above 38C (100.4F) as a fever. He also found that women run warmer than men, that temperature falls with age, and that it rises through the day.\n- **Temperatures appear to have fallen:** A Stanford team led by Julie Parsonnet analysed data from nearly 190,000 people in the US between 1862 and 2017. It suggests a new normal of about 36.4C (97.5F). American men run about 0.59C lower than in the early 19th century. The Tsimanes, an Amazonian community, dropped from about 37C in the early 2000s to 36.5C in 2018.\n- **Possible explanation, better health:** Parsonnet argues people today have fewer chronic infections such as tuberculosis and dysentery. Fighting infection burns calories, which produces heat. Vaccines, sanitation, toilets and shoes have also improved health. Climate-controlled homes mean the body works less to hold its temperature, so it makes less heat.\n- **Possible explanation, measurement error:** Philip Mackowiak, a medical historian, found that one of Wunderlich's thermometers was calibrated about 2C higher than modern ones. Wunderlich also used armpit readings rather than oral ones. Parsonnet disagrees. Her analysis of Union Army veterans, and of modern datasets from 1971 to 2017, shows the drop is real.\n- **Four factors that shape your baseline:** age (older people run cooler), sex (women run warmer), time of day (a dip at 03:00–05:00 and a peak at 16:00–18:00), and height and weight (taller people run cooler, heavier people slightly warmer).\n- **Takeaway:** Some medical references, including Harrison's Principles of Internal Medicine and UpToDate, have already moved away from 37C as the benchmark. Experts caution against treating any single number as a sharp boundary. A temperature below 35C (96F) or above 40C (104F) in adults can signal something more serious.",
+  "final_answer": "The most recent health-tagged BBC News article I found was \"Daughter keeps dying mum's letters for milestones\", published about 3 hours ago. It is a BBC London story. I took it from the \"More from the BBC\" links, not from the Health page's own list, which is why it was the newest. The Health page's top story, about evening snacking, was published 1 day ago.\n\n**Key points:**\n- **The family:** Amy Leslie, 22, from north London, lost her mother Danielle to breast cancer in September 2010, when Amy was six. Her grandmother, Sylvie Henry, died of the same disease in July 2009, aged 62. Danielle was 40 when she died.\n- **The letters:** Danielle left memory boxes for Amy and her brothers Ben and Joe. They hold gifts and letters for milestones she knew she might miss, such as driving tests, birthdays and graduations. One item was a key for Amy's 18th birthday, labelled \"The key to adulthood\". Amy still has unopened letters saved for the biggest moments of her life.\n- **The charity:** Danielle and Sylvie were professional dancers who ran their own dance school. In 2008 they started the breast cancer charity Future Dreams at the family kitchen table with £100. They staged dance shows to raise money, including one at the Savoy hotel. Amy says the charity made breast cancer's \"scariness\" into something \"fun, amazing\".\n- **Today:** The charity runs Future Dreams House, which opened five years ago. It supports people affected by breast cancer, and some travel from across the UK to use it. Amy calls it \"like a hug from my mum and my grandma\".\n- **Grief:** Amy says she did not fully take in what had happened until years later. Going to university brought feelings of anger. Therapy helped, but grief still \"comes up in the weirdest ways\".\n- **Her own health:** Because of her family history, Amy, now a newly qualified primary school teacher, has already seen doctors about her own breast cancer risk. She will start screening at 25. The NHS routinely offers breast screening from age 50.\n- **Message:** She says she will stay involved with the charity. Its message is that no-one should go through breast cancer \"alone or without hope\".",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The agent opened BBC Health’s top/latest article (“3 hours ago”) and summarized key points supported by the page text and final URL.",
+    "rationale": "The agent opened a BBC News article tagged Health, published 3 hours ago, and its summary accurately reflects the page’s breast-cancer story and key details.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 8123,
-    "output_tokens": 33
+    "input_tokens": 12333,
+    "output_tokens": 294
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.bbc.com/future/article/20261030-why-humans-maybe-ran-hotter-two-centuries-ago",
-    "title": "Scientists think our recent ancestors may have run hotter -- but why?"
+    "url": "https://www.bbc.com/news/articles/ckzd6me7q1j9o",
+    "title": "Woman who lost mum and gran to cancer keeps their charity going"
   },
   "final_screenshot": "screenshots/bbc-news-1.jpg",
-  "cost_usd": 0,
-  "elapsed_s": 26.4,
+  "cost_usd": 0.662416,
+  "elapsed_s": 64.5,
   "actions": [
     {
       "tool": "navigate",
@@ -33,30 +33,74 @@
         "url": "https://www.bbc.com/news/health"
       },
       "ok": true,
-      "ms": 495
+      "ms": 267
     },
     {
       "tool": "take_snapshot",
       "args": {
-        "filter": "all",
-        "max_chars": 6000
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 20
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_1_30"
-      },
-      "ok": true,
-      "ms": 128
+      "ms": 1
     },
     {
       "tool": "get_page_text",
-      "args": {},
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 24
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.bbc.com/news/articles/cq2e9v3030gyo"
+      },
+      "ok": true,
+      "ms": 347
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
       "ok": true,
       "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 10
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.bbc.com/news/articles/ckzd6me7q1j9o"
+      },
+      "ok": true,
+      "ms": 623
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 10
     }
   ]
 }

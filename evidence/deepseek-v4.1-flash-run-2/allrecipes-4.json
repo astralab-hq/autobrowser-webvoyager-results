@@ -1,0 +1,171 @@
+{
+  "task": {
+    "id": "allrecipes-4",
+    "site": "allrecipes",
+    "instruction": "Find a recipe for Baked Salmon that takes less than 30 minutes to prepare and has at least a 4 star rating based on user reviews.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a recipe that meets both criteria: **Baked Salmon Fillets Dijon** on Allrecipes (https://www.allrecipes.com/recipe/22538/baked-salmon-fillets-dijon/).\n\nIt's rated **4.6 out of 5** from **1,590 user ratings** (1,135 written reviews), and it's fast: **10 minutes prep, 15 minutes cook, 25 minutes total** — comfortably under your 30-minute limit. It's an Allrecipes Test Kitchen–tested recipe from contributor CHRISTYJ, serving 4.\n\nHow it's made: preheat the oven to 400°F (200°C) and line a shallow pan with foil. Place 4 salmon fillets skin-side down, spread a thin layer of Dijon mustard over each, season with salt and pepper, top with Italian-style bread crumbs, and drizzle with melted butter. Bake about 15 minutes, until the salmon flakes easily with a fork. Per serving: 331 calories, 25g protein, 22g fat, 8g carbs.\n\nIf you'd like a different option, other strong candidates from the same search were **Baked Dijon Salmon** (3,745 ratings) and **Best Baked Salmon** (4.8 stars, 3,242 ratings) — though that last one has a 1 hr 50 min total time, so it wouldn't fit your time limit.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page and answer show Baked Salmon Fillets Dijon with 4.6 rating from 1,590 ratings and prep time 10 mins/total time 25 mins, satisfying the criteria.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 16267,
+    "output_tokens": 46
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/recipe/22538/baked-salmon-fillets-dijon/",
+    "title": "Baked Salmon Fillets Dijon Recipe"
+  },
+  "final_screenshot": "screenshots/allrecipes-4.jpg",
+  "cost_usd": 0.00811654,
+  "elapsed_s": 70.5,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 28
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "baked salmon",
+        "uid": "ref_1_10"
+      },
+      "ok": true,
+      "ms": 305
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_11"
+      },
+      "ok": true,
+      "ms": 220
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/search?q=baked%20salmon"
+      },
+      "ok": true,
+      "ms": 379
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 13
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/34746/baked-salmon-ii/"
+      },
+      "ok": true,
+      "ms": 492
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 38
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/22538/baked-salmon-fillets-dijon/"
+      },
+      "ok": true,
+      "ms": 591
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 45
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1500,
+        "offset": 1500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 34
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 3000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 23
+    }
+  ]
+}

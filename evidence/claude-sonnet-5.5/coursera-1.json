@@ -6,48 +6,51 @@
     "start_url": "https://www.coursera.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I searched Coursera for \"python programming for beginners\" and applied the Beginner level filter. The results page is now open. The top matches for someone with no programming experience are:\n\n1. Python for Data Science, AI & Development (IBM, course)\n2. Python Basics (University of Michigan, course)\n3. Python Fundamentals - Variables, Loops, Functions & More (Packt, course)\n4. Python Programming Fundamentals (Microsoft, course)\n5. Programming for Everybody (Getting Started with Python) (University of Michigan, course)\n6. Crash Course on Python (Google, course)\n\nOther beginner options include Python Programming Essentials (Rice University), Programming in Python (Meta), Hello, Python! (Google) and the guided project Create Your First Python Program. I haven't opened any course pages, so I haven't checked ratings, duration or prerequisites. If you want one pick, \"Programming for Everybody (Getting Started with Python)\" is designed for people who have never programmed.",
+  "final_answer": "I searched Coursera for Python courses and applied the Beginner level filter. The search returned 69 beginner-level results. The top results are:\n\n1. **Python for the Absolute Beginner**, offered by KodeKloud (Course). This is the first result.\n2. **Introduction to Python for Beginners**, offered by SkillsBooster Academy (Course)\n3. **Programming for Everybody (Getting Started with Python)**, offered by University of Michigan (Course)\n4. **AI Python for Beginners**, offered by DeepLearning.AI (Course)\n5. **Programming in Python**, offered by Meta (Course)\n6. **An Introduction to Programming using Python**, offered by University of Leeds (Course)\n\n**Python for the Absolute Beginner** by KodeKloud looks like the best fit. It ranks first, and its title says it is for absolute beginners. **Programming for Everybody (Getting Started with Python)** from the University of Michigan is also a good choice. I haven't opened either course page, so I haven't checked the syllabus, duration or reviews.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The final Coursera page shows search results for “python programming for beginners” with the Beginner filter and beginner Python courses listed.",
+    "rationale": "The final Coursera page shows a beginner filter applied and lists beginner Python courses, including “Python for the Absolute Beginner” and “Programming for Everybody.”",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 9317,
-    "output_tokens": 31
+    "input_tokens": 8869,
+    "output_tokens": 36
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.coursera.org/search?query=python%20programming%20for%20beginners&productDifficultyLevel=Beginner&sortBy=BEST_MATCH",
+    "url": "https://www.coursera.org/search?query=Python%20for%20beginners%20no%20programming%20experience&productDifficultyLevel=Beginner&sortBy=BEST_MATCH",
     "title": "Coursera | Online Courses From Top Universities. Join for Free"
   },
   "final_screenshot": "screenshots/coursera-1.jpg",
-  "cost_usd": 0.361792,
-  "elapsed_s": 39.9,
+  "cost_usd": 0.593488,
+  "elapsed_s": 46.4,
   "actions": [
     {
       "tool": "take_snapshot",
       "args": {},
       "ok": true,
-      "ms": 45
+      "ms": 43
     },
     {
       "tool": "fill",
       "args": {
         "press_enter": true,
-        "text": "python programming for beginners",
+        "text": "Python for beginners no programming experience",
         "uid": "ref_1_8"
       },
       "ok": true,
-      "ms": 229
+      "ms": 385
     },
     {
       "tool": "take_snapshot",
-      "args": {},
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
       "ok": true,
-      "ms": 30
+      "ms": 1
     },
     {
       "tool": "click",
@@ -55,7 +58,7 @@
         "uid": "ref_1_19"
       },
       "ok": true,
-      "ms": 268
+      "ms": 410
     },
     {
       "tool": "take_snapshot",
@@ -64,7 +67,7 @@
         "max_chars": 3000
       },
       "ok": true,
-      "ms": 2
+      "ms": 1
     },
     {
       "tool": "click",
@@ -72,15 +75,7 @@
         "uid": "ref_3_1"
       },
       "ok": true,
-      "ms": 165
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_3_5"
-      },
-      "ok": false,
-      "ms": 3
+      "ms": 292
     },
     {
       "tool": "take_snapshot",
@@ -92,21 +87,27 @@
       "ms": 2
     },
     {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 10
+    },
+    {
       "tool": "click",
       "args": {
-        "uid": "ref_5_5"
+        "uid": "ref_5_4"
       },
       "ok": true,
-      "ms": 87
+      "ms": 245
     },
     {
       "tool": "take_snapshot",
       "args": {
         "filter": "interactive",
-        "max_chars": 3500
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 21
+      "ms": 2
     }
   ]
 }

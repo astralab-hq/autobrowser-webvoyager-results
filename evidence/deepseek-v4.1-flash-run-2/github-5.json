@@ -1,0 +1,117 @@
+{
+  "task": {
+    "id": "github-5",
+    "site": "github",
+    "instruction": "Find a Python repository on GitHub that has been updated in the past 2 days and has at least 500 stars.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a qualifying repository: **langbot-app/LangBot** — https://github.com/langbot-app/LangBot\n\n- **Language:** Python\n- **Stars:** 18.8k (well above the 500 minimum)\n- **Last updated:** November 7, 2026 — today (latest commit `8cb194a`, \"fix(agent): merge cross-source descriptors of the same input media\"), so it's within the past 2 days\n- **What it is:** A production-grade platform for building agentic IM bots — 生产级多平台智能机器人开发平台 — with agent/knowledge-base orchestration and a plugin system, supporting Discord, Slack, LINE, Telegram, WeChat, Feishu, DingTalk, QQ and Matrix, and integrating with ChatGPT, DeepSeek, Dify, n8n, Langflow, Coze, Claude, Gemini, GLM and Ollama. Licensed Apache-2.0.\n\nI found it by searching GitHub for `language:Python stars:>=500 pushed:>=2026-11-05`, sorted by most recently updated, then opening the repo to confirm the star count and the commit date directly on the page. Other qualifying options from the same search included `gadievron/raptor` (4k stars, updated 56 seconds ago) and `inclusionAI/Avernet` (601 stars, updated 23 seconds ago).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final answer names LangBot; GitHub page/search show Python, 18.8k stars, and latest commit Nov 7/1 minute ago within 2 days.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 13335,
+    "output_tokens": 41
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/langbot-app/LangBot",
+    "title": "GitHub - langbot-app/LangBot: Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze, Claude, Gemini, GLM, Ollama, SiliconFlow, Kimi, openclaw / hermes agent, deerflow · GitHub"
+  },
+  "final_screenshot": "screenshots/github-5.jpg",
+  "cost_usd": 0.00376784,
+  "elapsed_s": 39.2,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=language%3APython+stars%3A%3E%3D500&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 671
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/search?q=language%3APython+stars%3A%3E%3D500+pushed%3A%3E%3D2026-11-05&type=repositories&s=updated&o=desc"
+      },
+      "ok": true,
+      "ms": 549
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 12000
+      },
+      "ok": true,
+      "ms": 36
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 9800
+      },
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/langbot-app/LangBot"
+      },
+      "ok": true,
+      "ms": 874
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1200,
+        "selector": "div.Box-sc-1a1uzn9-0, [data-testid=\"latest-commit\"]"
+      },
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

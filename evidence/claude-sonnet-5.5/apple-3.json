@@ -6,34 +6,72 @@
     "start_url": "https://www.apple.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "The latest iPhone Pro models on Apple's compare page are the iPhone 18 Pro and iPhone 18 Pro Max. Apple also lists a new iPhone Duo, which is a foldable and not part of the Pro line. The prices below are the US prices shown on the page.\n\n**Price (starting, 256GB)**\n- iPhone 18 Pro: from $1,199, or $49.95/mo. for 24 months\n- iPhone 18 Pro Max: from $1,299, or $54.12/mo. for 24 months\n- The Pro Max costs $100 more at every storage size:\n  - 512GB: $1,399 for the Pro, $1,499 for the Pro Max\n  - 1TB: $1,799 for the Pro, $1,899 for the Pro Max\n  - 2TB: $2,399 for the Pro, $2,499 for the Pro Max\n\n**Screen size (Super Retina XDR OLED, ProMotion up to 120Hz)**\n- iPhone 18 Pro: 6.3-inch display, 2622×1206 pixels at 460 ppi\n- iPhone 18 Pro Max: 6.9-inch display, 2868×1320 pixels at 460 ppi\n\nThe Pro Max has a 0.6-inch larger screen and costs $100 more. Both phones have the A20 Pro chip, the same 48MP Pro Fusion camera system and the same display features. The Pro Max also gets longer battery life: up to 45 hours of video playback, against 36 hours for the Pro.",
+  "final_answer": "The latest iPhone line-up on Apple's site is the iPhone 18 Pro and iPhone 18 Pro Max. The prices and screen sizes below come from Apple's US shop page and its specs page.\n\n**iPhone 18 Pro**\n- Price: from $1,199, or $49.95/mo. for 24 months. Leasing with Apple Upgrade starts at $34.99/mo. The $1,199 price is for the 256GB model.\n- Screen: 6.3-inch Super Retina XDR OLED, 2622×1206 pixels at 460 ppi.\n\n**iPhone 18 Pro Max**\n- Price: from $1,299, or $54.12/mo. for 24 months. Leasing with Apple Upgrade starts at $37.99/mo.\n- Screen: 6.9-inch Super Retina XDR OLED, 2868×1320 pixels at 460 ppi.\n\n**Comparison:** The Pro Max costs $100 more at the starting price. Its screen is 0.6 inches larger diagonally (6.9 in vs 6.3 in). Both models have the same 460 ppi pixel density, ProMotion up to 120Hz, and Always-On display. The Pro weighs 211 g and the Pro Max weighs 249 g.\n\nThe $1,299 Pro Max price is the one shown on the shop page. I didn't open the Pro Max storage options to check it against the 256GB tier.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "Apple compare page showed iPhone 18 Pro/Pro Max with prices ($1199/$1299) and screen sizes (6.3″/6.9″), which the final answer correctly compared.",
+    "rationale": "Final page shows iPhone 18 Pro/Pro Max prices and 6.3/6.9-inch displays; answer compares price difference and screen size.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 9444,
-    "output_tokens": 355
+    "input_tokens": 16472,
+    "output_tokens": 38
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.apple.com/iphone/compare/",
-    "title": "iPhone - Compare Models - Apple"
+    "url": "https://www.apple.com/us/shop/buy-iphone/iphone-18-pro",
+    "title": "Shop iPhone 18 Pro and iPhone 18 Pro Max - Apple"
   },
   "final_screenshot": "screenshots/apple-3.jpg",
-  "cost_usd": 0,
-  "elapsed_s": 20.9,
+  "cost_usd": 2.760412,
+  "elapsed_s": 89.4,
   "actions": [
     {
       "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "tool": "click",
       "args": {
-        "filter": "all"
+        "uid": "ref_1_8"
+      },
+      "ok": false,
+      "ms": 220
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 51
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/iphone-18-pro/specs/"
       },
       "ok": true,
-      "ms": 26
+      "ms": 139
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 19
     },
     {
       "tool": "navigate",
@@ -41,13 +79,136 @@
         "url": "https://www.apple.com/iphone/compare/"
       },
       "ok": true,
-      "ms": 156
+      "ms": 232
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "iPhone 18 Pro Max starting price text in compare table",
+        "limit": 3
+      },
+      "ok": true,
+      "ms": 42
     },
     {
       "tool": "get_page_text",
+      "args": {
+        "head_limit": 5000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 307
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/iphone-18-pro/"
+      },
+      "ok": true,
+      "ms": 334
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/us/shop/buy-iphone/iphone-18-pro"
+      },
+      "ok": true,
+      "ms": 313
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "iPhone 18 Pro Max model option with price",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 34
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 5000,
+        "selector": "main"
+      },
+      "ok": false,
+      "ms": 8
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "iPhone 18 Pro Max screen size or model selector (6.3 vs 6.9 inch)",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 32
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 103
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 4000,
+        "offset": 48
+      },
+      "ok": true,
+      "ms": 27
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": "form, [class*=\"rf-bfe\"], [data-autom=\"dimensionScreensize\"]"
+      },
+      "ok": true,
+      "ms": 10
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 5000
+      },
+      "ok": true,
+      "ms": 37
+    },
+    {
+      "tool": "take_screenshot",
       "args": {},
       "ok": true,
-      "ms": 8
+      "ms": 72
     }
   ]
 }

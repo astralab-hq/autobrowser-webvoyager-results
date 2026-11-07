@@ -6,26 +6,26 @@
     "start_url": "https://huggingface.co/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "Here are three recent, popular open-source translation models on Hugging Face. I picked models created between about Oct 1 and Oct 31, 2026. Counts are from the Hub when I checked.\n\n1. **tencent/Hy-SimulMT-30B-A3B** (created Oct 22, 2026). It is a 30B-parameter model with about 3B active parameters. It covers roughly 40 languages, including Chinese, English, Japanese, Malay, Hindi and Arabic. The licence is Apache-2.0. The base model has 44 likes and 509 downloads. The FP8 version (tencent/Hy-SimulMT-30B-A3B-FP8) has 458 likes and about 1.1k downloads. A GGUF build is also available. It was the top result in the trending translation list.\n\n2. **tencent/Hy-SimulMT-30B-A3B-Interleave** (created Oct 22, 2026). This is a second variant from the same family, with the same languages and Apache-2.0 licence. It has 16 likes and 286 downloads. FP8 and GGUF versions exist, and the GGUF build has about 3.4k downloads.\n\n3. **IndexTeam/Index-Translate** family (2B, 9B and 35B-A3B-preview). The original 2B and 9B weights were created Sep 28, 2026, just before the one-month window. The GGUF builds were released Oct 2, 2026, inside it. Index-Translate-9B-GGUF has about 63k downloads and 19 likes. Index-Translate-2B-GGUF has about 25.7k downloads and 20 likes. Index-Translate-2B has 76 likes and Index-Translate-9B has 42 likes. They are Apache-2.0 and based on Qwen3.5.\n\nI left out tencent/Hy-MT2-1.8B and pfnet/plamo-2-translate. Both are trending, but they look like older releases that were only updated recently. Hy-MT2 has been around since at least May.",
+  "final_answer": "Only some of the popular new translation models are clearly open source. I checked each model's license tag, and the date window is Oct 7 to Nov 7, 2026.\n\n**Clearly open-source, created in the past month:**\n1. **tencent/Hy-SimulMT-30B-A3B** (Tencent). Created Oct 22, 2026 under the Apache-2.0 license. It has 47 likes and about 899 downloads. It is a 30B model with 3B active parameters, aimed at simultaneous (streaming) translation across about 40 languages.\n2. **tencent/Hy-SimulMT-30B-A3B-FP8**. Created Oct 22, 2026 under Apache-2.0. It has 461 likes and about 1.26k downloads. It is the FP8-quantized version of model 1, so it is a variant, not a separate model.\n3. **Singla0009/Hindi-to-Hinglish-Pro**. Created Oct 10, 2026 under the MIT license. It is a small ByT5-based model for Hindi to Hinglish, available in ONNX and GGUF formats. It is much less popular, with 3 likes and about 316 downloads. It is closer to transliteration than general translation.\n\n**Most popular new models, but not clearly open source:**\n- **pfnet/plamo-3-translate** (0.8B, 2B, 8B and 31B, plus GGUF, FP8, NVFP4 and MLX variants), created Oct 26–27, 2026. This family leads the trending list. For example, plamo-3-translate-0.8b-GGUF has 28 likes and about 14.4k downloads, and plamo-3-translate-31b has 19 likes. Its license tag is \"other\", which means a custom license, not a standard open-source one. Read the license on the model card before using it commercially.\n\nI left out the Index-Translate models (created Sep 28) and tencent/Hy-MT2 (May 2026) because they are outside the one-month window.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The answer lists three HF translation model entries/families with supported createdAt dates, popularity counts, tags, and licenses from the browsed Hugging Face pages/API.",
+    "rationale": "The agent used Hugging Face API results sorted by trending score and reported three translation model repos within Oct 7–Nov 7 with dates, licenses, likes/downloads.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 12669,
-    "output_tokens": 558
+    "input_tokens": 18247,
+    "output_tokens": 2113
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://huggingface.co/api/models?search=Hy-SimulMT&limit=10",
+    "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=trendingScore&limit=30&expand[]=createdAt&expand[]=tags&expand[]=likes",
     "title": ""
   },
   "final_screenshot": "screenshots/huggingface-2.jpg",
-  "cost_usd": 1.333702,
-  "elapsed_s": 64.7,
+  "cost_usd": 1.180196,
+  "elapsed_s": 115.0,
   "actions": [
     {
       "tool": "navigate",
@@ -33,59 +33,149 @@
         "url": "https://huggingface.co/models?pipeline_tag=translation&sort=trending"
       },
       "ok": true,
-      "ms": 405
+      "ms": 362
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
     },
     {
       "tool": "get_page_text",
       "args": {},
+      "ok": true,
+      "ms": 19
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?pipeline_tag=translation&sort=created"
+      },
+      "ok": true,
+      "ms": 495
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=trendingScore&limit=40&expand[]=createdAt&expand[]=likes&expand[]=downloads&expand[]=license"
+      },
+      "ok": true,
+      "ms": 335
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=trendingScore&limit=40&expand[]=createdAt&expand[]=likes&expand[]=downloads&expand[]=tags"
+      },
+      "ok": true,
+      "ms": 414
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
       "ok": true,
       "ms": 1
     },
     {
       "tool": "navigate",
       "args": {
-        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=createdAt&direction=-1&limit=30&full=false"
+        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=trendingScore&limit=50&expand[]=createdAt&expand[]=likes&expand[]=downloads"
       },
       "ok": true,
-      "ms": 397
+      "ms": 525
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
     },
     {
       "tool": "get_page_text",
-      "args": {},
+      "args": {
+        "offset": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models/pfnet/plamo-3-translate-31b"
+      },
+      "ok": true,
+      "ms": 375
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?pipeline_tag=translation&sort=trendingScore&limit=30&expand[]=createdAt&expand[]=tags&expand[]=likes"
+      },
+      "ok": true,
+      "ms": 356
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Hy-SimulMT-30B-A3B entry license tag"
+      },
+      "ok": true,
+      "ms": 9
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 9000,
+        "offset": 3000
+      },
       "ok": true,
       "ms": 6
-    },
-    {
-      "tool": "navigate",
-      "args": {
-        "url": "https://huggingface.co/api/models?search=Index-Translate&pipeline_tag=translation&limit=10"
-      },
-      "ok": true,
-      "ms": 312
-    },
-    {
-      "tool": "get_page_text",
-      "args": {
-        "head_limit": 6000
-      },
-      "ok": true,
-      "ms": 7
-    },
-    {
-      "tool": "navigate",
-      "args": {
-        "url": "https://huggingface.co/api/models?search=Hy-SimulMT&limit=10"
-      },
-      "ok": true,
-      "ms": 517
-    },
-    {
-      "tool": "get_page_text",
-      "args": {
-        "head_limit": 6000
-      },
-      "ok": true,
-      "ms": 8
     }
   ]
 }

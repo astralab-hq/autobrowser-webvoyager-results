@@ -1,0 +1,98 @@
+{
+  "task": {
+    "id": "coursera-5",
+    "site": "coursera",
+    "instruction": "Identify a Specialization on Coursera that teaches C++ programming for beginners, provide the name and what the learning outcomes are.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "**Specialization: \"Programming in C++: A Hands-on Introduction\"** — offered by Codio on Coursera (https://www.coursera.org/specializations/hands-on-cpp). It's a 4-course series rated Beginner level, about 4 weeks at 10 hours/week, with roughly 44,101 learners already enrolled and a shareable career certificate.\n\n**What you'll learn (stated outcomes):**\n- Automate everyday, repetitive tasks using C++ programs\n- Create engaging, graphical-based programs\n- Develop a firm foundation of Computer Science concepts you can bring to any language you learn\n\n**The four courses and their outcomes:**\n1. **C++ Basics: Selection and Iteration** (9 hours) — use variables and operators to store and manipulate data; automate decision-making with selection statements; repeat sections of a program with the appropriate loop type.\n2. **C++ Basic Structures: Vectors, Pointers, Strings, and Files** (9 hours) — store and manipulate vectors of data; compare and manipulate strings of text; read and write to text and CSV files.\n3. **C++ Object Basics: Functions, Recursion, and Objects** (9 hours) — define and use custom functions to improve code readability; know when and how to use recursion instead of iteration; create and modify custom objects.\n4. **Object-Oriented C++: Inheritance and Encapsulation** (9 hours) — architect larger programs using object-oriented principles; re-use parts of classes using inheritance; encapsulate relevant information and methods in a class.\n\n**Skills gained:** computer programming, C++ (Programming Language), object-oriented programming (OOP), data structures, memory management, file I/O, data validation and integrity, code reusability, maintainability, and software documentation. The applied-learning component has learners build practical projects such as an automated file updater and graphical/animated output using the CImg library. It's taught in English by Elise Deitrick and two other Codio instructors, with a flexible, self-paced schedule.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent found Coursera’s beginner C++ specialization page and reported its name plus the “What you’ll learn” outcomes shown in the page text.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 11422,
+    "output_tokens": 36
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/specializations/hands-on-cpp",
+    "title": "Programming in C++: A Hands-on Introduction | Coursera"
+  },
+  "final_screenshot": "screenshots/coursera-5.jpg",
+  "cost_usd": 0.00437264,
+  "elapsed_s": 36.5,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 47
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "C++ programming for beginners",
+        "uid": "ref_1_8"
+      },
+      "ok": true,
+      "ms": 447
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_25"
+      },
+      "ok": true,
+      "ms": 320
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "switch_focus",
+      "args": {
+        "tab_id": 2096490265
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 31
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 22
+    }
+  ]
+}

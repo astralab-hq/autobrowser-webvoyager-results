@@ -1,0 +1,48 @@
+{
+  "task": {
+    "id": "google-search-2",
+    "site": "google-search",
+    "instruction": "Search for the latest news title about the NBA team the Los Angeles Lakers.",
+    "start_url": "https://www.google.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a google bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0,
+  "elapsed_s": 7.3,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 12
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "Los Angeles Lakers latest news",
+        "uid": "ref_1_6"
+      },
+      "ok": true,
+      "ms": 368
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    }
+  ]
+}

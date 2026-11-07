@@ -1,0 +1,83 @@
+{
+  "task": {
+    "id": "huggingface-4",
+    "site": "huggingface",
+    "instruction": "Locate an open-source conversational AI model on Hugging Face, trained in English and list its main features and applications.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found an open-source conversational AI model on Hugging Face: **minas2025/Qwen-3.5-0.8B-Uncensored-Conversational** (also titled \"Warm Qwen 3.5 0.8B Uncensored\"). It's tagged **English**, licensed **apache-2.0**, and built for **Text Generation** — a QLoRA fine-tune of `sh0ck0r/Qwen3.5-0.8B-heretic` (itself derived from `Qwen/Qwen3.5-0.8B-Base`), trained on the `minas2025/warm-chat-12k` dataset of 11,400 warm conversational rows.\n\n**Main features**\n- **Conversational, warm tone:** trained to chat like a person rather than a helpdesk bot — friendly greetings, casual register, no \"How can I assist you today?\" stiffness, and no system prompt needed (friendliness is baked in).\n- **Uncensored base:** answers without refusals or \"as an AI\" disclaimers — the card itself flags this as both the feature and the warning label.\n- **Small and lightweight:** 0.8B parameters, ~812 MB as a Q8_0 GGUF file, 2048-token context, architecture `qwen35`.\n- **Training recipe:** QLoRA 4-bit (merged), LoRA rank/alpha 16/32 across all 7 modules, learning rate 1.5e-4 cosine, effective batch 4, 2,000 steps (~2 hours on a 12 GB RX 6700 XT).\n- **Easy local deployment:** GGUF format works in LM Studio, Ollama, llama.cpp, vLLM, Jan and similar runtimes; uses the Qwen ChatML template (`<\\|im_start\\|>user` / `<\\|im_start\\|>assistant`).\n- **Auditable data:** the training dataset is published separately with per-row source tags (Nemotron slice under ODC-By; an Opus-candid slice that should be checked before commercial use).\n\n**Applications**\n- Casual companion / friendly chat assistants and roleplay-style conversation where warmth matters more than raw reasoning.\n- Lightweight on-device or local chat (desktop, laptop, modest GPU) thanks to the 0.8B size and GGUF packaging.\n- A base for further fine-tuning or experimentation with personality/tone in conversational models.\n\n**Stated limitations:** at 0.8B it chats but doesn't reason deeply (\"ask it for comfort, not calculus\"); it's warm-leaning rather than bubbly; it still self-identifies as Qwen/Tongyi; and its knowledge cutoff is just whatever the base model knew — so it can deliver wrong answers cheerfully. The model card reports about 1,581 downloads last month and 3 likes.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent found a Hugging Face model tagged English/conversational with apache-2.0 license and summarized supported model-card features and applications.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 12059,
+    "output_tokens": 35
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/minas2025/Qwen-3.5-0.8B-Uncensored-Conversational",
+    "title": "minas2025/Qwen-3.5-0.8B-Uncensored-Conversational · Hugging Face"
+  },
+  "final_screenshot": "screenshots/huggingface-4.jpg",
+  "cost_usd": 0.00103633,
+  "elapsed_s": 20.8,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 24
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_2"
+      },
+      "ok": true,
+      "ms": 428
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "conversational",
+        "uid": "ref_3_1"
+      },
+      "ok": true,
+      "ms": 227
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 18
+    }
+  ]
+}

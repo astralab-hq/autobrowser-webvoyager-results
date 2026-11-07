@@ -1,0 +1,119 @@
+{
+  "task": {
+    "id": "coursera-2",
+    "site": "coursera",
+    "instruction": "Find a Beginner's Spanish Specialization on Coursera and show all the courses in this Specialization.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found the beginner-level Spanish Specialization on Coursera: **Learn Spanish: Basic Spanish Vocabulary Specialization**, offered by the University of California, Davis (instructor Dr. Robert Blake). It's listed as Beginner level — no prior experience required — a 5-course series taking about 2 months at 10 hours a week, with 182,584 learners already enrolled.\n\nThe Specialization contains these 5 courses, in order:\n\n1. **Spanish Vocabulary: Meeting People** — Course 1, 16 hours. Entry-level start on Spanish grammar and pronunciation; talk about yourself, family and friends in the present tense.\n2. **Spanish Vocabulary: Cultural Experience** — Course 2, 14 hours. Builds on the basics to express likes and dislikes orally and in writing, with a visit to the marketplace.\n3. **Spanish Vocabulary: Sports, Travel, and the Home** — Course 3, 18 hours. Vocabulary for sports, pastimes, politics, travel and living arrangements; introduces the progressive and past tenses.\n4. **Spanish Vocabulary: Careers and Social Events** — Course 4, 15 hours. Vocabulary for dining, fashion, professions and careers; introduces the subjunctive and future tense.\n5. **Spanish Vocabulary Project** — Course 5, 9 hours. A capstone applying everything learned: plan an educational trip to a Spanish-speaking nation, with a written report and oral presentation.\n\nAcross the program you build a working vocabulary of about 1,500 of the most commonly used Spanish words, and it culminates in the applied project graded by peers. The page is at https://www.coursera.org/specializations/learn-spanish.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent opened Coursera’s Learn Spanish specialization page and listed all five courses shown in the page state, satisfying the request.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 14527,
+    "output_tokens": 31
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/specializations/learn-spanish",
+    "title": "Learn Spanish: Basic Spanish Vocabulary | Coursera"
+  },
+  "final_screenshot": "screenshots/coursera-2.jpg",
+  "cost_usd": 0.00886678,
+  "elapsed_s": 65.8,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 52
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "Beginner's Spanish Specialization",
+        "uid": "ref_1_8"
+      },
+      "ok": true,
+      "ms": 498
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "offset": 59
+      },
+      "ok": true,
+      "ms": 24
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 25
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_22"
+      },
+      "ok": true,
+      "ms": 688
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "switch_focus",
+      "args": {
+        "tab_id": 2088470759
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 35
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 30
+    }
+  ]
+}

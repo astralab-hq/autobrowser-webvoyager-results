@@ -1,0 +1,48 @@
+{
+  "task": {
+    "id": "cambridge-dictionary-5",
+    "site": "cambridge-dictionary",
+    "instruction": "Learn the UK and US pronunciation of the word \"procrastination\", and find one example sentence that reflects its use in context.",
+    "start_url": "https://dictionary.cambridge.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "blocked",
+  "pass": false,
+  "final_answer": null,
+  "judge": null,
+  "not_graded_because": "blocked: the site showed a cloudflare bot check, so the harness stopped the agent",
+  "final_page": null,
+  "final_screenshot": null,
+  "cost_usd": 0.00139145,
+  "elapsed_s": 36.8,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 24
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "procrastination",
+        "uid": "ref_1_15"
+      },
+      "ok": true,
+      "ms": 391
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    }
+  ]
+}

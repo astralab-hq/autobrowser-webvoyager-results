@@ -1,0 +1,83 @@
+{
+  "task": {
+    "id": "huggingface-3",
+    "site": "huggingface",
+    "instruction": "Look up a model with a license of cc-by-sa-4.0 with the most likes on Hugging face.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The most-liked model on Hugging Face with the **cc-by-sa-4.0** license is **replit/replit-code-v1-3b**.\n\nOn the filtered, likes-sorted listing (huggingface.co/models?license=license:cc-by-sa-4.0&sort=likes) it sits at the top with **748 likes**. It's a Text Generation model, last updated Jul 22, 2023, with about 2.05k downloads.\n\nThe runners-up are defog/sqlcoder-7b-2 (452 likes) and nlpaueb/legal-bert-base-uncased (335 likes).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The page is filtered to cc-by-sa-4.0 and sorted by Most likes, with replit/replit-code-v1-3b listed first at 748 likes.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 11049,
+    "output_tokens": 42
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/models?license=license%3Acc-by-sa-4.0&sort=likes",
+    "title": "Models with LICENSE:CC-BY-SA-4.0 license – Hugging Face"
+  },
+  "final_screenshot": "screenshots/huggingface-3.jpg",
+  "cost_usd": 0.00541297,
+  "elapsed_s": 20.7,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?license=license%3Acc-by-sa-4.0&sort=likes"
+      },
+      "ok": true,
+      "ms": 545
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "offset": 105
+      },
+      "ok": true,
+      "ms": 24
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 4000
+      },
+      "ok": true,
+      "ms": 23
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1200,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1900,
+        "offset": 7000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 25
+    }
+  ]
+}

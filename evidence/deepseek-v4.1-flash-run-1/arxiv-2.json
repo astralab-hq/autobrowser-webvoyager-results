@@ -1,0 +1,81 @@
+{
+  "task": {
+    "id": "arxiv-2",
+    "site": "arxiv",
+    "instruction": "Look up the most recent papers related to 'cs.CL', select one and show its abstract.",
+    "start_url": "https://arxiv.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The most recent paper in arXiv's cs.CL (Computation and Language) listing — the first entry under Friday, 6 November 2026 — is:\n\n**Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes**\nby Vladimir Beskorovainyi (arXiv:2611.08439; cs.CL, cross-listed cs.AI, cs.LG)\n\n**Abstract:** Typed-decision models score options that the caller supplies at request time, so their accuracy depends on label wording that the model's developer does not control. We compare two releases of a 307M-parameter multilingual cross-encoder, Ru-Jev, trained on thirteen Russian-language tasks; the later release adds an augmentation that presents labels in several surface forms. Holding questions fixed and varying only how eighteen routing labels are worded, we evaluate ten label vocabularies, produced by three separate processes and checked for overlap with the training data, with five candidates per question and, for eight of them, also with eighteen. On held-out vocabularies made of ordinary or borrowed words (English-derived jargon, office slang, department names), the augmented release is more accurate in every setting, by up to 0.24. Eleven of these fourteen gains survive a Holm correction (slang with eighteen candidates and descriptive sentences with five do not), and for jargon on all labels the label-level interval excludes zero in both settings. On abbreviations and opaque codes it gives no usable gain: on abbreviations it is not better, and worse on the clean slice, and on opaque codes both releases stay at or below chance once labels related to training options are removed. In most cells where accuracy rises, the risk-coverage area falls, but with eighteen candidates confident errors rise on jargon and slang. On two datasets neither release saw, accuracy moves by -8.4 and +5.6 points. We also report four evaluation hazards from comparing the two releases.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent used arXiv cs.CL recent, selected the first/latest entry, opened its abstract page, and final answer matches the page abstract.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 8432,
+    "output_tokens": 35
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://arxiv.org/abs/2611.08439",
+    "title": "[2611.08439] Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes"
+  },
+  "final_screenshot": "screenshots/arxiv-2.jpg",
+  "cost_usd": 0,
+  "elapsed_s": 25.9,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/list/cs.CL/recent"
+      },
+      "ok": true,
+      "ms": 126
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 25
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://arxiv.org/abs/2611.08439"
+      },
+      "ok": true,
+      "ms": 98
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "blockquote.abstract"
+      },
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "task": {
+    "id": "huggingface-7",
+    "site": "huggingface",
+    "instruction": "Which is the most downloaded audio related dataset on Hugging face currently.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The most downloaded audio-related dataset on Hugging Face right now is **espnet/yodas3**, with about **4.08 million downloads** (258 likes, updated roughly a month ago).\n\nI found it by going to the Datasets listing, applying the **Audio** modality filter, and sorting by **Most downloads** — the list is headed by espnet/yodas3, followed by google/fleurs (~768k downloads) and Fhrozen/FSD50k (~51.2k downloads).\n\nYODAS v3 is a large multilingual speech corpus (the dataset card links to \"YODAS v3: A 1 Million Hour Dataset for the Next Generation of Open Voice AI Research\"), tagged for Automatic Speech Recognition, Text-to-Speech and Audio-to-Audio, licensed CC-BY-3.0.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The trajectory shows Audio modality filtered and sorted by Most downloads, with espnet/yodas3 listed first at 4.08M downloads.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 10486,
+    "output_tokens": 34
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/datasets/espnet/yodas3",
+    "title": "espnet/yodas3 · Datasets at Hugging Face"
+  },
+  "final_screenshot": "screenshots/huggingface-7.jpg",
+  "cost_usd": 0.008766,
+  "elapsed_s": 34.2,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/datasets?sort=downloads"
+      },
+      "ok": true,
+      "ms": 731
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_18"
+      },
+      "ok": true,
+      "ms": 318
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 21
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/datasets/espnet/yodas3"
+      },
+      "ok": true,
+      "ms": 393
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    }
+  ]
+}

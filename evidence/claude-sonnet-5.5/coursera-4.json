@@ -6,17 +6,17 @@
     "start_url": "https://www.coursera.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I'd pick **Business Process Modelling** from STARWEAVER on Coursera. It has a 4.7-star rating from 135 reviews. It's a Beginner course that takes 1–4 weeks. It covers business workflow analysis, process modeling, process improvement, data flow diagrams, business process management and stakeholder engagement.\n\nTwo other results also have a 4.7 rating:\n- **Business Analysis: Process Modeling & Requirements Gathering** (SkillUp) has 4.7 stars from 72 reviews. It's a Beginner course that takes 1–3 months. It covers process modeling, process optimization and requirements gathering.\n- **Introduction to Workflow Management** (Coursera) has 4.7 stars from 12 reviews. It's an Intermediate course that takes 1–4 weeks. It covers workflow management, process mapping and business process management.\n\nNone of the Specializations in the results showed a 4.7 rating. The IBM and PracticalGrowth Specializations had no rating listed. So the three 4.7-rated matches are all individual courses.",
+  "final_answer": "I searched Coursera for \"business process management\". Several results are rated 4.7 stars. The strongest match is **Business Process Modelling** from STARWEAVER (https://www.coursera.org/learn/business-process-modelling). It's a beginner course that takes 1–4 weeks and has 135 reviews. It covers business workflow analysis, process modeling, workflow management, process improvement and business process management.\n\nOther 4.7-rated results:\n- **Introduction to Workflow Management** (Coursera): Intermediate course, 1–4 weeks, 12 reviews. It covers workflow management, process mapping, process optimization and business process management.\n- **Business Analysis: Process Modeling & Requirements Gathering** (SkillUp): Beginner course, 1–3 months, 72 reviews.\n- **Business Analysis: Project and Stakeholder Management** (SkillUp): Beginner course, 1–3 months, 38 reviews. This one is more about stakeholders and projects than process management.\n\nThe only Specialization in the results, Project & Process Management for a Tech-Driven Workplace (PracticalGrowth), showed no rating on the search page. So the 4.7-rated matches are all individual courses, not Specializations.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The page text supports “Business Process Modelling” on Coursera with skills including Business Process Management and a 4.7 rating.",
+    "rationale": "Coursera search evidence shows “Business Process Modelling” with skills including Business Process Management and a 4.7 rating.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 5560,
-    "output_tokens": 99
+    "input_tokens": 6721,
+    "output_tokens": 31
   },
   "not_graded_because": null,
   "final_page": {
@@ -24,8 +24,8 @@
     "title": "Coursera | Online Courses From Top Universities. Join for Free"
   },
   "final_screenshot": "screenshots/coursera-4.jpg",
-  "cost_usd": 0.696392,
-  "elapsed_s": 28.5,
+  "cost_usd": 0.522316,
+  "elapsed_s": 25.7,
   "actions": [
     {
       "tool": "navigate",
@@ -33,13 +33,22 @@
         "url": "https://www.coursera.org/search?query=business%20process%20management"
       },
       "ok": true,
-      "ms": 1029
+      "ms": 803
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 3
+      "ms": 22
     }
   ]
 }

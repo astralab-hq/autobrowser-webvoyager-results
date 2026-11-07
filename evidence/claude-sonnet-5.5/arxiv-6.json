@@ -6,26 +6,26 @@
     "start_url": "https://arxiv.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "The paper has 2 figures and 8 tables. I counted them from the ar5iv HTML version of the full text.\n\n**Figures (2)**\n- Figure 1: An illustration of the proposed flow-based calibration over BERT's sentence embedding space.\n- Figure 2: A scatterplot of sentence pairs, with similarity on one axis and edit distance on the other.\n\n**Tables (8)**\n- Table 1: Word embedding norms and k-NN distances, by word frequency rank.\n- Table 2: STS results without NLI supervision.\n- Table 3: STS results with NLI supervision.\n- Table 4: AUC on QNLI.\n- Table 5: Comparison with the SN and NATSV calibration baselines on STS-B.\n- Table 6: Spearman correlations between similarity, edit distance and gold similarity.\n- Table 7: Flow hyperparameters (Appendix B).\n- Table 8: Results with different random seeds (Appendix C).\n\nTables 1–6 are in the main text and Tables 7–8 are in the appendices. Counting only the main body gives 2 figures and 6 tables.",
+  "final_answer": "The paper has 2 figures and 8 tables. I counted the captions in the arXiv HTML version (v1).\n\nFigures (2):\n- Figure 1: an illustration of the proposed flow-based calibration over BERT's original sentence embedding space.\n- Figure 2: a scatterplot of sentence pairs, with similarity plotted against edit distance.\n\nTables (8):\n- Table 1: word embedding norms and k-NN distances by word-frequency rank.\n- Table 2: STS results without NLI supervision.\n- Table 3: STS results with NLI supervision.\n- Table 4: AUC on QNLI.\n- Table 5: comparison with embedding calibration baselines on STS-B.\n- Table 6: Spearman correlation between the various sentence similarities and edit distance.\n- Table 7: flow hyperparameters (Appendix B).\n- Table 8: results with different random seeds (Appendix C).\n\nThe 8 tables include the two appendix tables (7 and 8). The main body alone has 2 figures and 6 tables.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The agent opened the ar5iv full text for arXiv:2011.05864 and provided the requested count: 2 figures and 8 tables.",
+    "rationale": "The agent opened the correct arXiv HTML page for the paper and gave the requested count: 2 figures and 8 tables, including appendix tables.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 7029,
-    "output_tokens": 1924
+    "input_tokens": 11084,
+    "output_tokens": 768
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://ar5iv.labs.arxiv.org/html/2011.05864",
-    "title": "[2011.05864] On the Sentence Embeddings from Pre-trained Language Models"
+    "url": "https://arxiv.org/html/2011.05864v1",
+    "title": "On the Sentence Embeddings from Pre-trained Language Models"
   },
   "final_screenshot": "screenshots/arxiv-6.jpg",
-  "cost_usd": 0.795364,
-  "elapsed_s": 51,
+  "cost_usd": 0.39341,
+  "elapsed_s": 32.8,
   "actions": [
     {
       "tool": "navigate",
@@ -33,41 +33,45 @@
         "url": "https://arxiv.org/abs/2011.05864"
       },
       "ok": true,
-      "ms": 478
+      "ms": 227
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 3
+      "ms": 13
     },
     {
       "tool": "navigate",
       "args": {
-        "url": "https://arxiv.org/pdf/2011.05864v1"
+        "url": "https://arxiv.org/html/2011.05864v1"
       },
       "ok": true,
-      "ms": 114
+      "ms": 463
     },
     {
-      "tool": "get_page_text",
-      "args": {},
-      "ok": true,
-      "ms": 1
-    },
-    {
-      "tool": "navigate",
+      "tool": "take_snapshot",
       "args": {
-        "url": "https://ar5iv.labs.arxiv.org/html/2011.05864"
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 545
+      "ms": 2
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 4
+      "ms": 45
     }
   ]
 }

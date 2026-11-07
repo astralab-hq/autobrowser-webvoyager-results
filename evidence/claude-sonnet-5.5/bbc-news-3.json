@@ -6,80 +6,76 @@
     "start_url": "https://www.bbc.com/news/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "The most recent tournament on the DP World Tour leaderboard is the Genesis Championship. It ran 21–25 October 2026 at Woo Jeong Hills CC.\n\nSeven players are tied on a total of -10 (274 strokes), in joint 4th place: Jorge Campillo, Antoine Rozner, Sang-Hun Shin, Casey Jarvis, Ryan Fox, Filippo Celli and Si-Woo Kim. The leaderboard lists individual players, not teams, so I counted players.",
+  "final_answer": "The most recent tournament on the DP World Tour leaderboard is the **Abu Dhabi Championship**. It is being played at Yas Links from 5 to 8 November 2026 and is marked as live.\n\n**7** entries have a Total of 10 under par (-10). The leaderboard lists individual players, not teams. All seven are tied for 11th: Francesco Molinari, Richard Sterne, Daniel Hillier, Nathan Kimsey, Ewen Ferguson, Manuel Elvira and David Puig.\n\nThe page was last updated on 7 November 2026 at 09:17, and the tournament is still in progress, so these standings may change.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The final page shows DP World Tour Genesis Championship and exactly seven entries with Total -10; the agent reported those facts.",
+    "rationale": "Final page shows DP World Tour Abu Dhabi Championship and seven players with Total -10; agent stated both correctly.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 10721,
-    "output_tokens": 30
+    "input_tokens": 11649,
+    "output_tokens": 28
   },
   "not_graded_because": null,
   "final_page": {
     "url": "https://www.bbc.com/sport/golf/european-tour/leaderboard",
-    "title": "USPGA Tour Leaderboard - Golf - BBC Sport"
+    "title": "DP World Tour Leaderboard - Golf - BBC Sport"
   },
   "final_screenshot": "screenshots/bbc-news-3.jpg",
-  "cost_usd": 0,
-  "elapsed_s": 54.1,
+  "cost_usd": 0.429444,
+  "elapsed_s": 37.4,
   "actions": [
     {
-      "tool": "navigate",
-      "args": {
-        "url": "https://www.bbc.com/sport/golf/leaderboard"
-      },
-      "ok": true,
-      "ms": 173
-    },
-    {
       "tool": "take_snapshot",
-      "args": {
-        "filter": "all"
-      },
+      "args": {},
       "ok": true,
-      "ms": 42
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "filter": "interactive"
-      },
-      "ok": true,
-      "ms": 27
+      "ms": 28
     },
     {
       "tool": "click",
       "args": {
-        "uid": "ref_2_14"
+        "uid": "ref_1_10"
       },
-      "ok": true,
-      "ms": 170
+      "ok": false,
+      "ms": 182
     },
     {
-      "tool": "take_snapshot",
+      "tool": "find",
       "args": {
-        "filter": "interactive"
+        "description": "Golf link in sport navigation"
       },
       "ok": true,
-      "ms": 31
+      "ms": 48
     },
     {
       "tool": "click",
       "args": {
-        "uid": "ref_4_16"
+        "uid": "ref_0_44"
       },
+      "ok": false,
+      "ms": 237
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {},
       "ok": true,
-      "ms": 92
+      "ms": 33
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_77"
+      },
+      "ok": false,
+      "ms": 150
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 1
+      "ms": 26
     }
   ]
 }

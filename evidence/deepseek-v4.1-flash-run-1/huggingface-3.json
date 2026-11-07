@@ -1,0 +1,201 @@
+{
+  "task": {
+    "id": "huggingface-3",
+    "site": "huggingface",
+    "instruction": "Look up a model with a license of cc-by-sa-4.0 with the most likes on Hugging face.",
+    "start_url": "https://huggingface.co/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The most-liked Hugging Face model with a cc-by-sa-4.0 license is **replit/replit-code-v1-3b**, with **748 likes**.\n\nIts model page (https://huggingface.co/replit/replit-code-v1-3b) confirms the license as \"License: cc-by-sa-4.0\". It's a 3B-parameter code generation model (Text Generation task, Transformers/PyTorch, architecture `mpt`), trained on the `bigcode/the-stack-dedup` dataset, and published by Replit.\n\nFor context, the next most-liked cc-by-sa-4.0 models are defog/sqlcoder-7b-2 (452 likes), nlpaueb/legal-bert-base-uncased (335), stabilityai/stablelm-3b-4e1t (316), and defog/llama-3-sqlcoder-8b (276).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The HF models page/API sorted by likes for license:cc-by-sa-4.0 shows replit/replit-code-v1-3b first with 748 likes and the matching license tag.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 17945,
+    "output_tokens": 46
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://huggingface.co/api/models?filter=license%3Acc-by-sa-4.0&sort=likes&direction=-1&limit=5",
+    "title": ""
+  },
+  "final_screenshot": "screenshots/huggingface-3.jpg",
+  "cost_usd": 0.00488026,
+  "elapsed_s": 69.2,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?license=license%3Acc-by-sa-4.0&sort=likes"
+      },
+      "ok": true,
+      "ms": 428
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "offset": 105
+      },
+      "ok": true,
+      "ms": 12
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 4000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 21
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/replit/replit-code-v1-3b"
+      },
+      "ok": true,
+      "ms": 463
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?license=license%3Acc-by-sa-4.0&sort=likes"
+      },
+      "ok": true,
+      "ms": 466
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/replit/replit-code-v1-3b"
+      },
+      "ok": true,
+      "ms": 437
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?license=license%3Acc-by-sa-4.0&sort=likes"
+      },
+      "ok": true,
+      "ms": 410
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_105"
+      },
+      "ok": true,
+      "ms": 424
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/models?license=license%3Acc-by-sa-4.0&sort=likes"
+      },
+      "ok": true,
+      "ms": 425
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_105"
+      },
+      "ok": true,
+      "ms": 318
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 9
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://huggingface.co/api/models?filter=license%3Acc-by-sa-4.0&sort=likes&direction=-1&limit=5"
+      },
+      "ok": true,
+      "ms": 437
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    }
+  ]
+}

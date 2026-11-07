@@ -1,0 +1,191 @@
+{
+  "task": {
+    "id": "wolfram-alpha-1",
+    "site": "wolfram-alpha",
+    "instruction": "Give a constraint on the set of inequalities for the inner region of the pentagram.",
+    "start_url": "https://www.wolframalpha.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "fail",
+  "pass": false,
+  "final_answer": "Wolfram|Alpha's \"pentagram lamina\" page gives the defining inequalities as a five-branch disjunction (with a > 0), and the inner (central) pentagon is picked out by the constraints on the y-extent, e.g.:\n\n2√(5 + 2√5)·y ≤ a   and   2√(5 + 2√5)·y ≥ a\n\nThese appear in the page's set as \"2 sqrt(5 + 2 sqrt(5)) y<=a\" and \"2 sqrt(5 + 2 sqrt(5)) y>=a\", each combined with the other linear pieces such as\n\n2a + 3√5·x + 5x ≥ √(2(5 + √5))·y,\n2a + √(50 + 22√5)·y ≥ (5 + √5)·x,\n3√5·x + 5x + √(2(5 + √5))·y ≤ 2a,\n2a + (5 + √5)·x + √(50 + 22√5)·y ≥ 0,\n√(650 − 290√5)·a + 10√(5 − 2√5)·x + 20y ≥ 10√5·y,\n10(√(5 − 2√5)·x + (√5 − 2)y) ≤ √(650 − 290√5)·a.\n\nSo one valid constraint on the inner region is 2√(5 + 2√5)·y ≤ a (together with its mirror 2√(5 + 2√5)·y ≥ a), which bounds the central pentagon vertically; the full region is the union of the five branches of the disjunction above.",
+  "judge": {
+    "verdict": "FAILURE",
+    "rationale": "The answer misstates the inner constraint: it gives both 2√(5+2√5)y≤a and ≥a, which together imply equality, not the inner region.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 15208,
+    "output_tokens": 44
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.wolframalpha.com/input?i=pentagram+lamina",
+    "title": "pentagram lamina - Wolfram|Alpha"
+  },
+  "final_screenshot": "screenshots/wolfram-alpha-1.jpg",
+  "cost_usd": 0.01954661,
+  "elapsed_s": 139.7,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 25
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "inequalities for the inner region of the pentagram",
+        "uid": "ref_1_7"
+      },
+      "ok": true,
+      "ms": 286
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 14
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "pentagram",
+        "uid": "ref_3_10"
+      },
+      "ok": true,
+      "ms": 250
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "regular pentagon",
+        "uid": "ref_5_10"
+      },
+      "ok": true,
+      "ms": 244
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 13
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "pentagon",
+        "uid": "ref_7_10"
+      },
+      "ok": true,
+      "ms": 245
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "inner pentagon of a pentagram",
+        "uid": "ref_9_10"
+      },
+      "ok": true,
+      "ms": 244
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "pentagram lamina",
+        "uid": "ref_11_10"
+      },
+      "ok": true,
+      "ms": 251
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 20
+    }
+  ]
+}

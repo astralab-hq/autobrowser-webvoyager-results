@@ -1,0 +1,219 @@
+{
+  "task": {
+    "id": "booking-5",
+    "site": "booking",
+    "instruction": "Search a hotel with free WiFi and air conditioning in Bali from {{date+60}} to {{date+63}}.",
+    "start_url": "https://www.booking.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I ran the search on Booking.com for **Bali, Indonesia**, **Jan 6 – Jan 9, 2027** (3 nights, 2 adults, 1 room), with the **Free Wifi** and **Air conditioning** facility filters applied. The results page confirms both filters are active (\"Free Wifi | Air conditioning\") and returns **15,661 properties found**, sorted by \"Our top picks.\"\n\nTop results shown:\n\n1. **Mara River Safari Lodge Bali** — Keramas. Scored 8.8 \"Excellent\" (835 reviews). Swala Deluxe One-Bedroom Lodge + Bali Safari Park Entrance & Safari Journey; breakfast included, free cancellation.\n2. **The Aroma Villa Munduk** — Mayong. Scored 9.5 \"Exceptional\" (216 reviews), value for money 9.7. Double Room with Mountain View, 1 king bed, breakfast included.\n3. **Green Onion Villa** — Baturaja. Scored 9.7 \"Exceptional\" (11 reviews), value for money 10. Deluxe Villa, entire villa, 1 bedroom/1 bathroom, 35 m², free cancellation.\n4. **Temple Retreat Rumah Cantik** — Banjar. Scored 8.7 \"Excellent\" (41 reviews), Free Wifi rated 10. One-Bedroom Villa, 25 m², breakfast included.\n5. **K Ko Surf Village at Keramas** — Lebih. Scored 9.6 \"Exceptional\" (196 reviews). Queen Suite, breakfast included.\n6. **AA Inn Kuta Beach** — Kartika Plaza. Scored 8.7 \"Excellent\" (722 reviews). Double Room with Balcony.\n7. **Elmon Ricefield Hotel** — Babakan, Tumbak Bayuh. Scored 9.3 \"Wonderful\" (102 reviews).\n\nAll listings are priced for 3 nights, 2 adults, including taxes and fees, in USD. Let me know if you'd like me to narrow by price, review score, area (e.g. Seminyak, Ubud, Kuta), or open one of these to check availability and book.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page shows Bali dates Jan 6–9, 2027 with active filters “Free Wifi” and “Air conditioning” and hotel/property results listed.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 17741,
+    "output_tokens": 301
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.booking.com/searchresults.html?ss=Bali%2C+Indonesia&checkin=2027-01-06&checkout=2027-01-09&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD&nflt=hotelfacility%3D107%3Broomfacility%3D11",
+    "title": "Booking.com: Hotels in Bali. Book your hotel now!"
+  },
+  "final_screenshot": "screenshots/booking-5.jpg",
+  "cost_usd": 0.01529597,
+  "elapsed_s": 49.5,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 49
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "offset": 164
+      },
+      "ok": true,
+      "ms": 54
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 56
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "destination search input field for entering a city or hotel name",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 51
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 104
+      },
+      "ok": true,
+      "ms": 49
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 42
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 104
+      },
+      "ok": true,
+      "ms": 50
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 49
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 61
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Enter destination textbox in the search bar",
+        "limit": 8
+      },
+      "ok": true,
+      "ms": 39
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.booking.com/searchresults.html?ss=Bali%2C+Indonesia&checkin=2027-01-06&checkout=2027-01-09&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD"
+      },
+      "ok": true,
+      "ms": 501
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Free WiFi facility filter checkbox",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 67
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Air conditioning facility filter checkbox",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 66
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_125"
+      },
+      "ok": true,
+      "ms": 375
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Air conditioning facility filter checkbox",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 69
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_136"
+      },
+      "ok": true,
+      "ms": 247
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 3000
+      },
+      "ok": true,
+      "ms": 53
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 1200
+      },
+      "ok": true,
+      "ms": 76
+    }
+  ]
+}

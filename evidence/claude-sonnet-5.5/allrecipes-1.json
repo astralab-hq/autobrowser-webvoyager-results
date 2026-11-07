@@ -6,17 +6,17 @@
     "start_url": "https://www.allrecipes.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I found one that fits: **Debbie's Vegetable Lasagna** on Allrecipes (https://www.allrecipes.com/recipe/236878/debbies-vegetable-lasagna/).\n\n- **Rating:** 4.7 out of 5 from 20 ratings (14 five-star, 5 four-star, 1 three-star).\n- **Vegetarian:** It has no meat. It uses lasagna noodles, a white sauce, ricotta, Parmesan and mozzarella, with carrots and spinach. The sauce uses vegetable broth.\n- **Zucchini:** It calls for 2 cups of coarsely chopped zucchini, which you sauté with the carrots and spinach.\n- **Time and yield:** 1 hr 10 mins total (25 mins prep, 45 mins cook). It makes 8 servings at about 291 calories each.\n\nOne caveat is that the recipe lists margarine and Parmesan cheese. Parmesan is traditionally made with animal rennet, so a strict vegetarian may want to swap in a vegetarian-labelled Parmesan.",
+  "final_answer": "I found one that fits: **Debbie's Vegetable Lasagna** on Allrecipes (https://www.allrecipes.com/recipe/236878/debbies-vegetable-lasagna/).\n\n- **Rating:** 4.7 out of 5 from 20 ratings (14 five-star, 5 four-star, 1 three-star).\n- **Vegetarian:** It's meatless, and Allrecipes lists it under Vegetarian Lasagna Recipes.\n- **Zucchini:** It uses 2 cups of coarsely chopped zucchini. The other vegetables are shredded carrots and frozen chopped spinach.\n- **Other ingredients:** Lasagna noodles, a white sauce made with milk, vegetable broth, white wine and Parmesan, a ricotta and egg mixture, and mozzarella.\n- **Time and yield:** 25 minutes prep and 45 minutes cook, so 1 hr 10 min total. It makes 8 servings at about 291 calories each.\n\nTo make it, you boil the noodles and make the white sauce. Then you saute the carrots, zucchini and spinach and stir them into the ricotta mixture. Layer everything in a 9x13 dish and bake at 375°F for about 30 minutes.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "Final page shows Debbie's Vegetable Lasagna, 4.7 rating, Vegetarian Lasagna category, and ingredients include 2 cups chopped zucchini.",
+    "rationale": "Final page shows Debbie's Vegetable Lasagna in Vegetarian Lasagna Recipes, rated 4.7, with ingredient “2 cups coarsely chopped zucchini.”",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 9357,
-    "output_tokens": 35
+    "input_tokens": 11146,
+    "output_tokens": 37
   },
   "not_graded_because": null,
   "final_page": {
@@ -24,8 +24,8 @@
     "title": "Debbie's Vegetable Lasagna Recipe"
   },
   "final_screenshot": "screenshots/allrecipes-1.jpg",
-  "cost_usd": 0.647076,
-  "elapsed_s": 28.8,
+  "cost_usd": 0.243494,
+  "elapsed_s": 41.8,
   "actions": [
     {
       "tool": "navigate",
@@ -33,35 +33,45 @@
         "url": "https://www.allrecipes.com/search?q=vegetarian+lasagna+zucchini"
       },
       "ok": true,
-      "ms": 516
-    },
-    {
-      "tool": "get_page_text",
-      "args": {},
-      "ok": true,
-      "ms": 1
+      "ms": 463
     },
     {
       "tool": "take_snapshot",
       "args": {
-        "filter": "interactive"
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 17
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_1_47"
-      },
-      "ok": true,
-      "ms": 161
+      "ms": 1
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 46
+      "ms": 33
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/236878/debbies-vegetable-lasagna/"
+      },
+      "ok": true,
+      "ms": 598
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 53
     }
   ]
 }

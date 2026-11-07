@@ -6,48 +6,98 @@
     "start_url": "https://www.google.com/maps/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I've planned the trip in Google Maps, from Boston Logan International Airport to North Station. The page is open on driving directions.\n\nDriving routes:\n- Best route: about 8 min, 3.7 miles, via MA-1A S. Google marks it as the best route in current traffic. It has tolls.\n- Alternative 1: about 8 min, 3.8 miles, via Airport Rd - Departure Level and MA-1A S.\n- Alternative 2: about 9 min, 3.3 miles, via Airport Wy and MA-1A S. Traffic is moderate, as usual.\n\nThe other travel-mode tabs show times of about 24 min, 48 min and 23 min. I didn't open them, so I haven't confirmed which mode each time belongs to.",
+  "final_answer": "I searched Google Maps for directions from Boston Logan International Airport to North Station (135 Causeway St, Boston, MA 02114). The results are for Sat, Nov 7 with \"Leave now\" as the departure time.\n\nTravel options:\n- Driving: 8 min. The fastest route is via MA-1A S, 3.7 miles. It has tolls and is the fastest now because of traffic. Two alternatives are via Airport Rd - Departure Level and MA-1A S (3.8 miles, 8 min) and via Airport Wy and MA-1A S (3.3 miles, 8 min).\n- Transit: 26 min.\n- Cycling: 23 min.\n- Walking: 48 min.\n\nDriving is the quickest option. Of the other modes, cycling (23 min) is faster than transit (26 min). I didn't open the transit details, so I don't have its step-by-step route. I can open that next if you want it.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The final Google Maps page shows directions from Boston Logan International Airport to North Station with route options and times, matching the trip-planning request.",
+    "rationale": "The agent used Google Maps directions for Logan Airport to North Station and reported supported route options, times, distance, and toll information from the page.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 4679,
-    "output_tokens": 34
+    "input_tokens": 6737,
+    "output_tokens": 35
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.google.com/maps/dir/Boston+Logan+International+Airport,+1+Harborside+Dr,+East+Boston,+MA+02128,+United+States/North+Station,+135+Causeway+St,+Boston,+MA+02114,+United+States/@42.3681627,-71.0765719,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x89e3708e162d05cb:0x651087057818603a!2m2!1d-71.0611311!2d42.3662329?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+    "url": "https://www.google.com/maps/dir/Boston+Logan+International+Airport,+1+Harborside+Dr,+East+Boston,+MA+02128,+United+States/North+Station,+135+Causeway+St,+Boston,+MA+02114,+United+States/@42.3682261,-71.0765717,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89e37014d5da4937:0xc9394c31f2d5144!2m2!1d-71.0096136!2d42.365602!1m5!1m1!1s0x89e3708e162d05cb:0x651087057818603a!2m2!1d-71.0611311!2d42.3662329?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
     "title": "Boston Logan International Airport to North Station - Google Maps"
   },
   "final_screenshot": "screenshots/google-map-4.jpg",
-  "cost_usd": 0.724282,
-  "elapsed_s": 19.5,
+  "cost_usd": 0,
+  "elapsed_s": 28.3,
   "actions": [
     {
-      "tool": "navigate",
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 12
+    },
+    {
+      "tool": "click",
       "args": {
-        "url": "https://www.google.com/maps/dir/Boston+Logan+International+Airport/North+Station,+Boston,+MA"
+        "uid": "ref_1_3"
       },
       "ok": true,
-      "ms": 242
+      "ms": 278
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "fill_form",
+      "args": {
+        "entries": [
+          {
+            "text": "Boston Logan International Airport",
+            "uid": "ref_3_9"
+          },
+          {
+            "text": "North Station, Boston",
+            "uid": "ref_3_12"
+          }
+        ]
+      },
+      "ok": true,
+      "ms": 373
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_12"
+      },
+      "ok": true,
+      "ms": 220
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 2
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "filter": "interactive"
-      },
-      "ok": true,
-      "ms": 25
+      "ms": 19
     }
   ]
 }

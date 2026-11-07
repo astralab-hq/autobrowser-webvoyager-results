@@ -6,26 +6,26 @@
     "start_url": "https://www.booking.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I searched Booking.com for Los Angeles, Dec 18–21, 2026 (3 nights, 2 adults, 1 room) with the 4-star and 5-star filters set in the search URL. I didn't open each listing to check its star rating, so the ratings rest on those filters. These are the first results on the page:\n\n- **Loews Hollywood Hotel** (Hollywood): scored 8.8 Excellent from 7,851 reviews. It costs MYR 2,577 plus MYR 417 taxes for 3 nights, with free cancellation.\n- **InterContinental Los Angeles Downtown** (Downtown LA): scored 8.7 Excellent. It costs MYR 3,678 plus MYR 596 taxes.\n- **Hotel Indigo Los Angeles Downtown** (Downtown LA): scored 8.3 Very Good. I didn't capture its price.\n- **Hotel Figueroa, Unbound Collection by Hyatt** (Downtown LA): scored 8.1 Very Good. It costs MYR 1,825 (down from MYR 2,175) plus MYR 287 taxes, with free cancellation and payment at the property.\n- **Sheraton Universal** (Universal City): scored 8.4 Very Good. It costs MYR 3,124 plus MYR 506 taxes.\n- **The Beverly Hilton** (Beverly Hills): scored 7.4 Good. It costs MYR 4,196 plus MYR 522 taxes, with free cancellation.\n\nLoews Hollywood Hotel has the highest guest score, and its location score is 9.5. Hotel Figueroa is the cheapest of these hotels.\n\nThe results also include apartments and entire homes, such as a Koreatown rooftop home. Ignore those if you only want a hotel. Booking.com also says about 72% of properties matching these filters are unavailable for these dates.\n\nI haven't booked anything. If you want one of these, tell me which and I'll open its availability page.",
+  "final_answer": "I searched Booking.com for Los Angeles from Fri, Dec 18 to Mon, Dec 21, 2026 (3 nights, 2 adults, 1 room) with the 4-star filter applied. The page lists 707 properties, and the results include some vacation rentals with similar quality ratings. Two of the top results:\n\n- **InterContinental - Los Angeles Downtown by IHG** is in Downtown LA, 1.6 km from downtown. It scored 8.7 (Excellent) from 1,686 reviews. A Classic Queen Room with Two Queen Beds and City View costs MYR 3,355 for the 3 nights, plus MYR 544 in taxes. It is marked \"Featured\".\n- **The Beverly Hilton** is in Beverly Hills, 15.7 km from downtown. It scored 7.4 (Good) from 339 reviews. It is marked \"Ad\", so it is a paid placement.\n\nI didn't confirm the star rating on each hotel's own page, so the 4-star filter is my only basis for it. I didn't book anything. Of these two, the InterContinental has the higher guest score. You can browse the full list here: https://www.booking.com/searchresults.html?ss=Los+Angeles&checkin=2026-12-18&checkout=2026-12-21&group_adults=2&no_rooms=1&group_children=0&nflt=class%3D4%3Bclass%3D5",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The final page shows Los Angeles, Dec 18–21, property rating filters applied, and multiple hotel results with 4–5 star icons such as Loews Hollywood Hotel.",
+    "rationale": "The final page shows Los Angeles Dec 18–21, 2026 with 4-star filter checked and lists hotels such as InterContinental with 5-star icons and availability.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 11133,
-    "output_tokens": 371
+    "input_tokens": 10728,
+    "output_tokens": 335
   },
   "not_graded_because": null,
   "final_page": {
-    "url": "https://www.booking.com/searchresults.html?ss=Los+Angeles%2C+California%2C+United+States&checkin=2026-12-18&checkout=2026-12-21&group_adults=2&no_rooms=1&group_children=0&nflt=class%3D4%3Bclass%3D5",
-    "title": "Booking.com: Search results: Los+Angeles%2C+California%2C+United+States. Book your hotel now!"
+    "url": "https://www.booking.com/searchresults.html?ss=Los+Angeles&checkin=2026-12-18&checkout=2026-12-21&group_adults=2&no_rooms=1&group_children=0&nflt=class%3D4%3Bclass%3D5",
+    "title": "Booking.com: Search results: Los+Angeles. Book your hotel now!"
   },
   "final_screenshot": "screenshots/booking-3.jpg",
-  "cost_usd": 0,
-  "elapsed_s": 43.1,
+  "cost_usd": 0.270352,
+  "elapsed_s": 40.2,
   "actions": [
     {
       "tool": "take_snapshot",
@@ -36,18 +36,19 @@
     {
       "tool": "navigate",
       "args": {
-        "url": "https://www.booking.com/searchresults.html?ss=Los+Angeles%2C+California%2C+United+States&checkin=2026-12-18&checkout=2026-12-21&group_adults=2&no_rooms=1&group_children=0&nflt=class%3D4%3Bclass%3D5"
+        "url": "https://www.booking.com/searchresults.html?ss=Los+Angeles&checkin=2026-12-18&checkout=2026-12-21&group_adults=2&no_rooms=1&group_children=0&nflt=class%3D4%3Bclass%3D5"
       },
       "ok": true,
-      "ms": 2157
+      "ms": 1737
     },
     {
       "tool": "take_snapshot",
       "args": {
-        "filter": "interactive"
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 45
+      "ms": 2
     },
     {
       "tool": "get_page_text",
@@ -55,7 +56,7 @@
         "head_limit": 6000
       },
       "ok": true,
-      "ms": 1
+      "ms": 67
     }
   ]
 }

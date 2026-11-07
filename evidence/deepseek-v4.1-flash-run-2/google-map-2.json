@@ -1,0 +1,67 @@
+{
+  "task": {
+    "id": "google-map-2",
+    "site": "google-map",
+    "instruction": "Find Apple Stores close to zip code 90028",
+    "start_url": "https://www.google.com/maps/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Google Maps returned these Apple Stores for zip code 90028 (Hollywood), listed in the order the results panel shows them:\n\n1. **Apple The Grove** — 189 The Grove Dr, Los Angeles · +1 323-617-9800\n2. **Apple Tower Theatre** — 802 S Broadway, Los Angeles · +1 213-655-1200\n3. **Apple Beverly Center** — 8500 Beverly Blvd, Los Angeles · +1 424-239-3880\n4. **Apple Century City** — 10250 Santa Monica Blvd, Los Angeles · +1 424-204-4290\n5. **Apple The Americana at Brand** — 877 Americana Way, Glendale · +1 818-254-1070\n6. **Apple Glendale Galleria** — 2126 Galleria Way, Glendale · +1 818-502-8310\n\nThe search also surfaced two third-party resellers that are not Apple Stores: iCarryAll Hollywood (6731 Hollywood Blvd) and MacPro-LA/Sell your Mac (1947 N Cahuenga Blvd Unit 104).\n\nNote: the results were captured at 9:50 PM Saturday, Malaysia time — which is early Saturday morning in Los Angeles — so every store showed as \"Closed · Opens 10 am.\" The list is Google's default ranking; the panel didn't display mileage figures, so I can't quote exact distances without opening each listing.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The final answer lists Apple Store results and details supported by Google Maps page text/results for “Apple Store near 90028.”",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 6847,
+    "output_tokens": 31
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.google.com/maps/search/Apple+Store+near+90028/@34.0945056,-118.4186172,12z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+    "title": "Apple Store near 90028 - Google Maps"
+  },
+  "final_screenshot": "screenshots/google-map-2.jpg",
+  "cost_usd": 0.00297671,
+  "elapsed_s": 13.3,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 14
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "Apple Store near 90028",
+        "uid": "ref_1_1"
+      },
+      "ok": true,
+      "ms": 303
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "selector": "div[role=\"main\"]"
+      },
+      "ok": true,
+      "ms": 11
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+{
+  "task": {
+    "id": "apple-2",
+    "site": "apple",
+    "instruction": "Compare the prices and chips for the iPhone 14 Pro and iPhone 15 Pro models directly from Apple's website.",
+    "start_url": "https://www.apple.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I compared both models on Apple's own iPhone comparison page (apple.com/iphone/compare, iPhone 15 Pro vs iPhone 14 Pro vs iPhone 18 Pro).\n\n**Prices — neither model has a price on Apple's site anymore.** In the Price row, both the iPhone 15 Pro column and the iPhone 14 Pro column show only a dash (\"—\"), and the buy area reads \"Not available\" / \"Available at authorized resellers.\" Apple has discontinued both, so it no longer sells them directly and lists no starting price or monthly installment figure for either. For reference, the only priced column on that page is the iPhone 18 Pro, at \"From $1199 or $49.95/mo. for 24 mo.\" (lease from $34.99/mo. for 24 mo. with Apple Upgrade).\n\n**Chips:**\n- **iPhone 15 Pro — A17 Pro chip:** 6-core CPU (2 performance + 4 efficiency cores), 6-core GPU, 16-core Neural Engine, and hardware-accelerated ray tracing.\n- **iPhone 14 Pro — A16 Bionic chip:** 6-core CPU (2 performance + 4 efficiency cores), 5-core GPU, 16-core Neural Engine, and no hardware-accelerated ray tracing (listed as \"— Not available\").\n\nSo the chip gap is a one-generation step: A17 Pro adds a 6th GPU core and hardware ray tracing over the A16 Bionic, while CPU core counts and the 16-core Neural Engine are identical on paper. Since Apple lists no current pricing for either phone, any price comparison would have to come from authorized resellers or refurbished listings rather than from Apple directly.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final answer matches Apple page evidence: iPhone 15 Pro has A17 Pro, iPhone 14 Pro has A16 Bionic, and both show dashes/authorized resellers instead of prices.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 16159,
+    "output_tokens": 47
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.apple.com/iphone/compare/?modelList=iphone-15-pro,iphone-14-pro,iphone-18-pro",
+    "title": "iPhone 15 Pro vs iPhone 14 Pro vs iPhone 18 Pro - Apple"
+  },
+  "final_screenshot": "screenshots/apple-2.jpg",
+  "cost_usd": 0.03867455,
+  "elapsed_s": 177.7,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/iphone/"
+      },
+      "ok": true,
+      "ms": 107
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.apple.com/iphone/compare/"
+      },
+      "ok": true,
+      "ms": 295
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "select_option",
+      "args": {
+        "label": "iPhone 15 Pro",
+        "uid": "ref_1_22"
+      },
+      "ok": true,
+      "ms": 276
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "select_option",
+      "args": {
+        "label": "iPhone 14 Pro",
+        "uid": "ref_3_23"
+      },
+      "ok": true,
+      "ms": 86
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 331
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000,
+        "selector": ".compare-columns"
+      },
+      "ok": false,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000,
+        "offset": 20000
+      },
+      "ok": true,
+      "ms": 286
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "selector": "table"
+      },
+      "ok": false,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "include_screenshot": true,
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 101
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000,
+        "offset": 28000
+      },
+      "ok": true,
+      "ms": 270
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": 700,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 59
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 57
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": 2600,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 57
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": 3000,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 58
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "Processor chip row in the comparison table"
+      },
+      "ok": true,
+      "ms": 46
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": 4200,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 56
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": 3000,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 58
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 44
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -1800,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 57
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -900,
+        "x": 600,
+        "y": 400
+      },
+      "ok": true,
+      "ms": 58
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -700,
+        "x": 600,
+        "y": 400
+      },
+      "ok": true,
+      "ms": 64
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 49
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -1400,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 57
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -2600,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 56
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -700,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 67
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": 3000,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 65
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 48
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -600,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 62
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -450,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 59
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -350,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 71
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 52
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -2200,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 59
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 8
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": 5000,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 59
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 44
+    },
+    {
+      "tool": "scroll",
+      "args": {
+        "deltaY": -1200,
+        "x": 600,
+        "y": 500
+      },
+      "ok": true,
+      "ms": 57
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const out = {columns: [], rows: {}};\\n  // find the comparison table container\\n  const tables = Array.from(document.querySelectorAll('[data-component-list*=\\\"Compare\\\"], .compare, section'));\\n  // generic approach: find rows by their label text\\n  const labels = ['Price','Processor: Chip','Display: Screen Size','Camera: Main'];\\n  const all = Array.from(document.queryS… [+863 chars]",
+      "ok": true,
+      "ms": 257
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const rows = Array.from(document.querySelectorAll('.compare-row, .row, [class*=\\\"compare-row\\\"]'));\\n  const result = {};\\n  const wanted = ['Price', 'Processor: Chip'];\\n  // Build from rowheader + cells structure\\n  const headers = Array.from(document.querySelectorAll('.compare-rowheader')).map(h => h.innerText.trim());\\n  const grid = [];\\n  document.querySelectorAll(… [+620 chars]",
+      "ok": true,
+      "ms": 8
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const out = {};\\n  // Find the price row and chip row by their rowheader text, then read sibling cells\\n  const rowheaders = Array.from(document.querySelectorAll('.compare-rowheader'));\\n  const pick = rowheaders.filter(h => /^(Price|Chip)$/i.test(h.innerText.trim()));\\n  out.found = pick.map(h => {\\n    const row = h.parentElement;\\n    const cells = Array.from(row.chil… [+614 chars]",
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const out = {};\\n  const rows = Array.from(document.querySelectorAll('.compare-row'));\\n  const priceRow = rows.find(r => {\\n    const h = r.querySelector('.compare-rowheader');\\n    return h && /^Price/i.test(h.innerText.trim());\\n  });\\n  if (priceRow) {\\n    out.priceCells = Array.from(priceRow.children).map(c => (c.innerText||'').trim().replace(/\\\\s+/g,' '));\\n    ou… [+377 chars]",
+      "ok": true,
+      "ms": 9
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const out = {};\\n  const hdrs = Array.from(document.querySelectorAll('.compare-rowheader'));\\n  const priceHdr = hdrs.find(h => /Price/i.test(h.innerText));\\n  if (priceHdr) {\\n    const row = priceHdr.closest('.compare-row') || priceHdr.parentElement;\\n    out.rowClass = row.className;\\n    out.cells = Array.from(row.children).map(c => (c.innerText||'').trim().replace(/… [+522 chars]",
+      "ok": true,
+      "ms": 14
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const rows = Array.from(document.querySelectorAll('.compare-row'));\\n  const three = rows.filter(r => r.children.length === 4);\\n  const out = [];\\n  three.forEach(r => {\\n    const cells = Array.from(r.children).map(c => (c.innerText||'').trim().replace(/\\\\s+/g,' '));\\n    if (/^(Price|Chip|Display: Screen Size|Capacity)/i.test(cells[0])) out.push(cells);\\n  });\\n  // c… [+476 chars]",
+      "ok": true,
+      "ms": 22
+    },
+    {
+      "tool": "evaluate_script",
+      "args": "{\"expression\":\"(() => {\\n  const rows = Array.from(document.querySelectorAll('.compare-row'));\\n  const out = [];\\n  rows.forEach(r => {\\n    const cells = Array.from(r.children).map(c => (c.innerText||'').trim().replace(/\\\\s+/g,' '));\\n    if (cells.length === 4 && /price/i.test(cells[0])) out.push(cells);\\n  });\\n  // also check the top summary price area\\n  const summary = Array.from(document.q… [+297 chars]",
+      "ok": true,
+      "ms": 21
+    }
+  ]
+}

@@ -1,0 +1,668 @@
+{
+  "task": {
+    "id": "coursera-3",
+    "site": "coursera",
+    "instruction": "Identify a new course or Specialization on Coursera related to Python Data Science, sort the courses by newest, what the first course is and which institution offers it.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "On Coursera, searching \"python data science\" with the Data Science topic and Python Programming skill applied — sorted by Newest — the first course in the results list is:\n\n**Lab - Train a model with Amazon SageMaker**\n- **Offered by: Amazon Web Services (AWS)**\n- Listed as: Advanced · Course · 1 – 4 Weeks\n- Skills tagged include AWS SageMaker, Model Training, MLOps, Applied Machine Learning, Predictive Modeling, Data Science and Python Programming — and the listing carries Coursera's \"Category: New\" marker, which is why it sorts to the top under Newest.\n\nSo the newest Python-Data-Science-related offering at the top of the sorted list is AWS's \"Lab - Train a model with Amazon SageMaker,\" offered by **Amazon Web Services**.\n\nFor context on what followed it in the same newest-first ordering: \"Machine Learning Fundamentals: Labs, Models and Modern AI\" (KodeKloud), \"Vector Databases and Retrieval-Augmented Generation (RAG)\" (Edureka, Specialization), \"Vector Search and Semantic Retrieval with Pinecone\" (Edureka), \"Build AI Apps with Python and Large Language Models\" (The Skill Valley), and \"Streaming Data Pipelines with Kafka and Spark\" (Edureka). Note that Coursera's catalog shifts constantly, so a refresh of the same Newest sort may surface different items at the top.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The final Coursera page shows search “python data science” with sortBy=NEW and first result “Lab - Train a model with Amazon SageMaker” by Amazon Web Services.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 14191,
+    "output_tokens": 302
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&skills=Python%20Programming&productTypes=Courses%2CSpecializations&sortBy=NEW",
+    "title": "Coursera | Online Courses From Top Universities. Join for Free"
+  },
+  "final_screenshot": "screenshots/coursera-3.jpg",
+  "cost_usd": 0.04428602,
+  "elapsed_s": 334.9,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 48
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science"
+      },
+      "ok": true,
+      "ms": 861
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_14"
+      },
+      "ok": true,
+      "ms": 429
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_4"
+      },
+      "ok": true,
+      "ms": 345
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_1"
+      },
+      "ok": true,
+      "ms": 268
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 10
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3200,
+        "offset": 3000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 1125
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python&topic=Data%20Science&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 741
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_20"
+      },
+      "ok": true,
+      "ms": 333
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "press_key",
+      "args": {
+        "chord": "Escape"
+      },
+      "ok": true,
+      "ms": 65
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 600,
+        "offset": 0,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 699
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_23"
+      },
+      "ok": true,
+      "ms": 1306
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/courses?query=python%20data%20science&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 711
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 736
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/courses?query=python%20data%20science&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 795
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_56"
+      },
+      "ok": true,
+      "ms": 5716
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/courses?query=python%20data%20science&skills=Python%20Programming&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 782
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/courses?query=python%20data%20science&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 779
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 9
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_56"
+      },
+      "ok": true,
+      "ms": 5758
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_15"
+      },
+      "ok": true,
+      "ms": 5835
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/courses?query=python%20data%20science&topic=Data%20Science&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 693
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_51"
+      },
+      "ok": true,
+      "ms": 5432
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1800,
+        "selector": "main"
+      },
+      "ok": false,
+      "ms": 6
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/courses?query=python%20data%20science&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 647
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 8
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_16"
+      },
+      "ok": true,
+      "ms": 5434
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 8
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&productTypes=Courses%2CSpecializations&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 559
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&productTypes=Courses%2CSpecializations&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 756
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1200,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 1200,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 10
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 3700,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&productTypes=Courses%2CSpecializations&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 1289
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 15
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&skills=Python%20Programming&productTypes=Courses%2CSpecializations&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 1135
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 10
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 1800,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 12
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&skills=Python%20Data%20Science%20Libraries%20and%20Tools&productTypes=Courses%2CSpecializations&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 1270
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&skills=Python%20Programming&productTypes=Courses%2CSpecializations&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 1054
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 12
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&productTypes=Courses%2CSpecializations&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 827
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 14
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.coursera.org/search?query=python%20data%20science&topic=Data%20Science&skills=Python%20Programming&productTypes=Courses%2CSpecializations&sortBy=NEW"
+      },
+      "ok": true,
+      "ms": 687
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 10
+    }
+  ]
+}

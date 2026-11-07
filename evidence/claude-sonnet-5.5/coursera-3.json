@@ -6,16 +6,16 @@
     "start_url": "https://www.coursera.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
-  "status": "pass",
-  "pass": true,
-  "final_answer": "With the search \"python data science\" sorted by Newest, the first result is \"Project Management with AI For Dummies\", offered by John Wiley & Sons. It is a Beginner course that takes 3–6 months and is tagged \"New\".\n\nThat result isn't really about Python or data science. The Newest sort returns about 10,000 results, and the newest ones are mostly unrelated. The next few are \"Zero Trust Architecture and Security Strategy\" (John Wiley & Sons), \"Podcasting For Dummies\" (John Wiley & Sons) and \"Financial Modeling and Risk Valuation\" (Perplexity). After those come several AWS Dev courses from Amazon Web Services.\n\nIf you want the newest Python-specific item, the \"Best Match\" list has two entries tagged \"New\". They are \"Python for Business Data Science\" (Madecraft, Specialization) and \"The Complete Python and Data Science Bootcamp\" (Packt, Specialization).",
+  "run_date": "2026-11-07",
+  "status": "fail",
+  "pass": false,
+  "final_answer": "With the \"python data science\" search on Coursera sorted by Newest, the first result is **AI Algorithmic Operations and Resource Allocation**. It is a course offered by **The Skill Valley**. Coursera lists it as Mixed level, 1–4 weeks, and tagged \"New\".\n\nThis result isn't clearly about Python data science. Coursera's search returned it as the top newest match, and the next results are also loose matches. One example is the Specialization \"AI for Executives: Strategy and Leadership\", also from The Skill Valley. I can narrow the results with a Python topic filter if you want a closer match.",
   "judge": {
-    "verdict": "SUCCESS",
-    "rationale": "Final page shows search for “python data science” sorted by Newest, with first result “Project Management with AI For Dummies” by John Wiley & Sons.",
+    "verdict": "FAILURE",
+    "rationale": "The reported first result is supported, but it is not clearly related to Python Data Science, and the agent did not apply a Python/data-science topic filter.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 8638,
+    "input_tokens": 8071,
     "output_tokens": 557
   },
   "not_graded_because": null,
@@ -24,8 +24,8 @@
     "title": "Coursera | Online Courses From Top Universities. Join for Free"
   },
   "final_screenshot": "screenshots/coursera-3.jpg",
-  "cost_usd": 0.71798,
-  "elapsed_s": 52.4,
+  "cost_usd": 0.48923,
+  "elapsed_s": 50.6,
   "actions": [
     {
       "tool": "navigate",
@@ -33,44 +33,30 @@
         "url": "https://www.coursera.org/search?query=python%20data%20science&sortBy=NEWEST"
       },
       "ok": true,
-      "ms": 1549
-    },
-    {
-      "tool": "get_page_text",
-      "args": {},
-      "ok": true,
-      "ms": 4
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "include_screenshot": true
-      },
-      "ok": true,
-      "ms": 97
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_1_24"
-      },
-      "ok": true,
-      "ms": 280
+      "ms": 808
     },
     {
       "tool": "take_snapshot",
       "args": {
         "filter": "interactive",
-        "include_screenshot": true,
         "max_chars": 3000
       },
       "ok": true,
-      "ms": 62
+      "ms": 0
     },
     {
-      "tool": "get_element_info",
+      "tool": "click",
       "args": {
-        "uid": "ref_3_4"
+        "uid": "ref_1_14"
+      },
+      "ok": true,
+      "ms": 521
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
       "ms": 1
@@ -81,17 +67,16 @@
         "uid": "ref_3_4"
       },
       "ok": true,
-      "ms": 226
+      "ms": 331
     },
     {
       "tool": "take_snapshot",
       "args": {
         "filter": "interactive",
-        "include_screenshot": true,
         "max_chars": 3000
       },
       "ok": true,
-      "ms": 48
+      "ms": 1
     },
     {
       "tool": "click",
@@ -99,13 +84,24 @@
         "uid": "ref_5_17"
       },
       "ok": true,
-      "ms": 152
+      "ms": 268
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
     },
     {
       "tool": "get_page_text",
-      "args": {},
+      "args": {
+        "head_limit": 4000
+      },
       "ok": true,
-      "ms": 2
+      "ms": 23
     }
   ]
 }

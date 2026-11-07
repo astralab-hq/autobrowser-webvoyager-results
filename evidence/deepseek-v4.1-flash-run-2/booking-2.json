@@ -1,0 +1,159 @@
+{
+  "task": {
+    "id": "booking-2",
+    "site": "booking",
+    "instruction": "Find a hotel in Ohio From December 20th to December 23th for 3 adults and 2 rooms.",
+    "start_url": "https://www.booking.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I searched Booking.com for Ohio, Dec 20–23, 2026 (3 nights), 3 adults in 2 rooms. The page confirmed the search parameters: \"Sun, Dec 20 — Wed, Dec 23\" and \"3 adults · 0 children · 2 rooms\" — and returned 2,816 properties. Here are the top options it showed, all priced for 2 rooms across the 3 nights:\n\n1. **Holiday Inn Columbus Dwtn-Capitol Square by IHG** — Downtown Columbus. Scored 7.7 \"Good\" (586 reviews). 2× Standard King Room (2 king beds), free cancellation, no prepayment needed. **US$694** + US$125 taxes and fees. Has a swimming pool.\n\n2. **Baymont by Wyndham Zanesville** — Zanesville. Scored 6.1 (341 reviews). 2× Queen Room – Mobility Access/Non-Smoking (2 queen beds), breakfast included, free cancellation, no prepayment. **US$506** + US$73 taxes and fees. Swimming pool. (Sponsored placement.)\n\n3. **Hyatt Regency Columbus** — Downtown Columbus. Scored 9.1 \"Wonderful\" (422 reviews), Location 9.5. 2× Queen Room with Two Queen Beds and Accessible Tub (4 queen beds). **US$762** + US$123 taxes and fees. Bar, sustainability certification.\n\n4. **Riverbend Hotel and Suites, Trademark Collection by Wyndham** — Ashtabula. Scored 9.2 \"Wonderful\" (224 reviews), Location 9.5. 2× Queen Room with Two Queen Beds – Non-Smoking (4 queen beds), free cancellation, no prepayment. Price shown plus US$91 taxes and fees. Free parking. (Sponsored placement.)\n\n5. **Home2 Suites Troy, OH** — Troy. Scored 8.5 \"Very Good\" (86 reviews). 2× Queen Studio with Two Queen Beds – Non-Smoking (2 entire studios with kitchens), breakfast included, free cancellation, no prepayment. **US$814** + US$106 taxes and fees. Swimming pool.\n\n6. **Hyatt Place Columbus/OSU** — Columbus. Scored 9.1 \"Wonderful\" (660 reviews), Location 9.5. 2× King Room with Sofa Bed – High Floor. Swimming pool.\n\nIf budget is the priority, the Baymont Zanesville is the cheapest at about US$579 all-in; if you want the best-rated stay in a major city, the Hyatt Regency Columbus (9.1) or Hyatt Place Columbus/OSU (9.1) are the strongest picks. Let me know which one you'd like and I can open it to check room availability and complete a booking.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Booking.com results show Ohio, Sun Dec 20–Wed Dec 23, 3 adults, 2 rooms, and agent provided supported hotel options with prices.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 16913,
+    "output_tokens": 214
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.booking.com/searchresults.html?ss=Ohio%2C+United+States&checkin=2026-12-20&checkout=2026-12-23&group_adults=3&no_rooms=2&group_children=0&selected_currency=USD",
+    "title": "Booking.com: Search results: Ohio%2C+United+States. Book your hotel now!"
+  },
+  "final_screenshot": "screenshots/booking-2.jpg",
+  "cost_usd": 0.00894575,
+  "elapsed_s": 38.9,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 65
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "offset": 161
+      },
+      "ok": true,
+      "ms": 59
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 56
+    },
+    {
+      "tool": "find",
+      "args": {
+        "description": "destination or city search input field on the hotel search form",
+        "limit": 5
+      },
+      "ok": true,
+      "ms": 64
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 109
+      },
+      "ok": true,
+      "ms": 51
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 48
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 109
+      },
+      "ok": true,
+      "ms": 45
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 54
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.booking.com/searchresults.html?ss=Ohio%2C+United+States&checkin=2026-12-20&checkout=2026-12-23&group_adults=3&no_rooms=2&group_children=0&selected_currency=USD"
+      },
+      "ok": true,
+      "ms": 2499
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000,
+        "offset": 58
+      },
+      "ok": true,
+      "ms": 48
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "selector": "[data-testid=\"property-list\"]"
+      },
+      "ok": false,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 7000
+      },
+      "ok": true,
+      "ms": 49
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 7000,
+        "offset": 7000
+      },
+      "ok": true,
+      "ms": 45
+    }
+  ]
+}

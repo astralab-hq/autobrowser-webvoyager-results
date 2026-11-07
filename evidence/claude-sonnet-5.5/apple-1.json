@@ -6,138 +6,106 @@
     "start_url": "https://www.apple.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "**iPhone 12 compatibility:** Yes. Apple's \"iPhone models compatible with iOS 17\" page lists iPhone 12, iPhone 12 mini, iPhone 12 Pro and iPhone 12 Pro Max as supported. The full list runs from iPhone XR, XS and XS Max up to the iPhone 15 series, plus iPhone SE (2nd and 3rd generation). To update, go to Settings > General > Software Update.\n\n**New features in iOS 17** (from Apple's \"About iOS 17 Updates\" page):\n- **Phone, Messages and FaceTime:** Contact Posters and Live Voicemail. Messages gets Live Stickers, Check In, audio message transcription, better search and swipe-to-reply. FaceTime gets video and audio messages and Reactions.\n- **StandBy:** a full-screen display for when iPhone is on its side and charging. It has clocks, photos and widgets, plus a red Night Mode.\n- **Interactive widgets:** you can take actions directly from the widget. iPhone widgets can also appear on a Mac desktop.\n- **AirDrop:** NameDrop shares contact details when two iPhones are held close together. You can also start AirDrop or SharePlay this way.\n- **Keyboard:** more accurate autocorrect, plus inline predictive text and better sentence corrections.\n- **Safari and passwords:** Profiles, locked Private Browsing, link tracking protection, and shared passwords and passkeys.\n- **Other updates:** Offline Maps, Music crossfade, AirPlay suggestions, saying \"Siri\" without \"Hey\", and an expanded Visual Look Up.\n- **Health:** State of Mind logging and Screen Distance.\n- **Accessibility:** Assistive Access, Live Speech, Personal Voice and Point and Speak.\n- **Later updates:** the Journal app (17.2), Stolen Device Protection (17.3), and Apple Podcasts transcripts and new emoji (17.4).\n\n**Features that apply to iPhone 12:** Apple marks the improved autocorrect, enhanced sentence corrections and inline predictive text as \"iPhone 12 and later\". So iPhone 12 gets those. Some other features need newer models, such as the iPhone 14 satellite features and the iPhone 15 Pro Action button options. Features also vary by region.",
+  "final_answer": "**Compatibility: yes, iOS 17 supports the iPhone 12.** Apple's page \"iPhone models compatible with iOS 17\" lists the iPhone 12, along with iPhone 12 mini, 12 Pro and 12 Pro Max. The full list is iPhone XR, XS, XS Max, 11, 11 Pro, 11 Pro Max, SE (2nd and 3rd generation), the 12, 13, 14 and 15 series. Apple also has an iPhone 12 page in the iOS 17 user guide. Apple notes that new features and apps may vary by iPhone model, region, language and carrier. I did not open the iPhone 12 page or Apple's Feature Availability page, so I can't give a per-feature breakdown for the iPhone 12.\n\nSome features depend on region or newer hardware:\n- Live Voicemail is U.S. and Canada only.\n- Precision Finding to meet up with a friend is described for iPhone 15.\n- The Action button guide covers iPhone 15 Pro and 15 Pro Max only.\n- Predictive text shown inline isn't available in all countries or regions.\n- AirPlay in hotel rooms is available only in select hotels.\n\n**New features in iOS 17, from Apple's \"What's new in iOS 17\" page:**\n- **StandBy:** Turn the iPhone on its side while charging to use it as a bedside clock, photo display or music control.\n- **Interactive widgets:** Widgets on the Home Screen, Lock Screen and StandBy can complete tasks with a tap.\n- **Contact Posters and Live Voicemail:** Posters are custom call screens. Live Voicemail shows a live transcript as a caller leaves a message.\n- **Stickers:** Make stickers from Memoji, photos or Live Photos, and use them anywhere the keyboard or Markup works.\n- **Journal (iOS 17.2):** A new app that suggests entries from your outings, photos and workouts.\n- **Messages:** Check In tells a friend when you arrive safely. You can also share or request a location, read transcripts of audio messages, and combine search filters.\n- **Keyboard:** Autocorrected words are underlined so you can revert them, and predictive text appears inline.\n- **FaceTime:** Leave audio or video messages, use hand-gesture reactions, and hand calls off to Apple TV.\n- **AirDrop and NameDrop:** Hold two iPhones close together to swap contact info, start an AirDrop transfer or start SharePlay.\n- **AirPlay (iOS 17.3):** Stream to the TV in select hotel rooms.\n- **Maps:** Offline maps, plus preferred charging networks and real-time charging availability for electric vehicles.\n- **Visual Look Up:** Works on paused video frames, identifies food and suggests recipes.\n- **Photos:** Pets are sorted in the People & Pets album, you can change a portrait's focus point, and memories are more customizable.\n- **Health:** State-of-mind logging and mental health assessments.\n- **Fitness:** A redesigned Sharing tab and Custom Plans in Fitness+.\n- **Screen Distance:** In Screen Time, it prompts you to move the iPhone farther away if you hold it closer than 12 inches for a long time.\n- **Safari:** Separate profiles, autofilled verification codes from Mail, and password sharing with trusted contacts.\n- **Privacy and security:** Sensitive Content Warning and Communication Safety cover more content, and Lockdown Mode is enhanced.\n- **Accessibility:** Personal Voice with Live Speech, and Point and Speak in Magnifier.\n- **Other apps:**\n  - Reminders: grocery lists, sections and a column view.\n  - Notes: PDFs and links between notes.\n  - Freeform: new drawing tools.\n  - Find My: share AirTags with up to five people.\n  - News: puzzles for Apple News+ subscribers.\n  - Home: Activity History.\n  - Tips: new suggestions added over time.\n\nThe pages I read were Apple's Malaysia (en-my) iPhone User Guide for iOS 17. Apple's page also lists iOS 18, iOS 26 and iOS 27, so a newer iOS may exist for your iPhone 12, but I didn't check that.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The compatibility page explicitly lists iPhone 12 models, and the agent accessed Apple Support’s “About iOS 17 Updates” page before summarizing iOS 17 features.",
+    "rationale": "The agent used Apple Support pages for “What’s new in iOS 17” and “iPhone models compatible with iOS 17,” and the final page lists iPhone 12.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 8323,
-    "output_tokens": 560
+    "input_tokens": 16270,
+    "output_tokens": 117
   },
   "not_graded_because": null,
   "final_page": {
     "url": "https://support.apple.com/en-my/guide/iphone/iphe3fa5df43/17.0/ios/17.0",
     "title": "iPhone models compatible with iOS 17 – Apple Support (MY)"
   },
-  "final_screenshot": null,
-  "cost_usd": 1.39896,
-  "elapsed_s": 88.5,
+  "final_screenshot": "screenshots/apple-1.jpg",
+  "cost_usd": 0.962668,
+  "elapsed_s": 93.4,
   "actions": [
     {
-      "tool": "navigate",
-      "args": {
-        "url": "https://support.apple.com/en-us/105058"
-      },
-      "ok": true,
-      "ms": 738
-    },
-    {
-      "tool": "navigate",
-      "args": {
-        "url": "https://support.apple.com/en-us/search?q=iOS%2017%20new%20features"
-      },
-      "ok": true,
-      "ms": 377
-    },
-    {
       "tool": "take_snapshot",
-      "args": {
-        "filter": "all"
-      },
+      "args": {},
       "ok": true,
-      "ms": 17
+      "ms": 21
     },
     {
       "tool": "navigate",
       "args": {
-        "url": "https://support.apple.com/en-us/105058"
+        "url": "https://support.apple.com/en-us/105102"
       },
       "ok": true,
-      "ms": 143
+      "ms": 2283
     },
     {
       "tool": "take_snapshot",
       "args": {
-        "filter": "interactive"
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 20
+      "ms": 1
     },
     {
-      "tool": "click",
+      "tool": "navigate",
       "args": {
-        "uid": "ref_1_13"
+        "url": "https://support.apple.com/en-us/guide/iphone/welcome/17/ios/17"
       },
       "ok": true,
-      "ms": 281
-    },
-    {
-      "tool": "take_snapshot",
-      "args": {
-        "filter": "interactive"
-      },
-      "ok": true,
-      "ms": 6
-    },
-    {
-      "tool": "fill",
-      "args": {
-        "press_enter": true,
-        "text": "iOS 17 compatible iPhone models",
-        "uid": "ref_3_14"
-      },
-      "ok": true,
-      "ms": 64
+      "ms": 941
     },
     {
       "tool": "take_snapshot",
       "args": {
-        "filter": "all"
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 14
-    },
-    {
-      "tool": "click",
-      "args": {
-        "uid": "ref_1_36"
-      },
-      "ok": true,
-      "ms": 501
+      "ms": 1
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 29
+      "ms": 55
     },
     {
       "tool": "navigate",
       "args": {
-        "url": "https://support.apple.com/kb/index?q=iPhone+models+compatible+with+iOS+17&page=search&locale=en_US"
+        "url": "https://support.apple.com/en-my/guide/iphone/iphe3fa5df43/17.0/ios/17.0"
       },
       "ok": true,
-      "ms": 664
+      "ms": 700
     },
     {
       "tool": "take_snapshot",
       "args": {
-        "filter": "all"
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
-      "ms": 22
+      "ms": 3
     },
     {
-      "tool": "navigate",
+      "tool": "click",
       "args": {
-        "url": "https://support.apple.com/guide/iphone/supported-models-iphe3fa5df43/17.0/ios/17.0"
+        "uid": "ref_1_16"
       },
       "ok": true,
-      "ms": 910
+      "ms": 395
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
     },
     {
       "tool": "get_page_text",
@@ -145,15 +113,64 @@
         "selector": "main"
       },
       "ok": false,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 60
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://support.apple.com/en-my/guide/iphone/iphfed2c4091/17.0/ios/17.0"
+      },
+      "ok": true,
+      "ms": 540
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
       "ms": 6
     },
     {
       "tool": "get_page_text",
       "args": {
-        "head_limit": 6000
+        "selector": ".main-content, article, #content, [role=main]"
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://support.apple.com/en-my/guide/iphone/iphe3fa5df43/17.0/ios/17.0"
+      },
+      "ok": true,
+      "ms": 262
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
       },
       "ok": true,
       "ms": 7
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": ".main-content, article, #content, [role=main], body"
+      },
+      "ok": true,
+      "ms": 47
     }
   ]
 }

@@ -1,0 +1,81 @@
+{
+  "task": {
+    "id": "google-map-1",
+    "site": "google-map",
+    "instruction": "Tell me one bus stop that is nearest to the intersection of main street and Amherst street in Altavista.",
+    "start_url": "https://www.google.com/maps/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "The nearest bus stop to the intersection of Main Street and Amherst Street in Altavista, VA is **Amherst and 7th** — roughly 125 m (about a 2-minute walk) from the corner, at approximately 37.1145, -79.2839.\n\nIt edges out the next-closest option, **Main Street Middle** (about 128 m away), by only a couple of metres, so either is essentially at the corner. Other nearby stops in the results include 5th and Nelson (~305 m), 7th and Franklin (~355 m), and Franklin and 8th (~385 m).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Google Maps showed nearby transit stops with coordinates; the agent computed distances from Amherst Ave & Main St and identified Amherst and 7th as slightly closest.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 6743,
+    "output_tokens": 340
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.google.com/maps/search/Transit+stations/@37.1137242,-79.2854353,17z/data=!3m1!4b1!4m7!2m6!3m5!2sAmherst+Ave+%26+Main+St!3s0x89b2b67c41eb7fb3:0x27a9cea6593b8da9!4m2!1d-79.2828604!2d37.1137115?entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D",
+    "title": "Transit stations - Google Maps"
+  },
+  "final_screenshot": "screenshots/google-map-1.jpg",
+  "cost_usd": 0.00338528,
+  "elapsed_s": 27.4,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 21
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "Main Street and Amherst Street, Altavista, VA",
+        "uid": "ref_1_1"
+      },
+      "ok": true,
+      "ms": 425
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_7"
+      },
+      "ok": true,
+      "ms": 232
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "selector": "div[role=\"main\"]"
+      },
+      "ok": true,
+      "ms": 8
+    }
+  ]
+}

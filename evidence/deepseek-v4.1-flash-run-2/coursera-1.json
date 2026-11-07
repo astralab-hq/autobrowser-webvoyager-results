@@ -1,0 +1,209 @@
+{
+  "task": {
+    "id": "coursera-1",
+    "site": "coursera",
+    "instruction": "Search for a beginner-level online course about Python programming, suitable for someone who has no programming experience on Coursera.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I searched Coursera for beginner-level Python courses and the top result is the best fit for someone with zero programming experience:\n\n**Programming for Everybody (Getting Started with Python)** — offered by the University of Michigan, taught by Charles Russell Severance.\n\n- **Level:** Beginner — the page explicitly states \"No prior experience required\"\n- **Rating:** 4.8 stars from 233,786 reviews (marked \"Bestseller\")\n- **Enrollment:** 3,659,975 learners already enrolled\n- **Commitment:** Flexible schedule — roughly 2 weeks at 10 hours a week, self-paced, 7 modules\n- **Cost:** Free to enroll / audit; included with Coursera Plus\n- **What you'll learn:** Install Python and write your first program, describe the basics of the Python language, use variables to store/retrieve/calculate information, and use core programming tools such as functions and loops\n- **Skills covered:** Programming Principles, Program Development, Software Installation, Computer Programming, Debugging\n- **URL:** https://www.coursera.org/learn/python\n\nIt's also the first course in the broader \"Python for Everybody\" Specialization if you later want to continue beyond the basics. Other beginner options that appeared in the same filtered search included Google's **Crash Course on Python** (4.8 stars, ~1–3 months) and University of Michigan's **Python Basics** (4.8 stars, 1–4 weeks), but the Michigan \"Getting Started\" course is the most explicitly designed for absolute beginners.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent found a Coursera course page showing “Programming for Everybody,” “Beginner level,” and “No prior experience required,” matching the request.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 12436,
+    "output_tokens": 36
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/learn/python",
+    "title": "Python for Everybody: Write Your First Python Programs | Coursera"
+  },
+  "final_screenshot": "screenshots/coursera-1.jpg",
+  "cost_usd": 0.00184372,
+  "elapsed_s": 46.9,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 44
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_8"
+      },
+      "ok": true,
+      "ms": 413
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "python for beginners",
+        "uid": "ref_3_1"
+      },
+      "ok": true,
+      "ms": 284
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_19"
+      },
+      "ok": true,
+      "ms": 308
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_1"
+      },
+      "ok": true,
+      "ms": 292
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 6000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "all",
+        "max_chars": 8000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "wait_for_dom_stable",
+      "args": {
+        "idle_ms": 800,
+        "timeout_ms": 8000
+      },
+      "ok": true,
+      "ms": 804
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "take_screenshot",
+      "args": {},
+      "ok": true,
+      "ms": 86
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_9_5"
+      },
+      "ok": true,
+      "ms": 238
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_11_23"
+      },
+      "ok": true,
+      "ms": 915
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "switch_focus",
+      "args": {
+        "tab_id": 1197371932
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000
+      },
+      "ok": true,
+      "ms": 38
+    }
+  ]
+}

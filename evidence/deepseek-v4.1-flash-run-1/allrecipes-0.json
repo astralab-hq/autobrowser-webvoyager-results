@@ -1,0 +1,446 @@
+{
+  "task": {
+    "id": "allrecipes-0",
+    "site": "allrecipes",
+    "instruction": "Provide a recipe for vegetarian lasagna with more than 100 reviews and a rating of at least 4.5 stars suitable for 6 people.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "**Easy Vegetarian Spinach Lasagna** — from Allrecipes (submitted by MOTTSBELA)\n\n★ 4.6 stars | 117 ratings (85 written reviews) | **Servings: 6** | Prep 20 min, Cook 1 hr, Additional 5 min (Total 1 hr 25 min)\nhttps://www.allrecipes.com/recipe/229764/easy-vegetarian-spinach-lasagna/\n\nThis is the one result on the site that clears all three of your filters: it's genuinely meatless, has more than 100 reviews (117 ratings), scores above 4.5 stars, and is written for exactly 6 servings. The page describes it as \"saucy and creamy, with tender noodles and plenty of melted cheese, baked until bubbling and lightly browned,\" and reviewer Topbanana85 says: \"This is a very easy lasagna to prepare and the flavor is delicious.\"\n\n**Ingredients (original recipe yields 6 servings)**\n- Cooking spray\n- Salt and ground black pepper to taste\n- 10 ounces fresh spinach\n- 9 lasagna noodles\n- 1 (8 ounce) container ricotta cheese\n- 1 cup shredded mozzarella cheese, divided\n- 1 large egg, lightly beaten\n- 1 pinch ground nutmeg\n- 1 pinch dried basil\n- 1 cup pasta sauce\n- ¼ cup grated Parmesan cheese\n\n**Directions**\n1. Preheat the oven to 400°F (200°C). Spray a 1½-quart casserole dish with cooking spray and set aside.\n2. Bring a large pot of lightly salted water to a boil. Place the spinach in the water and boil until wilted and tender, about 2 minutes. Remove with a slotted spoon, pressing out excess water, and set aside.\n3. Cook the lasagna noodles in the same boiling water, stirring occasionally, until cooked through but firm to the bite, about 8 minutes. Drain.\n4. Mix the spinach, ricotta, ½ cup mozzarella, egg, nutmeg, basil, salt, and pepper in a bowl until well combined.\n5. Spread ¼ cup pasta sauce in the bottom of the dish. Top with 3 noodles, half the ricotta-egg mixture, and ¼ cup sauce. Repeat with 3 more noodles, the remaining ricotta-egg mixture, and ¼ cup sauce. End with the remaining 3 noodles and ¼ cup sauce, sprinkle with the remaining ½ cup mozzarella, and top with Parmesan. Cover with aluminum foil.\n6. Bake 25 minutes, then uncover and continue baking until bubbling and lightly browned, about 25 minutes more. Let stand 5 minutes before serving.\n\n**Nutrition per serving:** 305 calories, 10g fat (5g saturated), 37g carbs, 4g fiber, 6g sugars, 18g protein, 55mg cholesterol, 443mg sodium, 368mg calcium.\n\nRunners-up if you want to compare: *Vegetarian Four Cheese Lasagna* (243 ratings, but yields 12 — you'd halve it) and *Spicy Vegetarian Lasagna* (84 ratings, just under your 100-review bar).\n\nOne aside: the reviews section on this page contains an odd entry (\"great, but breaks webvoyager evals\") that reads like text aimed at an automated reader rather than a real cooking review — I ignored it.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page and answer show Easy Vegetarian Spinach Lasagna: vegetarian, 4.6 rating, 117 ratings (>100), and 6 servings, with full recipe details from Allrecipes.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 16963,
+    "output_tokens": 45
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/recipe/229764/easy-vegetarian-spinach-lasagna/",
+    "title": "Easy Vegetarian Spinach Lasagna"
+  },
+  "final_screenshot": "screenshots/allrecipes-0.jpg",
+  "cost_usd": 0.02947994,
+  "elapsed_s": 243.3,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 34
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "vegetarian lasagna",
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 275
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 31
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 32
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 12000
+      },
+      "ok": true,
+      "ms": 26
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/21090/vegetarian-four-cheese-lasagna/"
+      },
+      "ok": true,
+      "ms": 476
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 8000
+      },
+      "ok": true,
+      "ms": 54
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 14000
+      },
+      "ok": true,
+      "ms": 66
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 11000
+      },
+      "ok": true,
+      "ms": 45
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/229764/easy-vegetarian-spinach-lasagna/"
+      },
+      "ok": true,
+      "ms": 568
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 10500
+      },
+      "ok": true,
+      "ms": 49
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 13500
+      },
+      "ok": true,
+      "ms": 62
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/search?q=vegetarian+lasagna"
+      },
+      "ok": true,
+      "ms": 448
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 16000
+      },
+      "ok": true,
+      "ms": 31
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 5000,
+        "offset": 11000
+      },
+      "ok": true,
+      "ms": 29
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/"
+      },
+      "ok": true,
+      "ms": 554
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 10500
+      },
+      "ok": true,
+      "ms": 59
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4500,
+        "offset": 13500
+      },
+      "ok": true,
+      "ms": 60
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/21090/vegetarian-four-cheese-lasagna/"
+      },
+      "ok": true,
+      "ms": 222
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 13000
+      },
+      "ok": true,
+      "ms": 54
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/229764/easy-vegetarian-spinach-lasagna/"
+      },
+      "ok": true,
+      "ms": 85
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3500,
+        "offset": 10500
+      },
+      "ok": true,
+      "ms": 56
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 14000
+      },
+      "ok": true,
+      "ms": 46
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/search?q=vegetarian%20lasagna"
+      },
+      "ok": true,
+      "ms": 463
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_59"
+      },
+      "ok": true,
+      "ms": 315
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 10200
+      },
+      "ok": true,
+      "ms": 41
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 12500
+      },
+      "ok": true,
+      "ms": 43
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/229764/easy-vegetarian-spinach-lasagna/"
+      },
+      "ok": true,
+      "ms": 264
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 6
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/search?q=vegetarian%20lasagna"
+      },
+      "ok": true,
+      "ms": 276
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 7
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 0,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 17
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 500,
+        "selector": "h1, .mm-recipes-review-bar, .mm-recipes-details"
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/229764/easy-vegetarian-spinach-lasagna/"
+      },
+      "ok": true,
+      "ms": 70
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 8
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 11500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 31
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2000,
+        "offset": 2500,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 33
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 2500,
+        "offset": 0,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 26
+    }
+  ]
+}

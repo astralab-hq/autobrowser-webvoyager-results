@@ -6,17 +6,17 @@
     "start_url": "https://github.com/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "Enterprise includes 48GB more GitHub Packages storage than Team. Enterprise gets 50GB and Team gets 2GB, so Enterprise has 25 times as much. For comparison, the Free plan gets 500MB.",
+  "final_answer": "On GitHub's Pricing page, the Enterprise plan includes 50GB of Packages storage and the Team plan includes 2GB. Enterprise therefore has 48GB more package storage than Team. That is 25 times the Team amount.",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The pricing page text shows Team has 2GB of Packages storage and Enterprise has 50GB, supporting the agent’s 48GB difference.",
+    "rationale": "The GitHub Pricing page shown lists Team with 2GB Packages storage and Enterprise with 50GB, supporting the agent’s 48GB difference.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 5284,
-    "output_tokens": 35
+    "input_tokens": 6832,
+    "output_tokens": 79
   },
   "not_graded_because": null,
   "final_page": {
@@ -24,8 +24,8 @@
     "title": "GitHub plans and pricing · GitHub"
   },
   "final_screenshot": "screenshots/github-3.jpg",
-  "cost_usd": 0.348116,
-  "elapsed_s": 13.8,
+  "cost_usd": 0.407952,
+  "elapsed_s": 18.3,
   "actions": [
     {
       "tool": "navigate",
@@ -33,13 +33,22 @@
         "url": "https://github.com/pricing"
       },
       "ok": true,
-      "ms": 572
+      "ms": 542
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
     },
     {
       "tool": "get_page_text",
       "args": {},
       "ok": true,
-      "ms": 5
+      "ms": 36
     }
   ]
 }

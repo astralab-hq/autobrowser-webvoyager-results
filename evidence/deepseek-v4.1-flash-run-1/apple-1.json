@@ -1,0 +1,342 @@
+{
+  "task": {
+    "id": "apple-1",
+    "site": "apple",
+    "instruction": "Research the new features of the iOS 17 on Apple support and check its compatibility with the iPhone 12.",
+    "start_url": "https://www.apple.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I checked two Apple Support pages: **\"About iOS 17 Updates\"** (support.apple.com/en-us/118723) and the iPhone User Guide page **\"iPhone models compatible with iOS 17\"** (support.apple.com/en-my/guide/iphone/iphe3fa5df43/17.0/ios/17.0).\n\n**Is the iPhone 12 compatible? Yes.** Apple's compatibility list for iOS 17 includes iPhone XR, iPhone XS, iPhone XS Max, iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max, **iPhone 12 mini, iPhone 12, iPhone 12 Pro, iPhone 12 Pro Max**, iPhone 13 mini / 13 / 13 Pro / 13 Pro Max, iPhone 14 / 14 Plus / 14 Pro / 14 Pro Max, iPhone 15 / 15 Plus / 15 Pro / 15 Pro Max, and iPhone SE (2nd and 3rd generation). So all four iPhone 12 models are supported — and notably, the iPhone 12 is the oldest model that gets the full set of new keyboard features.\n\n**The headline new features in iOS 17**, per Apple's page:\n\n- **Phone:** Contact Posters (customize how you appear on others' devices) and Live Voicemail (live transcription with the option to pick up).\n- **Messages:** a unified Stickers app with Live Stickers lifted from photos, Check In (auto-notifies a friend when you arrive safely), audio message transcription, swipe-to-reply, better search filters, and automatic cleanup of used verification codes.\n- **FaceTime:** leave a video or audio message when no one answers, Reactions (hearts, balloons, confetti triggered by gestures), adjustable Studio Lighting/Portrait intensity, and FaceTime on Apple TV using iPhone as the camera.\n- **StandBy:** a new full-screen, glanceable experience — clocks, photos and widgets — when iPhone is on its side and charging, with Night Mode and per-MagSafe-charger preferences.\n- **Widgets:** interactive widgets you can tap to act on (e.g. complete a reminder) on Home Screen, Lock Screen and StandBy; plus iPhone widgets on Mac.\n- **AirDrop:** NameDrop for exchanging contact info by bringing iPhones together, and a new proximity-based way to start a share or SharePlay session.\n- **Keyboard:** improved autocorrect accuracy via a transformer-based language model, easier autocorrect editing (underlined corrections you can revert with a tap), enhanced sentence-level grammar corrections, and inline predictive text — **all three of the model-gated ones are marked \"iPhone 12 and later.\"**\n- **Safari & Passwords:** Profiles to separate work/personal browsing, Private Browsing locking and tracker blocking, password and passkey sharing with trusted contacts, and one-time code AutoFill from Mail.\n- **Music & AirPlay:** SharePlay for Apple Music in the car, Crossfade, an intelligent AirPlay device list, suggested and automatic AirPlay connections.\n- **AirPods:** Adaptive Audio, Personalized Volume, Conversation Awareness, and press-to-mute (AirPods Pro 2nd gen / AirPods 3rd gen / AirPods Max with firmware 6A300+).\n- **Maps:** Offline Maps and EV routing with real-time charger availability.\n- **Siri:** the option to just say \"Siri\" instead of \"Hey Siri,\" and back-to-back requests without re-activating (iPhone 11 and later).\n- **Health:** State of Mind mood logging with interactive charts, mental health assessments, and Screen Distance using the TrueDepth camera.\n- **Privacy:** Sensitive Content Warnings, expanded Communication Safety for children (now including video), improved sharing permissions, and Link Tracking Protection in Messages, Mail and Safari Private Browsing.\n- **Accessibility:** Assistive Access, Live Speech, Personal Voice, and Point and Speak in Magnifier.\n- **Also:** Visual Look Up expansions, pets in the People album, Photos Album widget, Item sharing in Find My, Home Activity History, Grocery Lists in Reminders, full-width inline PDFs in Notes, new Memoji stickers, App Shortcuts in Spotlight, a redesigned Sharing tab in Fitness, email/phone-number sign-in, and new Freeform drawing tools.\n\n**Two caveats for an iPhone 12 owner:** a few items on that page are explicitly limited to newer hardware — Roadside Assistance via satellite and the Crash Detection optimizations are listed for iPhone 14 models only — and Apple notes that \"some features may not be available for all regions or on all Apple devices.\" Everything else in the iOS 17 feature set applies to the iPhone 12. The page also lists the latest iOS 17 releases as 17.7.7 and 17.7.6, both described as important security fixes recommended for all users.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent used Apple Support pages for iOS 17 features and compatibility; final page lists iPhone 12 under “iPhone models compatible with iOS 17.”",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 15455,
+    "output_tokens": 311
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://support.apple.com/en-my/guide/iphone/iphe3fa5df43/17.0/ios/17.0",
+    "title": "iPhone models compatible with iOS 17 – Apple Support (MY)"
+  },
+  "final_screenshot": "screenshots/apple-1.jpg",
+  "cost_usd": 0.02530628,
+  "elapsed_s": 89.1,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://support.apple.com/en-us/118575"
+      },
+      "ok": true,
+      "ms": 1044
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_13"
+      },
+      "ok": true,
+      "ms": 250
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "iOS 17 features",
+        "uid": "ref_3_14"
+      },
+      "ok": true,
+      "ms": 223
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_29"
+      },
+      "ok": true,
+      "ms": 706
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 16
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6106,
+        "offset": 24000
+      },
+      "ok": true,
+      "ms": 12
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 7000,
+        "offset": 17000
+      },
+      "ok": true,
+      "ms": 14
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://support.apple.com/en-us/118575"
+      },
+      "ok": true,
+      "ms": 105
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_13"
+      },
+      "ok": true,
+      "ms": 420
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "iOS 17 compatible devices",
+        "uid": "ref_3_14"
+      },
+      "ok": true,
+      "ms": 237
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "iOS 17 iPhone 12 compatibility",
+        "uid": "ref_1_15"
+      },
+      "ok": true,
+      "ms": 244
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "iOS 17 is compatible with these devices",
+        "uid": "ref_3_15"
+      },
+      "ok": true,
+      "ms": 223
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://support.apple.com/en-us/HT213268"
+      },
+      "ok": true,
+      "ms": 849
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://support.apple.com/en-us/search?query=iOS%2017%20compatible%20devices"
+      },
+      "ok": true,
+      "ms": 396
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "iOS 17 compatible devices",
+        "uid": "ref_1_16"
+      },
+      "ok": true,
+      "ms": 365
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_17"
+      },
+      "ok": true,
+      "ms": 216
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "iPhone models compatible with iOS 17",
+        "uid": "ref_1_15"
+      },
+      "ok": true,
+      "ms": 337
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_20"
+      },
+      "ok": true,
+      "ms": 716
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 4
+    },
+    {
+      "tool": "select_option",
+      "args": {
+        "label": "iOS 17",
+        "uid": "ref_1_15"
+      },
+      "ok": true,
+      "ms": 257
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 5
+    }
+  ]
+}

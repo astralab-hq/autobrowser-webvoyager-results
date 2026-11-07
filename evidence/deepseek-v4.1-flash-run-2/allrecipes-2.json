@@ -1,0 +1,118 @@
+{
+  "task": {
+    "id": "allrecipes-2",
+    "site": "allrecipes",
+    "instruction": "Find a recipe for a vegetarian lasagna under 600 calories per serving that has a prep time of less than 1 hour.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a recipe that meets all your criteria: **Artichoke Spinach Lasagna** from Allrecipes (https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/).\n\n**Why it fits:**\n- **Vegetarian** — no meat; it's built on marinated artichoke hearts, frozen spinach, onions, garlic, and vegetable broth, layered with mozzarella and crumbled herb-and-garlic feta.\n- **396 calories per serving** — comfortably under your 600-calorie limit (16g fat, 45g carbs, 21g protein per serving).\n- **Prep time: 20 minutes** — well under 1 hour. (Cook time is 1 hr, for 1 hr 20 mins total, so plan for oven time.)\n\n**Ratings:** 4.6 out of 5 from 1,824 ratings and 1,287 reviews; 2,169 home cooks report making it. It's tested by the Allrecipes Test Kitchen. Yields 8 servings.\n\n**Ingredients:** cooking spray; 9 uncooked lasagna noodles; 1 chopped onion; 4 cloves chopped garlic; 1 (14.5 oz) can vegetable broth; 1 tbsp chopped fresh rosemary; 1 (14 oz) can marinated artichoke hearts, drained and chopped; 1 (10 oz) package frozen chopped spinach, thawed, drained and squeezed dry; 1 (28 oz) jar tomato pasta sauce; 3 cups shredded mozzarella (divided); 1 (4 oz) package herb and garlic feta, crumbled.\n\n**Method in brief:** Preheat oven to 350°F and spray a 9x13-inch dish. Boil the noodles 8–10 minutes and drain. Sauté onion and garlic 3 minutes, add broth and rosemary and bring to a boil, then stir in artichokes and spinach and simmer covered 5 minutes; stir in the pasta sauce. Layer 1/4 of the mixture, 3 noodles, and 3/4 cup mozzarella, repeating twice more and finishing with the artichoke mixture and mozzarella; top with feta. Bake covered 40 minutes, uncovered 15 minutes more, then rest 10 minutes before cutting.\n\nOne note from reviewers: several found it a bit watery and suggest cutting back on the broth — the most helpful positive review (rated 4.75) recommends reducing it next time.",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page shows Artichoke Spinach Lasagna is vegetarian, prep 20 mins, and 396 calories per serving, satisfying all requested criteria.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 15517,
+    "output_tokens": 36
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/",
+    "title": "Artichoke Spinach Lasagna"
+  },
+  "final_screenshot": "screenshots/allrecipes-2.jpg",
+  "cost_usd": 0.01618968,
+  "elapsed_s": 56.3,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 43
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "vegetarian lasagna",
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 422
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 28
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 25
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 5000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 8
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/"
+      },
+      "ok": true,
+      "ms": 603
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 35
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 3000,
+        "selector": "main"
+      },
+      "ok": true,
+      "ms": 25
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "task": {
+    "id": "github-2",
+    "site": "github",
+    "instruction": "Look for the trending Python repositories on GitHub with most stars.",
+    "start_url": "https://github.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "Here are today's trending Python repositories on GitHub (trending/python, daily), ranked by **total stars** — the full list of 20 repos on the page:\n\n| # | Repository | Stars | Forks | Stars today |\n|---|---|---|---|---|\n| 1 | **sherlock-project / sherlock** — Hunt down social media accounts by username across social networks | 99,098 | 11,765 | 1,761 |\n| 2 | **D4Vinci / Scrapling** — Web scraping framework, from a single request to a full-scale crawl | 99,014 | 10,377 | 1,324 |\n| 3 | **django / django** — The Web framework for perfectionists with deadlines | 91,672 | 35,967 | 169 |\n| 4 | **microsoft / VibeVoice** — Open-Source Frontier Voice AI | 56,568 | 6,373 | 1,004 |\n| 5 | **psf / requests** — A simple, yet elegant, HTTP library | 54,711 | 11,519 | 119 |\n| 6 | **pandas-dev / pandas** — Data analysis / manipulation library | 50,511 | 20,728 | 194 |\n| 7 | **apache / airflow** — Platform to author, schedule, and monitor workflows | 47,405 | 18,321 | 21 |\n| 8 | **psf / black** — The uncompromising Python code formatter | 42,126 | 2,971 | 13 |\n| 9 | **dgtlmoon / changedetection.io** — Website change detection and monitoring | 35,606 | 2,219 | 55 |\n| 10 | **python-poetry / poetry** — Python packaging and dependency management | 34,430 | 2,584 | 133 |\n| 11 | **numpy / numpy** — Fundamental package for scientific computing | 33,378 | 13,091 | 131 |\n| 12 | **pydantic / pydantic** — Data validation using Python type hints | 29,360 | 3,154 | 25 |\n| 13 | **mlflow / mlflow** — Open source AI engineering platform for agents, LLMs, ML models | 28,712 | 6,593 | 8 |\n| 14 | **google / skills** — Agent Skills for Google products and technologies | 23,011 | 1,935 | 534 |\n| 15 | **airbytehq / airbyte** — Open-source data movement for ELT pipelines and AI agents | 22,330 | 5,441 | 8 |\n| 16 | **onnx / onnx** — Open standard for machine learning interoperability | 21,657 | 4,080 | 9 |\n| 17 | **NVIDIA / TensorRT-LLM** — Python API for defining LLMs with GPU inference optimizations | 15,031 | 2,916 | 9 |\n| 18 | **antoniaci / blackbird** — OSINT tool to search accounts by username/email | 9,872 | 1,401 | 121 |\n| 19 | **NVIDIA / auto-ontology** — Framework for semantic, graph-based reasoning layers over data | 9,500 | 758 | 2,015 |\n| 20 | **pipeshub-ai / pipeshub-ai** — Open-source context layer for AI agents | 4,035 | 651 | 64 |\n\nIf you meant \"most stars gained today\" rather than all-time stars, the leaders are **NVIDIA/auto-ontology** (+2,015), **sherlock** (+1,761), **Scrapling** (+1,324), **microsoft/VibeVoice** (+1,004), and **google/skills** (+534).",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent reached GitHub Trending Python today and provided the repositories with star counts, ranked by total stars, supported by the page excerpt.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 16533,
+    "output_tokens": 411
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://github.com/trending/python?since=daily",
+    "title": "Trending Python repositories on GitHub today · GitHub"
+  },
+  "final_screenshot": "screenshots/github-2.jpg",
+  "cost_usd": 0.00743568,
+  "elapsed_s": 43.7,
+  "actions": [
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://github.com/trending/python?since=daily"
+      },
+      "ok": true,
+      "ms": 1696
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "offset": 93
+      },
+      "ok": true,
+      "ms": 18
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 6000,
+        "offset": 0
+      },
+      "ok": true,
+      "ms": 21
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "max_chars": 4000,
+        "offset": 182
+      },
+      "ok": true,
+      "ms": 14
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 60
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000,
+        "offset": 30000
+      },
+      "ok": true,
+      "ms": 53
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000,
+        "selector": "article.Box-row"
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 9000,
+        "offset": 55000
+      },
+      "ok": true,
+      "ms": 47
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 9000,
+        "offset": 46500
+      },
+      "ok": true,
+      "ms": 47
+    }
+  ]
+}

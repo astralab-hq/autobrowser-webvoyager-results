@@ -1,0 +1,64 @@
+{
+  "task": {
+    "id": "wolfram-alpha-5",
+    "site": "wolfram-alpha",
+    "instruction": "Show the solution of y\"(z) + sin(y(z)) = 0 from wolframalpha.",
+    "start_url": "https://www.wolframalpha.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "WolframAlpha gives the general solution of y″(z) + sin(y(z)) = 0 as:\n\ny(z) = −2 am( ½√((c₁ + 2)(z + c₂)²), 4/(c₁ + 2) )\n\ny(z) = 2 am( ½√((c₁ + 2)(z + c₂)²), 4/(c₁ + 2) )\n\nwhere am(x, m) is the Jacobi amplitude function, and c₁, c₂ are arbitrary constants.\n\nAdditional classification from the page: it is a second-order nonlinear ordinary differential equation, and it is autonomous — equivalently written y″(z) = −sin(y(z)), or in exponential form y″(z) + ½ i e^(−i y(z)) − ½ i e^(i y(z)) = 0. (A step-by-step derivation is available on the page behind Wolfram|Alpha Pro.)",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The agent queried WolframAlpha and reported the displayed “Differential equation solutions” matching the page text and screenshot.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 4980,
+    "output_tokens": 29
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.wolframalpha.com/input?i=y%27%27%28z%29+%2B+sin%28y%28z%29%29+%3D+0",
+    "title": "y''(z) + sin(y(z)) = 0 - Wolfram|Alpha"
+  },
+  "final_screenshot": "screenshots/wolfram-alpha-5.jpg",
+  "cost_usd": 0.00576913,
+  "elapsed_s": 14.4,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 24
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "y''(z) + sin(y(z)) = 0",
+        "uid": "ref_1_7"
+      },
+      "ok": true,
+      "ms": 346
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {},
+      "ok": true,
+      "ms": 5
+    }
+  ]
+}

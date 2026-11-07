@@ -1,0 +1,167 @@
+{
+  "task": {
+    "id": "coursera-0",
+    "site": "coursera",
+    "instruction": "Find a beginner-level online course about '3d printing' which lasts 1-3 months, and is provided by a renowned university.",
+    "start_url": "https://www.coursera.org/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a strong match on Coursera: **3D Printing and Additive Manufacturing Specialization**, offered by the **University of Illinois Urbana-Champaign** (a renowned public research university consistently ranked among the top engineering schools in the U.S.).\n\nDetails as listed on the page:\n- **Level:** Beginner — no prior experience required\n- **Duration:** 2 months to complete at ~10 hours per week (within your 1–3 month window)\n- **Format:** A 4-course series (specialization) covering the fundamentals of 3D printing, industry-standard 3D modeling and scanning software, desktop printer setup/operation/maintenance, and design thinking for prototyping and manufacturing products\n- **Instructors:** Vishal Sachdev + 4 more\n- **Enrollment:** 20,847 already enrolled; 2,494 reviews across the program's courses; next session starts Nov 7\n- **Link:** https://www.coursera.org/specializations/3d-printing-additive-manufacturing\n\nIt's free to enroll/audit, and also included with Coursera Plus. If you'd rather have a single standalone course instead of a 4-course series, the same university also offers shorter beginner options such as \"The 3D Printing Revolution\" and \"3D Printing Software,\" and the University of Michigan offers \"Introduction to 3D Printing with Metals.\"",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "Final page and answer show a Coursera 3D printing specialization from University of Illinois, beginner level, 2 months duration, satisfying all criteria.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 11818,
+    "output_tokens": 36
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.coursera.org/specializations/3d-printing-additive-manufacturing",
+    "title": "3D Printing and Additive Manufacturing | Coursera"
+  },
+  "final_screenshot": "screenshots/coursera-0.jpg",
+  "cost_usd": 0.00270113,
+  "elapsed_s": 58.8,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 47
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_8"
+      },
+      "ok": true,
+      "ms": 340
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "3d printing",
+        "uid": "ref_3_1"
+      },
+      "ok": true,
+      "ms": 297
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_1_19"
+      },
+      "ok": true,
+      "ms": 368
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_3_1"
+      },
+      "ok": true,
+      "ms": 291
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 11
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_5_5"
+      },
+      "ok": true,
+      "ms": 236
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "click",
+      "args": {
+        "uid": "ref_7_24"
+      },
+      "ok": true,
+      "ms": 729
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "switch_focus",
+      "args": {
+        "tab_id": 1758169641
+      },
+      "ok": true,
+      "ms": 3
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000
+      },
+      "ok": true,
+      "ms": 35
+    }
+  ]
+}

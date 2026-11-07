@@ -6,17 +6,17 @@
     "start_url": "https://arxiv.org/"
   },
   "model": "anthropic/claude-sonnet-5.5",
-  "run_date": "2026-10-31",
+  "run_date": "2026-11-07",
   "status": "pass",
   "pass": true,
-  "final_answer": "I searched arXiv for \"quantum computing\", sorted by announcement date (newest first). It returned 58,983 results. These are the most recent ones, submitted 27–29 October 2026.\n\n**Quantum error correction and fault tolerance**\n- 2610.40592: Toric codes all the way down: decoupling translation-invariant topological CSS codes in higher dimensions.\n- 2610.40490: Fast and accurate neural triage decoding of ultra-high-rate quantum LDPC codes.\n- 2610.40052: Identifying logical operations from syndrome histories for qLDPC codes.\n- 2610.39067: Individually addressed logical Pauli measurements by QLDPC surgery on a trapped-ion quantum computer.\n- 2610.38847: Local quantum fault tolerance without expansion.\n- 2610.38283: Maximally-matched mixture decoding for correlated atom loss in quantum LDPC codes.\n- 2610.38914: High-threshold fusion-based quantum computation with optical hybrid qubits.\n- 2610.37991: Reducing the cost of ancilla purification for Majorana quantum computation.\n\n**Hardware and gates**\n- 2610.40642: Comparison of entangling strategies for unitary synthesis (trapped ions).\n- 2610.40329: High-fidelity universal quantum gates in a cryogenic atom array.\n- 2610.39670: Error-corrected quantum optimization via Rydberg atom array embeddings.\n- 2610.38604: Pulse-informed physical placement for parallel two-qubit gates in qubit arrays.\n- 2610.39942: Majorana zero modes in fractional vortices.\n\n**Algorithms, applications and software**\n- 2610.40561: Hybrid quantum-classical pathway to scalable quantum chemistry (VULCAN).\n- 2610.38701: Sample-based quantum diagonalization for variable molecular geometries.\n- 2610.39129: Reverse quantum annealing for ground-state energy calculation in molecules.\n- 2610.39541: Optimal linear combination of Hamiltonian simulation for dissipative dynamics.\n- 2610.39702: Quantum query complexity of tournament solutions.\n- 2610.40573: What can be computed with indefinite causal structure?\n- 2610.37772: Magic in Grover's algorithm and the role of oracle synthesis.\n- 2610.38189: Ancilla-free randomized Toffoli gates and the T-count of Boolean oracles.\n- 2610.39350: Provably efficient experimental classification of quantum data with quantum kernels.\n- 2610.39847: Digital-analog quantum neural network with long-range interactions.\n- 2610.39577: Adiabatic training of VQAs for entanglement detection.\n- 2610.39980: Benchmarking quantum neural networks for LISA MBHB coalescence.\n- 2610.39476: SeQUeNCe.DQC: full-stack simulation of distributed quantum computing.\n- 2610.39824: Dynamic resource scaling in quantum circuit simulations.\n- 2610.39406: QSoftCore: a conceptual foundation for quantum software engineering.\n- 2610.39263: A VLSI-like design and verification flow for quantum circuits.\n- 2610.40393: Quantum computing through computational imaging.\n\n**Post-quantum cryptography**\n- 2610.39873: Syndrome trellis decryption in post-quantum cryptography.\n- 2610.38632: Post-quantum cryptography in the automotive context.\n- 2610.38479: Recurrent bipartite graph neural networks for QC-MDPC error decoding.\n\nThe page also lists some loosely related papers, such as ones on quantum gravity, hep-th and knot theory. This is the first of about 1,180 pages at 50 results per page. The results are at https://arxiv.org/search/?query=quantum+computing&searchtype=all&order=-announced_date_first. I can narrow the search by category or date, or open any paper, if you want.",
+  "final_answer": "I searched arXiv for \"quantum computing\" and sorted by announcement date, newest first. It returned 59,149 results. The three newest, all submitted 5 November 2026, are:\n\n1. **Quantum Knowledge Distillation: State-of-the-art, Applications and Open Problems** (arXiv:2611.08461, quant-ph). Authors: Aldana Al-Sulaiti, Kuan-Cheng Chen, Muhammad Bilal Akram Dastagir, Ahmed Farouk and Saif Al-Kuwari. It is a survey of knowledge distillation in quantum machine learning. It finds the benefits depend on the task and architecture, and tests on physical quantum hardware are still limited. 21 pages, 3 figures, 4 tables.\n\n2. **Polynomial-time classical simulation of boson and fermion sampling under thermal loss** (arXiv:2611.08444, quant-ph, cs.CC, math-ph, physics.optics). Authors: Armando Angrisani and Hela Mhiri. It gives a framework for simulating boson and fermion sampling classically under thermal loss, which bears on claims of quantum computational advantage. 83 pages, 2 figures.\n\n3. **Deep-learning surrogate model for rapid quantum-noise computation in dual-pump fiber-optic phase-sensitive amplifiers** (arXiv:2611.08437, physics.optics). Authors: Yousra Bouasria, Debanuj Chatterjee, Abdessamad Belfakir and Debabrota Basu. It trains a neural network to predict amplifier noise figures about 400 times faster than the standard semi-quantum method, with a mean absolute error of 0.0015 dB.\n\nI only read the abstracts of these three. The page lists 50 results, and the next ones include arXiv:2611.08220, 2611.08200, 2611.08180, 2611.08152 and 2611.08151.\n\nFull results: https://arxiv.org/search/?query=quantum+computing&searchtype=all&order=-announced_date_first",
   "judge": {
     "verdict": "SUCCESS",
-    "rationale": "The agent searched arXiv for “quantum computing,” sorted newest first, and reported recent preprints supported by the visible results page.",
+    "rationale": "The agent searched arXiv for “quantum computing,” sorted by newest announcement date, and reported the top results shown on the final page.",
     "model": "gpt-5.5-2026-04-23",
     "prompt_version": "wv-2.2",
-    "input_tokens": 7760,
-    "output_tokens": 34
+    "input_tokens": 10210,
+    "output_tokens": 167
   },
   "not_graded_because": null,
   "final_page": {
@@ -24,22 +24,39 @@
     "title": "Search | arXiv e-print repository"
   },
   "final_screenshot": "screenshots/arxiv-0.jpg",
-  "cost_usd": 0,
-  "elapsed_s": 21.4,
+  "cost_usd": 0.334962,
+  "elapsed_s": 33.6,
   "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {},
+      "ok": true,
+      "ms": 21
+    },
     {
       "tool": "navigate",
       "args": {
         "url": "https://arxiv.org/search/?query=quantum+computing&searchtype=all&order=-announced_date_first"
       },
       "ok": true,
-      "ms": 903
+      "ms": 847
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
     },
     {
       "tool": "get_page_text",
-      "args": {},
+      "args": {
+        "head_limit": 9000
+      },
       "ok": true,
-      "ms": 5
+      "ms": 90
     }
   ]
 }

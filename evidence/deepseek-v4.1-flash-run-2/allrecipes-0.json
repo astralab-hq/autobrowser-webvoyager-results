@@ -1,0 +1,171 @@
+{
+  "task": {
+    "id": "allrecipes-0",
+    "site": "allrecipes",
+    "instruction": "Provide a recipe for vegetarian lasagna with more than 100 reviews and a rating of at least 4.5 stars suitable for 6 people.",
+    "start_url": "https://www.allrecipes.com/"
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "run_date": "2026-11-07",
+  "status": "pass",
+  "pass": true,
+  "final_answer": "I found a great match on Allrecipes: **Artichoke Spinach Lasagna** — rated **4.6 out of 5 stars** from **1,824 ratings / 1,287 reviews**, and it yields **8 servings**, so it comfortably covers 6 people (with a couple of portions left over). It's fully vegetarian and tested by the Allrecipes Test Kitchen.\n\n**Ingredients (original 1X recipe, yields 8 servings)**\n- Cooking spray\n- 9 uncooked lasagna noodles\n- 1 onion, chopped\n- 4 cloves garlic, chopped\n- 1 (14.5 ounce) can vegetable broth\n- 1 tablespoon chopped fresh rosemary\n- 1 (14 ounce) can marinated artichoke hearts, drained and chopped\n- 1 (10 ounce) package frozen chopped spinach, thawed, drained and squeezed dry\n- 1 (28 ounce) jar tomato pasta sauce\n- 3 cups shredded mozzarella cheese, divided\n- 1 (4 ounce) package herb and garlic feta, crumbled\n\n**Directions**\n1. Preheat the oven to 350°F (175°C). Spray a 9x13-inch baking dish with cooking spray.\n2. Bring a large pot of lightly salted water to a boil. Add noodles and cook 8 to 10 minutes, or until al dente; drain.\n3. Spray a large skillet with cooking spray and heat on medium-high. Sauté onion and garlic for 3 minutes, or until onion is tender-crisp. Stir in broth and rosemary; bring to a boil. Stir in artichoke hearts and spinach; reduce heat, cover, and simmer 5 minutes. Stir in pasta sauce.\n4. Spread 1/4 of the artichoke mixture in the bottom of the prepared baking dish; top with 3 cooked noodles. Sprinkle 3/4 cup mozzarella over the noodles. Repeat layers 2 more times, ending with artichoke mixture and mozzarella. Sprinkle crumbled feta on top.\n5. Bake, covered, for 40 minutes. Uncover and bake 15 minutes more, or until hot and bubbly. Let stand 10 minutes before cutting.\n\n**Timing & nutrition:** Prep 20 min, cook 1 hr, total 1 hr 20 min. Per serving: 396 calories, 16g fat, 45g carbs, 21g protein.\n\nSource: https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/",
+  "judge": {
+    "verdict": "SUCCESS",
+    "rationale": "The final answer cites Allrecipes evidence: Artichoke Spinach Lasagna is vegetarian, rated 4.6 with 1,287 reviews, and yields 8 servings, enough for 6.",
+    "model": "gpt-5.5-2026-04-23",
+    "prompt_version": "wv-2.2",
+    "input_tokens": 14540,
+    "output_tokens": 47
+  },
+  "not_graded_because": null,
+  "final_page": {
+    "url": "https://www.allrecipes.com/search?q=vegetarian+lasagna",
+    "title": "[vegetarian lasagna] Results from Allrecipes"
+  },
+  "final_screenshot": "screenshots/allrecipes-0.jpg",
+  "cost_usd": 0.01577353,
+  "elapsed_s": 101.7,
+  "actions": [
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive"
+      },
+      "ok": true,
+      "ms": 37
+    },
+    {
+      "tool": "fill",
+      "args": {
+        "press_enter": true,
+        "text": "vegetarian lasagna",
+        "uid": "ref_1_3"
+      },
+      "ok": true,
+      "ms": 429
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 0
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 6000
+      },
+      "ok": true,
+      "ms": 29
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 8000,
+        "offset": 6000
+      },
+      "ok": true,
+      "ms": 25
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/21090/vegetarian-four-cheese-lasagna/"
+      },
+      "ok": true,
+      "ms": 564
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 1
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 4000
+      },
+      "ok": true,
+      "ms": 51
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 5000,
+        "offset": 9000
+      },
+      "ok": true,
+      "ms": 49
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/recipe/20082/artichoke-spinach-lasagna/"
+      },
+      "ok": true,
+      "ms": 528
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 2
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 9000
+      },
+      "ok": true,
+      "ms": 50
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 3000,
+        "offset": 12000
+      },
+      "ok": true,
+      "ms": 50
+    },
+    {
+      "tool": "get_page_text",
+      "args": {
+        "head_limit": 4000,
+        "offset": 15000
+      },
+      "ok": true,
+      "ms": 57
+    },
+    {
+      "tool": "navigate",
+      "args": {
+        "url": "https://www.allrecipes.com/search?q=vegetarian+lasagna"
+      },
+      "ok": true,
+      "ms": 515
+    },
+    {
+      "tool": "take_snapshot",
+      "args": {
+        "filter": "interactive",
+        "max_chars": 3000
+      },
+      "ok": true,
+      "ms": 3
+    }
+  ]
+}
